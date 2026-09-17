@@ -1,0 +1,32 @@
+name: Boundary challenge
+description: Challenge the scope, distinction, or exclusion boundary of a canonical mechanism.
+title: "[Boundary]: "
+labels: ["boundary-challenge"]
+body:
+  - type: input
+    id: mechanism
+    attributes:
+      label: Canonical mechanism
+      placeholder: e.g. fiscal_dominance
+    validations:
+      required: true
+  - type: textarea
+    id: challenge
+    attributes:
+      label: Challenge
+      description: State exactly what is too broad, too narrow, duplicated, or causally unclear.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence or counterexample
+      description: Provide sources, cases, or a falsifying example where possible.
+    validations:
+      required: true
+  - type: textarea
+    id: repair
+    attributes:
+      label: Proposed repair
+      description: Suggest a clearer boundary, definition, or deprecation path.
+

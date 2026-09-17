@@ -1,0 +1,31 @@
+name: Prior art or overlap
+description: Identify an earlier work, standard, patent, or system that overlaps this registry or method.
+title: "[Prior art]: "
+labels: ["prior-art"]
+body:
+  - type: input
+    id: work
+    attributes:
+      label: Work
+      description: Title, author or institution, and date.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source link or identifier
+    validations:
+      required: true
+  - type: textarea
+    id: overlap
+    attributes:
+      label: Exact overlap
+      description: Identify which claim, mechanism, representation, or workflow is anticipated.
+    validations:
+      required: true
+  - type: textarea
+    id: difference
+    attributes:
+      label: Remaining difference, if any
+      description: Optional—state what appears not to be covered by the earlier work.
+

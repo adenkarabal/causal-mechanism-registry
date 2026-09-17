@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this registry, please cite the exact version."
+title: "Causal Mechanism Registry for Historical Crisis Research"
+type: dataset
+authors:
+  - name: "adenkarabal"
+abstract: "A versioned, finance-first registry of 32 bounded causal mechanisms for historical crisis research, comparative analysis, and experiments with compact world-state interfaces for language models."
+version: 0.1.0
+date-released: "2026-09-17"
+repository-code: "https://github.com/adenkarabal/causal-mechanism-registry"
+url: "https://github.com/adenkarabal/causal-mechanism-registry"
+license: CC-BY-4.0
+identifiers:
+  - type: url
+    value: "https://github.com/adenkarabal/causal-mechanism-registry/releases/tag/0.1.0"
+    description: "GitHub release for version 0.1.0."
+keywords:
+  - causal mechanisms
+  - historical crises
+  - financial crises
+  - controlled vocabulary
+  - language models

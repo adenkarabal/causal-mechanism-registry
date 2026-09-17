@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/adenkarabal/causal-mechanism-registry/main/schema/canonical.schema.json",
+  "title": "Causal Mechanism Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "released_on",
+    "license",
+    "phase_vocabulary",
+    "mechanism_count",
+    "mechanisms"
+  ],
+  "properties": {
+    "schema_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "released_on": { "type": "string", "format": "date" },
+    "license": { "const": "CC-BY-4.0" },
+    "phase_vocabulary": {
+      "type": "array",
+      "prefixItems": [
+        { "const": "trigger" },
+        { "const": "amplification" },
+        { "const": "transmission" },
+        { "const": "policy" },
+        { "const": "resolution" }
+      ],
+      "items": false,
+      "minItems": 5,
+      "maxItems": 5
+    },
+    "mechanism_count": { "const": 32 },
+    "mechanisms": {
+      "type": "array",
+      "minItems": 32,
+      "maxItems": 32,
+      "items": { "$ref": "#/$defs/mechanism" }
+    }
+  },
+  "$defs": {
+    "mechanism": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "status",
+        "introduced_in",
+        "definition_en",
+        "definition_tr",
+        "boundary_en",
+        "boundary_tr",
+        "default_phase_roles"
+      ],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+        "status": { "const": "canonical" },
+        "introduced_in": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+        "definition_en": { "type": "string", "minLength": 20 },
+        "definition_tr": { "type": "string", "minLength": 20 },
+        "boundary_en": { "type": "string", "minLength": 15 },
+        "boundary_tr": { "type": "string", "minLength": 15 },
+        "default_phase_roles": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": ["trigger", "amplification", "transmission", "policy", "resolution"]
+          }
+        }
+      }
+    }
+  }
+}
+

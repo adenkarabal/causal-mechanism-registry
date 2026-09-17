@@ -1,0 +1,423 @@
+{
+  "schema_version": "0.1.0",
+  "released_on": "2026-09-17",
+  "license": "CC-BY-4.0",
+  "phase_vocabulary": [
+    "trigger",
+    "amplification",
+    "transmission",
+    "policy",
+    "resolution"
+  ],
+  "mechanism_count": 32,
+  "mechanisms": [
+    {
+      "id": "energy_supply_shock",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "A disruption, or credible risk of disruption, to the physical availability of energy.",
+      "definition_tr": "Enerjinin fiziksel olarak bulunabilirliğinde kesinti veya güvenilir kesinti riski.",
+      "boundary_en": "Physical supply is central; price pass-through alone belongs under energy_cost_pressure.",
+      "boundary_tr": "Merkezde fiziksel arz vardır; yalnız fiyat geçişi energy_cost_pressure altında kodlanır.",
+      "default_phase_roles": [
+        "trigger"
+      ]
+    },
+    {
+      "id": "energy_supply_relief",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "An easing of a previously binding energy-supply constraint or disruption risk.",
+      "definition_tr": "Daha önce bağlayıcı olan enerji arz kısıtının veya kesinti riskinin gevşemesi.",
+      "boundary_en": "Relief requires easing of the supply constraint, not merely weaker energy demand.",
+      "boundary_tr": "Gevşeme arz kısıtında olmalıdır; yalnız enerji talebinin düşmesi yeterli değildir.",
+      "default_phase_roles": [
+        "resolution",
+        "policy"
+      ]
+    },
+    {
+      "id": "energy_cost_pressure",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "Pressure transmitted to households, firms, or public balance sheets through the cost of energy.",
+      "definition_tr": "Enerji maliyeti üzerinden hane, şirket veya kamu bilançolarına aktarılan baskı.",
+      "boundary_en": "This is the cost-transmission channel, not the physical supply disruption itself.",
+      "boundary_tr": "Bu maliyet-aktarım kanalıdır; fiziksel arz kesintisinin kendisi değildir.",
+      "default_phase_roles": [
+        "amplification",
+        "trigger"
+      ]
+    },
+    {
+      "id": "inflation_pressure",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "Broad forces that push the general price level persistently upward.",
+      "definition_tr": "Genel fiyat düzeyini kalıcı biçimde yukarı iten geniş tabanlı güçler.",
+      "boundary_en": "This is broader than any single inflation channel; cost_inflation is one possible mechanism beneath it.",
+      "boundary_tr": "Tek bir enflasyon kanalından geniştir; cost_inflation bunun altındaki olası mekanizmalardan biridir.",
+      "default_phase_roles": [
+        "amplification",
+        "trigger"
+      ]
+    },
+    {
+      "id": "cost_inflation",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "Inflation transmitted primarily through rising input, wage, logistics, or production costs.",
+      "definition_tr": "Esas olarak girdi, ücret, lojistik veya üretim maliyetlerindeki artışla taşınan enflasyon.",
+      "boundary_en": "The causal cost channel must be present; a high inflation reading alone is insufficient.",
+      "boundary_tr": "Nedensel maliyet kanalı bulunmalıdır; yalnız yüksek enflasyon verisi yeterli değildir.",
+      "default_phase_roles": [
+        "amplification",
+        "trigger"
+      ]
+    },
+    {
+      "id": "duration_selloff",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "Selling pressure concentrated in long-duration bonds or assets as discount rates or term premia reprice.",
+      "definition_tr": "İskonto oranı veya vade primi yeniden fiyatlanırken uzun vadeli tahvil ve varlıklarda yoğunlaşan satış baskısı.",
+      "boundary_en": "The duration channel must dominate; this is not a label for every bond-market decline.",
+      "boundary_tr": "Süre kanalı baskın olmalıdır; her tahvil piyasası düşüşünün etiketi değildir.",
+      "default_phase_roles": [
+        "transmission",
+        "amplification"
+      ]
+    },
+    {
+      "id": "sovereign_funding_stress",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "Strain on a sovereign's capacity or cost to issue, roll over, or service public obligations.",
+      "definition_tr": "Devletin kamu yükümlülüklerini ihraç, çevirme veya ödeme kapasitesi ve maliyeti üzerindeki stres.",
+      "boundary_en": "The stressed borrower is the sovereign; corporate funding and currency pressure are separate mechanisms.",
+      "boundary_tr": "Stres altındaki borçlu egemendir; şirket fonlaması ve kur baskısı ayrı mekanizmalardır.",
+      "default_phase_roles": [
+        "amplification",
+        "transmission"
+      ]
+    },
+    {
+      "id": "fx_pressure",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "System-level pressure on an exchange rate or on access to foreign-currency funding.",
+      "definition_tr": "Kur üzerinde veya döviz fonlamasına erişimde sistem düzeyinde baskı.",
+      "boundary_en": "This is the system-level pressure; entity-specific exposure belongs under currency_sensitivity.",
+      "boundary_tr": "Bu sistem düzeyindeki baskıdır; kurum veya sektör maruziyeti currency_sensitivity altında kodlanır.",
+      "default_phase_roles": [
+        "trigger",
+        "transmission"
+      ]
+    },
+    {
+      "id": "currency_sensitivity",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "Material exposure of an entity or sector's cash flow, costs, revenues, or balance sheet to exchange-rate changes.",
+      "definition_tr": "Bir kurum veya sektörün nakit akışı, maliyet, gelir ya da bilançosunun kur değişimlerine maddi duyarlılığı.",
+      "boundary_en": "This is exposure to currency movement, not the system-wide currency pressure itself.",
+      "boundary_tr": "Bu kur hareketine maruziyettir; sistem genelindeki kur baskısının kendisi değildir.",
+      "default_phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "intervention_risk",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "A credible risk or expectation of official intervention in currency, rates, credit, or commodity markets.",
+      "definition_tr": "Kur, faiz, kredi veya emtia piyasalarında resmî müdahaleye ilişkin güvenilir risk ya da beklenti.",
+      "boundary_en": "The mechanism is intervention risk or expectation, not every change in the expected policy path.",
+      "boundary_tr": "Mekanizma müdahale riski veya beklentisidir; beklenen politika yolundaki her değişim değildir.",
+      "default_phase_roles": [
+        "policy",
+        "trigger",
+        "resolution"
+      ]
+    },
+    {
+      "id": "liquidity_stress",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "Difficulty obtaining funding or transacting at scale without material delay, discount, or price impact.",
+      "definition_tr": "Maddi gecikme, iskonto veya fiyat etkisi olmadan fonlama sağlama ya da büyük işlem yapma güçlüğü.",
+      "boundary_en": "Impaired funding or market functioning is required; volatility alone is insufficient.",
+      "boundary_tr": "Fonlama veya piyasa işleyişi bozulmalıdır; yalnız oynaklık yeterli değildir.",
+      "default_phase_roles": [
+        "transmission",
+        "amplification"
+      ]
+    },
+    {
+      "id": "policy_repricing",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "A material revaluation of the expected path, stance, or reaction function of monetary or fiscal policy.",
+      "definition_tr": "Para veya maliye politikasının beklenen yolu, duruşu ya da tepki fonksiyonunun maddi yeniden fiyatlanması.",
+      "boundary_en": "The change is in expected policy and its pricing, not merely the announcement of an isolated action.",
+      "boundary_tr": "Değişim beklenen politika ve fiyatlamasındadır; tekil bir kararın duyurulmasıyla sınırlı değildir.",
+      "default_phase_roles": [
+        "policy",
+        "trigger"
+      ]
+    },
+    {
+      "id": "geopolitical_escalation",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "An intensification of geopolitical conflict or coercion that enters economic behavior, allocation, or pricing.",
+      "definition_tr": "Ekonomik davranışa, tahsise veya fiyatlamaya giren jeopolitik çatışma ya da zorlamanın şiddetlenmesi.",
+      "boundary_en": "Geopolitical news alone is insufficient; escalation must alter constraints, behavior, or risk pricing.",
+      "boundary_tr": "Yalnız jeopolitik haber yeterli değildir; tırmanış kısıtları, davranışı veya risk fiyatlamasını değiştirmelidir.",
+      "default_phase_roles": [
+        "trigger"
+      ]
+    },
+    {
+      "id": "geopolitical_deescalation",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "An easing of geopolitical conflict or coercion that relaxes an economically binding constraint or risk premium.",
+      "definition_tr": "Ekonomik olarak bağlayıcı bir kısıtı veya risk primini gevşeten jeopolitik çatışma ya da zorlamanın hafiflemesi.",
+      "boundary_en": "De-escalation is an active easing of prior stress, not the simple absence of new escalation.",
+      "boundary_tr": "Yumuşama önceki stresin aktif gevşemesidir; yeni tırmanış olmaması tek başına yeterli değildir.",
+      "default_phase_roles": [
+        "resolution"
+      ]
+    },
+    {
+      "id": "commodity_supply_squeeze",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "A tightening of physical commodity availability relative to near-term demand or deliverable capacity.",
+      "definition_tr": "Fiziksel emtia bulunabilirliğinin yakın dönem talebe veya teslim kapasitesine göre sıkışması.",
+      "boundary_en": "Physical availability or deliverability is central; generalized cost inflation is a downstream mechanism.",
+      "boundary_tr": "Merkezde fiziksel bulunabilirlik veya teslim kapasitesi vardır; genel maliyet enflasyonu aşağı-akış mekanizmasıdır.",
+      "default_phase_roles": [
+        "trigger",
+        "amplification"
+      ]
+    },
+    {
+      "id": "ai_equity_momentum",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "A self-reinforcing concentration of equity demand and performance around AI-related firms or capacity narratives.",
+      "definition_tr": "Hisse talebi ve performansının yapay zekâ ilişkili şirketler veya kapasite anlatıları çevresinde kendini besleyen yoğunlaşması.",
+      "boundary_en": "This is a market-feedback mechanism, not a judgment about AI technology or all technology equities.",
+      "boundary_tr": "Bu piyasa geri-bildirim mekanizmasıdır; yapay zekâ teknolojisi veya tüm teknoloji hisseleri hakkında hüküm değildir.",
+      "default_phase_roles": [
+        "amplification",
+        "trigger"
+      ]
+    },
+    {
+      "id": "equity_narrow_leadership",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "Equity-index performance increasingly carried by a small group of constituents, creating concentration fragility.",
+      "definition_tr": "Hisse endeksi performansının giderek küçük bir bileşen grubu tarafından taşınması ve yoğunlaşma kırılganlığı üretmesi.",
+      "boundary_en": "Concentration of leadership is required; a strong or rising market alone does not qualify.",
+      "boundary_tr": "Liderlik yoğunlaşması bulunmalıdır; güçlü veya yükselen piyasa tek başına yeterli değildir.",
+      "default_phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "growth_slowdown",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "A broad deceleration in real economic growth or productive activity.",
+      "definition_tr": "Reel ekonomik büyüme veya üretken faaliyette geniş tabanlı yavaşlama.",
+      "boundary_en": "This concerns aggregate activity; demand_slowdown isolates the spending or orders channel.",
+      "boundary_tr": "Bu toplam faaliyeti kapsar; demand_slowdown harcama veya sipariş kanalını ayrıştırır.",
+      "default_phase_roles": [
+        "resolution",
+        "trigger"
+      ]
+    },
+    {
+      "id": "demand_slowdown",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "A material weakening in household, business, government, or external demand.",
+      "definition_tr": "Hane, şirket, kamu veya dış talepte maddi zayıflama.",
+      "boundary_en": "The demand channel must weaken; supply-constrained output alone does not qualify.",
+      "boundary_tr": "Talep kanalı zayıflamalıdır; yalnız arz kısıtlı üretim düşüşü yeterli değildir.",
+      "default_phase_roles": [
+        "resolution",
+        "trigger"
+      ]
+    },
+    {
+      "id": "risk_appetite_reversal",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "A directional shift from risk-seeking toward risk reduction, de-risking, or capital preservation.",
+      "definition_tr": "Risk arayışından risk azaltma, pozisyon küçültme veya sermaye korumaya yönelen belirgin dönüş.",
+      "boundary_en": "A reversal or transition is required; persistently low risk appetite alone is not the same mechanism.",
+      "boundary_tr": "Bir tersine dönüş veya geçiş bulunmalıdır; sürekli düşük risk iştahı aynı mekanizma değildir.",
+      "default_phase_roles": [
+        "transmission",
+        "trigger"
+      ]
+    },
+    {
+      "id": "asset_quality_stress",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "Deterioration in the repayment quality, collateral value, or expected recovery of assets held by financial institutions.",
+      "definition_tr": "Finansal kurumların tuttuğu varlıklarda geri ödeme kalitesi, teminat değeri veya beklenen tahsilatın bozulması.",
+      "boundary_en": "This concerns asset-side credit quality, not profitability compression from margins alone.",
+      "boundary_tr": "Bu aktif tarafındaki kredi kalitesidir; yalnız marj kaynaklı kârlılık sıkışması değildir.",
+      "default_phase_roles": [
+        "amplification",
+        "transmission"
+      ]
+    },
+    {
+      "id": "banking_margin_pressure",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "Compression of banking net-interest margins or closely related intermediation profitability.",
+      "definition_tr": "Bankacılık net faiz marjı veya buna yakın aracılık kârlılığının sıkışması.",
+      "boundary_en": "The bank intermediation margin is central; credit-loss deterioration belongs under asset_quality_stress.",
+      "boundary_tr": "Merkezde banka aracılık marjı vardır; kredi zararı bozulması asset_quality_stress altında kodlanır.",
+      "default_phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "funding_margin_pressure",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "Compression of non-bank or corporate margins through rising funding costs, refinancing burdens, or financing terms.",
+      "definition_tr": "Artan fonlama maliyeti, yeniden finansman yükü veya finansman koşulları üzerinden banka dışı ya da şirket marjlarının sıkışması.",
+      "boundary_en": "This is broader corporate or non-bank funding pressure, not bank net-interest-margin compression.",
+      "boundary_tr": "Bu şirket veya banka dışı fonlama baskısıdır; banka net faiz marjı sıkışması değildir.",
+      "default_phase_roles": [
+        "amplification",
+        "transmission"
+      ]
+    },
+    {
+      "id": "export_pressure",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "Stress on export volumes, prices, competitiveness, or market access transmitted from external markets or policy.",
+      "definition_tr": "Dış piyasalar veya politika üzerinden ihracat hacmi, fiyatı, rekabet gücü ya da pazar erişimine aktarılan stres.",
+      "boundary_en": "The external-sales channel must be material; domestic demand weakness alone does not qualify.",
+      "boundary_tr": "Dış satış kanalı maddi olmalıdır; yalnız iç talep zayıflığı yeterli değildir.",
+      "default_phase_roles": [
+        "transmission",
+        "trigger"
+      ]
+    },
+    {
+      "id": "capacity_investment",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "Investment that expands productive capacity and can alter future supply, financing needs, or overcapacity risk.",
+      "definition_tr": "Gelecekteki arzı, finansman ihtiyacını veya aşırı kapasite riskini değiştirebilen üretken kapasite yatırımı.",
+      "boundary_en": "This concerns capacity-building commitments, not current output or ordinary maintenance spending.",
+      "boundary_tr": "Bu kapasite kuran taahhütlerdir; mevcut üretim veya olağan bakım harcaması değildir.",
+      "default_phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "inventory_pressure",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "Pressure created by inventory accumulation, scarcity, or liquidation that changes production, pricing, or financing behavior.",
+      "definition_tr": "Stok birikimi, kıtlığı veya tasfiyesinin üretim, fiyatlama ya da finansman davranışını değiştirmesiyle oluşan baskı.",
+      "boundary_en": "Inventory dynamics must carry the mechanism; a physical supply shock without inventory transmission is separate.",
+      "boundary_tr": "Mekanizmayı stok dinamiği taşımalıdır; stok aktarımı olmayan fiziksel arz şoku ayrıdır.",
+      "default_phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "credit_cycle",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "A reinforcing expansion or contraction between credit availability, leverage, asset values, and economic activity.",
+      "definition_tr": "Kredi erişimi, kaldıraç, varlık değerleri ve ekonomik faaliyet arasındaki kendini güçlendiren genişleme veya daralma.",
+      "boundary_en": "The feedback cycle is central; a high level of debt without cyclical reinforcement is insufficient.",
+      "boundary_tr": "Merkezde geri-bildirim döngüsü vardır; döngüsel güçlenme olmadan yüksek borç düzeyi yeterli değildir.",
+      "default_phase_roles": [
+        "amplification",
+        "trigger"
+      ]
+    },
+    {
+      "id": "basis_dislocation",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "A disorderly widening between linked instruments expected to converge, often intensified by leveraged arbitrage unwinds.",
+      "definition_tr": "Yakınsaması beklenen bağlantılı araçlar arasındaki farkın, çoğu kez kaldıraçlı arbitraj çözülmesiyle düzensiz biçimde açılması.",
+      "boundary_en": "Expected convergence and its breakdown are essential; generic relative-value movement does not qualify.",
+      "boundary_tr": "Beklenen yakınsama ve bunun bozulması esastır; genel göreli-değer hareketi yeterli değildir.",
+      "default_phase_roles": [
+        "transmission",
+        "amplification"
+      ]
+    },
+    {
+      "id": "credit_market_freeze",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "A breakdown in credit-market intermediation in which liquidity promises, dealer capacity, and underlying asset liquidity become structurally incompatible.",
+      "definition_tr": "Likidite vaatleri, dealer kapasitesi ve alttaki varlık likiditesinin yapısal olarak uyumsuzlaştığı kredi piyasası aracılık çöküşü.",
+      "boundary_en": "Market intermediation must seize or fracture; ordinary spread widening or lower issuance alone is insufficient.",
+      "boundary_tr": "Piyasa aracılığı kilitlenmeli veya parçalanmalıdır; olağan spread açılması ya da düşük ihraç tek başına yeterli değildir.",
+      "default_phase_roles": [
+        "transmission",
+        "amplification"
+      ]
+    },
+    {
+      "id": "contagion",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "Transmission of crisis stress from one institution, market, sector, or country to another through an identifiable channel.",
+      "definition_tr": "Kriz stresinin tanımlanabilir bir kanal üzerinden bir kurum, piyasa, sektör veya ülkeden diğerine aktarılması.",
+      "boundary_en": "Contagion is between-node transmission; loss multiplication within the same node is amplification.",
+      "boundary_tr": "Bulaşma düğümler-arası aktarımdır; aynı düğüm içindeki kayıp büyümesi amplifikasyondur.",
+      "default_phase_roles": [
+        "transmission"
+      ]
+    },
+    {
+      "id": "protection_gap",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "The portion of economic loss not absorbed by insurance or other pre-arranged financial protection, shifting burden to households, firms, or the public balance sheet.",
+      "definition_tr": "Ekonomik kaybın sigorta veya önceden düzenlenmiş finansal koruma tarafından emilmeyen ve yükü hane, şirket ya da kamu bilançosuna kaydıran kısmı.",
+      "boundary_en": "This is the absorption-capacity gap, not the total physical or economic damage.",
+      "boundary_tr": "Bu zarar-emme kapasitesi açığıdır; toplam fiziksel veya ekonomik hasarın kendisi değildir.",
+      "default_phase_roles": [
+        "amplification",
+        "resolution"
+      ]
+    },
+    {
+      "id": "fiscal_dominance",
+      "status": "canonical",
+      "introduced_in": "0.1.0",
+      "definition_en": "A regime in which sovereign financing needs materially constrain monetary policy, subordinating price-stability choices to fiscal sustainability.",
+      "definition_tr": "Devletin finansman ihtiyacının para politikasını maddi biçimde kısıtladığı ve fiyat istikrarı tercihlerini mali sürdürülebilirliğe tabi kıldığı rejim.",
+      "boundary_en": "The fiscal-to-monetary direction of constraint is essential; simultaneous fiscal stress and policy repricing alone are insufficient.",
+      "boundary_tr": "Mali taraftan para politikasına yönelen kısıt esastır; eşzamanlı mali stres ve politika fiyatlaması tek başına yeterli değildir.",
+      "default_phase_roles": [
+        "policy",
+        "amplification"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+# Changelog
+
+## [0.1.0] — 2026-09-17
+
+First public release.
+
+- 32 canonical causal mechanisms, finance-first.
+- English and Turkish definitions with exclusion boundaries.
+- The closed five-phase role model.
+- Admission, change, and versioning rules.
+- Machine-readable YAML and JSON registries, a validation schema, and automated integrity checks.
+- Citation, licence, and provenance metadata.
+
+Release anchor: [`0.1.0`](https://github.com/adenkarabal/causal-mechanism-registry/releases/tag/0.1.0).
+
+### How the set reached thirty-two
+
+By admission over several months inside the research system. Every entry carries `introduced_in: 0.1.0` because `0.1.0` is the first *public* version, not because the set was written at once.
+
+| Step | Date | What entered |
+|---|---|---|
+| 27 → 29 | 2026-05-24 | `basis_dislocation`, `credit_market_freeze` |
+| 29 → 30 | 2026-06-05 | `contagion` — the missing inter-node transmission channel |
+| 30 → 32 | 2026-06-20 | `protection_gap`, `fiscal_dominance`; vocabulary frozen |
+
+`twin_crisis` and `sudden_stop` were both refused: existing entries already represent them without causal loss.

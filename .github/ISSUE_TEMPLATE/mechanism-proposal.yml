@@ -1,0 +1,58 @@
+name: Mechanism proposal
+description: Propose an evidence-backed addition to a future registry version.
+title: "[Proposal]: "
+labels: ["mechanism-proposal"]
+body:
+  - type: input
+    id: identifier
+    attributes:
+      label: Proposed identifier
+      placeholder: lowercase_snake_case
+    validations:
+      required: true
+  - type: textarea
+    id: definition
+    attributes:
+      label: One-sentence causal definition
+    validations:
+      required: true
+  - type: textarea
+    id: chain
+    attributes:
+      label: Causal chain
+      description: Express the mechanism as conditions → process → consequence.
+    validations:
+      required: true
+  - type: textarea
+    id: nearest
+    attributes:
+      label: Nearest existing mechanism or combination
+      description: Explain why the existing registry cannot represent this without material loss.
+    validations:
+      required: true
+  - type: textarea
+    id: cases
+    attributes:
+      label: Independent historical cases
+      description: List cases and sources showing recurrence.
+    validations:
+      required: true
+  - type: textarea
+    id: boundary
+    attributes:
+      label: Exclusion boundary or counterexample
+    validations:
+      required: true
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Proposed default phase role
+      options:
+        - trigger
+        - amplification
+        - transmission
+        - policy
+        - resolution
+    validations:
+      required: true
+

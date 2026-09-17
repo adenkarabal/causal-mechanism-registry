@@ -1,0 +1,11 @@
+# GitHub's language detection ignores data and prose by default, which left a
+# hundred lines of validation script defining this repository as a Ruby
+# project. The artifact is a controlled vocabulary — count the vocabulary.
+*.yaml linguist-detectable=true
+*.json linguist-detectable=true
+*.md   linguist-detectable=true
+
+# Generated from registry/canonical.yaml by scripts/build_mechanisms_md.rb.
+# Collapsed in diffs so review stays on the source of truth rather than on a
+# rendering of it.
+MECHANISMS.md linguist-generated=true

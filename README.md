@@ -11,11 +11,17 @@
 [![Docs: CC BY 4.0](https://img.shields.io/badge/Docs-CC_BY_4.0-2f6f69.svg)](LICENSE.md)
 [![Code: MIT](https://img.shields.io/badge/Code-MIT-2f6f69.svg)](LICENSE-CODE)
 
-[Mechanisms](MECHANISMS.md) · [How it was made](DISTILLATION.md) · [Method](METHODOLOGY.md) · [Admission rules](ADMISSION_RULES.md) · [Signature](SIGNATURE.md) · [Prior art](PRIOR_ART.md) · [Türkçe](README.tr.md) · [adenkarabal.com](https://adenkarabal.com)
+[Why this method](WHY.md) · [Mechanisms](MECHANISMS.md) · [How it was made](DISTILLATION.md) · [Method](METHODOLOGY.md) · [Admission rules](ADMISSION_RULES.md) · [Signature](SIGNATURE.md) · [Prior art](PRIOR_ART.md) · [Türkçe](README.tr.md) · [adenkarabal.com](https://adenkarabal.com)
 
 </div>
 
 ---
+
+## The question behind the registry
+
+A language model's reach across a subject is wider than any one person's, and asking it a good question normally requires knowing enough to recognise a good answer. On a large subject that requirement becomes a ceiling: the questioner's knowledge limits what the answer can contain, and where a question underspecifies, the answer comes back filled in with whatever is plausible in the implied shape.
+
+This registry is one response to that. Rather than describe what is happening, state where things stand in a fixed vocabulary the model itself supplied, and leave the interpretation to the model. [WHY.md](WHY.md) sets out the problem, the move, and what the move does not fix.
 
 ## Start with the mechanism
 
@@ -111,6 +117,8 @@ The working corpus, calibration process, candidate notebook, automation, and liv
 │   ├── mechanisms_doc.rb     MECHANISMS.md renderer
 │   └── build_mechanisms_md.rb
 ├── MECHANISMS.md             human-readable registry (generated)
+├── WHY.md                    the problem the registry answers
+├── WHY.tr.md                 Turkish edition
 ├── DISTILLATION.md           how the vocabulary was made
 ├── DISTILLATION.tr.md        Turkish edition
 ├── METHODOLOGY.md            construction and use

@@ -70,6 +70,7 @@ The registry does not eliminate judgment. It makes part of that judgment inspect
 - Historical similarity does not establish prediction.
 - The registry is finance-first and may underrepresent mechanisms from other domains.
 - Default phase roles can hide case-specific role changes.
+- Two different states of the world that produce the same signature are, to a reading of that signature, the same state. Whatever the vocabulary does not carry is invisible to it.
 
 These are the reasons for versioning, counterexamples, and adversarial review.
 

@@ -60,6 +60,7 @@ Başka alanlar aynı protokolle kendi sicillerini kurar. Kanonik küme finans-ö
 
 ## İlgili belgeler
 
+- [WHY.tr.md](WHY.tr.md) — bu sözlüğün çözmek için kurulduğu sorun
 - [ADMISSION_RULES.md](ADMISSION_RULES.md) — kanıt kapısının tamamı
 - [SIGNATURE.md](SIGNATURE.md) — sicilin bir an için puanlanmış hâli
 - [METHODOLOGY.md](METHODOLOGY.md) — inşa ve kullanım

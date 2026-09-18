@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased — documentation
+
+The vocabulary is untouched. No identifier, definition, boundary, or default phase role changed, so the version does not move ([VERSIONING.md](VERSIONING.md)).
+
+- [WHY.md](WHY.md) and [WHY.tr.md](WHY.tr.md) — the problem the registry was built to solve, stated for the first time: the asymmetry between what a model can reach and what a person can specify, the move that answers it, and the failure modes the move leaves standing.
+- [PRIOR_ART.md](PRIOR_ART.md) — scalable oversight and weak-to-strong generalisation added as a neighbouring line.
+- [METHODOLOGY.md](METHODOLOGY.md) — the representational boundary added to the epistemic limits: two states that score identically are one state to a reading.
+
 ## [0.1.0] — 2026-09-17
 
 First public release.

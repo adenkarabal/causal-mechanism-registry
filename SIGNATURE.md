@@ -23,6 +23,7 @@ The signature layer runs on Claude Opus. Signatures, their calibration and the r
 
 ## Related documents
 
+- [WHY.md](WHY.md) — why the state is handed over scored instead of described
 - [MECHANISMS.md](MECHANISMS.md) — the thirty-two entries being scored
 - [DISTILLATION.md](DISTILLATION.md) — how the vocabulary was made
 - [METHODOLOGY.md](METHODOLOGY.md) — the unit of representation and the phase model

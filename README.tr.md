@@ -11,13 +11,19 @@
 [![Belgeler: CC BY 4.0](https://img.shields.io/badge/Belgeler-CC_BY_4.0-2f6f69.svg)](LICENSE.md)
 [![Kod: MIT](https://img.shields.io/badge/Kod-MIT-2f6f69.svg)](LICENSE-CODE)
 
-[Mekanizmalar](MECHANISMS.md) · [Nasıl kuruldu](DISTILLATION.tr.md) · [Yöntem](METHODOLOGY.md) · [Kabul kuralları](ADMISSION_RULES.md) · [İmza](SIGNATURE.md) · [Öncül çalışmalar](PRIOR_ART.md) · [English](README.md) · [adenkarabal.com](https://adenkarabal.com)
+[Neden bu yöntem](WHY.tr.md) · [Mekanizmalar](MECHANISMS.md) · [Nasıl kuruldu](DISTILLATION.tr.md) · [Yöntem](METHODOLOGY.md) · [Kabul kuralları](ADMISSION_RULES.md) · [İmza](SIGNATURE.md) · [Öncül çalışmalar](PRIOR_ART.md) · [English](README.md) · [adenkarabal.com](https://adenkarabal.com)
 
 Yöntem, kabul kuralları, imza ve öncül çalışmalar belgeleri İngilizcedir.
 
 </div>
 
 ---
+
+## Sicilin arkasındaki soru
+
+Bir dil modelinin bir konudaki erişimi tek bir insanınkinden geniştir; ona iyi bir soru sormak ise normalde iyi cevabı tanıyacak kadar bilmeyi gerektirir. Büyük bir konuda bu koşul tavana dönüşür: soranın bilgisi cevabın taşıyabileceğini sınırlar, ve soru bir şeyi belirtmeden bıraktığında cevap o boşluğu ima edilen biçime en makul geleniyle doldurarak gelir.
+
+Bu sicil o soruna verilmiş bir karşılıktır. Ne olduğunu anlatmak yerine, işlerin nerede durduğu modelin kendisinden gelen sabit bir sözlükle bildirilir; yorum modele bırakılır. Sorunu, hamleyi ve hamlenin düzeltmediğini [WHY.tr.md](WHY.tr.md) anlatır.
 
 ## Önce mekanizmaya bak
 
@@ -113,6 +119,8 @@ Döngüyü, rolleri ve kapsamı [DISTILLATION.tr.md](DISTILLATION.tr.md) verir.
 │   ├── mechanisms_doc.rb     MECHANISMS.md üreteci
 │   └── build_mechanisms_md.rb
 ├── MECHANISMS.md             insan-okur sicil (üretilir)
+├── WHY.md                    sicilin cevapladığı sorun
+├── WHY.tr.md                 Türkçe basım
 ├── DISTILLATION.md           sözlük nasıl kuruldu
 ├── DISTILLATION.tr.md        Türkçe basım
 ├── METHODOLOGY.md            inşa ve kullanım

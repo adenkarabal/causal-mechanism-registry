@@ -60,6 +60,7 @@ Other domains earn their own registries under the same protocol. The canonical s
 
 ## Related documents
 
+- [WHY.md](WHY.md) — the problem this vocabulary was built to solve
 - [ADMISSION_RULES.md](ADMISSION_RULES.md) — the evidence gate in full
 - [SIGNATURE.md](SIGNATURE.md) — the registry scored for a moment
 - [METHODOLOGY.md](METHODOLOGY.md) — construction and use

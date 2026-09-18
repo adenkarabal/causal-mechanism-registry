@@ -12,6 +12,7 @@ Named so that a reader can place the registry quickly. The scan is search-level.
 | Ontology- and schema-guided prompting | Those constrain the model's output. This loads its input state. |
 | Structured analytic techniques in intelligence analysis | Those adjudicate between competing hypotheses. A signature describes one state. |
 | Layered machine-readable research artifacts | Those carry a paper's claims. This carries a standing state on a cut-off schedule. |
+| Scalable oversight and weak-to-strong generalisation | The same problem shape: a supervisor that knows less than the system it supervises still has to elicit and check what that system knows. Those lines work on training and evaluation procedures. This is a querying discipline built on a frozen vocabulary. Neither validates the other, and no formal result is claimed here. |
 | Phase classification with public bulletins, such as the IPC | The nearest relative: a closed vocabulary, a severity scale, an evidence bar, a dated public record. It classifies outcome severity; this names the mechanisms producing it. |
 
 Not yet read against this work: composite risk indices in humanitarian and disaster response, event-coding vocabularies, conflict early-warning frameworks, and the forecasting-accountability literature.

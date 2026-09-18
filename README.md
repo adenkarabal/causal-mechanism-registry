@@ -11,7 +11,7 @@
 [![Docs: CC BY 4.0](https://img.shields.io/badge/Docs-CC_BY_4.0-2f6f69.svg)](LICENSE.md)
 [![Code: MIT](https://img.shields.io/badge/Code-MIT-2f6f69.svg)](LICENSE-CODE)
 
-[Mechanisms](MECHANISMS.md) · [How it was made](DISTILLATION.md) · [Method](METHODOLOGY.md) · [Admission rules](ADMISSION_RULES.md) · [Signature](SIGNATURE.md) · [Prior art](PRIOR_ART.md) · [Türkçe](README.tr.md)
+[Mechanisms](MECHANISMS.md) · [How it was made](DISTILLATION.md) · [Method](METHODOLOGY.md) · [Admission rules](ADMISSION_RULES.md) · [Signature](SIGNATURE.md) · [Prior art](PRIOR_ART.md) · [Türkçe](README.tr.md) · [adenkarabal.com](https://adenkarabal.com)
 
 </div>
 
@@ -132,6 +132,8 @@ The working corpus, calibration process, candidate notebook, automation, and liv
 Scored for a particular moment, the registry becomes a compact world state: each entry with an intensity from 0 to 100, a direction, and a justified zero where the mechanism is absent. The research system uses that vector for historical comparison, analogue retrieval, negative-space analysis, dated public readings, and conditioning a language model without a long narrative.
 
 The signature layer runs on Claude Opus. [SIGNATURE.md](SIGNATURE.md) has the object and the rules it is kept under.
+
+Dated readings are published at [adenkarabal.com](https://adenkarabal.com). The registry is open under CC BY 4.0; the readings are not.
 
 ## Release and scope
 

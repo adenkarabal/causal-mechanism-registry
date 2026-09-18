@@ -11,7 +11,7 @@
 [![Belgeler: CC BY 4.0](https://img.shields.io/badge/Belgeler-CC_BY_4.0-2f6f69.svg)](LICENSE.md)
 [![Kod: MIT](https://img.shields.io/badge/Kod-MIT-2f6f69.svg)](LICENSE-CODE)
 
-[Mekanizmalar](MECHANISMS.md) · [Nasıl kuruldu](DISTILLATION.tr.md) · [Yöntem](METHODOLOGY.md) · [Kabul kuralları](ADMISSION_RULES.md) · [İmza](SIGNATURE.md) · [Öncül çalışmalar](PRIOR_ART.md) · [English](README.md)
+[Mekanizmalar](MECHANISMS.md) · [Nasıl kuruldu](DISTILLATION.tr.md) · [Yöntem](METHODOLOGY.md) · [Kabul kuralları](ADMISSION_RULES.md) · [İmza](SIGNATURE.md) · [Öncül çalışmalar](PRIOR_ART.md) · [English](README.md) · [adenkarabal.com](https://adenkarabal.com)
 
 Yöntem, kabul kuralları, imza ve öncül çalışmalar belgeleri İngilizcedir.
 
@@ -134,6 +134,8 @@ Döngüyü, rolleri ve kapsamı [DISTILLATION.tr.md](DISTILLATION.tr.md) verir.
 Belirli bir an için puanlandığında sicil kompakt bir dünya durumuna dönüşür: her giriş 0–100 arası bir şiddet, bir yön ve mekanizma yoksa gerekçeli bir sıfır taşır. Araştırma sistemi bu vektörü tarihsel karşılaştırma, analog arama, negatif uzay incelemesi, tarihli kamusal okumalar ve bir dil modeline uzun anlatı vermeden bağlam yükleme için kullanır.
 
 İmza katmanı Claude Opus üzerinde çalışır. Nesnenin kendisi ve tabi olduğu kurallar [SIGNATURE.md](SIGNATURE.md) dosyasındadır.
+
+Tarihli okumalar [adenkarabal.com](https://adenkarabal.com) üzerinde yayımlanıyor. Sicil CC BY 4.0 ile açık; okumalar değil.
 
 ## Sürüm ve kapsam
 

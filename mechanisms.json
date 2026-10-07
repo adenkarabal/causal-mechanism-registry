@@ -1,0 +1,3776 @@
+{
+  "title": "Causal Mechanism Registry",
+  "version": "1.0.0",
+  "released": "2026-10-07",
+  "first_public_version": {
+    "version": "0.1.0",
+    "released": "2026-09-17"
+  },
+  "publisher": "Aden Karabal",
+  "site": "https://adenkarabal.com",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "ai_training": "not restricted by CC BY 4.0; attribution applies when the material is shared (see README)",
+  "signature_edition": "2026-09-25",
+  "count": 191,
+  "in_signature_count": 78,
+  "layers": {
+    "core": {
+      "label": "Core causal mechanisms",
+      "count": 133,
+      "in_signature": 32
+    },
+    "social": {
+      "label": "Social mechanisms",
+      "count": 32,
+      "in_signature": 20
+    },
+    "extension": {
+      "label": "Signature extensions",
+      "count": 21,
+      "in_signature": 21
+    },
+    "crisis_type": {
+      "label": "Crisis types",
+      "count": 5,
+      "in_signature": 5
+    }
+  },
+  "status_values": {
+    "stable": "Identifier and core meaning are fixed; later versions may only clarify.",
+    "provisional": "The identifier may still be renamed, merged or retired in a later version, always with a migration note."
+  },
+  "phase_vocabulary": [
+    "trigger",
+    "amplification",
+    "transmission",
+    "policy",
+    "resolution"
+  ],
+  "fields": {
+    "id": "Stable identifier. Never reused for another meaning.",
+    "name": "Display name. For entries in the signature, as shown on adenkarabal.com.",
+    "layer": "core | social | extension | crisis_type",
+    "status": "stable | provisional",
+    "definition": "What the entry is.",
+    "scope": "What it covers.",
+    "boundary": "What it is not, and which neighbouring entry takes the case instead.",
+    "test": "The distinguishing marker: what must be on record for the entry to apply.",
+    "related": "Identifiers named in the boundary or closest in meaning.",
+    "in_signature": "Whether the signature edition includes this mechanism, scored or marked unknown. false: named and defined here, not part of the current signature edition.",
+    "phase_roles": "Present only where default roles are assigned: roles in an episode, a prior rather than a claim about every occurrence.",
+    "introduced_in": "First version of this vocabulary that carried the identifier.",
+    "replaces": "Identifiers this entry supersedes."
+  },
+  "mechanisms": [
+    {
+      "id": "energy_supply_shock",
+      "name": "Energy supply shock",
+      "layer": "core",
+      "status": "stable",
+      "definition": "A disruption, or credible risk of disruption, to the physical availability of energy.",
+      "scope": "Outages, embargoes, interrupted pipeline or shipping routes, production or refining losses, and credible threats of any of these.",
+      "boundary": "Physical supply is central; price pass-through alone belongs under energy_cost_pressure.",
+      "test": "A physical shortfall in energy, or a credible threat of one, is on record, not only a higher price.",
+      "related": [
+        "energy_cost_pressure",
+        "energy_supply_relief"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "trigger"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "energy_supply_relief",
+      "name": "Energy supply relief",
+      "layer": "core",
+      "status": "stable",
+      "definition": "An easing of a previously binding energy-supply constraint or disruption risk.",
+      "scope": "Restored flows, new supply routes or capacity coming online, lifted embargoes, released emergency reserves, and receding disruption threats.",
+      "boundary": "Relief requires easing of the supply constraint, not merely weaker energy demand.",
+      "test": "A supply constraint that previously bound has loosened.",
+      "related": [
+        "energy_supply_shock",
+        "demand_slowdown"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "resolution",
+        "policy"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "energy_cost_pressure",
+      "name": "Energy cost pressure",
+      "layer": "core",
+      "status": "stable",
+      "definition": "Pressure transmitted to households, firms, or public balance sheets through the cost of energy.",
+      "scope": "Energy bills, fuel and power input costs, energy subsidies and their fiscal cost, and the margins of energy-intensive sectors.",
+      "boundary": "This is the cost-transmission channel, not the physical supply disruption itself.",
+      "test": "The burden arrives through what energy costs, whether or not supply was physically short.",
+      "related": [
+        "energy_supply_shock",
+        "cost_inflation"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "amplification",
+        "trigger"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "commodity_supply_squeeze",
+      "name": "Commodity supply squeeze",
+      "layer": "core",
+      "status": "stable",
+      "definition": "A tightening of physical commodity availability relative to near-term demand or deliverable capacity.",
+      "scope": "Metals, agricultural and food commodities, fertilisers and other physical commodities; export restrictions, logistics bottlenecks and thin deliverable stocks.",
+      "boundary": "Physical availability or deliverability is central; generalized cost inflation is a downstream mechanism.",
+      "test": "Deliverable supply is short of near-term demand.",
+      "related": [
+        "cost_inflation",
+        "inventory_pressure",
+        "energy_supply_shock"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "trigger",
+        "amplification"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "cost_inflation",
+      "name": "Cost inflation",
+      "layer": "core",
+      "status": "stable",
+      "definition": "Inflation transmitted primarily through rising input, wage, logistics, or production costs.",
+      "scope": "Pass-through of input, energy, wage, freight and import costs into prices.",
+      "boundary": "The causal cost channel must be present; a high inflation reading alone is insufficient.",
+      "test": "A cost increase is identified as the channel that moved prices.",
+      "related": [
+        "inflation_pressure",
+        "energy_cost_pressure"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "amplification",
+        "trigger"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "inflation_pressure",
+      "name": "Inflation pressure",
+      "layer": "core",
+      "status": "stable",
+      "definition": "Broad forces that push the general price level persistently upward.",
+      "scope": "Demand, cost, currency, expectations, and monetary or fiscal forces acting on the general price level.",
+      "boundary": "This is broader than any single inflation channel; cost_inflation is one possible mechanism beneath it.",
+      "test": "The general price level, not one price, is under persistent upward pressure.",
+      "related": [
+        "cost_inflation",
+        "fiscal_dominance"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "amplification",
+        "trigger"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "duration_selloff",
+      "name": "Duration sell-off",
+      "layer": "core",
+      "status": "stable",
+      "definition": "Selling pressure concentrated in long-duration bonds or assets as discount rates or term premia reprice.",
+      "scope": "Long-dated government and corporate debt and other long-duration assets whose value is most sensitive to discount rates and term premia.",
+      "boundary": "The duration channel must dominate; this is not a label for every bond-market decline.",
+      "test": "Losses are concentrated where duration is longest.",
+      "related": [
+        "sovereign_funding_stress",
+        "policy_repricing"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "transmission",
+        "amplification"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "sovereign_funding_stress",
+      "name": "Sovereign funding stress",
+      "layer": "core",
+      "status": "stable",
+      "definition": "Strain on a sovereign's capacity or cost to issue, roll over, or service public obligations.",
+      "scope": "Auction strain, rising sovereign borrowing costs, shortened maturities, loss of market access, and debt-service difficulty of central or general government.",
+      "boundary": "The stressed borrower is the sovereign; corporate funding and currency pressure are separate mechanisms.",
+      "test": "The sovereign's own ability or cost to fund itself is what is strained.",
+      "related": [
+        "funding_margin_pressure",
+        "fx_pressure",
+        "fiscal_dominance",
+        "debt_service_crowding_out"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "amplification",
+        "transmission"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "policy_repricing",
+      "name": "Policy repricing",
+      "layer": "core",
+      "status": "stable",
+      "definition": "A material revaluation of the expected path, stance, or reaction function of monetary or fiscal policy.",
+      "scope": "Shifts in expected policy rates, balance-sheet policy, fiscal stance, or the perceived reaction function of an authority.",
+      "boundary": "The change is in expected policy and its pricing, not merely the announcement of an isolated action.",
+      "test": "Expectations about the policy path changed, not only a single decision.",
+      "related": [
+        "intervention_risk",
+        "fiscal_dominance"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "policy",
+        "trigger"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "fiscal_dominance",
+      "name": "Fiscal dominance",
+      "layer": "core",
+      "status": "stable",
+      "definition": "A regime in which sovereign financing needs materially constrain monetary policy, subordinating price-stability choices to fiscal sustainability.",
+      "scope": "Monetary financing of deficits, rate suppression to contain debt service, and pressure on the central bank to accommodate fiscal needs.",
+      "boundary": "The fiscal-to-monetary direction of constraint is essential; simultaneous fiscal stress and policy repricing alone are insufficient.",
+      "test": "Monetary choices are shown to bend to the state's financing needs.",
+      "related": [
+        "sovereign_funding_stress",
+        "policy_repricing",
+        "erosion_of_institutional_independence"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "policy",
+        "amplification"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "fx_pressure",
+      "name": "FX pressure",
+      "layer": "core",
+      "status": "stable",
+      "definition": "System-level pressure on an exchange rate or on access to foreign-currency funding.",
+      "scope": "Depreciation pressure, reserve drawdowns, foreign-currency funding shortages, and parallel-market premia.",
+      "boundary": "This is the system-level pressure; entity-specific exposure belongs under currency_sensitivity.",
+      "test": "The pressure is on the currency, or on the country's foreign-currency access, as a whole.",
+      "related": [
+        "currency_sensitivity",
+        "intervention_risk",
+        "reserve_diversification"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "trigger",
+        "transmission"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "currency_sensitivity",
+      "name": "Currency sensitivity",
+      "layer": "core",
+      "status": "stable",
+      "definition": "Material exposure of an entity or sector's cash flow, costs, revenues, or balance sheet to exchange-rate changes.",
+      "scope": "Foreign-currency debt, import-cost dependence, foreign-currency revenues, and balance-sheet mismatches of firms, banks, households or sectors.",
+      "boundary": "This is exposure to currency movement, not the system-wide currency pressure itself.",
+      "test": "A named entity or sector is exposed to exchange-rate moves.",
+      "related": [
+        "fx_pressure"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "amplification"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "intervention_risk",
+      "name": "Intervention risk",
+      "layer": "core",
+      "status": "stable",
+      "definition": "A credible risk or expectation of official intervention in currency, rates, credit, or commodity markets.",
+      "scope": "Expected or threatened market operations, caps, controls and administrative measures by authorities.",
+      "boundary": "The mechanism is intervention risk or expectation, not every change in the expected policy path.",
+      "test": "A direct official action in a market is credibly expected or threatened.",
+      "related": [
+        "policy_repricing",
+        "fx_pressure"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "policy",
+        "trigger",
+        "resolution"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "export_earnings_shock",
+      "name": "Export earnings shock",
+      "layer": "core",
+      "status": "stable",
+      "definition": "A contraction in export earnings: a fall in export volumes or export prices, or a loss of market access.",
+      "scope": "Weaker external demand, lower world prices for exported goods, tariffs, quotas, boycotts, sanctions, or a collapse in the supply of the exported product.",
+      "boundary": "Chronic loss of export competitiveness, deindustrialisation or Dutch disease on their own are not this mechanism; weakness in domestic demand is demand_slowdown.",
+      "test": "What a country or sector earns from exports has contracted.",
+      "related": [
+        "demand_slowdown",
+        "geoeconomic_fragmentation"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "transmission",
+        "trigger"
+      ],
+      "introduced_in": "1.0.0",
+      "replaces": [
+        "export_pressure"
+      ]
+    },
+    {
+      "id": "liquidity_stress",
+      "name": "Liquidity stress",
+      "layer": "core",
+      "status": "stable",
+      "definition": "Difficulty obtaining funding or transacting at scale without material delay, discount, or price impact.",
+      "scope": "Funding-market strain, margin calls, collateral shortages and impaired market depth.",
+      "boundary": "Impaired funding or market functioning is required; volatility alone is insufficient.",
+      "test": "Funding, or trading at normal size, has become hard or costly.",
+      "related": [
+        "credit_market_freeze",
+        "basis_dislocation",
+        "self_fulfilling_run"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "transmission",
+        "amplification"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "credit_market_freeze",
+      "name": "Credit market freeze",
+      "layer": "core",
+      "status": "stable",
+      "definition": "A breakdown in credit-market intermediation in which liquidity promises, dealer capacity, and underlying asset liquidity become structurally incompatible.",
+      "scope": "Fund outflows meeting thinly traded credit, dealer balance-sheet limits, discounts to fund value, and halted issuance.",
+      "boundary": "Market intermediation must seize or fracture; ordinary spread widening or lower issuance alone is insufficient.",
+      "test": "Intermediation itself has seized, not only become more expensive.",
+      "related": [
+        "liquidity_stress"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "transmission",
+        "amplification"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "basis_dislocation",
+      "name": "Basis dislocation",
+      "layer": "core",
+      "status": "stable",
+      "definition": "A disorderly widening between linked instruments expected to converge, often intensified by leveraged arbitrage unwinds.",
+      "scope": "Cash-futures, swap and other convergence relationships, especially where leveraged positions are forced to unwind.",
+      "boundary": "Expected convergence and its breakdown are essential; generic relative-value movement does not qualify.",
+      "test": "Two instruments expected to converge have moved apart in a disorderly way.",
+      "related": [
+        "liquidity_stress"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "transmission",
+        "amplification"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "credit_cycle",
+      "name": "Credit cycle",
+      "layer": "core",
+      "status": "stable",
+      "definition": "A reinforcing expansion or contraction between credit availability, leverage, asset values, and economic activity.",
+      "scope": "Credit booms and busts, leverage build-up and deleveraging, and lending standards that move with asset values.",
+      "boundary": "The feedback cycle is central; a high level of debt without cyclical reinforcement is insufficient.",
+      "test": "Credit, leverage, asset values and activity are feeding each other.",
+      "related": [
+        "asset_quality_stress"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "amplification",
+        "trigger"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "funding_margin_pressure",
+      "name": "Funding margin pressure",
+      "layer": "core",
+      "status": "stable",
+      "definition": "Compression of non-bank or corporate margins through rising funding costs, refinancing burdens, or financing terms.",
+      "scope": "Corporate and non-bank refinancing walls, higher coupons, tighter covenants, and costlier trade or working-capital finance.",
+      "boundary": "This is broader corporate or non-bank funding pressure, not bank net-interest-margin compression.",
+      "test": "A non-bank borrower's margin is squeezed by what its funding costs.",
+      "related": [
+        "banking_margin_pressure",
+        "sovereign_funding_stress"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "amplification",
+        "transmission"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "asset_quality_stress",
+      "name": "Asset quality stress",
+      "layer": "core",
+      "status": "stable",
+      "definition": "Deterioration in the repayment quality, collateral value, or expected recovery of assets held by financial institutions.",
+      "scope": "Non-performing loans, impairments, falling collateral values and lower expected recoveries on financial institutions' assets.",
+      "boundary": "This concerns asset-side credit quality, not profitability compression from margins alone.",
+      "test": "The quality of the assets institutions carry has deteriorated.",
+      "related": [
+        "banking_margin_pressure",
+        "credit_cycle"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "amplification",
+        "transmission"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "banking_margin_pressure",
+      "name": "Banking margin pressure",
+      "layer": "core",
+      "status": "stable",
+      "definition": "Compression of banking net-interest margins or closely related intermediation profitability.",
+      "scope": "Net interest margin compression from funding costs, rate caps, deposit competition or regulatory constraints.",
+      "boundary": "The bank intermediation margin is central; credit-loss deterioration belongs under asset_quality_stress.",
+      "test": "Banks earn less on intermediation itself.",
+      "related": [
+        "asset_quality_stress",
+        "funding_margin_pressure"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "amplification"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "protection_gap",
+      "name": "Protection gap",
+      "layer": "core",
+      "status": "stable",
+      "definition": "The portion of economic loss not absorbed by insurance or other pre-arranged financial protection, shifting burden to households, firms, or the public balance sheet.",
+      "scope": "Uninsured disaster losses, underinsurance, insurer withdrawal from exposed areas, and losses falling on public budgets or households.",
+      "boundary": "This is the absorption-capacity gap, not the total physical or economic damage.",
+      "test": "Part of a loss was not absorbed by insurance or a pre-arranged buffer.",
+      "related": [
+        "cost_shifting",
+        "adaptation_finance_gap",
+        "natural_disaster"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "amplification",
+        "resolution"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "risk_appetite_reversal",
+      "name": "Risk appetite reversal",
+      "layer": "core",
+      "status": "stable",
+      "definition": "A directional shift from risk-seeking toward risk reduction, de-risking, or capital preservation.",
+      "scope": "Shifts from risk-seeking to de-risking across investors or lenders, including flight to safety and capital outflows from riskier markets.",
+      "boundary": "A reversal or transition is required; persistently low risk appetite alone is not the same mechanism.",
+      "test": "A change in the direction of risk-taking is observed, not only a low level.",
+      "related": [
+        "herd_behavior",
+        "contagion"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "transmission",
+        "trigger"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "ai_equity_momentum",
+      "name": "AI equity momentum",
+      "layer": "core",
+      "status": "stable",
+      "definition": "A self-reinforcing concentration of equity demand and performance around AI-related firms or capacity narratives.",
+      "scope": "Equity demand and valuations concentrated around AI-related firms, their suppliers and capacity narratives.",
+      "boundary": "This is a market-feedback mechanism, not a judgment about AI technology or all technology equities.",
+      "test": "A self-reinforcing feedback around AI-related firms is visible, not just strong results.",
+      "related": [
+        "equity_narrow_leadership",
+        "circular_financing",
+        "capacity_investment"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "amplification",
+        "trigger"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "equity_narrow_leadership",
+      "name": "Narrow equity leadership",
+      "layer": "core",
+      "status": "stable",
+      "definition": "Equity-index performance increasingly carried by a small group of constituents, creating concentration fragility.",
+      "scope": "Index performance carried by a small group of constituents, and the fragility that concentration creates.",
+      "boundary": "Concentration of leadership is required; a strong or rising market alone does not qualify.",
+      "test": "A small group of constituents carries the index.",
+      "related": [
+        "ai_equity_momentum"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "amplification"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "growth_slowdown",
+      "name": "Growth slowdown",
+      "layer": "core",
+      "status": "stable",
+      "definition": "A broad deceleration in real economic growth or productive activity.",
+      "scope": "Deceleration in output, production and activity at national, regional or global level.",
+      "boundary": "This concerns aggregate activity; demand_slowdown isolates the spending or orders channel.",
+      "test": "Aggregate activity is decelerating.",
+      "related": [
+        "demand_slowdown"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "resolution",
+        "trigger"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "demand_slowdown",
+      "name": "Demand slowdown",
+      "layer": "core",
+      "status": "stable",
+      "definition": "A material weakening in household, business, government, or external demand.",
+      "scope": "Weaker household consumption, business investment and orders, public spending, or external demand.",
+      "boundary": "The demand channel must weaken; supply-constrained output alone does not qualify.",
+      "test": "Spending or orders have weakened.",
+      "related": [
+        "growth_slowdown",
+        "export_earnings_shock"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "resolution",
+        "trigger"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "capacity_investment",
+      "name": "Capacity investment",
+      "layer": "core",
+      "status": "stable",
+      "definition": "Investment that expands productive capacity and can alter future supply, financing needs, or overcapacity risk.",
+      "scope": "Large capital expenditure on plants, data centres, energy, mines or other productive capacity, and the financing it requires.",
+      "boundary": "This concerns capacity-building commitments, not current output or ordinary maintenance spending.",
+      "test": "A commitment to new productive capacity is on record.",
+      "related": [
+        "ai_equity_momentum",
+        "circular_financing",
+        "useful_life_assumption"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "amplification"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "inventory_pressure",
+      "name": "Inventory pressure",
+      "layer": "core",
+      "status": "stable",
+      "definition": "Pressure created by inventory accumulation, scarcity, or liquidation that changes production, pricing, or financing behavior.",
+      "scope": "Stockpiling, destocking, and inventory gluts or shortages that change production, pricing or financing.",
+      "boundary": "Inventory dynamics must carry the mechanism; a physical supply shock without inventory transmission is separate.",
+      "test": "Inventory changes are what carry the effect.",
+      "related": [
+        "commodity_supply_squeeze"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "amplification"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "geopolitical_escalation",
+      "name": "Geopolitical escalation",
+      "layer": "core",
+      "status": "stable",
+      "definition": "An intensification of geopolitical conflict or coercion that enters economic behavior, allocation, or pricing.",
+      "scope": "Military, economic or diplomatic coercion that changes trade, investment, shipping, sanctions or risk pricing.",
+      "boundary": "Geopolitical news alone is insufficient; escalation must alter constraints, behavior, or risk pricing.",
+      "test": "Escalation changed constraints, behaviour or risk pricing, not only the news.",
+      "related": [
+        "geopolitical_deescalation",
+        "war_geopolitical",
+        "geoeconomic_fragmentation"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "trigger"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "geopolitical_deescalation",
+      "name": "Geopolitical de-escalation",
+      "layer": "core",
+      "status": "stable",
+      "definition": "An easing of geopolitical conflict or coercion that relaxes an economically binding constraint or risk premium.",
+      "scope": "Ceasefires, agreements, lifted sanctions and reopened routes that ease a prior constraint or risk premium.",
+      "boundary": "De-escalation is an active easing of prior stress, not the simple absence of new escalation.",
+      "test": "A prior geopolitical constraint has actively eased.",
+      "related": [
+        "geopolitical_escalation"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "resolution"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "contagion",
+      "name": "Contagion",
+      "layer": "core",
+      "status": "stable",
+      "definition": "Transmission of crisis stress from one institution, market, sector, or country to another through an identifiable channel.",
+      "scope": "Common-creditor, trade, funding, counterparty and confidence channels between institutions, markets, sectors or countries.",
+      "boundary": "Contagion is between-node transmission; loss multiplication within the same node is amplification.",
+      "test": "Stress moved from one node to another through a named channel.",
+      "related": [
+        "liquidity_stress",
+        "risk_appetite_reversal"
+      ],
+      "in_signature": true,
+      "phase_roles": [
+        "transmission"
+      ],
+      "introduced_in": "0.1.0"
+    },
+    {
+      "id": "accounting_disclosure_reform",
+      "name": "Accounting and disclosure reform",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "After falsified accounts are exposed, audit, accounting or disclosure standards are tightened to prevent a repetition.",
+      "scope": "Audit standards, revenue-recognition rules, resource reporting codes and corporate governance laws.",
+      "boundary": "It answers falsified reporting; reform of a reference price is benchmark_reform, prohibition of an instrument is instrument_ban_disclosure_reform, and post-crisis rules in general are re_regulation.",
+      "test": "A reporting or audit standard was changed in response to exposed falsification.",
+      "related": [
+        "benchmark_reform",
+        "instrument_ban_disclosure_reform",
+        "re_regulation",
+        "related_party_abuse"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "resolution"
+      ]
+    },
+    {
+      "id": "anti_hoarding_regulation",
+      "name": "Anti-hoarding regulation",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Laws and market officials prohibit and punish withholding essential goods from sale or cornering their supply.",
+      "scope": "Penal statutes, market inspectors, and price and storage rules for staples, found in several separate legal traditions.",
+      "boundary": "It prohibits; public purchases and releases of stocks are state_buffer_stock_intervention, limits on contract holdings in organised markets are position_limit_intervention, and the inventory changes themselves are inventory_pressure.",
+      "test": "A rule against withholding or cornering essential goods is on record and enforced.",
+      "related": [
+        "state_buffer_stock_intervention",
+        "position_limit_intervention",
+        "inventory_pressure",
+        "subsistence_unrest_spiral",
+        "self_fulfilling_run"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "policy"
+      ]
+    },
+    {
+      "id": "asset_management_company_resolution",
+      "name": "Asset management company resolution",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Impaired loans are moved out of banks into a separate company that manages and disposes of them, cleaning the banks' balance sheets.",
+      "scope": "Bad banks, public asset management companies and loan-transfer schemes, often combined with recapitalisation.",
+      "boundary": "The transfer of bad assets is the mechanism; capital injection is bank_recapitalization, and the deterioration that makes the transfer necessary is asset_quality_stress.",
+      "test": "Impaired assets were transferred out of banks to a dedicated entity.",
+      "related": [
+        "bank_recapitalization",
+        "asset_quality_stress",
+        "cost_shifting"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "resolution"
+      ]
+    },
+    {
+      "id": "asymmetric_payoff_mis_selling",
+      "name": "Asymmetric-payoff mis-selling",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Products with capped gains and open-ended losses are marketed to retail investors or small firms that cannot assess them.",
+      "scope": "Accumulators, knock-in knock-out currency contracts, structured notes and similar products sold to households and exporters.",
+      "boundary": "The harm comes from the sale to clients who cannot assess the payoff; the exposure itself is negative_convexity_short_option, and opacity of the product is financial_product_complexity_opacity.",
+      "test": "Products with limited upside and large downside were sold to non-professional clients.",
+      "related": [
+        "negative_convexity_short_option",
+        "financial_product_complexity_opacity",
+        "instrument_ban_disclosure_reform",
+        "embedded_leverage"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "bail_in",
+      "name": "Bail-in",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A failing institution is recapitalised by writing down its creditors' or depositors' claims or converting them into equity.",
+      "scope": "Statutory and negotiated write-downs or conversions of bonds, deposits and other liabilities during a resolution.",
+      "boundary": "The loss falls on the institution's own creditors rather than on public funds; the general change of who bears a loss is cost_shifting, public capital put into banks is bank_recapitalization, and an unpredictable taking of property by the state is arbitrary_expropriation_shock.",
+      "test": "Claims of creditors or depositors on a failing institution were written down or converted.",
+      "related": [
+        "cost_shifting",
+        "bank_recapitalization",
+        "arbitrary_expropriation_shock"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "policy",
+        "resolution"
+      ]
+    },
+    {
+      "id": "balance_sheet_recession",
+      "name": "Balance-sheet recession",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "After an asset bust, households and firms use their income to pay down debt instead of spending or borrowing, so demand stays weak even when credit is cheap.",
+      "scope": "Private-sector debt repayment after collapses in property or other asset prices, falling demand for loans, and prolonged weak spending by households, firms or both.",
+      "boundary": "The contraction comes from borrowers choosing to repay, not from lenders refusing credit; a reinforcing swing between credit supply, asset values and activity is credit_cycle, a fall in prices that raises real debt burdens is debt_deflation, and debt too large to permit new investment is debt_overhang.",
+      "test": "Private debt is being repaid while borrowing costs are low or falling, and demand for new credit is weak.",
+      "related": [
+        "credit_cycle",
+        "debt_deflation",
+        "debt_overhang",
+        "demand_slowdown"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "bank_recapitalization",
+      "name": "Bank recapitalisation",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Public funds restore the capital of banks judged undercapitalised, so that they can absorb losses and continue lending.",
+      "scope": "Capital injections through preferred or common shares, subordinated instruments or government bonds, in systemic banking crises.",
+      "boundary": "It supplies capital, not liquidity (contrast lender_of_last_resort_relief); a stake taken for strategic rather than rescue purposes is state_equity_participation, and the transfer of bad loans to a separate entity is asset_management_company_resolution.",
+      "test": "Public capital was injected into banks to restore their solvency.",
+      "related": [
+        "lender_of_last_resort_relief",
+        "state_equity_participation",
+        "asset_management_company_resolution",
+        "cost_shifting"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "policy",
+        "resolution"
+      ]
+    },
+    {
+      "id": "basis_risk",
+      "name": "Basis risk",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "The risk that a hedge and the exposure it is meant to offset move differently because they differ in tenor, timing or reference, so the hedge protects less than intended and can create losses or funding needs of its own.",
+      "scope": "Short-dated hedges rolled against long commitments, cross-hedges and over-hedges.",
+      "boundary": "It is a mismatch within one hedged position; a disorderly widening between linked instruments across a market is basis_dislocation, and the funding strain it may cause is liquidity_stress.",
+      "test": "A hedge and the exposure it covers are documented to differ in tenor, timing or reference, and either that gap is identified as a material risk or the hedge failed to offset the exposure as intended.",
+      "related": [
+        "basis_dislocation",
+        "liquidity_stress",
+        "model_risk"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "benchmark_reform",
+      "name": "Benchmark reform",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A manipulated reference rate or price fixing is replaced, or rebuilt on transaction data under independent oversight.",
+      "scope": "Interest-rate benchmarks, currency and metal fixings, and their administration.",
+      "boundary": "It answers manipulation of a reference price; broader reporting standards are accounting_disclosure_reform, post-crisis regimes in general are re_regulation, and exploitation of market rules is market_design_gaming.",
+      "test": "A benchmark's method or administrator was changed after manipulation.",
+      "related": [
+        "accounting_disclosure_reform",
+        "re_regulation",
+        "market_design_gaming"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "resolution"
+      ]
+    },
+    {
+      "id": "capital_flight",
+      "name": "Capital flight",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Residents move their savings out of the domestic economy in large amounts to escape expected losses, devaluation or controls.",
+      "scope": "Outflows by domestic households, firms and elites through banks, trade misinvoicing or cash, often ahead of devaluation, default or confiscation.",
+      "boundary": "The actors are residents; a halt of foreign financing is sudden_stop, and a general shift of investors away from risk is risk_appetite_reversal. A switch to foreign currency or metal kept at home is flight_to_hard_money_dollarization, and the strain on the currency is fx_pressure.",
+      "test": "Outflows by residents rise sharply, separately from changes in foreign inflows.",
+      "related": [
+        "sudden_stop",
+        "risk_appetite_reversal",
+        "flight_to_hard_money_dollarization",
+        "fx_pressure"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "transmission",
+        "amplification"
+      ]
+    },
+    {
+      "id": "capital_recycling",
+      "name": "Capital recycling",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Surpluses accumulated in one region are placed with intermediaries and lent on to deficit regions, building up their debt.",
+      "scope": "Recycling of commodity-export surpluses through international banks, and cross-border savings flowing into external borrowing booms.",
+      "boundary": "The defining feature is the cross-border chain from surplus to intermediary to borrower; a domestic credit boom is credit_cycle, and borrowing against expected resource rents is windfall_overextension.",
+      "test": "Lending to a borrowing region is traced to surpluses that another region placed with intermediaries.",
+      "related": [
+        "credit_cycle",
+        "windfall_overextension",
+        "sudden_stop"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "central_bank_independence_restoration",
+      "name": "Central bank independence restoration",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Monetary authority is freed from fiscal subordination, ending inflation driven by monetary financing.",
+      "scope": "Accords, statutes and reforms that return control of policy instruments to a central bank.",
+      "boundary": "It reverses fiscal_dominance and erosion_of_institutional_independence; creating an institution that did not exist is new_institution_founding.",
+      "test": "A legal or formal change returned control of monetary policy to the central bank.",
+      "related": [
+        "fiscal_dominance",
+        "erosion_of_institutional_independence",
+        "new_institution_founding"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "policy",
+        "resolution"
+      ]
+    },
+    {
+      "id": "clean_slate_debt_cancellation",
+      "name": "Clean-slate debt cancellation",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A ruler or state cancels existing private debts by decree, releasing debtors and often persons bound for debt.",
+      "scope": "Royal edicts releasing debts, cancellations of debt and bondage, and the abolition of personal liability for debt.",
+      "boundary": "The debts are extinguished; deferral or conversion is debt_moratorium_relief, and a successor state refusing the debts of its predecessor is odious_debt_repudiation.",
+      "test": "A decree extinguished existing private debts.",
+      "related": [
+        "debt_moratorium_relief",
+        "odious_debt_repudiation",
+        "debt_bondage_spiral"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "resolution"
+      ]
+    },
+    {
+      "id": "clearing_access_exclusion",
+      "name": "Clearing access exclusion",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Institutions outside the membership of a clearing or settlement system are cut off from its support when a crisis hits.",
+      "scope": "Non-member banks, trust companies, funds and dealers that depend on members for clearing, and the uneven reach of emergency facilities.",
+      "boundary": "The question is who is inside the system; generic funding strain is liquidity_stress, and the abolition of the system itself is infrastructure_regime_termination.",
+      "test": "An institution's lack of membership in a clearing system is shown to have denied it support in a crisis.",
+      "related": [
+        "liquidity_stress",
+        "infrastructure_regime_termination",
+        "settlement_failure",
+        "lender_of_last_resort_relief"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "coercive_interest_reduction",
+      "name": "Coercive interest reduction",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A sovereign lowers the interest on its existing debt by its own decision, through a conversion or consolidation, without formally defaulting.",
+      "scope": "Conversions of high-coupon debt into lower-coupon issues where holders have little real choice, and consolidations that lower the rate.",
+      "boundary": "No default is declared; a refusal to pay on grounds of legitimacy is odious_debt_repudiation, a failure to fund is sovereign_funding_stress, and a coordinated workout of company debts is debt_restructuring_framework.",
+      "test": "The rate on existing sovereign debt was cut by the debtor's decision without a declared default.",
+      "related": [
+        "odious_debt_repudiation",
+        "sovereign_funding_stress",
+        "debt_restructuring_framework",
+        "forced_loan_capital_levy"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "policy",
+        "resolution"
+      ]
+    },
+    {
+      "id": "coin_clipping_quality_degradation",
+      "name": "Coin clipping",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Users shave or wear down coins in circulation, so the money in use contains less metal than its face value.",
+      "scope": "Clipping, sweating and filing of hand-struck coin, and the falling acceptance of underweight coin.",
+      "boundary": "The erosion comes from users, not from the issuer; deliberate reduction by the issuer is debasement_seigniorage, and a reminting that answers the erosion is recoinage_shock.",
+      "test": "Circulating coins are shown to be underweight through use or tampering, not through the issuer's decision.",
+      "related": [
+        "debasement_seigniorage",
+        "recoinage_shock"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "commodity_backed_debt_overhang",
+      "name": "Commodity-backed debt overhang",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Debt repaid in, or secured on, a commodity becomes heavier when the commodity's price falls, because revenue and collateral fall together.",
+      "scope": "Oil-for-loans arrangements and similar commodity-secured or prepayment financing of sovereigns and state firms.",
+      "boundary": "The commodity is the means of repayment or the collateral; unsecured borrowing against expected rents is windfall_overextension, general strain in market funding is sovereign_funding_stress, and debt that deters new investment is debt_overhang.",
+      "test": "A debt contract ties repayment or security to a commodity whose price fell.",
+      "related": [
+        "windfall_overextension",
+        "sovereign_funding_stress",
+        "debt_overhang",
+        "commodity_dependence_fiscal_collapse"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "commodity_dependence_fiscal_collapse",
+      "name": "Commodity-dependent fiscal collapse",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A budget that relies on one commodity's revenue falls into crisis when that commodity's price drops.",
+      "scope": "Exporters of oil, copper, tin and other products whose public revenue and external balance hinge on a single commodity.",
+      "boundary": "The dependence of public finances on one commodity is the mechanism; strain on market access is sovereign_funding_stress, and the fall in export income itself is export_earnings_shock.",
+      "test": "A single commodity supplies a dominant share of public revenue, and its price fall precedes a fiscal crisis.",
+      "related": [
+        "sovereign_funding_stress",
+        "export_earnings_shock",
+        "terms_of_trade_shock",
+        "windfall_overextension"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "transmission"
+      ]
+    },
+    {
+      "id": "competitiveness_overvaluation",
+      "name": "Overvaluation and lost competitiveness",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "An overvalued real exchange rate erodes the competitiveness of tradable sectors and opens an external deficit.",
+      "scope": "Pegs and managed rates kept above what costs and prices support, chronic external deficits, and the devaluations that follow; undervaluation and surpluses are the mirror case.",
+      "boundary": "It names the chronic loss of competitiveness that export_earnings_shock leaves out. Appreciation driven by a resource windfall is dutch_disease, the decision to fix a parity too high is overvalued_peg_entry, and pressure on the currency itself is fx_pressure.",
+      "test": "The real exchange rate is shown to be out of line with relative costs, with a measurable loss of export or import-competing share.",
+      "related": [
+        "export_earnings_shock",
+        "dutch_disease",
+        "overvalued_peg_entry",
+        "fx_pressure",
+        "peg_defense_failure"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "trigger"
+      ]
+    },
+    {
+      "id": "compulsory_domestic_conversion",
+      "name": "Compulsory domestic conversion",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A state compels holders of an existing domestic entitlement, such as a stipend or pension, to accept government bonds in its place.",
+      "scope": "Commutation of hereditary stipends, pensions or salaries into bonds, and similar forced conversions of claims that were not debt.",
+      "boundary": "An existing obligation is converted; new compulsory lending is forced_loan_capital_levy, an interest cut on existing debt is coercive_interest_reduction, and an unpredictable taking is arbitrary_expropriation_shock.",
+      "test": "Holders of a domestic entitlement were required to accept bonds instead of it.",
+      "related": [
+        "forced_loan_capital_levy",
+        "coercive_interest_reduction",
+        "arbitrary_expropriation_shock"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "policy"
+      ]
+    },
+    {
+      "id": "convertibility_suspension",
+      "name": "Convertibility suspension",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Authorities formally suspend the right to exchange money for metal or for a fixed foreign standard, or suspend a statutory limit on note issue.",
+      "scope": "Wartime and emergency suspensions, legal-tender paper issued without redemption, and temporary suspensions used to relieve a liquidity panic.",
+      "boundary": "It is a discrete official act; continuing pressure on the currency is fx_pressure, and an expected official move is intervention_risk. Recovery after leaving a parity is devaluation_exit, and tokens issued with a redemption promise that was never honoured are token_redemption_collapse.",
+      "test": "A formal suspension of convertibility, or of the rule tying issue to reserves, is on record.",
+      "related": [
+        "fx_pressure",
+        "intervention_risk",
+        "devaluation_exit",
+        "token_redemption_collapse",
+        "lender_of_last_resort_relief"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "policy"
+      ]
+    },
+    {
+      "id": "corner_dynamics",
+      "name": "Market corner",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A trader or group gains control of the deliverable supply of a commodity or security while owning long contracts on it, so short holders must settle at a price the group sets.",
+      "scope": "Commodity and share corners and the settlement squeezes they produce.",
+      "boundary": "Control of deliverable supply is deliberate; a natural shortage is commodity_supply_squeeze, forced short covering without control of supply is short_squeeze, and failure to deliver at expiry is delivery_default.",
+      "test": "One party controls most of the deliverable supply and a large long position at the same time.",
+      "related": [
+        "commodity_supply_squeeze",
+        "short_squeeze",
+        "delivery_default",
+        "position_limit_intervention"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "trigger"
+      ]
+    },
+    {
+      "id": "creditor_governance",
+      "name": "Creditor governance",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A sovereign gives its creditors an institutional role in managing its debt or revenues, which lowers its cost of borrowing.",
+      "scope": "Debt offices run with creditor participation, revenues assigned to debt service under creditor oversight, and standing bondholder bodies.",
+      "boundary": "The role is granted to build credibility; control imposed by foreign creditors after a default is foreign_financial_control, and constitutional limits on the sovereign's power to default are credible_commitment_regime.",
+      "test": "Creditors hold seats or rights in the body that manages the sovereign's debt.",
+      "related": [
+        "foreign_financial_control",
+        "credible_commitment_regime",
+        "sovereign_funding_stress"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "resolution"
+      ]
+    },
+    {
+      "id": "currency_reform_redenomination",
+      "name": "Currency reform and redenomination",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A currency is replaced by a new unit at a fixed conversion ratio, often to close an episode of very high inflation.",
+      "scope": "New units with zeros removed, conversion of balances and prices, and reforms that reset the monetary standard.",
+      "boundary": "It replaces the unit; reminting existing coin is recoinage_shock, and tying the currency to an external anchor is exchange_rate_based_stabilization. Using the conversion to wipe out holdings is arbitrary_expropriation_shock.",
+      "test": "A new monetary unit replaced the old one at an announced ratio.",
+      "related": [
+        "recoinage_shock",
+        "exchange_rate_based_stabilization",
+        "arbitrary_expropriation_shock",
+        "heterodox_shock_stabilization_plan"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "policy",
+        "resolution"
+      ]
+    },
+    {
+      "id": "current_account_swing",
+      "name": "Current account swing",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A country's current account balance changes abruptly and by a large amount, in either direction, changing its need for external financing or its accumulation of reserves.",
+      "scope": "Sign changes and large, rapid swings of the trade and current balance: a move from surplus into deficit, and also the sharp narrowing of a large deficit that the literature calls a current account reversal.",
+      "boundary": "It records the swing in the external balance; the halt of foreign financing is sudden_stop, a move in relative prices is terms_of_trade_shock, and the currency symptom is fx_pressure.",
+      "test": "The current account balance changed sign, or moved by a large amount, within a short period.",
+      "related": [
+        "sudden_stop",
+        "terms_of_trade_shock",
+        "fx_pressure",
+        "specie_drain"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "trigger"
+      ]
+    },
+    {
+      "id": "debasement_seigniorage",
+      "name": "Debasement for seigniorage",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "An issuing authority lowers the metal content or weight of its coins and keeps the difference as revenue.",
+      "scope": "Reduced fineness, lighter coins at unchanged face value, token coinage and fraud at the mint, in commodity-money systems.",
+      "boundary": "The issuer acts from above; erosion by users is coin_clipping_quality_degradation. A general rise in prices is inflation_pressure, and monetary financing of a state under paper money is fiscal_dominance.",
+      "test": "The issuer reduced the metal value of coins while keeping their face value.",
+      "related": [
+        "coin_clipping_quality_degradation",
+        "inflation_pressure",
+        "fiscal_dominance",
+        "recoinage_shock"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "trigger"
+      ]
+    },
+    {
+      "id": "debt_deflation",
+      "name": "Debt deflation",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Falling prices raise the real burden of debts fixed in money terms, forcing distressed sales that push prices down further.",
+      "scope": "General or sectoral deflation acting on household, farm and corporate debt, with forced liquidation and falling collateral values.",
+      "boundary": "The price fall is the channel; debt repair through spending cuts and repayment, with or without falling prices, is balance_sheet_recession, and the two can act together. The public-debt side is war_debt_real_burden_deflation, and deflation caused by a shortage of monetary metal is specie_scarcity_deflation.",
+      "test": "Falling prices are recorded alongside a rising real debt burden and forced selling.",
+      "related": [
+        "balance_sheet_recession",
+        "war_debt_real_burden_deflation",
+        "specie_scarcity_deflation",
+        "credit_cycle"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "debt_moratorium_relief",
+      "name": "Debt moratorium relief",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "An authority suspends, defers or forcibly converts private debt payments to relieve distressed debtors, without extinguishing the debts.",
+      "scope": "Moratoria on collection, relief statutes for farmers and peasants, bans on coercive collection, and forced conversion of foreign-currency loans.",
+      "boundary": "The claim survives in altered form; outright cancellation is clean_slate_debt_cancellation, and a coordinated workout of company debts is debt_restructuring_framework.",
+      "test": "An official act deferred, suspended or converted private debt payments.",
+      "related": [
+        "clean_slate_debt_cancellation",
+        "debt_restructuring_framework",
+        "debt_bondage_spiral",
+        "microfinance_overlending"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "policy",
+        "resolution"
+      ]
+    },
+    {
+      "id": "debt_overhang",
+      "name": "Debt overhang",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Debt is so large that the gains from new investment or effort would go to creditors, so borrowers stop investing or spending.",
+      "scope": "Households, firms and sovereigns whose existing debt deters new investment, including foreign-currency mortgages and arrears.",
+      "boundary": "Borrowers cannot or will not invest under the weight of the debt; voluntary repayment is balance_sheet_recession, and lenders keeping insolvent firms alive is zombie_firm_forbearance.",
+      "test": "Existing debt is shown to deter investment or spending that would otherwise be worthwhile.",
+      "related": [
+        "balance_sheet_recession",
+        "zombie_firm_forbearance",
+        "twin_balance_sheet",
+        "commodity_backed_debt_overhang"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "debt_restructuring_framework",
+      "name": "Debt restructuring framework",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "An official or coordinated framework restructures many corporate debts at once, in place of case-by-case default.",
+      "scope": "Out-of-court workout schemes, insolvency codes and exchange-rate risk schemes for corporate debtors.",
+      "boundary": "It is a framework for firms; interest cuts by a sovereign on its own debt are coercive_interest_reduction, and relief for households or small debtors is debt_moratorium_relief.",
+      "test": "A common framework governed the restructuring of many corporate debts.",
+      "related": [
+        "coercive_interest_reduction",
+        "debt_moratorium_relief",
+        "twin_balance_sheet",
+        "zombie_firm_forbearance"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "resolution"
+      ]
+    },
+    {
+      "id": "delivery_default",
+      "name": "Delivery default",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Holders of short futures positions fail to deliver the commodity at expiry.",
+      "scope": "Defaults at contract expiry in commodities with thin deliverable supply, often at the end of a corner.",
+      "boundary": "It is a failure to deliver; a timing loss between the two legs of a settlement is settlement_failure, a deliberate corner is corner_dynamics, and a disorderly gap between linked instruments before expiry is basis_dislocation.",
+      "test": "Contracts went undelivered at expiry.",
+      "related": [
+        "settlement_failure",
+        "corner_dynamics",
+        "basis_dislocation"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "trigger"
+      ]
+    },
+    {
+      "id": "deposit_guarantee_blanket",
+      "name": "Blanket deposit guarantee",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Authorities guarantee all deposits, or all bank liabilities, to stop a run.",
+      "scope": "Blanket or unlimited guarantees issued during systemic banking crises.",
+      "boundary": "It is a realised guarantee; the run it answers is self_fulfilling_run, and the extra risk-taking it may encourage is moral_hazard.",
+      "test": "A guarantee covering all deposits or liabilities was announced.",
+      "related": [
+        "self_fulfilling_run",
+        "moral_hazard",
+        "lender_of_last_resort_relief"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "policy",
+        "resolution"
+      ]
+    },
+    {
+      "id": "devaluation_exit",
+      "name": "Devaluation exit",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Leaving a fixed parity ends a deflationary adjustment and lets prices and activity recover.",
+      "scope": "Exits from metallic standards or pegs followed by reflation.",
+      "boundary": "It requires the recovery that follows the exit; the formal suspension itself is convertibility_suspension, and a forced devaluation after reserves run out is peg_defense_failure.",
+      "test": "Prices and activity recover after a fixed parity is abandoned.",
+      "related": [
+        "convertibility_suspension",
+        "peg_defense_failure",
+        "debt_deflation"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "resolution"
+      ]
+    },
+    {
+      "id": "directed_lending",
+      "name": "Directed lending",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Official mandates steer bank lending to priority sectors or borrowers, and the loans accumulate as non-performing assets.",
+      "scope": "Priority-sector quotas, policy loans and state-guided credit allocation.",
+      "boundary": "The allocation is set by mandate; the deterioration of loan quality is asset_quality_stress, and a credit boom driven by markets is credit_cycle.",
+      "test": "Lending quotas or directives set by authorities are on record for the loans that later went bad.",
+      "related": [
+        "asset_quality_stress",
+        "credit_cycle",
+        "regulatory_forbearance"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "disaster_reconstruction_finance",
+      "name": "Disaster reconstruction finance",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Rebuilding after a disaster is financed through tax remission, special levies, transfers of assets or public borrowing.",
+      "scope": "Reconstruction funds, earmarked levies, debt issued for rebuilding, and redistribution of institutional assets.",
+      "boundary": "It finances rebuilding; immediate relief is external_relief_mobilization, and the uninsured loss is protection_gap.",
+      "test": "A dedicated financing arrangement for reconstruction is on record.",
+      "related": [
+        "external_relief_mobilization",
+        "protection_gap",
+        "natural_disaster"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "resolution"
+      ]
+    },
+    {
+      "id": "doctrinal_disinflation",
+      "name": "Doctrinal disinflation",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A central bank tightens despite domestic slack because a doctrine or concern for reputation, such as restoring a parity, demands it.",
+      "scope": "Tightening to return to or defend a historic parity, and policy justified by credibility rather than by current inflation.",
+      "boundary": "The motive is doctrinal, not an inflation goal; a change in the expected policy path in general is policy_repricing, and the choice of parity itself is overvalued_peg_entry.",
+      "test": "Tightening was justified by parity or reputation while domestic conditions called for easing.",
+      "related": [
+        "policy_repricing",
+        "overvalued_peg_entry",
+        "debt_deflation",
+        "competitiveness_overvaluation"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "policy",
+        "trigger"
+      ]
+    },
+    {
+      "id": "dual_measure_divergence",
+      "name": "Dual-measure divergence",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "One obligation carries two official numbers that are both correct, and decisions follow the number that sets the obligation rather than the one that measures the capacity to carry it.",
+      "scope": "Nominal against net loan proceeds, quotas against actual output, insured value against replacement cost, and similar paired measures.",
+      "boundary": "Both numbers are true; a false number is sovereign_statistics_falsification, information missing at the moment of decision is fog_of_war, and an assumption that moves reported profit is useful_life_assumption.",
+      "test": "Two official measures of the same obligation diverge and the decision is shown to follow the one that governs the obligation.",
+      "related": [
+        "sovereign_statistics_falsification",
+        "fog_of_war",
+        "useful_life_assumption",
+        "sovereign_funding_stress"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "dutch_disease",
+      "name": "Dutch disease",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A resource windfall raises the real exchange rate and draws resources away from other tradable sectors, hollowing out manufacturing or agriculture.",
+      "scope": "Windfalls from gas, oil, metals and other resources, real appreciation, and the shrinking of tradable sectors outside the resource.",
+      "boundary": "The windfall drives the appreciation; overvaluation from policy is competitiveness_overvaluation. A fall in export income counts as export_earnings_shock only when earnings actually contract.",
+      "test": "A resource windfall is followed by real appreciation and a measured decline of other tradable sectors.",
+      "related": [
+        "competitiveness_overvaluation",
+        "export_earnings_shock",
+        "windfall_overextension",
+        "commodity_dependence_fiscal_collapse"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "embedded_leverage",
+      "name": "Embedded leverage",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "An instrument's payoff multiplies movements in its reference rate or price, so a small position carries an exposure far larger than the capital committed.",
+      "scope": "Leveraged swaps, structured notes and other derivatives whose notional exposure dwarfs the capital at stake.",
+      "boundary": "The leverage lies in the design of the instrument; leverage obtained by borrowing against collateral is leverage_spiral, and an asymmetric payoff sold to unsophisticated clients is asymmetric_payoff_mis_selling.",
+      "test": "An instrument's loss on a given market move is a multiple of that move.",
+      "related": [
+        "leverage_spiral",
+        "asymmetric_payoff_mis_selling",
+        "negative_convexity_short_option"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "exchange_rate_based_stabilization",
+      "name": "Exchange-rate-based stabilization",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Inflation is brought down by tying the currency to an external or nominal anchor that breaks inflation expectations.",
+      "scope": "Pegs, currency boards, convertibility laws and indexed transition units used to end high inflation.",
+      "boundary": "The anchor is the mechanism; a package with price and wage freezes is heterodox_shock_stabilization_plan, an externally financed programme with conditions is imf_conditional_adjustment, and a new unit on its own is currency_reform_redenomination.",
+      "test": "An exchange-rate or nominal anchor was adopted as the main instrument against inflation.",
+      "related": [
+        "heterodox_shock_stabilization_plan",
+        "imf_conditional_adjustment",
+        "currency_reform_redenomination",
+        "peg_defense_failure",
+        "policy_repricing"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "policy",
+        "resolution"
+      ]
+    },
+    {
+      "id": "export_ban_provisioning_cascade",
+      "name": "Export-ban cascade",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Producing countries restrict food exports to protect domestic supply, which tightens world supply and prompts further restrictions.",
+      "scope": "Export bans, taxes and quotas on staples, and the importing countries left short.",
+      "boundary": "It is a self-protective coordination failure among states; a physical shortfall alone is commodity_supply_squeeze, the spread of stress through a named channel is contagion, and lasting redirection of trade along blocs is geoeconomic_fragmentation.",
+      "test": "Successive export restrictions by several producers are recorded during a price surge.",
+      "related": [
+        "commodity_supply_squeeze",
+        "contagion",
+        "geoeconomic_fragmentation",
+        "famine_food_security"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "external_relief_mobilization",
+      "name": "External relief mobilisation",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Resources from outside a stricken area, such as state granaries, foreign aid or institutional assets, are mobilised to relieve a disaster.",
+      "scope": "Release of public grain, international relief campaigns, and private or religious relief funds.",
+      "boundary": "It is relief brought in from outside; financing the rebuilding is disaster_reconstruction_finance, cuts to aid are aid_cuts, and the public's judgement of the response is performance_legitimacy.",
+      "test": "Relief resources from outside the affected area are shown to have arrived and been distributed.",
+      "related": [
+        "disaster_reconstruction_finance",
+        "aid_cuts",
+        "performance_legitimacy",
+        "state_buffer_stock_intervention"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "resolution"
+      ]
+    },
+    {
+      "id": "fictitious_asset_issuance",
+      "name": "Fictitious asset issuance",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Claims are issued on assets that do not exist.",
+      "scope": "Fake deposits, certificates, collectibles, forests, mines, digital tokens and even countries.",
+      "boundary": "The asset is absent; misrepresentation of a real asset is issuance_promotion_fraud, and a loan built to default is predatory_lending_issuance_fraud.",
+      "test": "The asset behind the claims was shown not to exist.",
+      "related": [
+        "issuance_promotion_fraud",
+        "predatory_lending_issuance_fraud",
+        "affinity_fraud",
+        "related_party_abuse"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "trigger"
+      ]
+    },
+    {
+      "id": "financial_product_complexity_opacity",
+      "name": "Product complexity and opacity",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A product is so complex or opaque that its owners cannot value it or exit from it when conditions change.",
+      "scope": "Structured notes, auction-rate securities, synthetic credit products and similar instruments.",
+      "boundary": "Opacity blocks valuation and exit; wrong model assumptions are model_risk, marketing to unsuitable clients is asymmetric_payoff_mis_selling, and a market-wide seizure of credit markets is credit_market_freeze.",
+      "test": "Owners could not price the product or dispose of it when they needed to.",
+      "related": [
+        "model_risk",
+        "asymmetric_payoff_mis_selling",
+        "credit_market_freeze"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "financial_warfare_sanctions",
+      "name": "Financial warfare and sanctions",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A state uses financial infrastructure as a weapon, freezing assets or reserves or cutting an adversary off from payment and clearing networks.",
+      "scope": "Asset and reserve freezes, exclusion from payment systems, financial blockades and secondary sanctions.",
+      "boundary": "The coercion runs through finance; geopolitical coercion in general is geopolitical_escalation, and lasting redirection of flows along bloc lines is geoeconomic_fragmentation.",
+      "test": "Assets, reserves or access to payment networks were blocked as a coercive measure.",
+      "related": [
+        "geopolitical_escalation",
+        "geoeconomic_fragmentation",
+        "reserve_diversification",
+        "export_earnings_shock"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "trigger"
+      ]
+    },
+    {
+      "id": "flight_to_hard_money_dollarization",
+      "name": "Flight to hard money",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "People abandon the domestic currency as a store of value or means of payment in favour of foreign currency or precious metal.",
+      "scope": "Currency substitution, pricing and saving in foreign currency, and private hoards of metal coin during inflation or monetary breakdown.",
+      "boundary": "The flight is from the money itself; moving savings abroad is capital_flight, and a general shift away from risky assets is risk_appetite_reversal.",
+      "test": "Use of foreign currency or metal for saving, pricing or payment rises at the expense of the domestic currency.",
+      "related": [
+        "capital_flight",
+        "risk_appetite_reversal",
+        "fx_pressure",
+        "inflation_pressure"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "forced_loan_capital_levy",
+      "name": "Forced loan or capital levy",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A state raises funds by compelling its own residents to lend to it or to surrender part of their capital.",
+      "scope": "Assessed compulsory loans, levies on wealth, and compulsory subscriptions to public debt.",
+      "boundary": "The funds are taken by legal compulsion; strain in voluntary market borrowing is sovereign_funding_stress, and an unpredictable taking is arbitrary_expropriation_shock. Converting an existing claim into debt is compulsory_domestic_conversion, and cutting the interest on existing debt is coercive_interest_reduction.",
+      "test": "Residents were legally obliged to lend to the state or to pay part of their wealth to it.",
+      "related": [
+        "sovereign_funding_stress",
+        "arbitrary_expropriation_shock",
+        "compulsory_domestic_conversion",
+        "coercive_interest_reduction"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "policy"
+      ]
+    },
+    {
+      "id": "foreign_financial_control",
+      "name": "Foreign financial control",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Creditors, or the states acting for them, take institutional control of a sovereign debtor's revenues or fiscal administration.",
+      "scope": "Debt commissions, receiverships of customs, salt or other revenues, creditor-run administrations and, at the extreme, the suspension of self-government.",
+      "boundary": "Control passes to outside creditors; the internal subordination of monetary policy to fiscal needs is fiscal_dominance, and a voice that a sovereign grants its creditors to build trust is creditor_governance.",
+      "test": "A body answerable to foreign creditors collects or controls part of the sovereign's revenue.",
+      "related": [
+        "fiscal_dominance",
+        "creditor_governance",
+        "sovereign_funding_stress",
+        "credible_commitment_regime"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "policy",
+        "resolution"
+      ]
+    },
+    {
+      "id": "heterodox_shock_stabilization_plan",
+      "name": "Heterodox shock stabilization",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A single stabilization package combines price and wage controls with an end to monetary financing and a fiscal tightening.",
+      "scope": "Plans that freeze prices, wages or exchange rates while closing deficits, often together with a new currency unit.",
+      "boundary": "Income controls are part of the package; a plan resting on an exchange-rate anchor alone is exchange_rate_based_stabilization, and a programme conditioned by an external lender is imf_conditional_adjustment.",
+      "test": "Price or wage controls were introduced together with fiscal and monetary measures in one plan.",
+      "related": [
+        "exchange_rate_based_stabilization",
+        "imf_conditional_adjustment",
+        "currency_reform_redenomination",
+        "inflation_pressure"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "policy",
+        "resolution"
+      ]
+    },
+    {
+      "id": "imf_conditional_adjustment",
+      "name": "IMF-conditional adjustment",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "An external official lender provides financing in exchange for policy conditions such as devaluation and fiscal tightening, as the route out of a balance-of-payments crisis.",
+      "scope": "Stand-by and similar arrangements with the International Monetary Fund or comparable lenders, their conditionality, and the large devaluations agreed with them.",
+      "boundary": "The programme is external and conditioned; a domestic exchange-rate anchor is exchange_rate_based_stabilization, and a general shift in policy expectations is policy_repricing.",
+      "test": "Financing from an external official lender was tied to stated policy conditions.",
+      "related": [
+        "exchange_rate_based_stabilization",
+        "policy_repricing",
+        "heterodox_shock_stabilization_plan",
+        "sudden_stop"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "policy",
+        "resolution"
+      ]
+    },
+    {
+      "id": "import_compression",
+      "name": "Import compression",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A shortage of foreign exchange forces imports, including inputs and capital goods, below what the economy needs to operate.",
+      "scope": "Licences, quotas, rationing of foreign currency and payment arrears that cut imports, and the falls in output that follow.",
+      "boundary": "The cut is forced by an external constraint; weaker spending is demand_slowdown, and the currency strain behind it is fx_pressure.",
+      "test": "Imports fell because foreign exchange was rationed or unavailable, not because demand fell.",
+      "related": [
+        "demand_slowdown",
+        "fx_pressure",
+        "terms_of_trade_shock",
+        "sudden_stop"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "transmission"
+      ]
+    },
+    {
+      "id": "infrastructure_regime_termination",
+      "name": "Infrastructure regime termination",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A working clearing, settlement or payment arrangement is abolished by political or administrative decision rather than by market failure.",
+      "scope": "Decrees closing exchanges, clearing houses, fair-based netting systems or customary money, and the losses of those who relied on them.",
+      "boundary": "The end comes by decision from above; gradual obsolescence through competition is institutional_displacement, and exclusion from a system that keeps running is clearing_access_exclusion.",
+      "test": "An official decision ended a functioning financial infrastructure.",
+      "related": [
+        "institutional_displacement",
+        "clearing_access_exclusion",
+        "settlement_failure"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "trigger"
+      ]
+    },
+    {
+      "id": "institutional_displacement",
+      "name": "Institutional displacement",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A rival, modern or foreign institution makes an incumbent intermediary redundant, and the incumbent declines or collapses.",
+      "scope": "Indigenous banking and remittance houses displaced by modern or colonial banks, whether through competition or through a privileged rival.",
+      "boundary": "The incumbent is outcompeted or bypassed; abolition by decree is infrastructure_regime_termination, a change of ownership is ownership_transfer, and a cheaper substitute product is technological_substitution_shock.",
+      "test": "The incumbent's business shrank as a named rival institution took over its functions.",
+      "related": [
+        "infrastructure_regime_termination",
+        "ownership_transfer",
+        "technological_substitution_shock"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "transmission"
+      ]
+    },
+    {
+      "id": "instrument_ban_disclosure_reform",
+      "name": "Instrument ban and disclosure reform",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A dangerous type of instrument is banned or made subject to mandatory disclosure and suitability rules.",
+      "scope": "Bans on options and time bargains, rules on derivative sales to retail clients and firms, and derivative reforms after a crisis.",
+      "boundary": "It targets an instrument type; restriction of a trading practice is short_selling_restriction, reform of reporting standards is accounting_disclosure_reform, and post-crisis regimes in general are re_regulation.",
+      "test": "An instrument type was banned or made subject to new disclosure or suitability rules.",
+      "related": [
+        "short_selling_restriction",
+        "accounting_disclosure_reform",
+        "re_regulation",
+        "asymmetric_payoff_mis_selling"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "resolution"
+      ]
+    },
+    {
+      "id": "issuance_promotion_fraud",
+      "name": "Issuance promotion fraud",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Promoters inflate reports and publicity to place shares in ventures whose real assets cannot support the price.",
+      "scope": "Exaggerated drilling or assay reports, company-promotion networks and over-subscribed flotations during a speculative boom.",
+      "boundary": "Some underlying asset exists but is misrepresented; claims on assets that do not exist are fictitious_asset_issuance, and the crowd dynamics of the boom are herd_behavior.",
+      "test": "Promotional claims about an issuer's assets were materially false at the time of issue.",
+      "related": [
+        "fictitious_asset_issuance",
+        "predatory_lending_issuance_fraud",
+        "herd_behavior"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "labor_force_collapse_shock",
+      "name": "Labour-force collapse",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Mass mortality abruptly shrinks the workforce, cutting output and reshaping wages and labour arrangements.",
+      "scope": "Plagues, epidemics and other mass-death events, and their effects on production, wages and labour institutions.",
+      "boundary": "The fall in labour is abrupt and caused by mortality; gradual change is demographic_transition, the outbreak as an event is pandemic_epidemic, and displacement of workers by automation is technological_unemployment.",
+      "test": "A sudden fall in the working population is followed by measured effects on output or wages.",
+      "related": [
+        "demographic_transition",
+        "pandemic_epidemic",
+        "technological_unemployment"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "transmission"
+      ]
+    },
+    {
+      "id": "lender_of_last_resort_relief",
+      "name": "Lender-of-last-resort relief",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A central bank or other public lender provides emergency funding to institutions or markets that cannot obtain it elsewhere.",
+      "scope": "Emergency loans against collateral, discount-window lending, coordinated lifeboats and moratoria that stop a panic.",
+      "boundary": "It supplies liquidity, not capital: injecting capital is bank_recapitalization, and moving losses onto the public is cost_shifting. The expectation of such lending, before it happens, is intervention_risk.",
+      "test": "Emergency lending to stressed institutions or markets is on record.",
+      "related": [
+        "bank_recapitalization",
+        "cost_shifting",
+        "intervention_risk",
+        "liquidity_stress",
+        "convertibility_suspension"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "policy",
+        "resolution"
+      ]
+    },
+    {
+      "id": "leverage_spiral",
+      "name": "Leverage spiral",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Rising asset prices raise collateral values and allow more borrowing against the same assets, which pushes prices higher, and the sequence runs in reverse on the way down.",
+      "scope": "Margin and haircut feedback in securities, property and land markets, collateralised credit for speculation, and forced unwinding of leveraged positions.",
+      "boundary": "The feedback runs through collateral on specific assets; when real activity is part of the feedback it is credit_cycle, funding strain without the collateral feedback is liquidity_stress, and leverage built into an instrument's payoff is embedded_leverage.",
+      "test": "Borrowing capacity is shown to move with the price of the collateral it finances.",
+      "related": [
+        "credit_cycle",
+        "liquidity_stress",
+        "embedded_leverage",
+        "basis_dislocation"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "market_design_gaming",
+      "name": "Market design gaming",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Participants exploit the rules of a market, rather than its prices, to extract payments the design did not intend.",
+      "scope": "Electricity and other engineered markets, congestion and capacity payments, and trading strategies built around gaps in the rules.",
+      "boundary": "The target is the rule set; deceptive orders are spoofing, control of supply is corner_dynamics, and an entity created to escape regulation is regulatory_arbitrage_vehicle.",
+      "test": "Profits are traced to a market rule being used against its purpose.",
+      "related": [
+        "spoofing",
+        "corner_dynamics",
+        "regulatory_arbitrage_vehicle"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "trigger"
+      ]
+    },
+    {
+      "id": "microfinance_overlending",
+      "name": "Microfinance overlending",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Competing small-loan lenders extend multiple loans to the same low-income borrowers until repayment collapses.",
+      "scope": "Booms in microfinance, consumer finance and card lending with multiple borrowing and aggressive collection.",
+      "boundary": "The overlending is to many small borrowers by competing lenders; economy-wide credit feedback is credit_cycle, and debt that binds the debtor's person or labour is debt_bondage_spiral.",
+      "test": "Borrowers holding loans from several lenders at once are shown to drive a repayment crisis.",
+      "related": [
+        "credit_cycle",
+        "debt_bondage_spiral",
+        "asset_quality_stress",
+        "debt_moratorium_relief"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "model_risk",
+      "name": "Model risk",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Losses arise because a pricing or risk model rests on assumptions, such as stable correlations or volatilities, that fail under stress.",
+      "scope": "Valuation and risk models for structured credit, derivatives and leveraged positions, including correlation assumptions behind guarantees and pooled products.",
+      "boundary": "The fault lies in the model; the false safety of senior tranches is tranching_illusion, and products too complex to price at all are financial_product_complexity_opacity.",
+      "test": "A key assumption of a model is shown to have failed in the episode.",
+      "related": [
+        "tranching_illusion",
+        "financial_product_complexity_opacity",
+        "negative_convexity_short_option",
+        "basis_risk"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "moral_hazard",
+      "name": "Moral hazard",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Actors take on more risk because they expect a guarantee, insurance or rescue to place part of the resulting losses on others.",
+      "scope": "Expected official rescues, implicit guarantees for large or connected institutions, deposit and credit insurance, and contracts that shield risk-takers from losses.",
+      "boundary": "It is a change in risk-taking caused by expected protection; the market pricing of a possible official action is intervention_risk, the moral switch-off of harm is collective_moral_disengagement, and weaker screening of loans made for distribution is originate_to_distribute_moral_hazard.",
+      "test": "Risk-taking is shown to rise because a backstop or guarantee is expected to absorb losses.",
+      "related": [
+        "intervention_risk",
+        "collective_moral_disengagement",
+        "originate_to_distribute_moral_hazard",
+        "deposit_guarantee_blanket",
+        "regulatory_forbearance"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "negative_convexity_short_option",
+      "name": "Short-option tail exposure",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A position that has in effect written options gains small amounts in calm markets and loses large amounts when the market moves sharply.",
+      "scope": "Written options, forward contracts with option-like features, and hedges that leave the owner short volatility.",
+      "boundary": "It is the exposure, whoever carries it; marketing such products to clients who cannot assess them is asymmetric_payoff_mis_selling, and leverage built into a payoff is embedded_leverage.",
+      "test": "Losses grow faster than the market move, as in a written option position.",
+      "related": [
+        "asymmetric_payoff_mis_selling",
+        "embedded_leverage",
+        "model_risk"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "new_institution_founding",
+      "name": "New monetary institution",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A crisis is resolved by founding a monetary institution, or by giving monetary policy a new statutory mandate, where no functioning one existed before.",
+      "scope": "Founding of central banks, currency boards and new monetary statutes after inflation or banking disorder.",
+      "boundary": "The institution or its statutory monetary mandate is new; restoring the autonomy of an existing one is central_bank_independence_restoration. A capacity whose value shows in a later crisis is state_capacity_building. An exchange-rate or nominal anchor adopted as the main instrument against inflation is exchange_rate_based_stabilization; a new currency board can carry both.",
+      "test": "A new monetary institution or statutory monetary mandate was created as part of resolving a crisis.",
+      "related": [
+        "central_bank_independence_restoration",
+        "state_capacity_building",
+        "exchange_rate_based_stabilization"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "resolution"
+      ]
+    },
+    {
+      "id": "odious_debt_repudiation",
+      "name": "Odious debt repudiation",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A successor government refuses to honour debts contracted by its predecessor on the ground that they were illegitimate, not because it cannot pay.",
+      "scope": "Repudiation after revolution, regime change, independence or annexation, and selective refusal of loans judged improper.",
+      "boundary": "The refusal rests on legitimacy rather than inability; a sovereign that cannot fund itself is sovereign_funding_stress, and cancelling private debts by decree is clean_slate_debt_cancellation.",
+      "test": "A government refused debt left by its predecessor on a stated ground of illegitimacy.",
+      "related": [
+        "sovereign_funding_stress",
+        "clean_slate_debt_cancellation",
+        "legitimacy_crisis"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "trigger"
+      ]
+    },
+    {
+      "id": "off_balance_sheet_maturity_transformation",
+      "name": "Off-balance-sheet maturity transformation",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Vehicles outside a sponsor's balance sheet fund long-term assets with short-term borrowing and lack a committed liquidity backstop.",
+      "scope": "Conduits, structured investment vehicles, wealth-management products and auction-rate structures.",
+      "boundary": "It is the structure; a vehicle set up to escape rules is regulatory_arbitrage_vehicle, the run on its liabilities is self_fulfilling_run, and the seizing up of its markets is credit_market_freeze.",
+      "test": "Vehicles funded short-term held long-term assets off the sponsor's balance sheet.",
+      "related": [
+        "regulatory_arbitrage_vehicle",
+        "self_fulfilling_run",
+        "credit_market_freeze",
+        "liquidity_stress"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "original_sin_currency_mismatch",
+      "name": "Original sin",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A country cannot borrow abroad in its own currency, or at long maturities at home, so its debt ends up in foreign currency or at short maturities.",
+      "scope": "Foreign-currency sovereign and private debt, short-term local-currency debt where long-term borrowing is unavailable, and foreign-currency borrowing by households and firms. Borrowing in a currency union the borrower does not control is a related constraint on monetary sovereignty, recorded here only where it produces the same mismatch.",
+      "boundary": "It is the structural constraint behind the exposure; an entity's sensitivity to exchange rates is currency_sensitivity, and the combination with short maturities on one balance sheet is twin_mismatch.",
+      "test": "External debt is in foreign currency, or domestic debt is short-term, because borrowing abroad in the country's own currency, or long-term at home, is unavailable.",
+      "related": [
+        "currency_sensitivity",
+        "twin_mismatch",
+        "sudden_stop",
+        "fx_pressure"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "originate_to_distribute_moral_hazard",
+      "name": "Originate-to-distribute incentive failure",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Lenders who distribute the loans they make to other investors, without keeping their risk, relax their screening of borrowers.",
+      "scope": "Securitised mortgages, trust products, debentures and other loans made for distribution.",
+      "boundary": "The incentive failure is specific to the lending chain; risk-taking because of an expected rescue is moral_hazard, and the false safety of the resulting securities is tranching_illusion.",
+      "test": "Loan quality is shown to fall where originators did not retain the credit risk.",
+      "related": [
+        "moral_hazard",
+        "tranching_illusion",
+        "asset_quality_stress"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "over_trading",
+      "name": "Overtrading",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A firm expands its commitments beyond its capital and liquid resources, so an ordinary delay in receipts brings it down.",
+      "scope": "Merchant houses, tax-farming partnerships and early joint ventures that took on obligations faster than their capital grew.",
+      "boundary": "The overreach is the firm's own; dependence on one counterparty is sovereign_exposure_concentration, and a market-wide funding squeeze is liquidity_stress.",
+      "test": "Commitments are shown to have exceeded capital and liquid resources before the failure.",
+      "related": [
+        "sovereign_exposure_concentration",
+        "liquidity_stress",
+        "funding_margin_pressure"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "overvalued_peg_entry",
+      "name": "Overvalued peg entry",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A country adopts or restores a fixed exchange rate at a parity above what its costs and prices support.",
+      "scope": "Returns to pre-crisis parities, entries into pegs or currency unions at a high rate, and the adjustment they impose.",
+      "boundary": "It is the entry decision; the loss of competitiveness that follows is competitiveness_overvaluation, the failed defence of a peg is peg_defense_failure, and deflationary policy motivated by parity is doctrinal_disinflation.",
+      "test": "A parity was set above the level consistent with relative costs at the time of entry.",
+      "related": [
+        "competitiveness_overvaluation",
+        "peg_defense_failure",
+        "doctrinal_disinflation"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "trigger",
+        "policy"
+      ]
+    },
+    {
+      "id": "peg_defense_failure",
+      "name": "Peg defence failure",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Authorities spend reserves defending a fixed exchange rate until they are exhausted, then devalue in a large, abrupt step.",
+      "scope": "Reserve drawdowns, interest-rate defences and delayed abandonment of pegs, especially after falls in commodity prices.",
+      "boundary": "It is the sequence of defence followed by capitulation; continuing pressure is fx_pressure, an expected intervention is intervention_risk, and a deliberate exit that ends deflation is devaluation_exit.",
+      "test": "A peg was defended with reserves and then abandoned in a single large devaluation.",
+      "related": [
+        "fx_pressure",
+        "intervention_risk",
+        "devaluation_exit",
+        "competitiveness_overvaluation"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "position_limit_intervention",
+      "name": "Position limit intervention",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "An exchange or regulator caps positions, halts trading or closes a market to break a squeeze.",
+      "scope": "Position limits, liquidation-only orders, suspensions of trading and delistings during corners and squeezes.",
+      "boundary": "It is a realised market measure; the expectation of official action is intervention_risk, and rules against withholding physical staples are anti_hoarding_regulation.",
+      "test": "A limit, halt or closure was imposed during a squeeze.",
+      "related": [
+        "intervention_risk",
+        "anti_hoarding_regulation",
+        "corner_dynamics",
+        "short_squeeze"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "policy",
+        "resolution"
+      ]
+    },
+    {
+      "id": "predatory_lending_issuance_fraud",
+      "name": "Predatory loan issuance fraud",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A loan to a real borrower is floated so that intermediaries capture the proceeds and default is built into its design.",
+      "scope": "Sovereign and quasi-sovereign bond issues where little of the money reaches the borrower, coupons are paid out of the principal, or the debt is hidden.",
+      "boundary": "The borrower exists but the issue is structured to fail; claims on assets that do not exist are fictitious_asset_issuance, and promotion of overvalued ventures is issuance_promotion_fraud.",
+      "test": "Most of the proceeds of a loan did not reach the stated borrower, or its servicing depended on the loan itself.",
+      "related": [
+        "fictitious_asset_issuance",
+        "issuance_promotion_fraud",
+        "sovereign_funding_stress",
+        "odious_debt_repudiation"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "trigger"
+      ]
+    },
+    {
+      "id": "re_regulation",
+      "name": "Re-regulation",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A crisis is followed by a new regulatory regime meant to resolve it, to prevent its recurrence, or both.",
+      "scope": "New banking laws, chartering and reserve rules, nationalised credit allocation and other regimes adopted after a crisis.",
+      "boundary": "It is the general change of regime; the specific reforms are accounting_disclosure_reform and instrument_ban_disclosure_reform. An emergency tool that outlives the emergency is ratchet_effect, and rules aimed at digital platforms are platform_regulation.",
+      "test": "A new body of financial rules was adopted in response to a crisis, to resolve it or to prevent a repeat.",
+      "related": [
+        "accounting_disclosure_reform",
+        "instrument_ban_disclosure_reform",
+        "ratchet_effect",
+        "platform_regulation"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "policy",
+        "resolution"
+      ]
+    },
+    {
+      "id": "recoinage_shock",
+      "name": "Recoinage shock",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Circulating coin is called in and reminted to a new standard, abruptly shrinking or repricing the money stock.",
+      "scope": "General recoinages, compulsory reminting, demonetisation of worn or debased coin, and reminting fees, in commodity-money systems.",
+      "boundary": "The coin stock itself is reminted; replacing the unit of account with a new currency is currency_reform_redenomination, and a change in expected policy without any reminting is policy_repricing.",
+      "test": "An official reminting changed the quantity or value of coin in circulation.",
+      "related": [
+        "currency_reform_redenomination",
+        "policy_repricing",
+        "debasement_seigniorage",
+        "specie_scarcity_deflation"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "policy",
+        "resolution"
+      ]
+    },
+    {
+      "id": "regulatory_arbitrage_vehicle",
+      "name": "Regulatory arbitrage vehicle",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "An entity outside the regulated perimeter is set up to escape capital, lending or quota rules.",
+      "scope": "Off-balance-sheet vehicles, trust and wealth-management channels, and money-management companies.",
+      "boundary": "The purpose is to escape rules; the maturity mismatch such vehicles often carry is off_balance_sheet_maturity_transformation, and exploitation of market rules for trading gains is market_design_gaming.",
+      "test": "A vehicle is shown to exist mainly to avoid a regulatory constraint.",
+      "related": [
+        "off_balance_sheet_maturity_transformation",
+        "market_design_gaming",
+        "re_regulation"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "regulatory_forbearance",
+      "name": "Regulatory forbearance",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Regulators delay recognising or resolving bank losses, letting weak institutions continue and the losses grow.",
+      "scope": "Relaxed accounting or capital rules, extended emergency credit and postponed closures.",
+      "boundary": "The delay is the regulator's; lenders keeping insolvent borrowers afloat is zombie_firm_forbearance, and the expected rescue that encourages risk-taking is moral_hazard.",
+      "test": "A known solvency problem was left unresolved by the authority responsible for it.",
+      "related": [
+        "zombie_firm_forbearance",
+        "moral_hazard",
+        "asset_quality_stress"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "related_party_abuse",
+      "name": "Related-party abuse",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Dealings between a company and parties connected to its controllers are used to inflate assets or income, or to move value out.",
+      "scope": "Offshore affiliates, circular sales, loans to owners and transfers within business groups.",
+      "boundary": "Related-party dealings are common and often legitimate; the entry applies only when they are used to misstate results or extract value. The counterparty is connected; assets that do not exist are fictitious_asset_issuance, and capital recycled along a supply chain between independent firms is circular_financing.",
+      "test": "Material transactions with connected parties were used to misstate results or extract value.",
+      "related": [
+        "fictitious_asset_issuance",
+        "circular_financing",
+        "accounting_disclosure_reform"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "reparations_transfer_problem",
+      "name": "Reparations transfer problem",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A large fixed external payment, such as a war indemnity, has to be turned into foreign exchange through trade surpluses, straining the payer's economy and currency.",
+      "scope": "Indemnities, reparations and war debts between states, and the loans raised to pay them.",
+      "boundary": "The burden is a fixed transfer; general strain on sovereign funding is sovereign_funding_stress, and the strain on the currency is fx_pressure.",
+      "test": "A fixed external payment obligation is shown to require a transfer the economy struggles to generate.",
+      "related": [
+        "sovereign_funding_stress",
+        "fx_pressure",
+        "capital_recycling",
+        "war_debt_real_burden_deflation"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "transmission"
+      ]
+    },
+    {
+      "id": "reserve_currency_dilemma",
+      "name": "Reserve-currency dilemma",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "The issuer of a reserve currency must run external deficits to supply the world with reserves, and those deficits erode confidence in the currency.",
+      "scope": "Reserve-currency issuers under fixed or semi-fixed regimes, official claims accumulating abroad, and pressure on the convertibility of the reserve asset.",
+      "boundary": "It is a structural contradiction of the issuer's role; a shift in the composition of reserves held by others is reserve_diversification, and pressure on one currency is fx_pressure.",
+      "test": "Supplying reserves to the world is shown to depend on deficits that weaken confidence in the issuer.",
+      "related": [
+        "reserve_diversification",
+        "fx_pressure",
+        "convertibility_suspension"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "resource_nationalism_backfire",
+      "name": "Resource nationalism backfire",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "During a windfall, nationalisation, special levies or limits on foreign investment drive away the investment the resource sector depends on, deepening the later bust.",
+      "scope": "Nationalisations, production levies, investment laws and contract renegotiations in extractive sectors.",
+      "boundary": "The measures are announced capture of resource rents; an unpredictable seizure of property is arbitrary_expropriation_shock, a change of ownership as such is ownership_transfer, and a state stake as such is state_equity_participation.",
+      "test": "Measures that capture resource rents are followed by a measured fall in investment or output in the sector.",
+      "related": [
+        "arbitrary_expropriation_shock",
+        "ownership_transfer",
+        "state_equity_participation",
+        "dutch_disease"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "settlement_failure",
+      "name": "Settlement failure",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "One side of a transaction delivers value and the other fails before completing its side, turning a timing gap into a loss.",
+      "scope": "Principal and timing risk in payment, securities and currency settlement, failures of clearing members, and breakdowns of netting at fairs or exchanges.",
+      "boundary": "It can strike while funding is available; an inability to obtain funding is liquidity_stress, and the onward spread of the loss is contagion. A short futures holder failing to deliver at expiry is delivery_default.",
+      "test": "A party completed its leg of a settlement and the counterparty failed before completing its own.",
+      "related": [
+        "liquidity_stress",
+        "contagion",
+        "delivery_default",
+        "clearing_access_exclusion"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "trigger",
+        "transmission"
+      ]
+    },
+    {
+      "id": "short_selling_restriction",
+      "name": "Short-selling restriction",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Authorities ban or restrict selling securities the seller does not own, particularly without having borrowed them first.",
+      "scope": "Bans on uncovered short sales, temporary prohibitions during panics, and disclosure duties for short positions.",
+      "boundary": "It targets a trading practice; prohibition of an instrument type is instrument_ban_disclosure_reform, and caps on positions during a squeeze are position_limit_intervention.",
+      "test": "A rule restricting short sales was introduced.",
+      "related": [
+        "instrument_ban_disclosure_reform",
+        "position_limit_intervention",
+        "short_squeeze"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "policy"
+      ]
+    },
+    {
+      "id": "short_squeeze",
+      "name": "Short squeeze",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Holders of short positions are forced to repurchase at the same time, driving the price up and forcing further repurchases.",
+      "scope": "Shares and commodities with large short interest, sudden concentrated purchases and limited lendable supply.",
+      "boundary": "No single party needs to control supply (contrast corner_dynamics); the price feedback runs among short holders. A disorderly gap between linked instruments is basis_dislocation.",
+      "test": "Forced covering of short positions is shown to drive the price move.",
+      "related": [
+        "corner_dynamics",
+        "basis_dislocation",
+        "liquidity_stress"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "single_buyer_dependence",
+      "name": "Single-buyer dependence",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "An exporter's dependence on one dominant customer transmits that customer's demand shocks directly to its earnings.",
+      "scope": "Commodity exporters and firms that deliver most of their output to one country or company.",
+      "boundary": "The concentration is in the customer, not the product; a contraction in export income counts as export_earnings_shock only once it has occurred, and dependence on a single commodity is commodity_dependence_fiscal_collapse. Concentration of a lender's exposure is sovereign_exposure_concentration.",
+      "test": "One customer takes a dominant share of exports and a change in its demand is the recorded shock.",
+      "related": [
+        "export_earnings_shock",
+        "commodity_dependence_fiscal_collapse",
+        "sovereign_exposure_concentration",
+        "terms_of_trade_shock"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "transmission"
+      ]
+    },
+    {
+      "id": "sovereign_exposure_concentration",
+      "name": "Single-counterparty exposure concentration",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A financial house concentrates its exposure on one dominant counterparty, typically a ruler or sovereign, so that the counterparty's failure or withdrawal destroys it.",
+      "scope": "Banking houses lending mainly to one crown or state, banks with one dominant borrower or depositor, and lenders whose largest client is also their most profitable one.",
+      "boundary": "The weakness is lack of diversification rather than the quality of the asset (contrast asset_quality_stress); the spread of the failure to other institutions is contagion, and dependence of an exporter on one customer is single_buyer_dependence.",
+      "test": "A large share of an institution's exposure sits with one counterparty whose failure or withdrawal caused its collapse.",
+      "related": [
+        "asset_quality_stress",
+        "contagion",
+        "single_buyer_dependence",
+        "sovereign_funding_stress"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "sovereign_statistics_falsification",
+      "name": "Sovereign statistics falsification",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A state publishes false official economic or fiscal statistics.",
+      "scope": "Misreported deficits, debt, inflation or growth figures, and hidden borrowing.",
+      "boundary": "The numbers are false; when two official numbers are both correct but govern different decisions it is dual_measure_divergence, and suppression of the truth about a disaster is information_suppression_disaster_amplification.",
+      "test": "Official statistics were later shown to have been false.",
+      "related": [
+        "dual_measure_divergence",
+        "information_suppression_disaster_amplification",
+        "institutional_trust_decline"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "trigger"
+      ]
+    },
+    {
+      "id": "specie_drain",
+      "name": "Specie drain",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Monetary metal physically leaves an economy, contracting its money supply.",
+      "scope": "Outflows of gold, silver or copper driven by trade deficits or by official mint ratios that undervalue one metal against foreign markets.",
+      "boundary": "It applies to metal-based money; pressure on a fiat currency or on access to foreign currency is fx_pressure. A general shortage of monetary metal without an outflow is specie_scarcity_deflation.",
+      "test": "A physical outflow of monetary metal is on record.",
+      "related": [
+        "fx_pressure",
+        "specie_scarcity_deflation",
+        "current_account_swing",
+        "debasement_seigniorage"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "transmission"
+      ]
+    },
+    {
+      "id": "specie_scarcity_deflation",
+      "name": "Specie scarcity deflation",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A shortage of monetary metal contracts the money supply and pushes the general price level down.",
+      "scope": "Bullion shortages from exhausted mines, outflows or private hoards, and the resulting scarcity of coin and deflation in metal-based systems.",
+      "boundary": "It is the reverse of a shortage that raises prices (commodity_supply_squeeze); the outflow channel itself is specie_drain, and the debt-burden spiral that can follow is debt_deflation.",
+      "test": "A scarcity of monetary metal coincides with falling prices.",
+      "related": [
+        "commodity_supply_squeeze",
+        "specie_drain",
+        "debt_deflation",
+        "debasement_seigniorage"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "trigger"
+      ]
+    },
+    {
+      "id": "spoofing",
+      "name": "Spoofing",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Orders placed with the intention of cancelling them create a false picture of supply or demand and move the price.",
+      "scope": "Spoofing and layering in electronic order books for futures, metals and shares.",
+      "boundary": "The deception lies in the orders; exploitation of market rules is market_design_gaming, and control of supply is corner_dynamics.",
+      "test": "Orders were placed and cancelled to move the price without any intent to trade.",
+      "related": [
+        "market_design_gaming",
+        "corner_dynamics"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "trigger"
+      ]
+    },
+    {
+      "id": "state_buffer_stock_intervention",
+      "name": "State buffer stock",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A public body builds up stocks of a staple when it is cheap and releases them when it is dear, smoothing prices and limiting speculation.",
+      "scope": "Public granaries, price-levelling systems and strategic reserves.",
+      "boundary": "It works through public stock operations rather than prohibition (contrast anti_hoarding_regulation); emergency release of stocks to relieve a disaster is external_relief_mobilization, and private stock dynamics are inventory_pressure.",
+      "test": "A public body is shown to build up and release stocks to stabilise prices.",
+      "related": [
+        "anti_hoarding_regulation",
+        "external_relief_mobilization",
+        "inventory_pressure",
+        "commodity_supply_squeeze"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "policy",
+        "resolution"
+      ]
+    },
+    {
+      "id": "sudden_stop",
+      "name": "Sudden stop",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Foreign lenders and investors abruptly stop financing an economy or withdraw their financing, cutting off the inflows that funded its external deficit and forcing a rapid adjustment.",
+      "scope": "Foreign lenders and investors withdrawing financing from a country, with reserve losses, import cuts and falls in output.",
+      "boundary": "It is the halt of foreign financing; outflows by residents are capital_flight, a general shift of investors away from risk is risk_appetite_reversal, the strain on the currency is fx_pressure, and the swing in the external balance itself is current_account_swing. Measured on net flows, a sudden stop and capital flight overlap; the gross inflows of non-residents separate them.",
+      "test": "A sharp, abrupt fall in gross capital inflows from non-residents is on record.",
+      "related": [
+        "capital_flight",
+        "risk_appetite_reversal",
+        "fx_pressure",
+        "current_account_swing",
+        "original_sin_currency_mismatch"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "trigger",
+        "transmission"
+      ]
+    },
+    {
+      "id": "technological_substitution_shock",
+      "name": "Technological substitution shock",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A region's natural or monopoly supply is undercut when a synthetic product or a new source of production makes it replaceable.",
+      "scope": "Synthetic substitutes for natural commodities, plantations or other new sources displacing incumbent producers, and the resulting collapse in prices and revenue.",
+      "boundary": "The cause is a cheaper substitute supply, not weaker demand (demand_slowdown) or a shortage (commodity_supply_squeeze); the fall in export income that follows is export_earnings_shock, and displacement of workers by automation is technological_unemployment.",
+      "test": "A new substitute or source of supply is shown to have displaced the incumbent product.",
+      "related": [
+        "demand_slowdown",
+        "commodity_supply_squeeze",
+        "export_earnings_shock",
+        "technological_unemployment"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "trigger"
+      ]
+    },
+    {
+      "id": "terms_of_trade_shock",
+      "name": "Terms-of-trade shock",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "The price of a country's exports falls sharply relative to the price of its imports, reducing what its output can purchase abroad.",
+      "scope": "Export-price collapses against stable import prices, and import-price surges.",
+      "boundary": "It is a change in relative prices, including one driven by import prices; a contraction of export earnings from any cause is export_earnings_shock, and fiscal dependence on one commodity is commodity_dependence_fiscal_collapse. A domestic price gap between farm and industrial goods is not a terms-of-trade shock.",
+      "test": "The ratio of export prices to import prices has fallen materially.",
+      "related": [
+        "export_earnings_shock",
+        "commodity_dependence_fiscal_collapse",
+        "import_compression",
+        "current_account_swing"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "trigger",
+        "transmission"
+      ]
+    },
+    {
+      "id": "token_redemption_collapse",
+      "name": "Token redemption collapse",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Money issued as tokens against a promise of later redemption in full-value money loses its value when the promise is not kept.",
+      "scope": "Emergency token coinage and notes issued with a pledge of future redemption, typically under war finance.",
+      "boundary": "The promise concerns future redemption; suspending an existing right to convert is convertibility_suspension, and reducing the metal in coins is debasement_seigniorage.",
+      "test": "Tokens were issued with an explicit redemption promise that was not honoured.",
+      "related": [
+        "convertibility_suspension",
+        "debasement_seigniorage"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "tranching_illusion",
+      "name": "Tranching illusion",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Slicing a pool of claims into senior and junior tranches makes the senior parts look safe while the risk of the pool remains.",
+      "scope": "Securitisations, collateralised debt obligations and earlier pooled-loan structures.",
+      "boundary": "The illusion comes from subordination over a pool; the failed assumptions behind it are model_risk, and the weaker screening of loans made for distribution is originate_to_distribute_moral_hazard.",
+      "test": "Senior tranches were rated or priced as near risk-free on assumptions about the pool's losses (default rates, loss severity or their correlation) that are shown to have been understated.",
+      "related": [
+        "model_risk",
+        "originate_to_distribute_moral_hazard",
+        "off_balance_sheet_maturity_transformation"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "twin_balance_sheet",
+      "name": "Twin balance-sheet problem",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Over-indebted firms and the banks carrying their bad loans hold each other back: the firms cannot invest and the banks cannot lend.",
+      "scope": "Corporate debt distress alongside impaired bank balance sheets after an investment boom.",
+      "boundary": "Both sides must be present at once; deterioration of bank assets alone is asset_quality_stress, and corporate debt alone is debt_overhang.",
+      "test": "Corporate over-indebtedness and bank impairment are recorded together, and each constrains the repair of the other.",
+      "related": [
+        "asset_quality_stress",
+        "debt_overhang",
+        "zombie_firm_forbearance",
+        "credit_cycle"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "twin_mismatch",
+      "name": "Twin mismatch",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A balance sheet funded short-term and in foreign currency while carrying long-term, local-currency assets is exposed to a devaluation and a funding run that reinforce each other.",
+      "scope": "Banks, finance companies and firms carrying both maturity and currency mismatches, typically in emerging-market crises.",
+      "boundary": "Both mismatches must sit on the same balance sheet; currency exposure alone is currency_sensitivity, and the inability to borrow in one's own currency is original_sin_currency_mismatch.",
+      "test": "The same institutions carry short-term foreign-currency liabilities against long-term domestic-currency assets.",
+      "related": [
+        "currency_sensitivity",
+        "original_sin_currency_mismatch",
+        "liquidity_stress",
+        "fx_pressure"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "war_debt_real_burden_deflation",
+      "name": "Public debt real-burden deflation",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Deflation raises the real burden of public debt fixed in money terms, usually debt left by a war, forcing heavier taxation.",
+      "scope": "Large nominal public debts during price declines, and the primary surpluses needed to service them.",
+      "boundary": "The debtor is the state; the private spiral of distressed selling is debt_deflation, and loss of market access is sovereign_funding_stress.",
+      "test": "A fall in prices raised the real value of public debt and the burden of servicing it.",
+      "related": [
+        "debt_deflation",
+        "sovereign_funding_stress",
+        "doctrinal_disinflation",
+        "reparations_transfer_problem"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "windfall_overextension",
+      "name": "Windfall overextension",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "A government or firm borrows and spends against expected future commodity revenue, and the debt outlasts the windfall.",
+      "scope": "Borrowing secured on, or justified by, projected resource rents during booms.",
+      "boundary": "The optimism is tied to resource rents; a general credit boom is credit_cycle, debt explicitly secured on commodity deliveries is commodity_backed_debt_overhang, and recycled foreign surpluses are capital_recycling.",
+      "test": "Borrowing was justified by expected commodity revenue that later fell short.",
+      "related": [
+        "credit_cycle",
+        "commodity_backed_debt_overhang",
+        "capital_recycling",
+        "sovereign_funding_stress"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "zombie_firm_forbearance",
+      "name": "Zombie-firm forbearance",
+      "layer": "core",
+      "status": "provisional",
+      "definition": "Lenders keep insolvent firms alive by rolling over their loans, which locks capital and labour into unproductive uses.",
+      "scope": "Evergreening, capitalised interest and rescue lending to firms that are not viable, often with official encouragement.",
+      "boundary": "The lender keeps the borrower alive; delay by regulators in resolving banks is regulatory_forbearance, and the deterioration of loan quality is asset_quality_stress.",
+      "test": "Loans to firms unable to cover interest from earnings are rolled over rather than resolved.",
+      "related": [
+        "regulatory_forbearance",
+        "asset_quality_stress",
+        "twin_balance_sheet",
+        "debt_overhang"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0",
+      "phase_roles": [
+        "amplification"
+      ]
+    },
+    {
+      "id": "race_to_the_bottom",
+      "name": "Race to the bottom",
+      "layer": "social",
+      "status": "stable",
+      "definition": "Competitors keep a strategy they know to be harmful because abstaining alone would mean a larger and more certain loss.",
+      "scope": "Competitive debasement, deregulation, subsidy or tax races, lending standards eroded under competition, and similar races among firms or states.",
+      "boundary": "The trap is collective: the actor is caught between joining a race already under way and a certain loss from standing aside. A harmful choice made without that competitive pressure is not this mechanism.",
+      "test": "An actor continues a known-harmful practice because rivals are doing it.",
+      "related": [
+        "herd_behavior",
+        "escalation_of_commitment"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "political_short_termism",
+      "name": "Political short-termism",
+      "layer": "social",
+      "status": "stable",
+      "definition": "Decision-makers avoid a small, near-certain cost now at the price of a larger, uncertain one later, so long-term remedies are postponed period after period.",
+      "scope": "Deferred reforms, repeated stop-gap measures, and debasement or deficit choices made to get through the current term.",
+      "boundary": "The driver is a decision horizon locked to the current term; a decision that is merely regretted later does not qualify.",
+      "test": "The near-term threat to the decision-maker is shown to outrank the long-term one.",
+      "related": [
+        "escalation_of_commitment"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "escalation_of_commitment",
+      "name": "Escalation of commitment",
+      "layer": "social",
+      "status": "stable",
+      "definition": "A decision-maker commits further resources or effort to a course of action that has started to produce negative results, instead of withdrawing.",
+      "scope": "Investments, policies, rescues and wars where new resources follow adverse feedback; motives include self-justification, sunk costs, and protecting consistency or reputation.",
+      "boundary": "Reputation pressure, a change of course, or a pre-emptive move without new resources tied to the failing line do not qualify. The domestic political cost of backing down from a public threat in an interstate crisis (audience costs) is a separate concept. The mechanism is defined by rising commitment despite negative feedback, not by whether the outcome later proves right.",
+      "test": "New resources were committed to the same line after negative feedback.",
+      "related": [
+        "political_short_termism",
+        "race_to_the_bottom"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "fog_of_war",
+      "name": "Fog of war",
+      "layer": "social",
+      "status": "stable",
+      "definition": "At the critical moment the decision-maker structurally lacks the information needed to decide: it does not exist, cannot be reached, arrives too late, or is contradictory.",
+      "scope": "Real-time uncertainty in financial panics, wars, disasters and policy emergencies where a decision cannot wait; inaction is also a decision.",
+      "boundary": "The information is missing to the decision-maker. Information that is held and deliberately suppressed is information_suppression_disaster_amplification. The test is what was knowable at the time, not what looks obvious in hindsight.",
+      "test": "A decision had to be made before the needed information was available.",
+      "related": [
+        "information_suppression_disaster_amplification",
+        "legal_authority_gap"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "legal_authority_gap",
+      "name": "Legal authority gap",
+      "layer": "social",
+      "status": "stable",
+      "definition": "The decision-maker sees the remedy but lacks, or cannot reach, the legal or institutional authority to apply it.",
+      "scope": "Missing lender-of-last-resort powers, legal prohibitions, disputed mandates and improvised emergency authority; the gap often pushes private actors into public functions.",
+      "boundary": "The gap is in the instrument or mandate, not in the diagnosis. When authority exists but material resources do not, see fiscal_military_exhaustion.",
+      "test": "The remedy is known but no one has clear legal power to apply it.",
+      "related": [
+        "fiscal_military_exhaustion",
+        "fog_of_war"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "self_fulfilling_run",
+      "name": "Self-fulfilling run",
+      "layer": "social",
+      "status": "stable",
+      "definition": "Each individual's rational decision to exit encourages and accelerates others' exits until the run itself exhausts the resource.",
+      "scope": "Bank and deposit runs, fund redemptions, hoarding stampedes and other coordination failures in which early movers are paid first.",
+      "boundary": "Exit is driven by expectations about others' exits and can strike an otherwise sound institution. Crowd action against a perceived injustice is subsistence_unrest_spiral; quiet convergence before the exit is herd_behavior.",
+      "test": "Withdrawals or hoarding accelerate because others are doing the same.",
+      "related": [
+        "herd_behavior",
+        "liquidity_stress",
+        "subsistence_unrest_spiral"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "legitimacy_crisis",
+      "name": "Legitimacy crisis",
+      "layer": "social",
+      "status": "stable",
+      "definition": "A crisis, epidemic, defeat or disaster demonstrates that the existing authority could not protect, and the consent on which its rule rests erodes.",
+      "scope": "Post-disaster, post-epidemic and post-defeat erosion of consent toward governments, rulers or institutions.",
+      "boundary": "It records the outcome, consent eroding, rather than the escalation engine (repression_radicalization_spiral) or a measured fall in trust in information sources (institutional_trust_decline).",
+      "test": "The crisis exposed a failure of protection and consent visibly eroded.",
+      "related": [
+        "performance_legitimacy",
+        "repression_radicalization_spiral",
+        "institutional_trust_decline"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "herd_behavior",
+      "name": "Herd behavior",
+      "layer": "social",
+      "status": "stable",
+      "definition": "As a position or narrative becomes crowded it looks safer and more correct, which draws in more participants.",
+      "scope": "Crowded trades, synchronised lending or investment, and narrative convergence; the exit narrows and price signals lose information.",
+      "boundary": "The core is convergence that builds quietly before an abrupt exit; the run of exits itself is self_fulfilling_run.",
+      "test": "Participants converge on the same position because others hold it.",
+      "related": [
+        "self_fulfilling_run",
+        "race_to_the_bottom",
+        "risk_appetite_reversal"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "succession_crisis",
+      "name": "Succession crisis",
+      "layer": "social",
+      "status": "stable",
+      "definition": "A vacuum or uncertainty at the moment power must change hands leads rival claimants to act at once, reopening the hierarchy that holds the state together.",
+      "scope": "Contested successions, dynastic disputes, leadership deaths or incapacity, and the fiscal and military disorder that follows.",
+      "boundary": "It is a temporary vacuum over who rules. When the monopoly of force itself fragments and is not rebuilt, see loss_of_monopoly_on_violence.",
+      "test": "The question of who rules next is open and contested.",
+      "related": [
+        "loss_of_monopoly_on_violence",
+        "legitimacy_crisis"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "scapegoating",
+      "name": "Scapegoating",
+      "layer": "social",
+      "status": "stable",
+      "definition": "Collective fear and anger in a crisis are directed at a visible, already stigmatised group, which is cast as the cause.",
+      "scope": "Spontaneous violence, organised persecution, and political narratives that assign the blame for a crisis to a group.",
+      "boundary": "It is horizontal blame aimed at a third group; vertical escalation between state and opposition is repression_radicalization_spiral. The entry describes the mechanism and does not justify it.",
+      "test": "Blame for a crisis is fixed on a pre-marked group as an explanatory shortcut.",
+      "related": [
+        "collective_moral_disengagement",
+        "repression_radicalization_spiral"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "performance_legitimacy",
+      "name": "Performance legitimacy",
+      "layer": "social",
+      "status": "stable",
+      "definition": "Handling a disaster or crisis works as a test of a regime's legitimacy: an effective response strengthens it, a failed one crystallises opposition.",
+      "scope": "Disaster relief, evacuation, epidemic response and crisis management, judged by the public as evidence of the state's protective capacity.",
+      "boundary": "The same mechanism can produce opposite outcomes; the deciding variable is the effectiveness of the response. Erosion of consent without the response being the test is legitimacy_crisis.",
+      "test": "Public judgement of the authority turns on how it handled the event.",
+      "related": [
+        "legitimacy_crisis",
+        "state_capacity_building"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "fiscal_military_exhaustion",
+      "name": "Fiscal-military exhaustion",
+      "layer": "social",
+      "status": "stable",
+      "definition": "A state can no longer generate the resources to sustain its coercive apparatus; unpaid or unsupplied forces mutiny or transfer their loyalty, and the centre's collapse accelerates.",
+      "scope": "Unpaid armies and garrisons, debased pay and a collapsing tax base, in pre-modern as well as modern states.",
+      "boundary": "Authority exists but resources do not (contrast legal_authority_gap); the outcome is the disintegration of armed force, not inflation (contrast fiscal_dominance).",
+      "test": "Armed forces go unpaid or unsupplied and their loyalty shifts.",
+      "related": [
+        "legal_authority_gap",
+        "fiscal_dominance",
+        "loss_of_monopoly_on_violence"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "loss_of_monopoly_on_violence",
+      "name": "Loss of the monopoly on violence",
+      "layer": "social",
+      "status": "stable",
+      "definition": "The state's monopoly on legitimate physical force becomes durably plural: armed power is split among several independent centres and the centre becomes one actor among many.",
+      "scope": "Warlordism, regional fragmentation, rival armed forces within one state, and civil war.",
+      "boundary": "Unlike succession_crisis, the monopoly itself fragments and is not restored when the question of who rules is settled.",
+      "test": "More than one independent armed centre holds force inside the state.",
+      "related": [
+        "succession_crisis",
+        "fiscal_military_exhaustion",
+        "war_geopolitical"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "entitlement_failure_famine",
+      "name": "Entitlement-failure famine",
+      "layer": "social",
+      "status": "stable",
+      "definition": "Famine becomes deadly because particular groups lose their entitlement to food, as wages, prices or terms of exchange collapse, rather than because food is absent overall.",
+      "scope": "Famines in which food remains available or is exported while specific groups cannot obtain it; wage collapse, price spikes and broken exchange ratios.",
+      "boundary": "It names the access channel and does not exclude a fall in supply operating at the same time. The famine as an event is the crisis type famine_food_security.",
+      "test": "Food was available somewhere in the system, yet a group lost the means to obtain it.",
+      "related": [
+        "famine_food_security",
+        "subsistence_unrest_spiral",
+        "protection_gap"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "subsistence_unrest_spiral",
+      "name": "Subsistence unrest spiral",
+      "layer": "social",
+      "status": "stable",
+      "definition": "When staple prices spike and hoarding or profiteering becomes visible, crowds read it as a moral violation rather than a market outcome and respond with riots, seizures or forced sales at a just price.",
+      "scope": "Food riots, bread and rice protests, and crowd enforcement of customary prices.",
+      "boundary": "The crowd intervenes rather than flees (contrast self_fulfilling_run). The trigger is a price crossing a threshold of perceived legitimacy, not the price level itself.",
+      "test": "Crowd action is framed as enforcing a just price.",
+      "related": [
+        "self_fulfilling_run",
+        "entitlement_failure_famine"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "arbitrary_expropriation_shock",
+      "name": "Arbitrary expropriation shock",
+      "layer": "social",
+      "status": "stable",
+      "definition": "A state seizes private property unpredictably and arbitrarily, and the damage spreads beyond the owners: the implicit bargain over property rights breaks, horizons shorten and capital leaves.",
+      "scope": "Deposit freezes and confiscations, uncompensated nationalisations, land seizures, and currency reforms used to wipe out holdings.",
+      "boundary": "It is a direct, targeted taking. Erosion through general inflation is inflation_pressure, or fiscal_dominance where fiscal needs are shown to drive monetary policy; an orderly change of ownership is ownership_transfer.",
+      "test": "A direct, unpredictable taking of private property is on record.",
+      "related": [
+        "ownership_transfer",
+        "fiscal_dominance",
+        "inflation_pressure",
+        "state_equity_participation"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "state_capacity_building",
+      "name": "State capacity building",
+      "layer": "social",
+      "status": "stable",
+      "definition": "A crisis produces a lasting jump in the state's capacity to absorb similar shocks: standing institutions, professional administration, census and tax infrastructure, early-warning and disaster-response systems.",
+      "scope": "Post-crisis institution-building that lowers the severity of a later crisis; it is a resolution-side mechanism, not a stress.",
+      "boundary": "Its value shows across a sequence of crises. Capacity-building does not follow every crisis and can be reversed. State ownership stakes are state_equity_participation.",
+      "test": "A capacity built after one crisis is shown to have reduced the impact of a later one.",
+      "related": [
+        "performance_legitimacy",
+        "state_equity_participation"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "collective_moral_disengagement",
+      "name": "Collective moral disengagement",
+      "layer": "social",
+      "status": "stable",
+      "definition": "A group, institution or state legitimises harm that would normally be morally forbidden through collective narrative and organisational language, so that violence, seizure, neglect or disaster amplification becomes routine.",
+      "scope": "Dehumanising language, diffusion of responsibility through chains of command or procedure, and framing of harm as necessary, unavoidable or deserved.",
+      "boundary": "It is not moral hazard (taking risk because losses fall on others). Scapegoating constructs a culprit; this mechanism switches off the moral weight of harm. Legitimacy loss is consent eroding from outside; here the perpetrating group disables its own restraint. Not every propaganda campaign or error qualifies.",
+      "test": "Knowledge of the harm exists and a collective frame removes its moral weight.",
+      "related": [
+        "scapegoating",
+        "legitimacy_crisis"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "information_suppression_disaster_amplification",
+      "name": "Disaster amplified by information suppression",
+      "layer": "social",
+      "status": "stable",
+      "definition": "A state or institution that holds the truth about a disaster structurally suppresses, denies or delays it, and the suppression itself enlarges the disaster.",
+      "scope": "Famines, epidemics, nuclear or environmental accidents and death tolls that are hidden or denied, with delayed response or blocked aid.",
+      "boundary": "The information is held and suppressed (contrast fog_of_war, where it is missing). General control of information flows is state_censorship. Not every communication failure qualifies.",
+      "test": "The information existed inside the state and its suppression measurably worsened the outcome.",
+      "related": [
+        "fog_of_war",
+        "state_censorship"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "repression_radicalization_spiral",
+      "name": "Repression–radicalization spiral",
+      "layer": "social",
+      "status": "stable",
+      "definition": "State repression of an opposition hardens and enlarges it instead of dispersing it; broader resistance draws harsher repression, which drives further radicalisation.",
+      "scope": "Iterative escalation between state and opposition that can lead toward revolution or civil war.",
+      "boundary": "The escalation is vertical and iterative (contrast the horizontal blame of scapegoating); legitimacy_crisis records only the outcome. A single act of repression that produces no escalation does not qualify.",
+      "test": "Each round of repression is followed by larger resistance and the loop repeats.",
+      "related": [
+        "scapegoating",
+        "legitimacy_crisis",
+        "autocratization"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "administrative_capacity_collapse",
+      "name": "Administrative capacity collapse",
+      "layer": "social",
+      "status": "provisional",
+      "definition": "The state's apparatus for recording, counting and collecting breaks down for a long period, so it can no longer tax or govern what it cannot observe.",
+      "scope": "Collapse of registers, censuses, land surveys and revenue collection in prolonged crises.",
+      "boundary": "It is a lasting structural loss; information missing at a moment of decision is fog_of_war, the reverse movement is state_capacity_building, and a lack of legal power is legal_authority_gap.",
+      "test": "Registers or revenue collection are shown to have stopped functioning for an extended period.",
+      "related": [
+        "fog_of_war",
+        "state_capacity_building",
+        "legal_authority_gap",
+        "public_service_delivery_failure"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "affinity_fraud",
+      "name": "Affinity fraud",
+      "layer": "social",
+      "status": "provisional",
+      "definition": "A fraudulent scheme spreads through a group bound by shared identity, using the members' trust in each other in place of scrutiny.",
+      "scope": "Schemes aimed at religious, ethnic, immigrant, professional or military communities and at diaspora networks.",
+      "boundary": "Group trust is the accelerant; claims on assets that do not exist are fictitious_asset_issuance, and convergence on a crowded narrative without fraud is herd_behavior.",
+      "test": "Victims were recruited mainly through a network of shared identity.",
+      "related": [
+        "fictitious_asset_issuance",
+        "herd_behavior",
+        "tangible_asset_verification_illusion"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "credible_commitment_regime",
+      "name": "Credible commitment regime",
+      "layer": "social",
+      "status": "provisional",
+      "definition": "Constitutional or institutional limits bind a sovereign to respect property and contracts, which lowers its cost of borrowing.",
+      "scope": "Parliamentary control of taxation and borrowing, independent courts and funded public debt.",
+      "boundary": "The constraint binds the sovereign itself; creditors sitting in the administration of the debt is creditor_governance, an unpredictable taking is arbitrary_expropriation_shock, and further investment in a failing line is escalation_of_commitment.",
+      "test": "A rule limiting the sovereign's power to default or seize is on record and is followed by cheaper borrowing.",
+      "related": [
+        "creditor_governance",
+        "arbitrary_expropriation_shock",
+        "escalation_of_commitment",
+        "foreign_financial_control"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "debt_bondage_spiral",
+      "name": "Debt bondage",
+      "layer": "social",
+      "status": "provisional",
+      "definition": "Debt turns the debtor's labour or person into collateral, so default leads to servitude and the debt is renewed or passed on.",
+      "scope": "Bondage for debt in antiquity, crop-lien and sharecropping debt, and peasant indebtedness to moneylenders.",
+      "boundary": "The stake is personal freedom, not public finance (contrast sovereign_funding_stress); official cancellation of such debts is clean_slate_debt_cancellation, and a lending boom among poor borrowers is microfinance_overlending.",
+      "test": "Debtors' labour or liberty is pledged or lost through debt.",
+      "related": [
+        "sovereign_funding_stress",
+        "clean_slate_debt_cancellation",
+        "microfinance_overlending",
+        "debt_moratorium_relief"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "negotiated_demobilization_settlement",
+      "name": "Negotiated demobilisation settlement",
+      "layer": "social",
+      "status": "provisional",
+      "definition": "A civil war ends through a negotiated pact on power-sharing and demobilisation rather than by victory.",
+      "scope": "Peace accords, disarmament and reintegration of fighters, and power-sharing arrangements.",
+      "boundary": "It ends internal armed fragmentation (loss_of_monopoly_on_violence) by agreement; the easing of tension between states is geopolitical_deescalation.",
+      "test": "A signed settlement provides for the demobilisation of armed groups and is followed by an end to the fighting.",
+      "related": [
+        "loss_of_monopoly_on_violence",
+        "geopolitical_deescalation",
+        "war_geopolitical"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "preference_falsification_cascade",
+      "name": "Preference falsification cascade",
+      "layer": "social",
+      "status": "provisional",
+      "definition": "Under repression people hide their opposition, so a single public event that reveals shared dissent can topple a regime suddenly.",
+      "scope": "Revolutions and collapses of authoritarian rule that surprise contemporaries.",
+      "boundary": "Hidden opinions come into the open all at once; exit from a resource is self_fulfilling_run, convergence on a crowded position is herd_behavior, and iterative escalation between state and opposition is repression_radicalization_spiral.",
+      "test": "A rapid shift from public compliance to open opposition follows a revealing event.",
+      "related": [
+        "self_fulfilling_run",
+        "herd_behavior",
+        "repression_radicalization_spiral",
+        "legitimacy_crisis"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "preparedness_paradox",
+      "name": "Preparedness paradox",
+      "layer": "social",
+      "status": "provisional",
+      "definition": "Successful prevention leaves no visible crisis, so its value is hard to see and it is easily judged wasteful; the benefit shows only against a counterfactual, such as a comparable earlier disaster or an estimate of the avoided loss.",
+      "scope": "Disaster preparedness, technical remediation and security investment whose success appears only as an absence of harm.",
+      "boundary": "It explains why prevention that worked looks unnecessary; underinvestment in prevention because of short horizons is political_short_termism, and the uninsured loss when prevention fails is protection_gap.",
+      "test": "A prevention effort is judged by outcomes that its own success has suppressed.",
+      "related": [
+        "political_short_termism",
+        "protection_gap",
+        "state_capacity_building"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "public_service_delivery_failure",
+      "name": "Public service delivery failure",
+      "layer": "social",
+      "status": "provisional",
+      "definition": "The state cannot physically deliver relief or basic services when they are needed, turning a hazard into a disaster.",
+      "scope": "Evacuation, relief distribution, and health and infrastructure services during disasters and crises.",
+      "boundary": "It is the shortfall in delivery itself; the uninsured loss is protection_gap, the public's judgement of the response is performance_legitimacy, services cut to pay debt are debt_service_crowding_out, and a lasting breakdown of administration is administrative_capacity_collapse.",
+      "test": "Needed services or relief were not delivered although the need was known.",
+      "related": [
+        "protection_gap",
+        "performance_legitimacy",
+        "debt_service_crowding_out",
+        "administrative_capacity_collapse"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "ratchet_effect",
+      "name": "Ratchet effect",
+      "layer": "social",
+      "status": "provisional",
+      "definition": "Powers or tools created or delegated for an emergency are not withdrawn after the emergency ends, because taking them back costs more than granting them did.",
+      "scope": "Emergency fiscal, military and monetary authority, delegated regional power, and standing crisis facilities.",
+      "boundary": "The tool exists and persists; the lack of a tool is legal_authority_gap, deliberate capacity-building is state_capacity_building, the birth of a post-crisis regime is re_regulation, and a regime shift toward autocracy is autocratization.",
+      "test": "An emergency tool or delegation remained in place after the threat that justified it had passed.",
+      "related": [
+        "legal_authority_gap",
+        "state_capacity_building",
+        "re_regulation",
+        "autocratization"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "reciprocal_mobilization_trap",
+      "name": "Reciprocal mobilisation trap",
+      "layer": "social",
+      "status": "provisional",
+      "definition": "Each side's defensive mobilisation is read by the other as preparation for attack, producing a mutual escalation that neither side chose.",
+      "scope": "Arms races, alliance mobilisations and military preparations in interstate crises.",
+      "boundary": "It is the self-reinforcing security dilemma; the market pricing of escalation is geopolitical_escalation, the war itself is war_geopolitical, and new resources committed to a failing course are escalation_of_commitment.",
+      "test": "Defensive measures by one side are followed by matching measures from the other, and the sequence repeats.",
+      "related": [
+        "geopolitical_escalation",
+        "war_geopolitical",
+        "escalation_of_commitment"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "regime_self_mythologizing",
+      "name": "Regime self-mythologising",
+      "layer": "social",
+      "status": "provisional",
+      "definition": "A ruling authority builds a positive story of rescue or miracle about itself, and that story becomes the basis of its legitimacy and of public expectations.",
+      "scope": "Official narratives of economic miracle, providential rule or national rescue, including their effect on markets.",
+      "boundary": "It builds legitimacy; blaming a group is scapegoating, the erosion of consent is legitimacy_crisis, false statistics are sovereign_statistics_falsification, and control of information channels is state_censorship.",
+      "test": "An official narrative of the regime's success is shown to shape public or market expectations.",
+      "related": [
+        "scapegoating",
+        "legitimacy_crisis",
+        "sovereign_statistics_falsification",
+        "state_censorship",
+        "performance_legitimacy"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "tangible_asset_verification_illusion",
+      "name": "Tangible-asset verification illusion",
+      "layer": "social",
+      "status": "provisional",
+      "definition": "A scheme fronted by visible physical assets persuades investors that it is sound because the assets are real.",
+      "scope": "Livestock, stamps, precious metals and other tangible goods used as the face of an investment scheme.",
+      "boundary": "The assets exist but cannot support the promised returns; assets that do not exist are fictitious_asset_issuance, and recruitment through group trust is affinity_fraud.",
+      "test": "Investor confidence is shown to rest on the existence of physical assets rather than on what those assets could earn.",
+      "related": [
+        "fictitious_asset_issuance",
+        "affinity_fraud"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "cost_shifting",
+      "name": "Cost shifting",
+      "layer": "extension",
+      "status": "provisional",
+      "definition": "The bearer of a loss or risk changes: from insurer, firm or state to household, tenant, taxpayer or borrower, or the reverse.",
+      "scope": "Withdrawn cover, risk moved through contracts, pricing or policy, and rescues that move losses onto the public.",
+      "boundary": "The uninsured share of a loss itself is protection_gap.",
+      "test": "Who carries the loss has changed.",
+      "related": [
+        "protection_gap"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "state_equity_participation",
+      "name": "State equity participation",
+      "layer": "extension",
+      "status": "provisional",
+      "definition": "A state, state fund or public pension fund acquires ownership, stakes, golden shares or contractual rights to returns in firms or strategic assets.",
+      "scope": "Equity stakes, golden shares, revenue-sharing rights, and state-fund holdings in strategic companies.",
+      "boundary": "Acquiring a stake or a right to returns is required; asset allocation or earning returns alone does not qualify. Capacity-building is state_capacity_building.",
+      "test": "The state acquired a stake or a contractual right to returns.",
+      "related": [
+        "ownership_transfer",
+        "state_capacity_building",
+        "arbitrary_expropriation_shock"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "ownership_transfer",
+      "name": "Ownership transfer",
+      "layer": "extension",
+      "status": "provisional",
+      "definition": "An asset changes hands: privatisation, distressed sale, transfer to a foreign or domestic group, merger or acquisition.",
+      "scope": "Privatisations, forced or distressed sales, and changes of control over strategic assets.",
+      "boundary": "Arbitrary seizure is arbitrary_expropriation_shock.",
+      "test": "A change of ownership or control is on record.",
+      "related": [
+        "arbitrary_expropriation_shock",
+        "state_equity_participation",
+        "wealth_concentration"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "water_scarcity",
+      "name": "Water scarcity",
+      "layer": "extension",
+      "status": "provisional",
+      "definition": "Water shortage, drought, groundwater depletion, and conflict over water allocation.",
+      "scope": "Applies whether or not the damage or cost has been measured.",
+      "boundary": "It names the scarcity and the allocation conflict; a flood, storm or other hazard event is natural_disaster.",
+      "test": "Available water falls short of needs, or its allocation is contested.",
+      "related": [
+        "natural_disaster",
+        "adaptation_finance_gap"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "adaptation_finance_gap",
+      "name": "Adaptation finance gap",
+      "layer": "extension",
+      "status": "provisional",
+      "definition": "The gap between what climate adaptation and loss and damage require and what has been pledged or disbursed.",
+      "scope": "Estimates of adaptation and loss-and-damage needs set against commitments and disbursements.",
+      "boundary": "The insurance gap is protection_gap.",
+      "test": "A measured need is compared with pledged or paid finance.",
+      "related": [
+        "protection_gap",
+        "aid_cuts"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "aid_cuts",
+      "name": "Aid cuts",
+      "layer": "extension",
+      "status": "provisional",
+      "definition": "Official development and humanitarian funding is cut, reduced, or pledged but not disbursed.",
+      "scope": "Donor budget cuts, suspended programmes, and pledges not converted into payments.",
+      "boundary": "The gap between adaptation needs and finance is adaptation_finance_gap.",
+      "test": "A fall in aid funding, or a pledge left unpaid, is on record.",
+      "related": [
+        "adaptation_finance_gap",
+        "humanitarian_displacement",
+        "famine_food_security"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "debt_service_crowding_out",
+      "name": "Debt service crowding out",
+      "layer": "extension",
+      "status": "provisional",
+      "definition": "Debt service crowds out spending on basic public services such as health and social protection.",
+      "scope": "Interest and principal payments absorbing revenue that would otherwise fund public services.",
+      "boundary": "The inability to fund debt in markets is sovereign_funding_stress.",
+      "test": "Debt service is shown to displace service spending.",
+      "related": [
+        "sovereign_funding_stress"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "autocratization",
+      "name": "Autocratization",
+      "layer": "extension",
+      "status": "provisional",
+      "definition": "Electoral, judicial and executive constraints narrow and a regime moves toward autocracy.",
+      "scope": "Weakened elections, courts, legislatures and other checks on the executive.",
+      "boundary": "The repression and resistance loop is repression_radicalization_spiral; loss of autonomy at named institutions is erosion_of_institutional_independence.",
+      "test": "Constraints on executive power have narrowed.",
+      "related": [
+        "erosion_of_institutional_independence",
+        "repression_radicalization_spiral",
+        "state_censorship"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "erosion_of_institutional_independence",
+      "name": "Erosion of institutional independence",
+      "layer": "extension",
+      "status": "provisional",
+      "definition": "The autonomy of independent institutions such as the central bank, regulators, the statistical office or the judiciary narrows.",
+      "scope": "Dismissals, legal changes, budget pressure and directives that reduce institutional autonomy.",
+      "boundary": "It overlaps with autocratization but names specific institutions. The fiscal capture of monetary policy as a regime is fiscal_dominance.",
+      "test": "A named institution lost autonomy.",
+      "related": [
+        "autocratization",
+        "fiscal_dominance"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "state_censorship",
+      "name": "State censorship",
+      "layer": "extension",
+      "status": "provisional",
+      "definition": "The state controls information flows through content removal, internet shutdowns, access blocking, foreign-agent registers and similar tools.",
+      "scope": "Content removal, shutdowns, blocking, and licensing or registration regimes for media and organisations.",
+      "boundary": "Suppressing the truth about a disaster so that the disaster grows is information_suppression_disaster_amplification.",
+      "test": "A state action restricted the flow of information.",
+      "related": [
+        "information_suppression_disaster_amplification",
+        "platform_regulation",
+        "autocratization"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "institutional_trust_decline",
+      "name": "Institutional trust decline",
+      "layer": "extension",
+      "status": "provisional",
+      "definition": "Measured trust in news, media, institutions and information sources declines.",
+      "scope": "Survey-measured trust in media, government, courts, science and platforms.",
+      "boundary": "A crisis that destroys an authority's consent is legitimacy_crisis.",
+      "test": "A measured fall in trust is on record.",
+      "related": [
+        "legitimacy_crisis",
+        "synthetic_media"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "platform_regulation",
+      "name": "Platform regulation",
+      "layer": "extension",
+      "status": "provisional",
+      "definition": "Regulation, antitrust action and enforcement directed at digital platforms.",
+      "scope": "Digital services rules, age limits, competition cases and enforcement actions.",
+      "boundary": "State control of content for political ends is state_censorship.",
+      "test": "A rule or enforcement action targets digital platforms.",
+      "related": [
+        "state_censorship",
+        "zero_click_search"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "synthetic_media",
+      "name": "Synthetic media",
+      "layer": "extension",
+      "status": "provisional",
+      "definition": "AI-generated content and deepfakes: their prevalence, labelling and effects.",
+      "scope": "Prevalence, labelling, detection and documented effects of synthetic content.",
+      "boundary": "A measured fall in trust is institutional_trust_decline, whether or not synthetic content caused it.",
+      "test": "AI-generated content is shown to be present or to have an effect.",
+      "related": [
+        "institutional_trust_decline",
+        "platform_regulation"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "zero_click_search",
+      "name": "Zero-click search",
+      "layer": "extension",
+      "status": "provisional",
+      "definition": "AI-assisted search shifts traffic and revenue from publishers to the platform.",
+      "scope": "Answer engines and AI summaries that reduce click-through to source sites.",
+      "boundary": "Rules aimed at platforms are platform_regulation.",
+      "test": "A shift of traffic or revenue away from publishers is measured.",
+      "related": [
+        "platform_regulation",
+        "synthetic_media"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "circular_financing",
+      "name": "Circular financing",
+      "layer": "extension",
+      "status": "provisional",
+      "definition": "The same capital circulates through a supply chain through vendor financing, cross-investment, lease guarantees and repurchase commitments.",
+      "scope": "Supplier-funded customers, reciprocal investments, and guarantees that recycle capital along the chain.",
+      "boundary": "Investment in new capacity itself is capacity_investment.",
+      "test": "Funds flow from a supplier to a customer and come back as purchases.",
+      "related": [
+        "capacity_investment",
+        "ai_equity_momentum",
+        "useful_life_assumption"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "useful_life_assumption",
+      "name": "Useful life assumption",
+      "layer": "extension",
+      "status": "provisional",
+      "definition": "The assumed depreciation life of assets changes reported profits and investment returns.",
+      "scope": "Depreciation schedules for servers, chips and other capital, and changes to their assumed useful life.",
+      "boundary": "The investment decision itself is capacity_investment.",
+      "test": "A useful-life assumption is shown to move reported profit or returns.",
+      "related": [
+        "capacity_investment",
+        "circular_financing"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "technological_unemployment",
+      "name": "Technological unemployment",
+      "layer": "extension",
+      "status": "provisional",
+      "definition": "Automation and AI displace workers from jobs or tasks, with effects on employment, wages and the division of labour.",
+      "scope": "Job displacement, wage effects and the reallocation of tasks.",
+      "boundary": "Market enthusiasm around AI firms is ai_equity_momentum.",
+      "test": "Displacement of workers or tasks attributed to automation is measured; job creation alone does not qualify.",
+      "related": [
+        "ai_equity_momentum",
+        "demographic_transition"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "wealth_concentration",
+      "name": "Wealth concentration",
+      "layer": "extension",
+      "status": "provisional",
+      "definition": "Wealth and asset ownership concentrate in the top segments of the distribution.",
+      "scope": "Top wealth shares and the ownership of financial and real assets.",
+      "boundary": "A single change of ownership is ownership_transfer.",
+      "test": "A measured rise in top wealth shares or in ownership concentration.",
+      "related": [
+        "ownership_transfer"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "demographic_transition",
+      "name": "Demographic transition",
+      "layer": "extension",
+      "status": "provisional",
+      "definition": "The shift from high to low fertility and mortality, and its consequences: population ageing, changing dependency ratios and labour supply.",
+      "scope": "Population ageing, fertility decline, dependency ratios and their labour-force effects.",
+      "boundary": "Labour displacement by technology is technological_unemployment; displacement under duress is humanitarian_displacement.",
+      "test": "A sustained shift in fertility or mortality from high to lower levels is shown, or a change in age structure that follows from such a shift.",
+      "related": [
+        "technological_unemployment",
+        "humanitarian_displacement"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "reserve_diversification",
+      "name": "Reserve diversification",
+      "layer": "extension",
+      "status": "provisional",
+      "definition": "Change in the reserve-currency order: central-bank gold purchases, the dollar's share of reserves, and diversification of reserves.",
+      "scope": "The composition of official reserves and the currency shares within them.",
+      "boundary": "System-level pressure on one currency is fx_pressure.",
+      "test": "The composition of official reserves has shifted.",
+      "related": [
+        "fx_pressure",
+        "geoeconomic_fragmentation"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "geoeconomic_fragmentation",
+      "name": "Geoeconomic fragmentation",
+      "layer": "extension",
+      "status": "provisional",
+      "definition": "Trade, direct investment and payment flows are redirected along geopolitical blocs, or barriers between blocs come to bind them.",
+      "scope": "Changes in trade shares along bloc or sanctions lines; tariffs and countervailing duties imposed on, or kept in force against, a rival bloc; restrictive investment-screening decisions; supply-security plans; payments moving to other currencies.",
+      "boundary": "The existence of infrastructure (participant counts, pilots, permitted arrangements), summits and declarations are not evidence on their own: the flow must be shown to change direction or the barrier to operate. Compared periods must be of equal length.",
+      "test": "A flow is shown to have changed direction along a bloc line, or a barrier between blocs is shown to operate.",
+      "related": [
+        "geopolitical_escalation",
+        "reserve_diversification",
+        "export_earnings_shock"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "war_geopolitical",
+      "name": "War and armed conflict",
+      "layer": "crisis_type",
+      "status": "stable",
+      "definition": "War or armed conflict as an event: the fighting itself, its human toll, and any financial echo.",
+      "scope": "Interstate wars, civil wars and other armed conflict.",
+      "boundary": "A crisis type names the event. The market pricing of geopolitical tension is geopolitical_escalation; fragmentation of armed power inside a state is loss_of_monopoly_on_violence.",
+      "test": "Armed conflict is taking place.",
+      "related": [
+        "geopolitical_escalation",
+        "loss_of_monopoly_on_violence",
+        "humanitarian_displacement"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "famine_food_security",
+      "name": "Famine and food security collapse",
+      "layer": "crisis_type",
+      "status": "stable",
+      "definition": "Famine or the collapse of food security as an event.",
+      "scope": "Measured acute food insecurity and famine conditions.",
+      "boundary": "The access channel through which famine kills is entitlement_failure_famine; food riots are subsistence_unrest_spiral.",
+      "test": "Acute food insecurity or famine conditions are measured.",
+      "related": [
+        "entitlement_failure_famine",
+        "subsistence_unrest_spiral",
+        "aid_cuts"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "humanitarian_displacement",
+      "name": "Humanitarian displacement",
+      "layer": "crisis_type",
+      "status": "stable",
+      "definition": "A humanitarian crisis of forced displacement and refugee flows, as an event.",
+      "scope": "Displacement by conflict, disaster or persecution.",
+      "boundary": "Displacement is the event; its causes are named separately, for example war_geopolitical or natural_disaster.",
+      "test": "People are forcibly displaced.",
+      "related": [
+        "war_geopolitical",
+        "natural_disaster",
+        "aid_cuts"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "natural_disaster",
+      "name": "Natural disaster",
+      "layer": "crisis_type",
+      "status": "stable",
+      "definition": "A natural hazard event, such as an earthquake, flood, storm or wildfire, that seriously disrupts a community or an economy.",
+      "scope": "The event and its measured physical and economic damage.",
+      "boundary": "The uninsured part of the loss is protection_gap; chronic shortage of water is water_scarcity.",
+      "test": "A natural hazard event caused serious, documented loss or disruption.",
+      "related": [
+        "protection_gap",
+        "water_scarcity",
+        "humanitarian_displacement"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    },
+    {
+      "id": "pandemic_epidemic",
+      "name": "Pandemic and epidemic",
+      "layer": "crisis_type",
+      "status": "stable",
+      "definition": "An epidemic or pandemic as an event: transmission, deaths and the load on health systems.",
+      "scope": "The outbreak itself.",
+      "boundary": "Vaccination coverage is not this type. Hiding or denying the outbreak so that it grows is information_suppression_disaster_amplification.",
+      "test": "An outbreak is spreading.",
+      "related": [
+        "information_suppression_disaster_amplification",
+        "legitimacy_crisis"
+      ],
+      "in_signature": true,
+      "introduced_in": "1.0.0"
+    }
+  ],
+  "deprecated": [
+    {
+      "id": "export_pressure",
+      "deprecated_in": "1.0.0",
+      "introduced_in": "0.1.0",
+      "replaced_by": "export_earnings_shock",
+      "note": "Renamed for clarity. The scope narrowed to the contraction of export earnings; chronic loss of export competitiveness is not part of export_earnings_shock."
+    }
+  ]
+}

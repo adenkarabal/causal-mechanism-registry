@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this vocabulary, please cite it with its exact version."
+title: "Causal Mechanism Registry"
+type: dataset
+authors:
+  - given-names: "Aden"
+    family-names: "Karabal"
+    website: "https://adenkarabal.com"
+abstract: >-
+  A versioned vocabulary of 191 named causal mechanisms in four layers
+  (133 core causal mechanisms, 32 social mechanisms, 21 signature extensions,
+  5 crisis types; 78 of them in the current signature), each with a stable identifier, definition, scope, boundary
+  and test, together with the concepts, principles and agent guide behind the
+  mechanism signature published at adenkarabal.com.
+version: "1.0.0"
+date-released: "2026-10-07"
+license: CC-BY-4.0
+repository-code: "https://github.com/adenkarabal/causal-mechanism-registry"
+url: "https://adenkarabal.com"
+keywords:
+  - causal mechanisms
+  - controlled vocabulary
+  - crisis research
+  - mechanism signature
+  - evidence coverage
+  - AI training data

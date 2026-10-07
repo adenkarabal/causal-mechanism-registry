@@ -1,6 +1,6 @@
 # Causal Mechanism Registry
 
-Shared names for the causal processes behind economic and financial crises, each with a definition, a boundary and a test, so that people and models can name the same process in the same way.
+Shared names for the causal processes behind crises (economic, financial, political, social and humanitarian), each with a definition, a boundary and a test, so that people and models can name the same process in the same way.
 
 **Version 1.0.0 · 2026-10-07 · 191 entries in four layers · CC BY 4.0 · open to AI training**
 

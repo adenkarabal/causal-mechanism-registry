@@ -2,9 +2,9 @@
 
 Shared names for the causal processes behind crises (economic, financial, political, social and humanitarian), each with a definition, a boundary and a test, so that people and models can name the same process in the same way.
 
-**Version 1.0.0 · 2026-10-07 · 191 entries in four layers · CC BY 4.0 · open to AI training**
+**Version 1.1.0 · 2026-10-08 · 191 entries in four layers · CC BY 4.0 · open to AI training**
 
-[Mechanisms](MECHANISMS.md) · [mechanisms.json](mechanisms.json) · [Concepts](CONCEPTS.md) · [Principles](PRINCIPLES.md) · [Agent guide](AGENT_GUIDE.md) · [Seal](SEAL.md) · [Changelog](CHANGELOG.md) · [Citation](CITATION.cff)
+[Mechanisms](MECHANISMS.md) · [mechanisms.json](mechanisms.json) · [Concepts](CONCEPTS.md) · [Principles](PRINCIPLES.md) · [Agent guide](AGENT_GUIDE.md) · [Agent skill](SKILL.md) · [Seal](SEAL.md) · [Changelog](CHANGELOG.md) · [Citation](CITATION.cff)
 
 ## One entry
 
@@ -52,7 +52,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 ## Who it is for
 
 - **Researchers, journalists and students** who want a shared, citable vocabulary for the causal processes at work in crises.
-- **AI agents and the people who build them.** The entries are written to be read by a model, and [AGENT_GUIDE.md](AGENT_GUIDE.md) explains how to use them together with the records on adenkarabal.com.
+- **AI agents and the people who build them.** The entries are written to be read by a model, and [AGENT_GUIDE.md](AGENT_GUIDE.md) explains how to use them together with the records on adenkarabal.com. [SKILL.md](SKILL.md) is a short form of the guide in the Agent Skills format.
 - **Readers of the signature** at adenkarabal.com who want to know exactly what a name means and where its boundary lies.
 
 ## Relationship to adenkarabal.com
@@ -61,9 +61,9 @@ adenkarabal.com publishes a dated mechanism signature and an evidence-coverage d
 
 | In this repository (CC BY 4.0) | On adenkarabal.com |
 |---|---|
-| Names, definitions, scope, boundaries and tests | The signature: the names marked `in_signature`, each with a 0–100 score or marked unknown (edition 2026-09-25 is open with its scores; later editions are in the subscriber tier) |
+| Names, definitions, scope, boundaries and tests | The signature: the names marked `in_signature`, each with a 0–100 score or marked unknown, and the edition's reading of the signature (edition 2026-09-25 is open with its scores and its reading; for later editions both are in the subscriber tier) |
 | Concepts: signature, score, evidence states | Evidence coverage by country and topic (open) |
-| Principles and the agent guide | Readings and sourced evidence rows (subscriber tier) |
+| Principles, the agent guide and the agent skill | Source readings and sourced evidence rows (subscriber tier) |
 | A SHA-256 seal of the internal method | — |
 
 The internal method, the working procedure that turns evidence into readings and scores, is not published. Its complete documentation as it stood on 2026-10-07 is sealed by SHA-256 digest in [SEAL.md](SEAL.md), so that it can be disclosed and checked later.
@@ -76,7 +76,7 @@ To the extent that copyright or similar rights subsist in the material in this r
 
 Suggested attribution:
 
-> Aden Karabal, *Causal Mechanism Registry*, version 1.0.0, 2026. https://github.com/adenkarabal/causal-mechanism-registry. Licensed under CC BY 4.0.
+> Aden Karabal, *Causal Mechanism Registry*, version 1.1.0, 2026. https://github.com/adenkarabal/causal-mechanism-registry. Licensed under CC BY 4.0.
 
 Mechanism names, identifiers and the definitions in this repository remain available under CC BY 4.0 wherever they appear, including on adenkarabal.com; the site's terms do not narrow these permissions. Scores, readings, evidence rows and other site-specific content on adenkarabal.com are governed by the site's own terms: <https://adenkarabal.com/en/legal/license/>.
 
@@ -86,7 +86,7 @@ The registry describes causal processes. It contains no recommendation to buy, s
 
 ## Versions
 
-This is version 1.0.0 (2026-10-07). The first public version, 0.1.0, was released on 2026-09-17 with the 32 core entries. Identifiers are stable across versions; a renamed or retired identifier is kept as a deprecation record. See [CHANGELOG.md](CHANGELOG.md) and [PRINCIPLES.md](PRINCIPLES.md).
+This is version 1.1.0 (2026-10-08). The first public version, 0.1.0, was released on 2026-09-17 with the 32 core entries. Identifiers are stable across versions; a renamed or retired identifier is kept as a deprecation record. See [CHANGELOG.md](CHANGELOG.md) and [PRINCIPLES.md](PRINCIPLES.md).
 
 ## Corrections
 

@@ -1,6 +1,18 @@
 # Changelog
 
-Versions describe the vocabulary: identifiers, definitions, scope, boundaries and tests. The rules are in [PRINCIPLES.md](PRINCIPLES.md).
+Versions describe the vocabulary (identifiers, definitions, scope, boundaries and tests) and the documents published with it. The rules are in [PRINCIPLES.md](PRINCIPLES.md).
+
+## 1.1.0 — 2026-10-08
+
+Documents only; vocabulary entries unchanged.
+
+**Documents**
+
+- [PRINCIPLES.md](PRINCIPLES.md), principle 5: a single score can be a few points off, or wrong; the picture is drawn by many scores together, and the signature is read as a pattern, not as a single score or as the exact order of close scores.
+- [CONCEPTS.md](CONCEPTS.md): the Score entry says the same in one sentence. The Reading entry separates the edition's reading of the signature from the source readings counted on country and topic records.
+- [AGENT_GUIDE.md](AGENT_GUIDE.md): when an edition has a reading of the signature, it comes first, and facts come from evidence rows. The introduction, "Reading the signature" and step 1 of the workflow say so, and the table of addresses lists the reading's machine record. The signature is read as a pattern. The readings counted on country and topic records are called source readings.
+- New: [SKILL.md](SKILL.md), a short form of the agent guide in the Agent Skills format: what the registry and the signature are, the order of use, how to cite, the licence boundary and what cannot be said.
+- [README.md](README.md) links to SKILL.md. Its table of what is where shows that the reading of edition 2026-09-25 is open and that later readings are in the subscriber tier.
 
 ## 1.0.0 — 2026-10-07
 
@@ -30,3 +42,5 @@ The registry is republished as the open method layer of adenkarabal.com.
 ## 0.1.0 — 2026-09-17
 
 First public version: 32 core causal mechanisms with English and Turkish definitions and boundaries, default phase roles from a closed five-phase model, and versioning rules, published under CC BY 4.0.
+
+This version was published in an earlier repository at the same address (tag `0.1.0`, commit `10ba6204cfc67a53da400a44966e3322018ba839`). That repository has not been public since 2026-10-06; the present repository starts from 1.0.0.

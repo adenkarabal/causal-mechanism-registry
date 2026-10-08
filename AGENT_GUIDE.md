@@ -1,6 +1,6 @@
 # Agent guide
 
-How an AI agent can carry out a research task with this vocabulary and the records published at adenkarabal.com: start from the signature, go to the country or topic record, then to the readings, then to the evidence rows.
+How an AI agent can carry out a research task with this vocabulary and the records published at adenkarabal.com. The path runs from the edition's reading of the signature, when the edition has one, to the signature, then to the country or topic record, its source readings and the evidence rows.
 
 The site addresses below follow <https://adenkarabal.com/llms.txt> (Turkish: <https://adenkarabal.com/tr/llms.txt>). If the two ever differ, llms.txt is current and this file is out of date.
 
@@ -9,6 +9,7 @@ The site addresses below follow <https://adenkarabal.com/llms.txt> (Turkish: <ht
 | You need | Where |
 |---|---|
 | What a name means, its boundary and its test | This repository: [`mechanisms.json`](mechanisms.json) (look up by `id`) or [MECHANISMS.md](MECHANISMS.md) |
+| The edition's reading of the signature, which comes before the scores | <https://adenkarabal.com/machine/reading.json> · fixed address in `editionPath`, for example <https://adenkarabal.com/machine/edition/2026-09-25/reading.json> · page <https://adenkarabal.com/en/signature/#reading> |
 | Which names are in the current signature, and which are unknown | <https://adenkarabal.com/machine/signature.json> |
 | What the signature cannot say | <https://adenkarabal.com/machine/limits.json> |
 | All records, counts and reading rules | <https://adenkarabal.com/machine/index.json> |
@@ -25,6 +26,8 @@ Country codes are ISO 3166-1 alpha-3 in lower case (`usa`, `tur`). Topic slugs a
 
 A signature is a frame of reference, not a report of events. The full text is in [CONCEPTS.md](CONCEPTS.md#reading-the-signature).
 
+- When an edition has a reading, the edition's reading comes first; an agent's own reading is built to the same standard; facts come from evidence rows. The points below and [the workflow](#the-workflow) set out that standard. The reading of edition 2026-09-25 is open: page <https://adenkarabal.com/en/signature/#reading>, machine record <https://adenkarabal.com/machine/reading.json> (fixed address `https://adenkarabal.com/machine/edition/2026-09-25/reading.json`). It is one interpretation text for the signature of that edition, a different thing from the source readings counted on country and topic records.
+- The signature is read as a pattern, not as a single score or as the exact order of close scores. A single score can be a few points off, or wrong; the picture is drawn by many scores together ([PRINCIPLES.md](PRINCIPLES.md#5-scores-are-editorial-judgements)).
 - Reason inside the frame and say so: "in the signature of edition 2026-09-25, `fiscal_dominance` is scored *n*", never "fiscal dominance is at *n* today".
 - Do not tell your user what is happening in the world on the strength of the signature alone. Facts come from dated, sourced records: evidence rows, or other sources you cite with their dates.
 - A high score is a reason to look at the evidence; a low score or unknown is not a reason to stop looking.
@@ -32,7 +35,9 @@ A signature is a frame of reference, not a report of events. The full text is in
 
 ## The workflow
 
-### 1. Start from the signature
+### 1. The edition's reading, then the signature
+
+When the edition has a reading of the signature, it comes first: `/machine/reading.json`, with its fixed address in `editionPath`. Like the signature, the reading is a frame: its links between names are inferences, and facts still come from evidence rows.
 
 Fetch `signature.json` and note its `edition` and `cut`. For each name that bears on the question, look up the entry in `mechanisms.json` and read its `definition`, `boundary` and `test`.
 
@@ -52,9 +57,9 @@ Resolve the place or subject through `countries.json` or `topics.json`, then fet
 - Each line carries a status code and a `statusText`. Read the `statusText`.
 - A topic that is absent from a country's `topicStatus` was not looked at for that country. That is a statement about the record, not about the world.
 
-### 3. Note the readings
+### 3. The source readings
 
-The open record gives the number of readings and their date range. Reading titles and texts are in the subscriber tier. A reading applies the vocabulary to evidence; links it draws between names are inferences.
+The open record gives the number of source readings and their date range. Their titles and texts are in the subscriber tier. A source reading applies the vocabulary to evidence; links it draws between names are inferences.
 
 ### 4. Go to the evidence rows
 
@@ -80,9 +85,10 @@ Each recipe gives the addresses in order, the fields to read and what you cannot
 - You cannot say that M is present in any case just because it is defined. Its `test` has to be met by evidence.
 
 **"How intense is mechanism M in the signature?"**
-1. `/machine/signature.json`: note `edition` and `cut`; find M in `data.names` by `id`.
-2. Read `score` or `unknown`. If `score` is listed under `withheld`, it is in the subscriber tier.
-3. In `mechanisms.json`, read M's `definition` and `test`, so that you report what the name means.
+1. `/machine/reading.json`, when the edition has a reading: the reading frames the scores and comes first.
+2. `/machine/signature.json`: note `edition` and `cut`; find M in `data.names` by `id`.
+3. Read `score` or `unknown`. If `score` is listed under `withheld`, it is in the subscriber tier.
+4. In `mechanisms.json`, read M's `definition` and `test`, so that you report what the name means.
 - Answer as "in the signature of edition E, M is scored *n* (0–100, an editorial assessment of intensity)".
 - You cannot say that M is at *n* now, that *n* is a probability, or which way it is moving.
 
@@ -110,13 +116,14 @@ Each recipe gives the addresses in order, the fields to read and what you cannot
 
 Question: *"What does the dashboard record about stress in Türkiye's banking system?"* The figures below are from edition 2026-09-25 and will differ in later editions.
 
-1. **Signature.** `signature.json` gives edition 2026-09-25, with its scores open. Names that bear on bank stress include `asset_quality_stress`, `banking_margin_pressure`, `liquidity_stress` and `self_fulfilling_run`; in that edition `self_fulfilling_run` is unknown.
-2. **Vocabulary.** In `mechanisms.json`, the test for `self_fulfilling_run` is that withdrawals or hoarding accelerate because others are doing the same; its boundary separates it from `herd_behavior` and `subsistence_unrest_spiral`.
-3. **Resolve.** "Turkey" resolves to `tur` through `countries.json`; "banks" is an alias of the topic "Banking system", slug `banking-system`.
-4. **Country record.** In `country/tur.json` the line for the topic "Banking system" reads "evidence · regional series or population majority", with 4 readings.
-5. **Topic record.** `topic/banking-system.json` shows the same status for the Türkiye–Caucasus region, alongside the other regions.
-6. **Evidence rows.** The sourced rows behind that status are in the subscriber tier.
-7. **Answer.** Report what is on record, with edition and cut; name the topics and regions that were not looked at; give no country score and no direction.
+1. **Reading.** `reading.json` gives the reading of edition 2026-09-25; it frames what follows and is read before the scores.
+2. **Signature.** `signature.json` gives edition 2026-09-25, with its scores open. Names that bear on bank stress include `asset_quality_stress`, `banking_margin_pressure`, `liquidity_stress` and `self_fulfilling_run`; in that edition `self_fulfilling_run` is unknown.
+3. **Vocabulary.** In `mechanisms.json`, the test for `self_fulfilling_run` is that withdrawals or hoarding accelerate because others are doing the same; its boundary separates it from `herd_behavior` and `subsistence_unrest_spiral`.
+4. **Resolve.** "Turkey" resolves to `tur` through `countries.json`; "banks" is an alias of the topic "Banking system", slug `banking-system`.
+5. **Country record.** In `country/tur.json` the line for the topic "Banking system" reads "evidence · regional series or population majority", with 4 readings.
+6. **Topic record.** `topic/banking-system.json` shows the same status for the Türkiye–Caucasus region, alongside the other regions.
+7. **Evidence rows.** The sourced rows behind that status are in the subscriber tier.
+8. **Answer.** Report what is on record, with edition and cut; name the topics and regions that were not looked at; give no country score and no direction.
 
 ## Citing
 

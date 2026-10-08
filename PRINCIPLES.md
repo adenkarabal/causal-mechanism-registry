@@ -28,7 +28,7 @@ A record that silently turns "not examined" into "nothing happened" agrees with 
 
 ## 5. Scores are editorial judgements
 
-A score in the signature is an editorial assessment of intensity on a 0–100 scale. It is not a probability, a forecast or a risk rating. It is published as a judgement, with the edition it belongs to, and it can be wrong.
+A score in the signature is an editorial assessment of intensity on a 0–100 scale. It is not a probability, a forecast or a risk rating. It is published as a judgement, with the edition it belongs to. A single score can be a few points off, or wrong. The picture is drawn by many scores together, not by any one of them: the signature is read as a pattern, not as a single score or as the exact order of close scores.
 
 ## 6. Zero factual errors is the standard, and gates enforce it
 

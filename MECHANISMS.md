@@ -1,6 +1,6 @@
 # Mechanisms
 
-Version 1.0.0 · 2026-10-07 · 191 entries in four layers · CC BY 4.0, open to AI training (see README).
+Version 1.1.0 · 2026-10-08 · 191 entries in four layers · CC BY 4.0, open to AI training (see README).
 
 This file is generated from [`mechanisms.json`](mechanisms.json); if the two differ, the JSON file takes precedence. Each entry has a stable identifier, a definition, its scope, its boundary against neighbouring entries, and a test: what must be on record for the entry to apply. What the layers, statuses and the `in_signature` flag mean is in [CONCEPTS.md](CONCEPTS.md).
 

@@ -40,14 +40,14 @@ Every entry carries `in_signature`.
 - `true`: the current signature edition includes the name, either with a score or marked unknown.
 - `false`: the mechanism is named and defined here but is not part of the current signature edition. It has no score, and its absence from the signature says nothing about the world.
 
-In version 1.0.0, 78 entries are in the signature and 113 are not.
+In version 1.1.0, 78 entries are in the signature and 113 are not.
 
 ## Status
 
 | Status | Meaning |
 |---|---|
 | `stable` | The identifier and its core meaning are fixed. Later versions may clarify the wording, never reverse it. |
-| `provisional` | The identifier may still be renamed, merged or retired in a later version, always with a migration note. In version 1.0.0, all signature extensions and all 113 entries outside the signature are provisional. |
+| `provisional` | The identifier may still be renamed, merged or retired in a later version, always with a migration note. In version 1.1.0, all signature extensions and all 113 entries outside the signature are provisional. |
 
 ## Parts of an entry
 
@@ -79,12 +79,12 @@ Amplification happens inside a node; transmission happens between nodes. Default
 
 A **signature** is a dated frame of reference, built from the fixed names of this vocabulary, with a 0–100 intensity assessment for each name or a mark that the name is unknown. Edition 2026-09-25 covers the world as a whole.
 
-- **Score.** A score is an editorial assessment of how intensely a mechanism is present in that state. It is not a probability, a forecast or a risk rating. It has no unit, and no shared measuring scale across names is claimed. A score on its own is neither an explanation nor evidence.
+- **Score.** A score is an editorial assessment of how intensely a mechanism is present in that state. It is not a probability, a forecast or a risk rating. It has no unit, and no shared measuring scale across names is claimed. A score on its own is neither an explanation nor evidence. A single score can be a few points off, or wrong; the signature is read as a pattern across many scores, not as a single score or as the exact order of close scores.
 - **unknown.** No score was given. It is not 0, and the signature says nothing about that name.
 - **withheld.** On adenkarabal.com, a field listed as withheld exists in the subscriber tier. It is neither zero nor unknown.
 - **Names and scores only.** Within its scope, a signature carries no geography, no direction and no causal links between names. Where a reading draws a link between two names, the link is an inference, not a measurement.
 - **Missing is not absent.** A mechanism that is not in the vocabulary, or is unknown in a signature, is not thereby absent from the world.
-- **Same vocabulary, same comparison.** Signatures can be compared only when they use the same vocabulary version, or with an explicit bridge between versions. In version 1.0.0, the entries marked `in_signature` are exactly the names of the signature in edition 2026-09-25 at adenkarabal.com.
+- **Same vocabulary, same comparison.** Signatures can be compared only when they use the same vocabulary version, or with an explicit bridge between versions. In version 1.1.0, the entries marked `in_signature` are exactly the names of the signature in edition 2026-09-25 at adenkarabal.com.
 
 A signature can be wrong. Two different states of the world that produce the same scores are, to anyone reading only the signature, the same state: whatever the vocabulary does not name is invisible to it.
 
@@ -130,7 +130,12 @@ An evidence row is a single sourced record: what was measured or stated, where, 
 
 ## Reading
 
-A reading is a dated piece of research that examines evidence for a set of topics and places, and applies the names of this vocabulary to what it finds. Readings are where the vocabulary meets cases. Links between names in a reading are inferences.
+Two different things on adenkarabal.com are called readings.
+
+- **The edition's reading** (the reading of the signature) is one interpretation text for the signature of an edition. When an edition has one, it comes before the scores, and facts still come from evidence rows. The reading of edition 2026-09-25 is open; the readings of later editions are in the subscriber tier.
+- **Source readings** are the readings counted on country and topic records: dated pieces of research that examine evidence for a set of topics and places and apply the names of this vocabulary to what they find. Source readings are where the vocabulary meets cases.
+
+Links between names in either kind of reading are inferences.
 
 ## What the signature cannot say
 

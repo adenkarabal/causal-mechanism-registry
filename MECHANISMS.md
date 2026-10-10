@@ -1,8 +1,8 @@
 # Mechanisms
 
-Version 1.1.0 · 2026-10-08 · 191 entries in four layers · CC BY 4.0, open to AI training (see README).
+Version 1.2.0 · 2026-10-10 · 191 entries in four layers · CC BY 4.0, open to AI training (see README).
 
-This file is generated from [`mechanisms.json`](mechanisms.json); if the two differ, the JSON file takes precedence. Each entry has a stable identifier, a definition, its scope, its boundary against neighbouring entries, and a test: what must be on record for the entry to apply. What the layers, statuses and the `in_signature` flag mean is in [CONCEPTS.md](CONCEPTS.md).
+This file is generated from [`mechanisms.json`](mechanisms.json); if the two differ, the JSON file takes precedence. Each entry has a stable identifier, a definition, its scope, its boundary against neighbouring entries, and a test: what must be on record for the entry to apply. What the layers, statuses, the `in_signature` flag and the default phase roles mean is in [CONCEPTS.md](CONCEPTS.md).
 
 The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 9 unknown in edition 2026-09-25); the others are named and defined but not scored in the current edition.
 
@@ -333,8 +333,8 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 **Contagion.** Transmission of crisis stress from one institution, market, sector, or country to another through an identifiable channel.
 
 - **Scope:** Common-creditor, trade, funding, counterparty and confidence channels between institutions, markets, sectors or countries.
-- **Boundary:** Contagion is between-node transmission; loss multiplication within the same node is amplification.
-- **Test:** Stress moved from one node to another through a named channel.
+- **Boundary:** Contagion is transmission between institutions, markets, sectors or countries; loss multiplication within one of them is amplification.
+- **Test:** Stress moved from one institution, market, sector or country to another through a named channel.
 - **Related:** `liquidity_stress`, `risk_appetite_reversal`
 - layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: transmission
 

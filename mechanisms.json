@@ -1,7 +1,7 @@
 {
   "title": "Causal Mechanism Registry",
-  "version": "1.1.0",
-  "released": "2026-10-08",
+  "version": "1.2.0",
+  "released": "2026-10-10",
   "first_public_version": {
     "version": "0.1.0",
     "released": "2026-09-17"
@@ -58,7 +58,7 @@
     "test": "The distinguishing marker: what must be on record for the entry to apply.",
     "related": "Identifiers named in the boundary or closest in meaning.",
     "in_signature": "Whether the signature edition includes this mechanism, scored or marked unknown. false: named and defined here, not part of the current signature edition.",
-    "phase_roles": "Present only where default roles are assigned: roles in an episode, a prior rather than a claim about every occurrence.",
+    "phase_roles": "Present only where default roles are assigned: roles in an episode (see CONCEPTS.md), a starting assumption rather than a claim about every occurrence.",
     "introduced_in": "First version of this vocabulary that carried the identifier.",
     "replaces": "Identifiers this entry supersedes."
   },
@@ -688,8 +688,8 @@
       "status": "stable",
       "definition": "Transmission of crisis stress from one institution, market, sector, or country to another through an identifiable channel.",
       "scope": "Common-creditor, trade, funding, counterparty and confidence channels between institutions, markets, sectors or countries.",
-      "boundary": "Contagion is between-node transmission; loss multiplication within the same node is amplification.",
-      "test": "Stress moved from one node to another through a named channel.",
+      "boundary": "Contagion is transmission between institutions, markets, sectors or countries; loss multiplication within one of them is amplification.",
+      "test": "Stress moved from one institution, market, sector or country to another through a named channel.",
       "related": [
         "liquidity_stress",
         "risk_appetite_reversal"

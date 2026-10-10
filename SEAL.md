@@ -1,6 +1,6 @@
 # Seal
 
-The internal working procedure behind the signature at adenkarabal.com is not published. Its complete documentation, as it stood on 2026-10-07, was sealed instead: only SHA-256 digests are published here. The sealed content can be disclosed later, in whole or part by part, and anyone can check a disclosed file against the digests below.
+The complete documentation of the internal working procedure behind the signature at adenkarabal.com, as it stood on 2026-10-07, was sealed: only SHA-256 digests are published here. The sealed content can be disclosed later, in whole or part by part, and anyone can check a disclosed file against the digests below.
 
 ## Seal record
 
@@ -16,7 +16,7 @@ The internal working procedure behind the signature at adenkarabal.com is not pu
 
 ## Parts
 
-Each part is one document, byte for byte as sealed. Labels are neutral and say nothing about the content.
+Each part is one document, byte for byte as sealed. Labels are neutral and say nothing about the content. The dashboard's data names the files behind parts 18–22 (the four name lists and the display-name table of edition 2026-09-25) with the same digests.
 
 | Label | Bytes | SHA-256 |
 |---|---:|---|

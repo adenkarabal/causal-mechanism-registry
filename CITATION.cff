@@ -12,8 +12,9 @@ abstract: >-
   5 crisis types; 78 of them in the current signature), each with a stable identifier, definition, scope, boundary
   and test, together with the concepts, principles and agent guide behind the
   mechanism signature published at adenkarabal.com.
-version: "1.1.0"
-date-released: "2026-10-08"
+version: "1.2.0"
+date-released: "2026-10-10"
+doi: "10.5281/zenodo.23248221"
 license: CC-BY-4.0
 repository-code: "https://github.com/adenkarabal/causal-mechanism-registry"
 url: "https://adenkarabal.com"

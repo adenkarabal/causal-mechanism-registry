@@ -14,6 +14,8 @@ The rules the vocabulary and the work built on it are kept under.
 
 Every published claim is tied to an edition and a cut date. The cut is the date the data describes; asOf is when the inputs were produced. A claim without a date cannot be checked against later evidence.
 
+This applies to claims about the world. Live records, such as Tracking on the dashboard, carry the time they were observed instead.
+
 ## 3. Evidence is sourced
 
 An evidence row links to its source. A statement without a source is not evidence, however plausible it is. Facts from third-party sources stay attributed to those sources, under their own licences.
@@ -30,14 +32,16 @@ A record that silently turns "not examined" into "nothing happened" agrees with 
 
 A score in the signature is an editorial assessment of intensity on a 0–100 scale. It is not a probability, a forecast or a risk rating. It is published as a judgement, with the edition it belongs to. A single score can be a few points off, or wrong. The picture is drawn by many scores together, not by any one of them: the signature is read as a pattern, not as a single score or as the exact order of close scores.
 
-## 6. Zero factual errors is the standard, and gates enforce it
+## 6. Zero factual errors is the standard, and gates check for it
 
-Before anything is published, it must meet these standards:
+Before anything is published, it must meet these standards, or state plainly which check is still pending (principle 9):
 
 1. **Numbers and sources.** Every number matches its source, and every source is the one cited.
 2. **Instrument and direction.** No sentence pairs a specific financial instrument with a direction or a recommendation.
-3. **Leakage.** No internal working material, private paths or personal traces reach the published text.
+3. **Rights and privacy.** No third-party text without the right to publish it, no personal records and no credentials reach the published text. Working material, including folder paths, may be published as part of the open working record.
 4. **Independent reading.** An independent blind reading has checked the work (principle 8).
+
+Gates reduce errors; they do not rule them out. An error found after publication is corrected with its date (principle 9).
 
 ## 7. Gates do not stay silent
 
@@ -54,18 +58,19 @@ Checks are themselves tested against known errors; a check that fails that test 
 
 ## 8. An independent blind reading
 
-Before publication, work is checked by an independent blind reading. Its purpose is to catch what the author cannot see: factual errors, unsupported claims, and evidence that was ignored. The author does not certify its own work, and the reviewer does not produce the judgement it is checking.
+Before publication, work is checked by an independent blind reading; where that reading is still pending, the published work says so. Its purpose is to catch what the author cannot see: factual errors, unsupported claims, and evidence that was ignored. The author does not certify its own work, and the reviewer does not produce the judgement it is checking.
 
 ## 9. Versions and corrections
 
 - Published records are not edited silently.
-- An edition's records stay unchanged at their own address.
-- A correction is published as a new dated version that says what changed. The earlier version stays readable.
+- A correction to this vocabulary is published as a new dated version that says what changed. The earlier version stays readable.
+- On the site, a correction to the current signature stays at the same address and is recorded in a dated change log. An archived signature stays as published, except where material must be removed for legal reasons, to protect personal data or after a permission is lost; such a removal is recorded without republishing the removed material.
+- A permanent address is meant for stable citation; it is not a promise of perpetual hosting.
 - A correction that has not yet been re-verified is labelled as such.
 
-## 10. No investment advice
+## 10. Description, not direction
 
-Nothing published under this method recommends buying, selling or holding a specific financial instrument, sets a target price, or issues a trading signal or model allocation. The vocabulary describes causal processes; it does not tell anyone what to do with money.
+The vocabulary describes causal processes. Nothing published under this method tells anyone what to do: no sentence pairs a specific instrument with a direction (principle 6, standard 2).
 
 ## 11. The direction and the responsibility are the publisher's
 
@@ -73,4 +78,4 @@ The ideas, concepts and editorial direction are Aden Karabal's. The tools used f
 
 ## 12. The method is sealed, not erased
 
-The internal working procedure is not published. Its complete documentation is sealed by SHA-256 digest ([SEAL.md](SEAL.md)) so that it can be disclosed later, in whole or in part, and checked against the digest by anyone.
+The complete documentation of the internal working procedure, as it stood on 2026-10-07, is sealed by SHA-256 digest ([SEAL.md](SEAL.md)) so that it can be disclosed later, in whole or in part, and checked against the digest by anyone.

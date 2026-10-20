@@ -134,7 +134,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 ## Who it is for
 
 - **Researchers, journalists and students** who want a shared, citable vocabulary for the causal processes at work in crises.
-- **AI agents and the people who build them.** The entries are written to be read by a model, and [AGENT_GUIDE.md](AGENT_GUIDE.md) explains how to use them together with the records on adenkarabal.com. [SKILL.md](SKILL.md) is a short form of the guide in the Agent Skills format.
+- **AI agents and the people who build them.** The entries are written to be read by a model, and [AGENT_GUIDE.md](AGENT_GUIDE.md) explains how to use them together with the records on adenkarabal.com. [SKILL.md](SKILL.md) is a short form of the guide in the Agent Skills format. The same vocabulary is served as an MCP server at <https://adenkarabal.com/mcp> (streamable HTTP, read-only, no sign-in): resolve a name, read an entry with its version.
 - **Readers of the signature** at adenkarabal.com who want to know exactly what a name means and where its boundary lies.
 
 ## Relationship to adenkarabal.com

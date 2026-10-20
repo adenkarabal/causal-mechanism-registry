@@ -18,6 +18,7 @@ The site addresses below follow <https://adenkarabal.com/llms.txt> (Turkish: <ht
 | A topic | `https://adenkarabal.com/machine/topic/{slug}.json` · on the dashboard, the world view <https://adenkarabal.com/pano/#dunya> (there is no page for a single topic) |
 | Names, codes, slugs and aliases | <https://adenkarabal.com/machine/countries.json> · <https://adenkarabal.com/machine/topics.json> |
 | API description | <https://adenkarabal.com/machine/openapi.json> · <https://adenkarabal.com/.well-known/api-catalog> |
+| The open vocabulary as an MCP server: resolve a name, read an entry with its version (streamable HTTP, read-only, no sign-in; published versions only, default the latest) | <https://adenkarabal.com/mcp> |
 | The dashboard: the human view of the signature, its reading, coverage and evidence. When a new signature is published, the previous signature's final dashboard stays at a permanent archive address | <https://adenkarabal.com/pano/> |
 
 Country codes are ISO 3166-1 alpha-3 in lower case (`usa`, `tur`), plus the World Bank codes `chi` (Channel Islands) and `xkx` (Kosovo). Country names and aliases, such as "Turkey" and "Türkiye", are listed in `countries.json`. Topic slugs are frozen English slugs; `topics.json` lists them with their topic aliases (for example "Fed").

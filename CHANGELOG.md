@@ -2,6 +2,15 @@
 
 Versions describe the vocabulary (identifiers, definitions, scope, boundaries and tests) and the documents published with it. The rules are in [PRINCIPLES.md](PRINCIPLES.md).
 
+## 1.3.1 — 2026-10-20
+
+Descriptions aligned with the data; no entry's text, identifier, layer, status or relation changed.
+
+- `kind` has three values, not two: `mechanism` 184, `crisis_type` 5 and `state` 2 (`water_scarcity`, `wealth_concentration`). The field description in `mechanisms.json` now names all three; the 1.3.0 note below named two.
+- `review_values.in_review` now says how review and status combine: an entry in review may have its wording clarified; only a `provisional` entry may also be merged or renamed. 23 entries are `stable` and `in_review`; their identifiers and core meanings are fixed.
+- [MECHANISMS.md](MECHANISMS.md) shows `kind` on each entry's line, so that it carries the same fields as `mechanisms.json`.
+- [CONCEPTS.md](CONCEPTS.md) lists `kind`, `review` and `name_test` among the parts of an entry.
+
 ## 1.3.0 — 2026-10-20
 
 The vocabulary is now generated from the publisher's master copy of the concept records; a version is not released when the published file and the master copy differ.

@@ -1,6 +1,6 @@
 # Mechanisms
 
-Version 1.3.0 · 2026-10-20 · 191 entries in four layers · CC BY 4.0, open to AI training (see README).
+Version 1.3.1 · 2026-10-20 · 191 entries in four layers · CC BY 4.0, open to AI training (see README).
 
 This file is generated from [`mechanisms.json`](mechanisms.json); if the two differ, the JSON file takes precedence. Each entry has a stable identifier, a definition, its scope, its boundary against neighbouring entries, and a test: what must be on record for the entry to apply. What the layers, statuses, the `in_signature` flag and the default phase roles mean is in [CONCEPTS.md](CONCEPTS.md).
 
@@ -26,7 +26,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Physical supply is central; price pass-through alone belongs under energy_cost_pressure.
 - **Test:** A physical shortfall in energy, or a credible threat of one, is on record, not only a higher price.
 - **Related:** `energy_cost_pressure`, `energy_supply_relief`, `commodity_supply_squeeze`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: trigger · review `accepted` · name test `untested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: trigger · kind `mechanism` · review `accepted` · name test `untested`
 
 ### `energy_supply_relief`
 
@@ -36,7 +36,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Relief requires easing of the supply constraint, not merely weaker energy demand.
 - **Test:** A supply constraint that previously bound has loosened.
 - **Related:** `energy_supply_shock`, `demand_slowdown`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: resolution, policy · review `accepted` · name test `untested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: resolution, policy · kind `mechanism` · review `accepted` · name test `untested`
 
 ### `energy_cost_pressure`
 
@@ -46,7 +46,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** This is the cost-transmission channel, not the physical supply disruption itself.
 - **Test:** The burden arrives through what energy costs, whether or not supply was physically short.
 - **Related:** `energy_supply_shock`, `cost_inflation`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification, trigger · review `accepted` · name test `untested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification, trigger · kind `mechanism` · review `accepted` · name test `untested`
 
 ### `commodity_supply_squeeze`
 
@@ -56,7 +56,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Physical availability or deliverability is central; generalized cost inflation is a downstream mechanism.
 - **Test:** Deliverable supply is short of near-term demand.
 - **Related:** `cost_inflation`, `inventory_pressure`, `energy_supply_shock`, `corner_dynamics`, `export_ban_provisioning_cascade`, `specie_scarcity_deflation`, `state_buffer_stock_intervention`, `technological_substitution_shock`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: trigger, amplification · review `accepted` · name test `untested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: trigger, amplification · kind `mechanism` · review `accepted` · name test `untested`
 
 ### `cost_inflation`
 
@@ -66,7 +66,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The causal cost channel must be present; a high inflation reading alone is insufficient.
 - **Test:** A cost increase is identified as the channel that moved prices.
 - **Related:** `inflation_pressure`, `energy_cost_pressure`, `commodity_supply_squeeze`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification, trigger · review `accepted` · name test `untested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification, trigger · kind `mechanism` · review `accepted` · name test `untested`
 
 ### `inflation_pressure`
 
@@ -76,7 +76,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** This is broader than any single inflation channel; cost_inflation is one possible mechanism beneath it.
 - **Test:** The general price level, not one price, is under persistent upward pressure.
 - **Related:** `cost_inflation`, `fiscal_dominance`, `arbitrary_expropriation_shock`, `debasement_seigniorage`, `flight_to_hard_money_dollarization`, `heterodox_shock_stabilization_plan`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification, trigger · review `accepted` · name test `untested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification, trigger · kind `mechanism` · review `accepted` · name test `untested`
 
 ### `duration_selloff`
 
@@ -86,7 +86,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The duration channel must dominate; this is not a label for every bond-market decline.
 - **Test:** Losses are concentrated where duration is longest.
 - **Related:** `sovereign_funding_stress`, `policy_repricing`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: transmission, amplification · review `in_review` · name test `untested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: transmission, amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `sovereign_funding_stress`
 
@@ -96,7 +96,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The stressed borrower is the sovereign; corporate funding and currency pressure are separate mechanisms.
 - **Test:** The sovereign's own ability or cost to fund itself is what is strained.
 - **Related:** `funding_margin_pressure`, `fx_pressure`, `fiscal_dominance`, `debt_service_crowding_out`, `coercive_interest_reduction`, `commodity_backed_debt_overhang`, `commodity_dependence_fiscal_collapse`, `creditor_governance`, `debt_bondage_spiral`, `dual_measure_divergence`, `duration_selloff`, `forced_loan_capital_levy`, `foreign_financial_control`, `odious_debt_repudiation`, `predatory_lending_issuance_fraud`, `reparations_transfer_problem`, `sovereign_exposure_concentration`, `war_debt_real_burden_deflation`, `windfall_overextension`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification, transmission · review `in_review` · name test `untested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification, transmission · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `policy_repricing`
 
@@ -106,7 +106,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The change is in expected policy and its pricing, not merely the announcement of an isolated action.
 - **Test:** Expectations about the policy path changed, not only a single decision.
 - **Related:** `intervention_risk`, `fiscal_dominance`, `doctrinal_disinflation`, `duration_selloff`, `exchange_rate_based_stabilization`, `imf_conditional_adjustment`, `recoinage_shock`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: policy, trigger · review `accepted` · name test `untested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: policy, trigger · kind `mechanism` · review `accepted` · name test `untested`
 
 ### `fiscal_dominance`
 
@@ -116,7 +116,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The fiscal-to-monetary direction of constraint is essential; simultaneous fiscal stress and policy repricing alone are insufficient.
 - **Test:** Monetary choices are shown to bend to the state's financing needs.
 - **Related:** `sovereign_funding_stress`, `policy_repricing`, `erosion_of_institutional_independence`, `arbitrary_expropriation_shock`, `central_bank_independence_restoration`, `debasement_seigniorage`, `fiscal_military_exhaustion`, `foreign_financial_control`, `inflation_pressure`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: policy, amplification · review `accepted` · name test `untested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: policy, amplification · kind `mechanism` · review `accepted` · name test `untested`
 
 ### `fx_pressure`
 
@@ -126,7 +126,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** This is the system-level pressure; entity-specific exposure belongs under currency_sensitivity.
 - **Test:** The pressure is on the currency, or on the country's foreign-currency access, as a whole.
 - **Related:** `currency_sensitivity`, `intervention_risk`, `reserve_diversification`, `capital_flight`, `competitiveness_overvaluation`, `convertibility_suspension`, `current_account_swing`, `flight_to_hard_money_dollarization`, `import_compression`, `original_sin_currency_mismatch`, `peg_defense_failure`, `reparations_transfer_problem`, `reserve_currency_dilemma`, `sovereign_funding_stress`, `specie_drain`, `sudden_stop`, `twin_mismatch`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: trigger, transmission · review `accepted` · name test `untested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: trigger, transmission · kind `mechanism` · review `accepted` · name test `untested`
 
 ### `currency_sensitivity`
 
@@ -136,7 +136,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** This is exposure to currency movement, not the system-wide currency pressure itself.
 - **Test:** A named entity or sector is exposed to exchange-rate moves.
 - **Related:** `fx_pressure`, `original_sin_currency_mismatch`, `twin_mismatch`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification · review `accepted` · name test `partial`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification · kind `mechanism` · review `accepted` · name test `partial`
 
 ### `intervention_risk`
 
@@ -146,7 +146,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The mechanism is intervention risk or expectation, not every change in the expected policy path.
 - **Test:** A direct official action in a market is credibly expected or threatened.
 - **Related:** `policy_repricing`, `fx_pressure`, `convertibility_suspension`, `lender_of_last_resort_relief`, `moral_hazard`, `peg_defense_failure`, `position_limit_intervention`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: policy, trigger, resolution · review `in_review` · name test `untested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: policy, trigger, resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `export_earnings_shock`
 
@@ -156,7 +156,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Chronic loss of export competitiveness, deindustrialisation or Dutch disease on their own are not this mechanism; weakness in domestic demand is demand_slowdown.
 - **Test:** What a country or sector earns from exports has contracted.
 - **Related:** `demand_slowdown`, `geoeconomic_fragmentation`, `commodity_dependence_fiscal_collapse`, `competitiveness_overvaluation`, `dutch_disease`, `financial_warfare_sanctions`, `single_buyer_dependence`, `technological_substitution_shock`, `terms_of_trade_shock`
-- layer `core` · status `stable` · in the signature · introduced in 1.0.0 · default phase roles: transmission, trigger · replaces `export_pressure` · review `accepted` · name test `partial`
+- layer `core` · status `stable` · in the signature · introduced in 1.0.0 · default phase roles: transmission, trigger · replaces `export_pressure` · kind `mechanism` · review `accepted` · name test `partial`
 
 ### `liquidity_stress`
 
@@ -166,7 +166,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Impaired funding or market functioning is required; volatility alone is insufficient.
 - **Test:** Funding, or trading at normal size, has become hard or costly.
 - **Related:** `credit_market_freeze`, `basis_dislocation`, `self_fulfilling_run`, `basis_risk`, `clearing_access_exclusion`, `contagion`, `lender_of_last_resort_relief`, `leverage_spiral`, `off_balance_sheet_maturity_transformation`, `over_trading`, `settlement_failure`, `short_squeeze`, `twin_mismatch`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: transmission, amplification · review `accepted` · name test `untested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: transmission, amplification · kind `mechanism` · review `accepted` · name test `untested`
 
 ### `credit_market_freeze`
 
@@ -176,7 +176,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Market intermediation must seize or fracture; ordinary spread widening or lower issuance alone is insufficient.
 - **Test:** Intermediation itself has seized, not only become more expensive.
 - **Related:** `liquidity_stress`, `financial_product_complexity_opacity`, `off_balance_sheet_maturity_transformation`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: transmission, amplification · review `in_review` · name test `untested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: transmission, amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `basis_dislocation`
 
@@ -186,7 +186,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Expected convergence and its breakdown are essential; generic relative-value movement does not qualify.
 - **Test:** Two instruments expected to converge have moved apart in a disorderly way.
 - **Related:** `liquidity_stress`, `basis_risk`, `delivery_default`, `leverage_spiral`, `short_squeeze`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: transmission, amplification · review `accepted` · name test `untested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: transmission, amplification · kind `mechanism` · review `accepted` · name test `untested`
 
 ### `credit_cycle`
 
@@ -196,7 +196,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The feedback runs through real activity as well as credit and asset values: activity changes borrowers' net worth or lenders' standards and so moves credit supply. A spiral of collateral values and forced sales that stays inside financial markets is leverage_spiral; a high but stable debt level without reinforcement is not a credit cycle (debt too large to permit new investment is debt_overhang); borrowers choosing to repay while credit is available is balance_sheet_recession.
 - **Test:** Changes in real activity are shown to feed back into credit supply, through borrowers' net worth or lenders' standards, rather than a high debt level alone or a price spiral confined to collateral.
 - **Related:** `asset_quality_stress`, `balance_sheet_recession`, `capital_recycling`, `debt_deflation`, `debt_overhang`, `directed_lending`, `leverage_spiral`, `microfinance_overlending`, `twin_balance_sheet`, `windfall_overextension`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification, trigger · review `accepted` · name test `tested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification, trigger · kind `mechanism` · review `accepted` · name test `tested`
 
 ### `funding_margin_pressure`
 
@@ -206,7 +206,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** This is broader corporate or non-bank funding pressure, not bank net-interest-margin compression.
 - **Test:** A non-bank borrower's margin is squeezed by what its funding costs.
 - **Related:** `banking_margin_pressure`, `sovereign_funding_stress`, `over_trading`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification, transmission · review `accepted` · name test `partial`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification, transmission · kind `mechanism` · review `accepted` · name test `partial`
 
 ### `asset_quality_stress`
 
@@ -216,7 +216,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** This concerns asset-side credit quality, not profitability compression from margins alone.
 - **Test:** The quality of the assets institutions carry has deteriorated.
 - **Related:** `banking_margin_pressure`, `credit_cycle`, `asset_management_company_resolution`, `directed_lending`, `microfinance_overlending`, `originate_to_distribute_moral_hazard`, `regulatory_forbearance`, `sovereign_exposure_concentration`, `twin_balance_sheet`, `zombie_firm_forbearance`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification, transmission · review `in_review` · name test `untested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification, transmission · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `banking_margin_pressure`
 
@@ -226,7 +226,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The bank intermediation margin is central; credit-loss deterioration belongs under asset_quality_stress.
 - **Test:** Banks earn less on intermediation itself.
 - **Related:** `asset_quality_stress`, `funding_margin_pressure`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification · review `accepted` · name test `untested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification · kind `mechanism` · review `accepted` · name test `untested`
 
 ### `protection_gap`
 
@@ -236,7 +236,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** This is the absorption-capacity gap, not the total physical or economic damage.
 - **Test:** Part of a loss was not absorbed by insurance or a pre-arranged buffer.
 - **Related:** `cost_shifting`, `adaptation_finance_gap`, `natural_disaster`, `disaster_reconstruction_finance`, `entitlement_failure_famine`, `preparedness_paradox`, `public_service_delivery_failure`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification, resolution · review `accepted` · name test `tested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification, resolution · kind `mechanism` · review `accepted` · name test `tested`
 
 ### `risk_appetite_reversal`
 
@@ -246,7 +246,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** A reversal or transition is required; persistently low risk appetite alone is not the same mechanism.
 - **Test:** A change in the direction of risk-taking is observed, not only a low level.
 - **Related:** `herd_behavior`, `contagion`, `capital_flight`, `flight_to_hard_money_dollarization`, `sudden_stop`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: transmission, trigger · review `in_review` · name test `untested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: transmission, trigger · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `ai_equity_momentum`
 
@@ -256,7 +256,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** This is a market-feedback mechanism, not a judgment about AI technology or all technology equities.
 - **Test:** A self-reinforcing feedback around AI-related firms is visible, not just strong results.
 - **Related:** `equity_narrow_leadership`, `circular_financing`, `capacity_investment`, `technological_unemployment`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification, trigger · review `in_review` · name test `untested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification, trigger · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `equity_narrow_leadership`
 
@@ -266,7 +266,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Concentration of leadership is required; a strong or rising market alone does not qualify.
 - **Test:** A small group of constituents carries the index.
 - **Related:** `ai_equity_momentum`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `growth_slowdown`
 
@@ -276,7 +276,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** This concerns aggregate activity; demand_slowdown isolates the spending or orders channel.
 - **Test:** Aggregate activity is decelerating.
 - **Related:** `demand_slowdown`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: resolution, trigger · review `accepted` · name test `untested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: resolution, trigger · kind `mechanism` · review `accepted` · name test `untested`
 
 ### `demand_slowdown`
 
@@ -286,7 +286,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The demand channel must weaken; supply-constrained output alone does not qualify.
 - **Test:** Spending or orders have weakened.
 - **Related:** `growth_slowdown`, `export_earnings_shock`, `balance_sheet_recession`, `energy_supply_relief`, `import_compression`, `technological_substitution_shock`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: resolution, trigger · review `accepted` · name test `untested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: resolution, trigger · kind `mechanism` · review `accepted` · name test `untested`
 
 ### `capacity_investment`
 
@@ -296,7 +296,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** This concerns capacity-building commitments, not current output or ordinary maintenance spending.
 - **Test:** A commitment to new productive capacity is on record.
 - **Related:** `ai_equity_momentum`, `circular_financing`, `useful_life_assumption`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `inventory_pressure`
 
@@ -306,7 +306,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Inventory dynamics must carry the mechanism; a physical supply shock without inventory transmission is separate.
 - **Test:** Inventory changes are what carry the effect.
 - **Related:** `commodity_supply_squeeze`, `anti_hoarding_regulation`, `state_buffer_stock_intervention`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification · review `accepted` · name test `partial`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: amplification · kind `mechanism` · review `accepted` · name test `partial`
 
 ### `geopolitical_escalation`
 
@@ -316,7 +316,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Geopolitical news alone is insufficient; escalation must alter constraints, behavior, or risk pricing.
 - **Test:** Escalation changed constraints, behaviour or risk pricing, not only the news.
 - **Related:** `geopolitical_deescalation`, `war_geopolitical`, `geoeconomic_fragmentation`, `financial_warfare_sanctions`, `reciprocal_mobilization_trap`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: trigger · review `in_review` · name test `untested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: trigger · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `geopolitical_deescalation`
 
@@ -326,7 +326,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** De-escalation is an active easing of prior stress, not the simple absence of new escalation.
 - **Test:** A prior geopolitical constraint has actively eased.
 - **Related:** `geopolitical_escalation`, `negotiated_demobilization_settlement`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: resolution · review `accepted` · name test `untested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: resolution · kind `mechanism` · review `accepted` · name test `untested`
 
 ### `contagion`
 
@@ -336,7 +336,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Contagion is transmission between institutions, markets, sectors or countries; loss multiplication within one of them is amplification.
 - **Test:** Stress moved from one institution, market, sector or country to another through a named channel.
 - **Related:** `liquidity_stress`, `risk_appetite_reversal`, `export_ban_provisioning_cascade`, `settlement_failure`, `sovereign_exposure_concentration`
-- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: transmission · review `accepted` · name test `untested`
+- layer `core` · status `stable` · in the signature · introduced in 0.1.0 · default phase roles: transmission · kind `mechanism` · review `accepted` · name test `untested`
 
 ### `accounting_disclosure_reform`
 
@@ -346,7 +346,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It answers falsified reporting; reform of a reference price is benchmark_reform, prohibition of an instrument is instrument_ban_disclosure_reform, and post-crisis rules in general are re_regulation.
 - **Test:** A reporting or audit standard was changed in response to exposed falsification.
 - **Related:** `benchmark_reform`, `instrument_ban_disclosure_reform`, `re_regulation`, `related_party_abuse`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: resolution · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `anti_hoarding_regulation`
 
@@ -356,7 +356,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It prohibits; public purchases and releases of stocks are state_buffer_stock_intervention, limits on contract holdings in organised markets are position_limit_intervention, and the inventory changes themselves are inventory_pressure.
 - **Test:** A rule against withholding or cornering essential goods is on record and enforced.
 - **Related:** `state_buffer_stock_intervention`, `position_limit_intervention`, `inventory_pressure`, `subsistence_unrest_spiral`, `self_fulfilling_run`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `asset_management_company_resolution`
 
@@ -366,7 +366,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The transfer of bad assets is the mechanism; capital injection is bank_recapitalization, and the deterioration that makes the transfer necessary is asset_quality_stress.
 - **Test:** Impaired assets were transferred out of banks to a dedicated entity.
 - **Related:** `bank_recapitalization`, `asset_quality_stress`, `cost_shifting`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: resolution · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `asymmetric_payoff_mis_selling`
 
@@ -376,7 +376,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The harm comes from the sale to clients who cannot assess the payoff; the exposure itself is negative_convexity_short_option, and opacity of the product is financial_product_complexity_opacity.
 - **Test:** Products with limited upside and large downside were sold to non-professional clients.
 - **Related:** `negative_convexity_short_option`, `financial_product_complexity_opacity`, `instrument_ban_disclosure_reform`, `embedded_leverage`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `bail_in`
 
@@ -386,7 +386,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The loss falls on the institution's own creditors rather than on public funds; the general change of who bears a loss is cost_shifting, public capital put into banks is bank_recapitalization, and an unpredictable taking of property by the state is arbitrary_expropriation_shock.
 - **Test:** Claims of creditors or depositors on a failing institution were written down or converted.
 - **Related:** `cost_shifting`, `bank_recapitalization`, `arbitrary_expropriation_shock`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `balance_sheet_recession`
 
@@ -396,7 +396,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The contraction comes from borrowers choosing to repay, not from lenders refusing credit; a reinforcing swing between credit supply, asset values and activity is credit_cycle, a fall in prices that raises real debt burdens is debt_deflation, and debt too large to permit new investment is debt_overhang.
 - **Test:** Private debt is being repaid while borrowing costs are low or falling, and demand for new credit is weak.
 - **Related:** `credit_cycle`, `debt_deflation`, `debt_overhang`, `demand_slowdown`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `bank_recapitalization`
 
@@ -406,7 +406,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It supplies capital, not liquidity (contrast lender_of_last_resort_relief); a stake taken for strategic rather than rescue purposes is state_equity_participation, and the transfer of bad loans to a separate entity is asset_management_company_resolution.
 - **Test:** Public capital was injected into banks to restore their solvency.
 - **Related:** `lender_of_last_resort_relief`, `state_equity_participation`, `asset_management_company_resolution`, `cost_shifting`, `bail_in`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `basis_risk`
 
@@ -416,7 +416,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It is a mismatch within one hedged position; a disorderly widening between linked instruments across a market is basis_dislocation, and the funding strain it may cause is liquidity_stress.
 - **Test:** A hedge and the exposure it covers are documented to differ in tenor, timing or reference, and either that gap is identified as a material risk or the hedge failed to offset the exposure as intended.
 - **Related:** `basis_dislocation`, `liquidity_stress`, `model_risk`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `benchmark_reform`
 
@@ -426,7 +426,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It answers manipulation of a reference price; broader reporting standards are accounting_disclosure_reform, post-crisis regimes in general are re_regulation, and exploitation of market rules is market_design_gaming.
 - **Test:** A benchmark's method or administrator was changed after manipulation.
 - **Related:** `accounting_disclosure_reform`, `re_regulation`, `market_design_gaming`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: resolution · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `capital_flight`
 
@@ -436,7 +436,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The actors are residents; a halt of foreign financing is sudden_stop, and a general shift of investors away from risk is risk_appetite_reversal. A switch to foreign currency or metal kept at home is flight_to_hard_money_dollarization, and the strain on the currency is fx_pressure.
 - **Test:** Outflows by residents rise sharply, separately from changes in foreign inflows.
 - **Related:** `sudden_stop`, `risk_appetite_reversal`, `flight_to_hard_money_dollarization`, `fx_pressure`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: transmission, amplification · review `accepted` · name test `tested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: transmission, amplification · kind `mechanism` · review `accepted` · name test `tested`
 
 ### `capital_recycling`
 
@@ -446,7 +446,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The defining feature is the cross-border chain from surplus to intermediary to borrower; a domestic credit boom is credit_cycle, and borrowing against expected resource rents is windfall_overextension.
 - **Test:** Lending to a borrowing region is traced to surpluses that another region placed with intermediaries.
 - **Related:** `credit_cycle`, `windfall_overextension`, `sudden_stop`, `reparations_transfer_problem`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `central_bank_independence_restoration`
 
@@ -456,7 +456,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It reverses fiscal_dominance and erosion_of_institutional_independence; creating an institution that did not exist is new_institution_founding.
 - **Test:** A legal or formal change returned control of monetary policy to the central bank.
 - **Related:** `fiscal_dominance`, `erosion_of_institutional_independence`, `new_institution_founding`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `clean_slate_debt_cancellation`
 
@@ -466,7 +466,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The debts are extinguished; deferral or conversion is debt_moratorium_relief, and a successor state refusing the debts of its predecessor is odious_debt_repudiation.
 - **Test:** A decree extinguished existing private debts.
 - **Related:** `debt_moratorium_relief`, `odious_debt_repudiation`, `debt_bondage_spiral`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: resolution · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `clearing_access_exclusion`
 
@@ -476,7 +476,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The question is who is inside the system; generic funding strain is liquidity_stress, and the abolition of the system itself is infrastructure_regime_termination.
 - **Test:** An institution's lack of membership in a clearing system is shown to have denied it support in a crisis.
 - **Related:** `liquidity_stress`, `infrastructure_regime_termination`, `settlement_failure`, `lender_of_last_resort_relief`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `coercive_interest_reduction`
 
@@ -486,7 +486,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** No default is declared; a refusal to pay on grounds of legitimacy is odious_debt_repudiation, a failure to fund is sovereign_funding_stress, and a coordinated workout of company debts is debt_restructuring_framework.
 - **Test:** The rate on existing sovereign debt was cut by the debtor's decision without a declared default.
 - **Related:** `odious_debt_repudiation`, `sovereign_funding_stress`, `debt_restructuring_framework`, `forced_loan_capital_levy`, `compulsory_domestic_conversion`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `coin_clipping_quality_degradation`
 
@@ -496,7 +496,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The erosion comes from users, not from the issuer; deliberate reduction by the issuer is debasement_seigniorage, and a reminting that answers the erosion is recoinage_shock.
 - **Test:** Circulating coins are shown to be underweight through use or tampering, not through the issuer's decision.
 - **Related:** `debasement_seigniorage`, `recoinage_shock`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `commodity_backed_debt_overhang`
 
@@ -506,7 +506,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The commodity is the means of repayment or the collateral; unsecured borrowing against expected rents is windfall_overextension, general strain in market funding is sovereign_funding_stress, and debt that deters new investment is debt_overhang.
 - **Test:** A debt contract ties repayment or security to a commodity whose price fell.
 - **Related:** `windfall_overextension`, `sovereign_funding_stress`, `debt_overhang`, `commodity_dependence_fiscal_collapse`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `commodity_dependence_fiscal_collapse`
 
@@ -516,7 +516,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The dependence of public finances on one commodity is the mechanism; strain on market access is sovereign_funding_stress, and the fall in export income itself is export_earnings_shock.
 - **Test:** A single commodity supplies a dominant share of public revenue, and its price fall precedes a fiscal crisis.
 - **Related:** `sovereign_funding_stress`, `export_earnings_shock`, `terms_of_trade_shock`, `windfall_overextension`, `commodity_backed_debt_overhang`, `dutch_disease`, `single_buyer_dependence`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: transmission · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: transmission · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `competitiveness_overvaluation`
 
@@ -526,7 +526,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It names the chronic loss of competitiveness that export_earnings_shock leaves out. Appreciation driven by a resource windfall is dutch_disease, the decision to fix a parity too high is overvalued_peg_entry, and pressure on the currency itself is fx_pressure.
 - **Test:** The real exchange rate is shown to be out of line with relative costs, with a measurable loss of export or import-competing share.
 - **Related:** `export_earnings_shock`, `dutch_disease`, `overvalued_peg_entry`, `fx_pressure`, `peg_defense_failure`, `doctrinal_disinflation`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `compulsory_domestic_conversion`
 
@@ -536,7 +536,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** An existing obligation is converted; new compulsory lending is forced_loan_capital_levy, an interest cut on existing debt is coercive_interest_reduction, and an unpredictable taking is arbitrary_expropriation_shock.
 - **Test:** Holders of a domestic entitlement were required to accept bonds instead of it.
 - **Related:** `forced_loan_capital_levy`, `coercive_interest_reduction`, `arbitrary_expropriation_shock`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `convertibility_suspension`
 
@@ -546,7 +546,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It is a discrete official act; continuing pressure on the currency is fx_pressure, and an expected official move is intervention_risk. Recovery after leaving a parity is devaluation_exit, and tokens issued with a redemption promise that was never honoured are token_redemption_collapse.
 - **Test:** A formal suspension of convertibility, or of the rule tying issue to reserves, is on record.
 - **Related:** `fx_pressure`, `intervention_risk`, `devaluation_exit`, `token_redemption_collapse`, `lender_of_last_resort_relief`, `reserve_currency_dilemma`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `corner_dynamics`
 
@@ -556,7 +556,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Control of deliverable supply is deliberate; a natural shortage is commodity_supply_squeeze, forced short covering without control of supply is short_squeeze, and failure to deliver at expiry is delivery_default.
 - **Test:** One party controls most of the deliverable supply and a large long position at the same time.
 - **Related:** `commodity_supply_squeeze`, `short_squeeze`, `delivery_default`, `position_limit_intervention`, `market_design_gaming`, `spoofing`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `creditor_governance`
 
@@ -566,7 +566,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The role is granted to build credibility; control imposed by foreign creditors after a default is foreign_financial_control, and constitutional limits on the sovereign's power to default are credible_commitment_regime.
 - **Test:** Creditors hold seats or rights in the body that manages the sovereign's debt.
 - **Related:** `foreign_financial_control`, `credible_commitment_regime`, `sovereign_funding_stress`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: resolution · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `currency_reform_redenomination`
 
@@ -576,7 +576,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It replaces the unit; reminting existing coin is recoinage_shock, and tying the currency to an external anchor is exchange_rate_based_stabilization. Using the conversion to wipe out holdings is arbitrary_expropriation_shock.
 - **Test:** A new monetary unit replaced the old one at an announced ratio.
 - **Related:** `recoinage_shock`, `exchange_rate_based_stabilization`, `arbitrary_expropriation_shock`, `heterodox_shock_stabilization_plan`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `current_account_swing`
 
@@ -586,7 +586,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It records the swing in the external balance; the halt of foreign financing is sudden_stop, a move in relative prices is terms_of_trade_shock, and the currency symptom is fx_pressure.
 - **Test:** The current account balance changed sign, or moved by a large amount, within a short period.
 - **Related:** `sudden_stop`, `terms_of_trade_shock`, `fx_pressure`, `specie_drain`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `debasement_seigniorage`
 
@@ -596,7 +596,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The issuer acts from above; erosion by users is coin_clipping_quality_degradation. A general rise in prices is inflation_pressure, and monetary financing of a state under paper money is fiscal_dominance.
 - **Test:** The issuer reduced the metal value of coins while keeping their face value.
 - **Related:** `coin_clipping_quality_degradation`, `inflation_pressure`, `fiscal_dominance`, `recoinage_shock`, `specie_drain`, `specie_scarcity_deflation`, `token_redemption_collapse`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `debt_deflation`
 
@@ -606,7 +606,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The price fall is the channel; debt repair through spending cuts and repayment, with or without falling prices, is balance_sheet_recession, and the two can act together. The public-debt side is war_debt_real_burden_deflation, and deflation caused by a shortage of monetary metal is specie_scarcity_deflation.
 - **Test:** Falling prices are recorded alongside a rising real debt burden and forced selling.
 - **Related:** `balance_sheet_recession`, `war_debt_real_burden_deflation`, `specie_scarcity_deflation`, `credit_cycle`, `devaluation_exit`, `doctrinal_disinflation`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `debt_moratorium_relief`
 
@@ -616,7 +616,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The claim survives in altered form; outright cancellation is clean_slate_debt_cancellation, and a coordinated workout of company debts is debt_restructuring_framework.
 - **Test:** An official act deferred, suspended or converted private debt payments.
 - **Related:** `clean_slate_debt_cancellation`, `debt_restructuring_framework`, `debt_bondage_spiral`, `microfinance_overlending`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `debt_overhang`
 
@@ -626,7 +626,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Borrowers cannot or will not invest under the weight of the debt; voluntary repayment is balance_sheet_recession, and lenders keeping insolvent firms alive is zombie_firm_forbearance.
 - **Test:** Existing debt is shown to deter investment or spending that would otherwise be worthwhile.
 - **Related:** `balance_sheet_recession`, `zombie_firm_forbearance`, `twin_balance_sheet`, `commodity_backed_debt_overhang`, `credit_cycle`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `debt_restructuring_framework`
 
@@ -636,7 +636,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It is a framework for firms; interest cuts by a sovereign on its own debt are coercive_interest_reduction, and relief for households or small debtors is debt_moratorium_relief.
 - **Test:** A common framework governed the restructuring of many corporate debts.
 - **Related:** `coercive_interest_reduction`, `debt_moratorium_relief`, `twin_balance_sheet`, `zombie_firm_forbearance`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: resolution · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `delivery_default`
 
@@ -646,7 +646,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It is a failure to deliver; a timing loss between the two legs of a settlement is settlement_failure, a deliberate corner is corner_dynamics, and a disorderly gap between linked instruments before expiry is basis_dislocation.
 - **Test:** Contracts went undelivered at expiry.
 - **Related:** `settlement_failure`, `corner_dynamics`, `basis_dislocation`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `deposit_guarantee_blanket`
 
@@ -656,7 +656,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It is a realised guarantee; the run it answers is self_fulfilling_run, and the extra risk-taking it may encourage is moral_hazard.
 - **Test:** A guarantee covering all deposits or liabilities was announced.
 - **Related:** `self_fulfilling_run`, `moral_hazard`, `lender_of_last_resort_relief`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `devaluation_exit`
 
@@ -666,7 +666,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It requires the recovery that follows the exit; the formal suspension itself is convertibility_suspension, and a forced devaluation after reserves run out is peg_defense_failure.
 - **Test:** Prices and activity recover after a fixed parity is abandoned.
 - **Related:** `convertibility_suspension`, `peg_defense_failure`, `debt_deflation`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: resolution · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `directed_lending`
 
@@ -676,7 +676,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The allocation is set by mandate; the deterioration of loan quality is asset_quality_stress, and a credit boom driven by markets is credit_cycle.
 - **Test:** Lending quotas or directives set by authorities are on record for the loans that later went bad.
 - **Related:** `asset_quality_stress`, `credit_cycle`, `regulatory_forbearance`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `disaster_reconstruction_finance`
 
@@ -686,7 +686,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It finances rebuilding; immediate relief is external_relief_mobilization, and the uninsured loss is protection_gap.
 - **Test:** A dedicated financing arrangement for reconstruction is on record.
 - **Related:** `external_relief_mobilization`, `protection_gap`, `natural_disaster`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: resolution · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `doctrinal_disinflation`
 
@@ -696,7 +696,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The motive is doctrinal, not an inflation goal; a change in the expected policy path in general is policy_repricing, and the choice of parity itself is overvalued_peg_entry.
 - **Test:** Tightening was justified by parity or reputation while domestic conditions called for easing.
 - **Related:** `policy_repricing`, `overvalued_peg_entry`, `debt_deflation`, `competitiveness_overvaluation`, `war_debt_real_burden_deflation`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, trigger · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, trigger · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `dual_measure_divergence`
 
@@ -706,7 +706,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Both numbers are true; a false number is sovereign_statistics_falsification, information missing at the moment of decision is fog_of_war, and an assumption that moves reported profit is useful_life_assumption.
 - **Test:** Two official measures of the same obligation diverge and the decision is shown to follow the one that governs the obligation.
 - **Related:** `sovereign_statistics_falsification`, `fog_of_war`, `useful_life_assumption`, `sovereign_funding_stress`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `dutch_disease`
 
@@ -716,7 +716,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The windfall drives the appreciation; overvaluation from policy is competitiveness_overvaluation. A fall in export income counts as export_earnings_shock only when earnings actually contract.
 - **Test:** A resource windfall is followed by real appreciation and a measured decline of other tradable sectors.
 - **Related:** `competitiveness_overvaluation`, `export_earnings_shock`, `windfall_overextension`, `commodity_dependence_fiscal_collapse`, `resource_nationalism_backfire`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `embedded_leverage`
 
@@ -726,7 +726,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The leverage lies in the design of the instrument; leverage obtained by borrowing or by posting margin is leverage, the feedback between collateral values and borrowing capacity is leverage_spiral, and an asymmetric payoff sold to unsophisticated clients is asymmetric_payoff_mis_selling.
 - **Test:** An instrument's loss on a given market move is a multiple of that move.
 - **Related:** `leverage_spiral`, `asymmetric_payoff_mis_selling`, `negative_convexity_short_option`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `exchange_rate_based_stabilization`
 
@@ -736,7 +736,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The anchor is the mechanism; a package with price and wage freezes is heterodox_shock_stabilization_plan, an externally financed programme with conditions is imf_conditional_adjustment, and a new unit on its own is currency_reform_redenomination.
 - **Test:** An exchange-rate or nominal anchor was adopted as the main instrument against inflation.
 - **Related:** `heterodox_shock_stabilization_plan`, `imf_conditional_adjustment`, `currency_reform_redenomination`, `peg_defense_failure`, `policy_repricing`, `new_institution_founding`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `export_ban_provisioning_cascade`
 
@@ -746,7 +746,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It is a self-protective coordination failure among states; a physical shortfall alone is commodity_supply_squeeze, the spread of stress through a named channel is contagion, and lasting redirection of trade along blocs is geoeconomic_fragmentation.
 - **Test:** Successive export restrictions by several producers are recorded during a price surge.
 - **Related:** `commodity_supply_squeeze`, `contagion`, `geoeconomic_fragmentation`, `famine_food_security`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `external_relief_mobilization`
 
@@ -756,7 +756,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It is relief brought in from outside; financing the rebuilding is disaster_reconstruction_finance, cuts to aid are aid_cuts, and the public's judgement of the response is performance_legitimacy.
 - **Test:** Relief resources from outside the affected area are shown to have arrived and been distributed.
 - **Related:** `disaster_reconstruction_finance`, `aid_cuts`, `performance_legitimacy`, `state_buffer_stock_intervention`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: resolution · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `fictitious_asset_issuance`
 
@@ -766,7 +766,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The asset is absent; misrepresentation of a real asset is issuance_promotion_fraud, and a loan built to default is predatory_lending_issuance_fraud.
 - **Test:** The asset behind the claims was shown not to exist.
 - **Related:** `issuance_promotion_fraud`, `predatory_lending_issuance_fraud`, `affinity_fraud`, `related_party_abuse`, `tangible_asset_verification_illusion`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `financial_product_complexity_opacity`
 
@@ -776,7 +776,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Opacity blocks valuation and exit; wrong model assumptions are model_risk, marketing to unsuitable clients is asymmetric_payoff_mis_selling, and a market-wide seizure of credit markets is credit_market_freeze.
 - **Test:** Owners could not price the product or dispose of it when they needed to.
 - **Related:** `model_risk`, `asymmetric_payoff_mis_selling`, `credit_market_freeze`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `financial_warfare_sanctions`
 
@@ -786,7 +786,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The coercion runs through finance; geopolitical coercion in general is geopolitical_escalation, and lasting redirection of flows along bloc lines is geoeconomic_fragmentation.
 - **Test:** Assets, reserves or access to payment networks were blocked as a coercive measure.
 - **Related:** `geopolitical_escalation`, `geoeconomic_fragmentation`, `reserve_diversification`, `export_earnings_shock`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `flight_to_hard_money_dollarization`
 
@@ -796,7 +796,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The flight is from the money itself; moving savings abroad is capital_flight, and a general shift away from risky assets is risk_appetite_reversal.
 - **Test:** Use of foreign currency or metal for saving, pricing or payment rises at the expense of the domestic currency.
 - **Related:** `capital_flight`, `risk_appetite_reversal`, `fx_pressure`, `inflation_pressure`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `forced_loan_capital_levy`
 
@@ -806,7 +806,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The funds are taken by legal compulsion; strain in voluntary market borrowing is sovereign_funding_stress, and an unpredictable taking is arbitrary_expropriation_shock. Converting an existing claim into debt is compulsory_domestic_conversion, and cutting the interest on existing debt is coercive_interest_reduction.
 - **Test:** Residents were legally obliged to lend to the state or to pay part of their wealth to it.
 - **Related:** `sovereign_funding_stress`, `arbitrary_expropriation_shock`, `compulsory_domestic_conversion`, `coercive_interest_reduction`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `foreign_financial_control`
 
@@ -816,7 +816,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Control passes to outside creditors; the internal subordination of monetary policy to fiscal needs is fiscal_dominance, and a voice that a sovereign grants its creditors to build trust is creditor_governance.
 - **Test:** A body answerable to foreign creditors collects or controls part of the sovereign's revenue.
 - **Related:** `fiscal_dominance`, `creditor_governance`, `sovereign_funding_stress`, `credible_commitment_regime`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `heterodox_shock_stabilization_plan`
 
@@ -826,7 +826,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Income controls are part of the package; a plan resting on an exchange-rate anchor alone is exchange_rate_based_stabilization, and a programme conditioned by an external lender is imf_conditional_adjustment.
 - **Test:** Price or wage controls were introduced together with fiscal and monetary measures in one plan.
 - **Related:** `exchange_rate_based_stabilization`, `imf_conditional_adjustment`, `currency_reform_redenomination`, `inflation_pressure`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `imf_conditional_adjustment`
 
@@ -836,7 +836,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The programme is external and conditioned; a domestic exchange-rate anchor is exchange_rate_based_stabilization, and a general shift in policy expectations is policy_repricing.
 - **Test:** Financing from an external official lender was tied to stated policy conditions.
 - **Related:** `exchange_rate_based_stabilization`, `policy_repricing`, `heterodox_shock_stabilization_plan`, `sudden_stop`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `import_compression`
 
@@ -846,7 +846,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The cut is forced by an external constraint; weaker spending is demand_slowdown, and the currency strain behind it is fx_pressure.
 - **Test:** Imports fell because foreign exchange was rationed or unavailable, not because demand fell.
 - **Related:** `demand_slowdown`, `fx_pressure`, `terms_of_trade_shock`, `sudden_stop`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: transmission · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: transmission · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `infrastructure_regime_termination`
 
@@ -856,7 +856,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The end comes by decision from above; gradual obsolescence through competition is institutional_displacement, and exclusion from a system that keeps running is clearing_access_exclusion.
 - **Test:** An official decision ended a functioning financial infrastructure.
 - **Related:** `institutional_displacement`, `clearing_access_exclusion`, `settlement_failure`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `institutional_displacement`
 
@@ -866,7 +866,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The incumbent is outcompeted or bypassed; abolition by decree is infrastructure_regime_termination, a change of ownership is ownership_transfer, and a cheaper substitute product is technological_substitution_shock.
 - **Test:** The incumbent's business shrank as a named rival institution took over its functions.
 - **Related:** `infrastructure_regime_termination`, `ownership_transfer`, `technological_substitution_shock`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: transmission · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: transmission · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `instrument_ban_disclosure_reform`
 
@@ -876,7 +876,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It targets an instrument type; restriction of a trading practice is short_selling_restriction, reform of reporting standards is accounting_disclosure_reform, and post-crisis regimes in general are re_regulation.
 - **Test:** A rule bans an instrument type, or attaches disclosure or suitability conditions to that instrument, rather than restricting a trading practice or changing general reporting standards.
 - **Related:** `short_selling_restriction`, `accounting_disclosure_reform`, `re_regulation`, `asymmetric_payoff_mis_selling`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: resolution · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `issuance_promotion_fraud`
 
@@ -886,7 +886,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Some underlying asset exists but is misrepresented; claims on assets that do not exist are fictitious_asset_issuance, and the crowd dynamics of the boom are herd_behavior.
 - **Test:** Promotional claims about an issuer's assets were materially false at the time of issue.
 - **Related:** `fictitious_asset_issuance`, `predatory_lending_issuance_fraud`, `herd_behavior`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `labor_force_collapse_shock`
 
@@ -896,7 +896,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The fall in labour is abrupt and caused by mortality; gradual change is demographic_transition, the outbreak as an event is pandemic_epidemic, and displacement of workers by automation is technological_unemployment.
 - **Test:** A sudden fall in the working population is followed by measured effects on output or wages.
 - **Related:** `demographic_transition`, `pandemic_epidemic`, `technological_unemployment`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: transmission · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: transmission · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `lender_of_last_resort_relief`
 
@@ -906,7 +906,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It supplies liquidity, not capital: injecting capital is bank_recapitalization, and moving losses onto the public is cost_shifting. The expectation of such lending, before it happens, is intervention_risk.
 - **Test:** Emergency lending, not a capital injection, was extended to institutions or markets that could not obtain funding elsewhere.
 - **Related:** `bank_recapitalization`, `cost_shifting`, `intervention_risk`, `liquidity_stress`, `convertibility_suspension`, `clearing_access_exclusion`, `deposit_guarantee_blanket`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `leverage_spiral`
 
@@ -916,7 +916,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The feedback runs through collateral on specific assets; when real activity is part of the feedback it is credit_cycle, funding strain without the collateral feedback is liquidity_stress, and leverage built into an instrument's payoff is embedded_leverage.
 - **Test:** Borrowing capacity is shown to move with the price of the collateral it finances.
 - **Related:** `credit_cycle`, `liquidity_stress`, `embedded_leverage`, `basis_dislocation`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `market_design_gaming`
 
@@ -926,7 +926,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The target is the rule set; deceptive orders are spoofing, control of supply is corner_dynamics, and an entity created to escape regulation is regulatory_arbitrage_vehicle.
 - **Test:** Profits are traced to a market rule being used against its purpose.
 - **Related:** `spoofing`, `corner_dynamics`, `regulatory_arbitrage_vehicle`, `benchmark_reform`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `microfinance_overlending`
 
@@ -936,7 +936,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The overlending is to many small borrowers by competing lenders; economy-wide credit feedback is credit_cycle, and debt that binds the debtor's person or labour is debt_bondage_spiral.
 - **Test:** Borrowers holding loans from several lenders at once are shown to drive a repayment crisis.
 - **Related:** `credit_cycle`, `debt_bondage_spiral`, `asset_quality_stress`, `debt_moratorium_relief`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `model_risk`
 
@@ -946,7 +946,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The fault lies in the model; the false safety of senior tranches is tranching_illusion, and products too complex to price at all are financial_product_complexity_opacity.
 - **Test:** A key assumption of a model is shown to have failed in the episode.
 - **Related:** `tranching_illusion`, `financial_product_complexity_opacity`, `negative_convexity_short_option`, `basis_risk`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `moral_hazard`
 
@@ -956,7 +956,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It is a change in risk-taking caused by expected protection; the market pricing of a possible official action is intervention_risk, the moral switch-off of harm is collective_moral_disengagement, and weaker screening of loans made for distribution is originate_to_distribute_moral_hazard.
 - **Test:** Risk-taking is shown to rise because a backstop or guarantee is expected to absorb losses.
 - **Related:** `intervention_risk`, `collective_moral_disengagement`, `originate_to_distribute_moral_hazard`, `deposit_guarantee_blanket`, `regulatory_forbearance`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `negative_convexity_short_option`
 
@@ -966,7 +966,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It is the exposure, whoever carries it; marketing such products to clients who cannot assess them is asymmetric_payoff_mis_selling, and leverage built into a payoff is embedded_leverage.
 - **Test:** Losses grow faster than the market move, as in a written option position.
 - **Related:** `asymmetric_payoff_mis_selling`, `embedded_leverage`, `model_risk`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `new_institution_founding`
 
@@ -976,7 +976,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The institution or its statutory monetary mandate is new; restoring the autonomy of an existing one is central_bank_independence_restoration. A capacity whose value shows in a later crisis is state_capacity_building. An exchange-rate or nominal anchor adopted as the main instrument against inflation is exchange_rate_based_stabilization; a new currency board can carry both.
 - **Test:** A new monetary institution or statutory monetary mandate was created as part of resolving a crisis.
 - **Related:** `central_bank_independence_restoration`, `state_capacity_building`, `exchange_rate_based_stabilization`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: resolution · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `odious_debt_repudiation`
 
@@ -986,7 +986,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The refusal rests on legitimacy rather than inability; a sovereign that cannot fund itself is sovereign_funding_stress, and cancelling private debts by decree is clean_slate_debt_cancellation.
 - **Test:** A government refused debt left by its predecessor on a stated ground of illegitimacy.
 - **Related:** `sovereign_funding_stress`, `clean_slate_debt_cancellation`, `legitimacy_crisis`, `coercive_interest_reduction`, `predatory_lending_issuance_fraud`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `off_balance_sheet_maturity_transformation`
 
@@ -996,7 +996,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It is the structure; a vehicle set up to escape rules is regulatory_arbitrage_vehicle, the run on its liabilities is self_fulfilling_run, and the seizing up of its markets is credit_market_freeze.
 - **Test:** Vehicles funded short-term held long-term assets off the sponsor's balance sheet.
 - **Related:** `regulatory_arbitrage_vehicle`, `self_fulfilling_run`, `credit_market_freeze`, `liquidity_stress`, `tranching_illusion`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `original_sin_currency_mismatch`
 
@@ -1006,7 +1006,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It is the structural constraint behind the exposure; an entity's sensitivity to exchange rates is currency_sensitivity, and the combination with short maturities on one balance sheet is twin_mismatch.
 - **Test:** External debt is in foreign currency, or domestic debt is short-term, because borrowing abroad in the country's own currency, or long-term at home, is unavailable.
 - **Related:** `currency_sensitivity`, `twin_mismatch`, `sudden_stop`, `fx_pressure`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `originate_to_distribute_moral_hazard`
 
@@ -1016,7 +1016,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The incentive failure is specific to the lending chain; risk-taking because of an expected rescue is moral_hazard, and the false safety of the resulting securities is tranching_illusion.
 - **Test:** Loan quality is shown to fall where originators did not retain the credit risk.
 - **Related:** `moral_hazard`, `tranching_illusion`, `asset_quality_stress`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `over_trading`
 
@@ -1026,7 +1026,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The overreach is the firm's own; dependence on one counterparty is sovereign_exposure_concentration, and a market-wide funding squeeze is liquidity_stress.
 - **Test:** Commitments are shown to have exceeded capital and liquid resources before the failure.
 - **Related:** `sovereign_exposure_concentration`, `liquidity_stress`, `funding_margin_pressure`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `overvalued_peg_entry`
 
@@ -1036,7 +1036,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It is the entry decision; the loss of competitiveness that follows is competitiveness_overvaluation, the failed defence of a peg is peg_defense_failure, and deflationary policy motivated by parity is doctrinal_disinflation.
 - **Test:** A parity was set above the level consistent with relative costs at the time of entry.
 - **Related:** `competitiveness_overvaluation`, `peg_defense_failure`, `doctrinal_disinflation`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger, policy · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger, policy · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `peg_defense_failure`
 
@@ -1046,7 +1046,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It is the sequence of defence followed by capitulation; continuing pressure is fx_pressure, an expected intervention is intervention_risk, and a deliberate exit that ends deflation is devaluation_exit.
 - **Test:** A peg was defended with reserves and then abandoned in a single large devaluation.
 - **Related:** `fx_pressure`, `intervention_risk`, `devaluation_exit`, `competitiveness_overvaluation`, `exchange_rate_based_stabilization`, `overvalued_peg_entry`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `position_limit_intervention`
 
@@ -1056,7 +1056,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It is a realised market measure; the expectation of official action is intervention_risk, and rules against withholding physical staples are anti_hoarding_regulation.
 - **Test:** A limit, halt or closure was imposed during a squeeze.
 - **Related:** `intervention_risk`, `anti_hoarding_regulation`, `corner_dynamics`, `short_squeeze`, `short_selling_restriction`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `predatory_lending_issuance_fraud`
 
@@ -1066,7 +1066,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The borrower exists but the issue is structured to fail; claims on assets that do not exist are fictitious_asset_issuance, and promotion of overvalued ventures is issuance_promotion_fraud.
 - **Test:** Most of the proceeds of a loan did not reach the stated borrower, or its servicing depended on the loan itself.
 - **Related:** `fictitious_asset_issuance`, `issuance_promotion_fraud`, `sovereign_funding_stress`, `odious_debt_repudiation`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `re_regulation`
 
@@ -1076,7 +1076,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It is the general change of regime; the specific reforms are accounting_disclosure_reform and instrument_ban_disclosure_reform. An emergency tool that outlives the emergency is ratchet_effect, and rules aimed at digital platforms are platform_regulation.
 - **Test:** A new body of financial rules was adopted in response to a crisis, to resolve it or to prevent a repeat.
 - **Related:** `accounting_disclosure_reform`, `instrument_ban_disclosure_reform`, `ratchet_effect`, `platform_regulation`, `benchmark_reform`, `regulatory_arbitrage_vehicle`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `recoinage_shock`
 
@@ -1086,7 +1086,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The coin stock itself is reminted; replacing the unit of account with a new currency is currency_reform_redenomination, and a change in expected policy without any reminting is policy_repricing.
 - **Test:** An official reminting changed the quantity or value of coin in circulation.
 - **Related:** `currency_reform_redenomination`, `policy_repricing`, `debasement_seigniorage`, `specie_scarcity_deflation`, `coin_clipping_quality_degradation`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `regulatory_arbitrage_vehicle`
 
@@ -1096,7 +1096,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The purpose is to escape rules; the maturity mismatch such vehicles often carry is off_balance_sheet_maturity_transformation, and exploitation of market rules for trading gains is market_design_gaming.
 - **Test:** A vehicle is shown to exist mainly to avoid a regulatory constraint.
 - **Related:** `off_balance_sheet_maturity_transformation`, `market_design_gaming`, `re_regulation`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `regulatory_forbearance`
 
@@ -1106,7 +1106,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The delay is the regulator's; lenders keeping insolvent borrowers afloat is zombie_firm_forbearance, and the expected rescue that encourages risk-taking is moral_hazard.
 - **Test:** A known solvency problem was left unresolved by the authority responsible for it.
 - **Related:** `zombie_firm_forbearance`, `moral_hazard`, `asset_quality_stress`, `directed_lending`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `related_party_abuse`
 
@@ -1116,7 +1116,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Related-party dealings are common and often legitimate; the entry applies only when they are used to misstate results or extract value. The counterparty is connected; assets that do not exist are fictitious_asset_issuance, and capital recycled along a supply chain between independent firms is circular_financing.
 - **Test:** Material transactions with connected parties were used to misstate results or extract value.
 - **Related:** `fictitious_asset_issuance`, `circular_financing`, `accounting_disclosure_reform`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `reparations_transfer_problem`
 
@@ -1126,7 +1126,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The burden is a fixed transfer; general strain on sovereign funding is sovereign_funding_stress, and the strain on the currency is fx_pressure.
 - **Test:** A fixed external payment obligation is shown to require a transfer the economy struggles to generate.
 - **Related:** `sovereign_funding_stress`, `fx_pressure`, `capital_recycling`, `war_debt_real_burden_deflation`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: transmission · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: transmission · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `reserve_currency_dilemma`
 
@@ -1136,7 +1136,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It is a structural contradiction of the issuer's role; a shift in the composition of reserves held by others is reserve_diversification, and pressure on one currency is fx_pressure.
 - **Test:** Supplying reserves to the world is shown to depend on deficits that weaken confidence in the issuer.
 - **Related:** `reserve_diversification`, `fx_pressure`, `convertibility_suspension`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `resource_nationalism_backfire`
 
@@ -1146,7 +1146,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The measures are announced capture of resource rents; an unpredictable seizure of property is arbitrary_expropriation_shock, a change of ownership as such is ownership_transfer, and a state stake as such is state_equity_participation.
 - **Test:** Measures that capture resource rents are followed by a measured fall in investment or output in the sector, and the text links the fall to those measures.
 - **Related:** `arbitrary_expropriation_shock`, `ownership_transfer`, `state_equity_participation`, `dutch_disease`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `settlement_failure`
 
@@ -1156,7 +1156,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It can strike while funding is available; an inability to obtain funding is liquidity_stress, and the onward spread of the loss is contagion. A short futures holder failing to deliver at expiry is delivery_default.
 - **Test:** A party completed its leg of a settlement and the counterparty failed before completing its own.
 - **Related:** `liquidity_stress`, `contagion`, `delivery_default`, `clearing_access_exclusion`, `infrastructure_regime_termination`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger, transmission · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger, transmission · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `short_selling_restriction`
 
@@ -1166,7 +1166,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It targets a trading practice; prohibition of an instrument type is instrument_ban_disclosure_reform, and caps on positions during a squeeze are position_limit_intervention.
 - **Test:** A rule restricting short sales was introduced.
 - **Related:** `instrument_ban_disclosure_reform`, `position_limit_intervention`, `short_squeeze`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `short_squeeze`
 
@@ -1176,7 +1176,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** No single party needs to control supply (contrast corner_dynamics); the price feedback runs among short holders. A disorderly gap between linked instruments is basis_dislocation.
 - **Test:** Forced covering by short holders is shown to drive the price move without any single party controlling the deliverable supply.
 - **Related:** `corner_dynamics`, `basis_dislocation`, `liquidity_stress`, `position_limit_intervention`, `short_selling_restriction`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `single_buyer_dependence`
 
@@ -1186,7 +1186,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The concentration is in the customer, not the product; a contraction in export income counts as export_earnings_shock only once it has occurred, and dependence on a single commodity is commodity_dependence_fiscal_collapse. Concentration of a lender's exposure is sovereign_exposure_concentration.
 - **Test:** One customer takes a dominant share of exports and a change in its demand is the recorded shock.
 - **Related:** `export_earnings_shock`, `commodity_dependence_fiscal_collapse`, `sovereign_exposure_concentration`, `terms_of_trade_shock`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: transmission · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: transmission · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `sovereign_exposure_concentration`
 
@@ -1196,7 +1196,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The weakness is lack of diversification rather than the quality of the asset (contrast asset_quality_stress); the spread of the failure to other institutions is contagion, and dependence of an exporter on one customer is single_buyer_dependence.
 - **Test:** A large share of an institution's exposure sits with one counterparty whose failure or withdrawal caused its collapse.
 - **Related:** `asset_quality_stress`, `contagion`, `single_buyer_dependence`, `sovereign_funding_stress`, `over_trading`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `sovereign_statistics_falsification`
 
@@ -1206,7 +1206,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The numbers are false; when two official numbers are both correct but govern different decisions it is dual_measure_divergence, and suppression of the truth about a disaster is information_suppression_disaster_amplification.
 - **Test:** Official statistics were later shown to have been false.
 - **Related:** `dual_measure_divergence`, `information_suppression_disaster_amplification`, `institutional_trust_decline`, `regime_self_mythologizing`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `specie_drain`
 
@@ -1216,7 +1216,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It applies to metal-based money; pressure on a fiat currency or on access to foreign currency is fx_pressure. A general shortage of monetary metal without an outflow is specie_scarcity_deflation.
 - **Test:** A physical outflow of monetary metal is on record.
 - **Related:** `fx_pressure`, `specie_scarcity_deflation`, `current_account_swing`, `debasement_seigniorage`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: transmission · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: transmission · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `specie_scarcity_deflation`
 
@@ -1226,7 +1226,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It is the reverse of a shortage that raises prices (commodity_supply_squeeze); the outflow channel itself is specie_drain, and the debt-burden spiral that can follow is debt_deflation.
 - **Test:** Falling prices are traced to a shortage of monetary metal shrinking the money supply, not to forced selling by debtors or a fall in demand.
 - **Related:** `commodity_supply_squeeze`, `specie_drain`, `debt_deflation`, `debasement_seigniorage`, `recoinage_shock`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `spoofing`
 
@@ -1236,7 +1236,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The deception lies in the orders; exploitation of market rules is market_design_gaming, and control of supply is corner_dynamics.
 - **Test:** Orders were placed and cancelled to move the price without any intent to trade.
 - **Related:** `market_design_gaming`, `corner_dynamics`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `state_buffer_stock_intervention`
 
@@ -1246,7 +1246,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It works through public stock operations rather than prohibition (contrast anti_hoarding_regulation); emergency release of stocks to relieve a disaster is external_relief_mobilization, and private stock dynamics are inventory_pressure.
 - **Test:** A public body is shown to build up and release stocks to stabilise prices.
 - **Related:** `anti_hoarding_regulation`, `external_relief_mobilization`, `inventory_pressure`, `commodity_supply_squeeze`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy, resolution · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `sudden_stop`
 
@@ -1256,7 +1256,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It is the halt of foreign financing; outflows by residents are capital_flight, a general shift of investors away from risk is risk_appetite_reversal, the strain on the currency is fx_pressure, and the swing in the external balance itself is current_account_swing. Measured on net flows, a sudden stop and capital flight overlap; the gross inflows of non-residents separate them.
 - **Test:** A sharp, abrupt fall in gross capital inflows from non-residents is on record.
 - **Related:** `capital_flight`, `risk_appetite_reversal`, `fx_pressure`, `current_account_swing`, `original_sin_currency_mismatch`, `capital_recycling`, `imf_conditional_adjustment`, `import_compression`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger, transmission · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger, transmission · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `technological_substitution_shock`
 
@@ -1266,7 +1266,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The cause is a cheaper substitute supply, not weaker demand (demand_slowdown) or a shortage (commodity_supply_squeeze); the fall in export income that follows is export_earnings_shock, and displacement of workers by automation is technological_unemployment.
 - **Test:** A new substitute or source of supply is shown to have displaced the incumbent product.
 - **Related:** `demand_slowdown`, `commodity_supply_squeeze`, `export_earnings_shock`, `technological_unemployment`, `institutional_displacement`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `terms_of_trade_shock`
 
@@ -1276,7 +1276,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It is a change in relative prices, including one driven by import prices; a contraction of export earnings from any cause is export_earnings_shock, and fiscal dependence on one commodity is commodity_dependence_fiscal_collapse. A domestic price gap between farm and industrial goods is not a terms-of-trade shock.
 - **Test:** The ratio of export prices to import prices has fallen materially.
 - **Related:** `export_earnings_shock`, `commodity_dependence_fiscal_collapse`, `import_compression`, `current_account_swing`, `single_buyer_dependence`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger, transmission · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: trigger, transmission · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `token_redemption_collapse`
 
@@ -1286,7 +1286,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The promise concerns future redemption; suspending an existing right to convert is convertibility_suspension, and reducing the metal in coins is debasement_seigniorage.
 - **Test:** Tokens were issued with an explicit redemption promise that was not honoured.
 - **Related:** `convertibility_suspension`, `debasement_seigniorage`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `tranching_illusion`
 
@@ -1296,7 +1296,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The illusion comes from subordination over a pool; the failed assumptions behind it are model_risk, and the weaker screening of loans made for distribution is originate_to_distribute_moral_hazard.
 - **Test:** Senior tranches were rated or priced as near risk-free on assumptions about the pool's losses (default rates, loss severity or their correlation) that are shown to have been understated.
 - **Related:** `model_risk`, `originate_to_distribute_moral_hazard`, `off_balance_sheet_maturity_transformation`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `twin_balance_sheet`
 
@@ -1306,7 +1306,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Both sides must be present at once; deterioration of bank assets alone is asset_quality_stress, and corporate debt alone is debt_overhang.
 - **Test:** Corporate over-indebtedness and bank impairment are recorded together, and each constrains the repair of the other.
 - **Related:** `asset_quality_stress`, `debt_overhang`, `zombie_firm_forbearance`, `credit_cycle`, `debt_restructuring_framework`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `twin_mismatch`
 
@@ -1316,7 +1316,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Both mismatches must sit on the same balance sheet; currency exposure alone is currency_sensitivity, and the inability to borrow in one's own currency is original_sin_currency_mismatch.
 - **Test:** The same institutions carry short-term foreign-currency liabilities against long-term domestic-currency assets.
 - **Related:** `currency_sensitivity`, `original_sin_currency_mismatch`, `liquidity_stress`, `fx_pressure`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `war_debt_real_burden_deflation`
 
@@ -1326,7 +1326,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The debtor is the state; the private spiral of distressed selling is debt_deflation, and loss of market access is sovereign_funding_stress.
 - **Test:** A fall in prices raised the real value of public debt and the burden of servicing it.
 - **Related:** `debt_deflation`, `sovereign_funding_stress`, `doctrinal_disinflation`, `reparations_transfer_problem`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `windfall_overextension`
 
@@ -1336,7 +1336,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The optimism is tied to resource rents; a general credit boom is credit_cycle, debt explicitly secured on commodity deliveries is commodity_backed_debt_overhang, and recycled foreign surpluses are capital_recycling.
 - **Test:** Borrowing was justified by expected commodity revenue that later fell short.
 - **Related:** `credit_cycle`, `commodity_backed_debt_overhang`, `capital_recycling`, `sovereign_funding_stress`, `commodity_dependence_fiscal_collapse`, `dutch_disease`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `zombie_firm_forbearance`
 
@@ -1346,7 +1346,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The lender keeps the borrower alive; delay by regulators in resolving banks is regulatory_forbearance, and the deterioration of loan quality is asset_quality_stress.
 - **Test:** Loans to firms unable to cover interest from earnings are rolled over rather than resolved.
 - **Related:** `regulatory_forbearance`, `asset_quality_stress`, `twin_balance_sheet`, `debt_overhang`, `debt_restructuring_framework`
-- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · review `in_review` · name test `untested`
+- layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
 
 ## Social mechanisms
 
@@ -1360,7 +1360,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The trap is collective: the actor is caught between joining a race already under way and a certain loss from standing aside. A harmful choice made without that competitive pressure is not this mechanism.
 - **Test:** An actor continues a known-harmful practice because rivals are doing it.
 - **Related:** `herd_behavior`, `escalation_of_commitment`
-- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · review `accepted` · name test `partial`
+- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `partial`
 
 ### `political_short_termism`
 
@@ -1370,7 +1370,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The driver is a decision horizon locked to the current term; a decision that is merely regretted later does not qualify.
 - **Test:** The near-term threat to the decision-maker is shown to outrank the long-term one.
 - **Related:** `escalation_of_commitment`, `preparedness_paradox`
-- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · review `accepted` · name test `tested`
+- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `tested`
 
 ### `escalation_of_commitment`
 
@@ -1380,7 +1380,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Reputation pressure, a change of course, or a pre-emptive move without new resources tied to the failing line do not qualify. The domestic political cost of backing down from a public threat in an interstate crisis (audience costs) is a separate concept. The mechanism is defined by rising commitment despite negative feedback, not by whether the outcome later proves right.
 - **Test:** New resources were committed to the same line after negative feedback.
 - **Related:** `political_short_termism`, `race_to_the_bottom`, `credible_commitment_regime`, `reciprocal_mobilization_trap`
-- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · review `accepted` · name test `tested`
+- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `tested`
 
 ### `fog_of_war`
 
@@ -1390,7 +1390,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The information is missing to the decision-maker. Information that is held and deliberately suppressed is information_suppression_disaster_amplification. The test is what was knowable at the time, not what looks obvious in hindsight.
 - **Test:** A decision had to be made before the needed information was available.
 - **Related:** `information_suppression_disaster_amplification`, `legal_authority_gap`, `administrative_capacity_collapse`, `dual_measure_divergence`
-- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · review `accepted` · name test `partial`
+- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `partial`
 
 ### `legal_authority_gap`
 
@@ -1400,7 +1400,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The gap is in the instrument or mandate, not in the diagnosis. When authority exists but material resources do not, see fiscal_military_exhaustion.
 - **Test:** The remedy is known but no one has clear legal power to apply it.
 - **Related:** `fiscal_military_exhaustion`, `fog_of_war`, `administrative_capacity_collapse`, `ratchet_effect`
-- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · review `accepted` · name test `tested`
+- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `tested`
 
 ### `self_fulfilling_run`
 
@@ -1410,7 +1410,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Exit is driven by expectations about others' exits and can strike an otherwise sound institution. Crowd action against a perceived injustice is subsistence_unrest_spiral; quiet convergence before the exit is herd_behavior.
 - **Test:** Withdrawals or hoarding accelerate because others are doing the same.
 - **Related:** `herd_behavior`, `liquidity_stress`, `subsistence_unrest_spiral`, `anti_hoarding_regulation`, `deposit_guarantee_blanket`, `off_balance_sheet_maturity_transformation`, `preference_falsification_cascade`
-- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · review `accepted` · name test `tested`
+- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `tested`
 
 ### `legitimacy_crisis`
 
@@ -1420,7 +1420,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It records the outcome, consent eroding, rather than the escalation engine (repression_radicalization_spiral) or a measured fall in trust in information sources (institutional_trust_decline).
 - **Test:** The crisis exposed a failure of protection and consent visibly eroded.
 - **Related:** `performance_legitimacy`, `repression_radicalization_spiral`, `institutional_trust_decline`, `collective_moral_disengagement`, `odious_debt_repudiation`, `pandemic_epidemic`, `preference_falsification_cascade`, `regime_self_mythologizing`, `succession_crisis`
-- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · review `accepted` · name test `tested`
+- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `tested`
 
 ### `herd_behavior`
 
@@ -1430,7 +1430,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The core is convergence that builds quietly before an abrupt exit; the run of exits itself is self_fulfilling_run.
 - **Test:** Participants converge on the same position because others hold it.
 - **Related:** `self_fulfilling_run`, `race_to_the_bottom`, `risk_appetite_reversal`, `affinity_fraud`, `issuance_promotion_fraud`, `preference_falsification_cascade`
-- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · review `accepted` · name test `tested`
+- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `tested`
 
 ### `succession_crisis`
 
@@ -1440,7 +1440,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It is a temporary vacuum over who rules. When the monopoly of force itself fragments and is not rebuilt, see loss_of_monopoly_on_violence.
 - **Test:** The question of who rules next is open and contested.
 - **Related:** `loss_of_monopoly_on_violence`, `legitimacy_crisis`
-- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · review `accepted` · name test `tested`
+- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `tested`
 
 ### `scapegoating`
 
@@ -1450,7 +1450,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It is horizontal blame aimed at a third group; vertical escalation between state and opposition is repression_radicalization_spiral. The entry describes the mechanism and does not justify it.
 - **Test:** Blame for a crisis is fixed on a pre-marked group as an explanatory shortcut.
 - **Related:** `collective_moral_disengagement`, `repression_radicalization_spiral`, `regime_self_mythologizing`
-- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · review `accepted` · name test `tested`
+- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `tested`
 
 ### `performance_legitimacy`
 
@@ -1460,7 +1460,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The same mechanism can produce opposite outcomes; the deciding variable is the effectiveness of the response. Erosion of consent without the response being the test is legitimacy_crisis.
 - **Test:** Public judgement of the authority turns on how it handled the event.
 - **Related:** `legitimacy_crisis`, `state_capacity_building`, `external_relief_mobilization`, `public_service_delivery_failure`, `regime_self_mythologizing`
-- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · review `accepted` · name test `partial`
+- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `partial`
 
 ### `fiscal_military_exhaustion`
 
@@ -1470,7 +1470,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Authority exists but resources do not (contrast legal_authority_gap); the outcome is the disintegration of armed force, not inflation (contrast fiscal_dominance).
 - **Test:** Armed forces go unpaid or unsupplied and their loyalty shifts.
 - **Related:** `legal_authority_gap`, `fiscal_dominance`, `loss_of_monopoly_on_violence`
-- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · review `in_review` · name test `untested`
+- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `loss_of_monopoly_on_violence`
 
@@ -1480,7 +1480,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Unlike succession_crisis, the monopoly itself fragments and is not restored when the question of who rules is settled.
 - **Test:** More than one independent armed centre holds force inside the state.
 - **Related:** `succession_crisis`, `fiscal_military_exhaustion`, `war_geopolitical`, `negotiated_demobilization_settlement`
-- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · review `accepted` · name test `tested`
+- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `tested`
 
 ### `entitlement_failure_famine`
 
@@ -1490,7 +1490,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It names the access channel and does not exclude a fall in supply operating at the same time. The famine as an event is the crisis type famine_food_security.
 - **Test:** Food was available somewhere in the system, yet a group lost the means to obtain it.
 - **Related:** `famine_food_security`, `subsistence_unrest_spiral`, `protection_gap`
-- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · review `in_review` · name test `untested`
+- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `subsistence_unrest_spiral`
 
@@ -1500,7 +1500,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The crowd intervenes rather than flees (contrast self_fulfilling_run). The trigger is a price crossing a threshold of perceived legitimacy, not the price level itself.
 - **Test:** Crowd action is framed as enforcing a just price.
 - **Related:** `self_fulfilling_run`, `entitlement_failure_famine`, `anti_hoarding_regulation`, `famine_food_security`
-- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · review `in_review` · name test `untested`
+- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `arbitrary_expropriation_shock`
 
@@ -1510,7 +1510,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It is a direct, targeted taking. Erosion through general inflation is inflation_pressure, or fiscal_dominance where fiscal needs are shown to drive monetary policy; an orderly change of ownership is ownership_transfer.
 - **Test:** A direct, unpredictable taking of private property is on record.
 - **Related:** `ownership_transfer`, `fiscal_dominance`, `inflation_pressure`, `state_equity_participation`, `bail_in`, `compulsory_domestic_conversion`, `credible_commitment_regime`, `currency_reform_redenomination`, `forced_loan_capital_levy`, `resource_nationalism_backfire`
-- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · review `in_review` · name test `untested`
+- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `state_capacity_building`
 
@@ -1520,7 +1520,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Its value shows across a sequence of crises. Capacity-building does not follow every crisis and can be reversed. State ownership stakes are state_equity_participation.
 - **Test:** A capacity built after one crisis is shown to have reduced the impact of a later one.
 - **Related:** `performance_legitimacy`, `state_equity_participation`, `administrative_capacity_collapse`, `new_institution_founding`, `preparedness_paradox`, `ratchet_effect`
-- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · review `in_review` · name test `untested`
+- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `collective_moral_disengagement`
 
@@ -1530,7 +1530,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It is not moral hazard (taking risk because losses fall on others). Scapegoating constructs a culprit; this mechanism switches off the moral weight of harm. Legitimacy loss is consent eroding from outside; here the perpetrating group disables its own restraint. Not every propaganda campaign or error qualifies.
 - **Test:** Knowledge of the harm exists and a collective frame removes its moral weight.
 - **Related:** `scapegoating`, `legitimacy_crisis`, `moral_hazard`
-- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · review `in_review` · name test `untested`
+- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `information_suppression_disaster_amplification`
 
@@ -1540,7 +1540,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The information is held and suppressed (contrast fog_of_war, where it is missing). General control of information flows is state_censorship. Not every communication failure qualifies.
 - **Test:** The information existed inside the state and its suppression measurably worsened the outcome.
 - **Related:** `fog_of_war`, `state_censorship`, `pandemic_epidemic`, `sovereign_statistics_falsification`
-- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · review `in_review` · name test `untested`
+- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `repression_radicalization_spiral`
 
@@ -1550,7 +1550,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The escalation is vertical and iterative (contrast the horizontal blame of scapegoating); legitimacy_crisis records only the outcome. A single act of repression that produces no escalation does not qualify.
 - **Test:** Each round of repression is followed by larger resistance and the loop repeats.
 - **Related:** `scapegoating`, `legitimacy_crisis`, `autocratization`, `preference_falsification_cascade`
-- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · review `in_review` · name test `untested`
+- layer `social` · status `stable` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `administrative_capacity_collapse`
 
@@ -1560,7 +1560,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It is a lasting structural loss; information missing at a moment of decision is fog_of_war, the reverse movement is state_capacity_building, and a lack of legal power is legal_authority_gap.
 - **Test:** Registers or revenue collection are shown to have stopped functioning for an extended period.
 - **Related:** `fog_of_war`, `state_capacity_building`, `legal_authority_gap`, `public_service_delivery_failure`
-- layer `social` · status `provisional` · not in the current signature · introduced in 1.0.0 · review `in_review` · name test `untested`
+- layer `social` · status `provisional` · not in the current signature · introduced in 1.0.0 · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `affinity_fraud`
 
@@ -1570,7 +1570,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Group trust is the accelerant; claims on assets that do not exist are fictitious_asset_issuance, and convergence on a crowded narrative without fraud is herd_behavior.
 - **Test:** Victims were recruited mainly through a network of shared identity.
 - **Related:** `fictitious_asset_issuance`, `herd_behavior`, `tangible_asset_verification_illusion`
-- layer `social` · status `provisional` · not in the current signature · introduced in 1.0.0 · review `in_review` · name test `untested`
+- layer `social` · status `provisional` · not in the current signature · introduced in 1.0.0 · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `credible_commitment_regime`
 
@@ -1580,7 +1580,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The constraint binds the sovereign itself; creditors sitting in the administration of the debt is creditor_governance, an unpredictable taking is arbitrary_expropriation_shock, and further investment in a failing line is escalation_of_commitment.
 - **Test:** A rule limiting the sovereign's power to default or seize is on record and is followed by cheaper borrowing.
 - **Related:** `creditor_governance`, `arbitrary_expropriation_shock`, `escalation_of_commitment`, `foreign_financial_control`
-- layer `social` · status `provisional` · not in the current signature · introduced in 1.0.0 · review `in_review` · name test `untested`
+- layer `social` · status `provisional` · not in the current signature · introduced in 1.0.0 · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `debt_bondage_spiral`
 
@@ -1590,7 +1590,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The stake is personal freedom, not public finance (contrast sovereign_funding_stress); official cancellation of such debts is clean_slate_debt_cancellation, and a lending boom among poor borrowers is microfinance_overlending.
 - **Test:** Debtors' labour or liberty is pledged or lost through debt.
 - **Related:** `sovereign_funding_stress`, `clean_slate_debt_cancellation`, `microfinance_overlending`, `debt_moratorium_relief`
-- layer `social` · status `provisional` · not in the current signature · introduced in 1.0.0 · review `in_review` · name test `untested`
+- layer `social` · status `provisional` · not in the current signature · introduced in 1.0.0 · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `negotiated_demobilization_settlement`
 
@@ -1600,7 +1600,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It ends internal armed fragmentation (loss_of_monopoly_on_violence) by agreement; the easing of tension between states is geopolitical_deescalation.
 - **Test:** A signed settlement provides for the demobilisation of armed groups and is followed by an end to the fighting.
 - **Related:** `loss_of_monopoly_on_violence`, `geopolitical_deescalation`, `war_geopolitical`
-- layer `social` · status `provisional` · not in the current signature · introduced in 1.0.0 · review `in_review` · name test `untested`
+- layer `social` · status `provisional` · not in the current signature · introduced in 1.0.0 · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `preference_falsification_cascade`
 
@@ -1610,7 +1610,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Hidden opinions come into the open all at once; exit from a resource is self_fulfilling_run, convergence on a crowded position is herd_behavior, and iterative escalation between state and opposition is repression_radicalization_spiral.
 - **Test:** A rapid shift from public compliance to open opposition follows a revealing event.
 - **Related:** `self_fulfilling_run`, `herd_behavior`, `repression_radicalization_spiral`, `legitimacy_crisis`
-- layer `social` · status `provisional` · not in the current signature · introduced in 1.0.0 · review `in_review` · name test `untested`
+- layer `social` · status `provisional` · not in the current signature · introduced in 1.0.0 · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `preparedness_paradox`
 
@@ -1620,7 +1620,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It explains why prevention that worked looks unnecessary; underinvestment in prevention because of short horizons is political_short_termism, and the uninsured loss when prevention fails is protection_gap.
 - **Test:** A prevention effort is judged by outcomes that its own success has suppressed.
 - **Related:** `political_short_termism`, `protection_gap`, `state_capacity_building`
-- layer `social` · status `provisional` · not in the current signature · introduced in 1.0.0 · review `in_review` · name test `untested`
+- layer `social` · status `provisional` · not in the current signature · introduced in 1.0.0 · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `public_service_delivery_failure`
 
@@ -1630,7 +1630,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It is the shortfall in delivery itself; the uninsured loss is protection_gap, the public's judgement of the response is performance_legitimacy, services cut to pay debt are debt_service_crowding_out, and a lasting breakdown of administration is administrative_capacity_collapse.
 - **Test:** Needed services or relief were not delivered although the need was known.
 - **Related:** `protection_gap`, `performance_legitimacy`, `debt_service_crowding_out`, `administrative_capacity_collapse`
-- layer `social` · status `provisional` · not in the current signature · introduced in 1.0.0 · review `in_review` · name test `untested`
+- layer `social` · status `provisional` · not in the current signature · introduced in 1.0.0 · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `ratchet_effect`
 
@@ -1640,7 +1640,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The tool exists and persists; the lack of a tool is legal_authority_gap, deliberate capacity-building is state_capacity_building, the birth of a post-crisis regime is re_regulation, and a regime shift toward autocracy is autocratization.
 - **Test:** An emergency tool or delegation remained in place after the threat that justified it had passed.
 - **Related:** `legal_authority_gap`, `state_capacity_building`, `re_regulation`, `autocratization`
-- layer `social` · status `provisional` · not in the current signature · introduced in 1.0.0 · review `in_review` · name test `untested`
+- layer `social` · status `provisional` · not in the current signature · introduced in 1.0.0 · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `reciprocal_mobilization_trap`
 
@@ -1650,7 +1650,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It is the self-reinforcing security dilemma; the market pricing of escalation is geopolitical_escalation, the war itself is war_geopolitical, and new resources committed to a failing course are escalation_of_commitment.
 - **Test:** Defensive measures by one side are followed by matching measures from the other, and the sequence repeats.
 - **Related:** `geopolitical_escalation`, `war_geopolitical`, `escalation_of_commitment`
-- layer `social` · status `provisional` · not in the current signature · introduced in 1.0.0 · review `in_review` · name test `untested`
+- layer `social` · status `provisional` · not in the current signature · introduced in 1.0.0 · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `regime_self_mythologizing`
 
@@ -1660,7 +1660,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It builds legitimacy; blaming a group is scapegoating, the erosion of consent is legitimacy_crisis, false statistics are sovereign_statistics_falsification, and control of information channels is state_censorship.
 - **Test:** An official narrative of the regime's success is shown to shape public or market expectations.
 - **Related:** `scapegoating`, `legitimacy_crisis`, `sovereign_statistics_falsification`, `state_censorship`, `performance_legitimacy`
-- layer `social` · status `provisional` · not in the current signature · introduced in 1.0.0 · review `in_review` · name test `untested`
+- layer `social` · status `provisional` · not in the current signature · introduced in 1.0.0 · kind `mechanism` · review `in_review` · name test `untested`
 
 ### `tangible_asset_verification_illusion`
 
@@ -1670,7 +1670,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The assets exist but cannot support the promised returns; assets that do not exist are fictitious_asset_issuance, and recruitment through group trust is affinity_fraud.
 - **Test:** Investor confidence is shown to rest on the existence of physical assets rather than on what those assets could earn.
 - **Related:** `fictitious_asset_issuance`, `affinity_fraud`
-- layer `social` · status `provisional` · not in the current signature · introduced in 1.0.0 · review `in_review` · name test `untested`
+- layer `social` · status `provisional` · not in the current signature · introduced in 1.0.0 · kind `mechanism` · review `in_review` · name test `untested`
 
 ## Signature extensions
 
@@ -1684,7 +1684,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The uninsured share of a loss itself is protection_gap.
 - **Test:** Who carries the loss has changed.
 - **Related:** `protection_gap`, `asset_management_company_resolution`, `bail_in`, `bank_recapitalization`, `lender_of_last_resort_relief`
-- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · review `accepted` · name test `tested`
+- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `tested`
 
 ### `state_equity_participation`
 
@@ -1694,7 +1694,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Acquiring a stake or a right to returns is required; asset allocation or earning returns alone does not qualify. Capacity-building is state_capacity_building.
 - **Test:** The state acquired a stake or a contractual right to returns.
 - **Related:** `ownership_transfer`, `state_capacity_building`, `arbitrary_expropriation_shock`, `bank_recapitalization`, `resource_nationalism_backfire`
-- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · review `accepted` · name test `tested`
+- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `tested`
 
 ### `ownership_transfer`
 
@@ -1704,7 +1704,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Arbitrary seizure is arbitrary_expropriation_shock.
 - **Test:** A change of ownership or control is on record.
 - **Related:** `arbitrary_expropriation_shock`, `state_equity_participation`, `wealth_concentration`, `institutional_displacement`, `resource_nationalism_backfire`
-- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · review `accepted` · name test `partial`
+- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `partial`
 
 ### `water_scarcity`
 
@@ -1714,7 +1714,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It names the scarcity and the allocation conflict; a flood, storm or other hazard event is natural_disaster.
 - **Test:** Available water falls short of needs, or its allocation is contested.
 - **Related:** `natural_disaster`, `adaptation_finance_gap`
-- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · review `in_review` · name test `tested`
+- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · kind `state` · review `in_review` · name test `tested`
 
 ### `adaptation_finance_gap`
 
@@ -1724,7 +1724,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The insurance gap is protection_gap.
 - **Test:** A measured need is compared with pledged or paid finance.
 - **Related:** `protection_gap`, `aid_cuts`, `water_scarcity`
-- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · review `accepted` · name test `tested`
+- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `tested`
 
 ### `aid_cuts`
 
@@ -1734,7 +1734,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The gap between adaptation needs and finance is adaptation_finance_gap.
 - **Test:** A fall in aid funding, or a pledge left unpaid, is on record.
 - **Related:** `adaptation_finance_gap`, `humanitarian_displacement`, `famine_food_security`, `external_relief_mobilization`
-- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · review `accepted` · name test `tested`
+- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `tested`
 
 ### `debt_service_crowding_out`
 
@@ -1744,7 +1744,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The inability to fund debt in markets is sovereign_funding_stress.
 - **Test:** Debt service is shown to displace service spending.
 - **Related:** `sovereign_funding_stress`, `public_service_delivery_failure`
-- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · review `accepted` · name test `tested`
+- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `tested`
 
 ### `autocratization`
 
@@ -1754,7 +1754,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The repression and resistance loop is repression_radicalization_spiral; loss of autonomy at named institutions is erosion_of_institutional_independence.
 - **Test:** Electoral, judicial or legislative constraints on the executive have narrowed across the regime, not only the autonomy of one named institution.
 - **Related:** `erosion_of_institutional_independence`, `repression_radicalization_spiral`, `state_censorship`, `ratchet_effect`
-- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · review `accepted` · name test `tested`
+- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `tested`
 
 ### `erosion_of_institutional_independence`
 
@@ -1764,7 +1764,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** It overlaps with autocratization but names specific institutions. The fiscal capture of monetary policy as a regime is fiscal_dominance.
 - **Test:** A named institution lost autonomy.
 - **Related:** `autocratization`, `fiscal_dominance`, `central_bank_independence_restoration`
-- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · review `accepted` · name test `tested`
+- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `tested`
 
 ### `state_censorship`
 
@@ -1774,7 +1774,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Suppressing the truth about a disaster so that the disaster grows is information_suppression_disaster_amplification.
 - **Test:** A state action restricted the flow of information.
 - **Related:** `information_suppression_disaster_amplification`, `platform_regulation`, `autocratization`, `regime_self_mythologizing`
-- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · review `accepted` · name test `tested`
+- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `tested`
 
 ### `institutional_trust_decline`
 
@@ -1784,7 +1784,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** A crisis that destroys an authority's consent is legitimacy_crisis.
 - **Test:** A survey or index records falling trust in news, media, institutions or information sources; the loss of a ruling authority's consent is not required.
 - **Related:** `legitimacy_crisis`, `synthetic_media`, `sovereign_statistics_falsification`
-- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · review `accepted` · name test `tested`
+- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `tested`
 
 ### `platform_regulation`
 
@@ -1794,7 +1794,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** State control of content for political ends is state_censorship.
 - **Test:** A rule or enforcement action targets digital platforms as businesses (competition, conduct, data or liability), not the political content they carry.
 - **Related:** `state_censorship`, `zero_click_search`, `re_regulation`, `synthetic_media`
-- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · review `accepted` · name test `tested`
+- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `tested`
 
 ### `synthetic_media`
 
@@ -1804,7 +1804,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** A measured fall in trust is institutional_trust_decline, whether or not synthetic content caused it.
 - **Test:** The content in question is shown to be AI-generated, not only false or misleading, and its spread, labelling or effect is documented.
 - **Related:** `institutional_trust_decline`, `platform_regulation`, `zero_click_search`
-- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · review `accepted` · name test `tested`
+- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `tested`
 
 ### `zero_click_search`
 
@@ -1814,7 +1814,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Rules aimed at platforms are platform_regulation.
 - **Test:** A loss of traffic or revenue by publishers is measured and tied to search answers kept on the platform, not to a general fall in advertising or to regulation.
 - **Related:** `platform_regulation`, `synthetic_media`
-- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · review `accepted` · name test `tested`
+- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `tested`
 
 ### `circular_financing`
 
@@ -1824,7 +1824,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Investment in new capacity itself is capacity_investment.
 - **Test:** Funds flow from a supplier to a customer and come back as purchases.
 - **Related:** `capacity_investment`, `ai_equity_momentum`, `useful_life_assumption`, `related_party_abuse`
-- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · review `accepted` · name test `partial`
+- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `partial`
 
 ### `useful_life_assumption`
 
@@ -1834,7 +1834,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The investment decision itself is capacity_investment.
 - **Test:** A useful-life assumption is shown to move reported profit or returns.
 - **Related:** `capacity_investment`, `circular_financing`, `dual_measure_divergence`
-- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · review `accepted` · name test `tested`
+- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `tested`
 
 ### `technological_unemployment`
 
@@ -1844,7 +1844,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Market enthusiasm around AI firms is ai_equity_momentum.
 - **Test:** Displacement of workers or tasks attributed to automation is measured; job creation alone does not qualify.
 - **Related:** `ai_equity_momentum`, `demographic_transition`, `labor_force_collapse_shock`, `technological_substitution_shock`
-- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · review `accepted` · name test `partial`
+- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `partial`
 
 ### `wealth_concentration`
 
@@ -1854,7 +1854,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** A single change of ownership is ownership_transfer.
 - **Test:** Top wealth shares or ownership concentration are measured to rise across the distribution, not only through one change of owner.
 - **Related:** `ownership_transfer`
-- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · review `in_review` · name test `tested`
+- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · kind `state` · review `in_review` · name test `tested`
 
 ### `demographic_transition`
 
@@ -1864,7 +1864,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Labour displacement by technology is technological_unemployment; displacement under duress is humanitarian_displacement.
 - **Test:** A sustained shift in fertility or mortality from high to lower levels is shown, or a change in age structure that follows from such a shift.
 - **Related:** `technological_unemployment`, `humanitarian_displacement`, `labor_force_collapse_shock`
-- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · review `in_review` · name test `tested`
+- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `in_review` · name test `tested`
 
 ### `reserve_diversification`
 
@@ -1874,7 +1874,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** System-level pressure on one currency is fx_pressure.
 - **Test:** The composition of official reserves has shifted.
 - **Related:** `fx_pressure`, `geoeconomic_fragmentation`, `financial_warfare_sanctions`, `reserve_currency_dilemma`
-- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · review `accepted` · name test `tested`
+- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `tested`
 
 ### `geoeconomic_fragmentation`
 
@@ -1884,7 +1884,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The existence of infrastructure (participant counts, pilots, permitted arrangements), summits and declarations are not evidence on their own: the flow must be shown to change direction or the barrier to operate. Compared periods must be of equal length.
 - **Test:** A flow is shown to have changed direction along a bloc line, or a barrier between blocs is shown to operate.
 - **Related:** `geopolitical_escalation`, `reserve_diversification`, `export_earnings_shock`, `export_ban_provisioning_cascade`, `financial_warfare_sanctions`
-- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · review `accepted` · name test `tested`
+- layer `extension` · status `provisional` · in the signature · introduced in 1.0.0 · kind `mechanism` · review `accepted` · name test `tested`
 
 ## Crisis types
 
@@ -1898,7 +1898,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** A crisis type names the event. The market pricing of geopolitical tension is geopolitical_escalation; fragmentation of armed power inside a state is loss_of_monopoly_on_violence.
 - **Test:** Armed conflict is taking place.
 - **Related:** `geopolitical_escalation`, `loss_of_monopoly_on_violence`, `humanitarian_displacement`, `negotiated_demobilization_settlement`, `reciprocal_mobilization_trap`
-- layer `crisis_type` · status `stable` · in the signature · introduced in 1.0.0 · review `in_review` · name test `partial`
+- layer `crisis_type` · status `stable` · in the signature · introduced in 1.0.0 · kind `crisis_type` · review `in_review` · name test `partial`
 
 ### `famine_food_security`
 
@@ -1908,7 +1908,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The access channel through which famine kills is entitlement_failure_famine; food riots are subsistence_unrest_spiral.
 - **Test:** Acute food insecurity or famine conditions are measured.
 - **Related:** `entitlement_failure_famine`, `subsistence_unrest_spiral`, `aid_cuts`, `export_ban_provisioning_cascade`
-- layer `crisis_type` · status `stable` · in the signature · introduced in 1.0.0 · review `in_review` · name test `partial`
+- layer `crisis_type` · status `stable` · in the signature · introduced in 1.0.0 · kind `crisis_type` · review `in_review` · name test `partial`
 
 ### `humanitarian_displacement`
 
@@ -1918,7 +1918,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Displacement is the event; its causes are named separately, for example war_geopolitical or natural_disaster.
 - **Test:** People are forcibly displaced.
 - **Related:** `war_geopolitical`, `natural_disaster`, `aid_cuts`, `demographic_transition`
-- layer `crisis_type` · status `stable` · in the signature · introduced in 1.0.0 · review `in_review` · name test `partial`
+- layer `crisis_type` · status `stable` · in the signature · introduced in 1.0.0 · kind `crisis_type` · review `in_review` · name test `partial`
 
 ### `natural_disaster`
 
@@ -1928,7 +1928,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** The uninsured part of the loss is protection_gap; chronic shortage of water is water_scarcity.
 - **Test:** A natural hazard event caused serious, documented loss or disruption.
 - **Related:** `protection_gap`, `water_scarcity`, `humanitarian_displacement`, `disaster_reconstruction_finance`
-- layer `crisis_type` · status `stable` · in the signature · introduced in 1.0.0 · review `in_review` · name test `partial`
+- layer `crisis_type` · status `stable` · in the signature · introduced in 1.0.0 · kind `crisis_type` · review `in_review` · name test `partial`
 
 ### `pandemic_epidemic`
 
@@ -1938,7 +1938,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 - **Boundary:** Vaccination coverage is not this type. Hiding or denying the outbreak so that it grows is information_suppression_disaster_amplification.
 - **Test:** An outbreak is spreading.
 - **Related:** `information_suppression_disaster_amplification`, `legitimacy_crisis`, `labor_force_collapse_shock`
-- layer `crisis_type` · status `stable` · in the signature · introduced in 1.0.0 · review `in_review` · name test `partial`
+- layer `crisis_type` · status `stable` · in the signature · introduced in 1.0.0 · kind `crisis_type` · review `in_review` · name test `partial`
 
 ## Deprecated identifiers
 

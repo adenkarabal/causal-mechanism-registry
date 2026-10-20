@@ -12,7 +12,7 @@ abstract: >-
   5 crisis types; 78 of them in the current signature), each with a stable identifier, definition, scope, boundary
   and test, together with the concepts, principles and agent guide behind the
   mechanism signature published at adenkarabal.com.
-version: "1.3.0"
+version: "1.3.1"
 date-released: "2026-10-20"
 doi: "10.5281/zenodo.23248221"
 license: CC-BY-4.0

@@ -2,6 +2,18 @@
 
 Versions describe the vocabulary (identifiers, definitions, scope, boundaries and tests) and the documents published with it. The rules are in [PRINCIPLES.md](PRINCIPLES.md).
 
+## 1.3.0 — 2026-10-20
+
+The vocabulary is now generated from the publisher's master copy of the concept records; a version is not released when the published file and the master copy differ.
+
+**Vocabulary**
+
+- New fields on every entry: `kind` (`mechanism` or `crisis_type`), `review` (`accepted` 53, `in_review` 138) and `name_test` (`tested` 30, `partial` 15, `untested` 146). Their meanings are in `mechanisms.json` (`review_values`, `name_test_values`).
+- Identifiers: all 191 identifiers of 1.2.0 are kept; none was removed.
+- No identifier was added. A new identifier is published only after its name has passed a blind naming test.
+- `related` is now reciprocal: when one entry lists another, the other lists it back. 98 entries gained reverse links; no link was removed.
+- Wording changed after a review of whether each boundary and test separates the entry from its nearest neighbours: `autocratization` (test); `credit_cycle` (boundary, test); `embedded_leverage` (boundary); `institutional_trust_decline` (test); `instrument_ban_disclosure_reform` (test); `lender_of_last_resort_relief` (test); `peg_defense_failure` (definition); `platform_regulation` (test); `resource_nationalism_backfire` (test); `short_squeeze` (test); `specie_scarcity_deflation` (test); `synthetic_media` (test); `wealth_concentration` (test); `zero_click_search` (test).
+
 ## 1.2.0 — 2026-10-10
 
 Wording clarified; identifiers, layers, statuses and the meaning of every entry are unchanged.

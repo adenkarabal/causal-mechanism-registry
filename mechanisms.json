@@ -1,7 +1,7 @@
 {
   "title": "Causal Mechanism Registry",
-  "version": "1.2.0",
-  "released": "2026-10-10",
+  "version": "1.3.0",
+  "released": "2026-10-20",
   "first_public_version": {
     "version": "0.1.0",
     "released": "2026-09-17"
@@ -60,7 +60,10 @@
     "in_signature": "Whether the signature edition includes this mechanism, scored or marked unknown. false: named and defined here, not part of the current signature edition.",
     "phase_roles": "Present only where default roles are assigned: roles in an episode (see CONCEPTS.md), a starting assumption rather than a claim about every occurrence.",
     "introduced_in": "First version of this vocabulary that carried the identifier.",
-    "replaces": "Identifiers this entry supersedes."
+    "replaces": "Identifiers this entry supersedes.",
+    "kind": "mechanism | crisis_type: what sort of concept the entry is.",
+    "review": "accepted | in_review (see review_values).",
+    "name_test": "tested | partial | untested (see name_test_values). Not every name has been blind-tested."
   },
   "mechanisms": [
     {
@@ -74,13 +77,17 @@
       "test": "A physical shortfall in energy, or a credible threat of one, is on record, not only a higher price.",
       "related": [
         "energy_cost_pressure",
-        "energy_supply_relief"
+        "energy_supply_relief",
+        "commodity_supply_squeeze"
       ],
       "in_signature": true,
       "phase_roles": [
         "trigger"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "untested"
     },
     {
       "id": "energy_supply_relief",
@@ -100,7 +107,10 @@
         "resolution",
         "policy"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "untested"
     },
     {
       "id": "energy_cost_pressure",
@@ -120,7 +130,10 @@
         "amplification",
         "trigger"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "untested"
     },
     {
       "id": "commodity_supply_squeeze",
@@ -134,14 +147,22 @@
       "related": [
         "cost_inflation",
         "inventory_pressure",
-        "energy_supply_shock"
+        "energy_supply_shock",
+        "corner_dynamics",
+        "export_ban_provisioning_cascade",
+        "specie_scarcity_deflation",
+        "state_buffer_stock_intervention",
+        "technological_substitution_shock"
       ],
       "in_signature": true,
       "phase_roles": [
         "trigger",
         "amplification"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "untested"
     },
     {
       "id": "cost_inflation",
@@ -154,14 +175,18 @@
       "test": "A cost increase is identified as the channel that moved prices.",
       "related": [
         "inflation_pressure",
-        "energy_cost_pressure"
+        "energy_cost_pressure",
+        "commodity_supply_squeeze"
       ],
       "in_signature": true,
       "phase_roles": [
         "amplification",
         "trigger"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "untested"
     },
     {
       "id": "inflation_pressure",
@@ -174,14 +199,21 @@
       "test": "The general price level, not one price, is under persistent upward pressure.",
       "related": [
         "cost_inflation",
-        "fiscal_dominance"
+        "fiscal_dominance",
+        "arbitrary_expropriation_shock",
+        "debasement_seigniorage",
+        "flight_to_hard_money_dollarization",
+        "heterodox_shock_stabilization_plan"
       ],
       "in_signature": true,
       "phase_roles": [
         "amplification",
         "trigger"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "untested"
     },
     {
       "id": "duration_selloff",
@@ -201,7 +233,10 @@
         "transmission",
         "amplification"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "sovereign_funding_stress",
@@ -216,14 +251,32 @@
         "funding_margin_pressure",
         "fx_pressure",
         "fiscal_dominance",
-        "debt_service_crowding_out"
+        "debt_service_crowding_out",
+        "coercive_interest_reduction",
+        "commodity_backed_debt_overhang",
+        "commodity_dependence_fiscal_collapse",
+        "creditor_governance",
+        "debt_bondage_spiral",
+        "dual_measure_divergence",
+        "duration_selloff",
+        "forced_loan_capital_levy",
+        "foreign_financial_control",
+        "odious_debt_repudiation",
+        "predatory_lending_issuance_fraud",
+        "reparations_transfer_problem",
+        "sovereign_exposure_concentration",
+        "war_debt_real_burden_deflation",
+        "windfall_overextension"
       ],
       "in_signature": true,
       "phase_roles": [
         "amplification",
         "transmission"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "policy_repricing",
@@ -236,14 +289,22 @@
       "test": "Expectations about the policy path changed, not only a single decision.",
       "related": [
         "intervention_risk",
-        "fiscal_dominance"
+        "fiscal_dominance",
+        "doctrinal_disinflation",
+        "duration_selloff",
+        "exchange_rate_based_stabilization",
+        "imf_conditional_adjustment",
+        "recoinage_shock"
       ],
       "in_signature": true,
       "phase_roles": [
         "policy",
         "trigger"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "untested"
     },
     {
       "id": "fiscal_dominance",
@@ -257,14 +318,23 @@
       "related": [
         "sovereign_funding_stress",
         "policy_repricing",
-        "erosion_of_institutional_independence"
+        "erosion_of_institutional_independence",
+        "arbitrary_expropriation_shock",
+        "central_bank_independence_restoration",
+        "debasement_seigniorage",
+        "fiscal_military_exhaustion",
+        "foreign_financial_control",
+        "inflation_pressure"
       ],
       "in_signature": true,
       "phase_roles": [
         "policy",
         "amplification"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "untested"
     },
     {
       "id": "fx_pressure",
@@ -278,14 +348,31 @@
       "related": [
         "currency_sensitivity",
         "intervention_risk",
-        "reserve_diversification"
+        "reserve_diversification",
+        "capital_flight",
+        "competitiveness_overvaluation",
+        "convertibility_suspension",
+        "current_account_swing",
+        "flight_to_hard_money_dollarization",
+        "import_compression",
+        "original_sin_currency_mismatch",
+        "peg_defense_failure",
+        "reparations_transfer_problem",
+        "reserve_currency_dilemma",
+        "sovereign_funding_stress",
+        "specie_drain",
+        "sudden_stop",
+        "twin_mismatch"
       ],
       "in_signature": true,
       "phase_roles": [
         "trigger",
         "transmission"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "untested"
     },
     {
       "id": "currency_sensitivity",
@@ -297,13 +384,18 @@
       "boundary": "This is exposure to currency movement, not the system-wide currency pressure itself.",
       "test": "A named entity or sector is exposed to exchange-rate moves.",
       "related": [
-        "fx_pressure"
+        "fx_pressure",
+        "original_sin_currency_mismatch",
+        "twin_mismatch"
       ],
       "in_signature": true,
       "phase_roles": [
         "amplification"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "partial"
     },
     {
       "id": "intervention_risk",
@@ -316,7 +408,12 @@
       "test": "A direct official action in a market is credibly expected or threatened.",
       "related": [
         "policy_repricing",
-        "fx_pressure"
+        "fx_pressure",
+        "convertibility_suspension",
+        "lender_of_last_resort_relief",
+        "moral_hazard",
+        "peg_defense_failure",
+        "position_limit_intervention"
       ],
       "in_signature": true,
       "phase_roles": [
@@ -324,7 +421,10 @@
         "trigger",
         "resolution"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "export_earnings_shock",
@@ -337,7 +437,14 @@
       "test": "What a country or sector earns from exports has contracted.",
       "related": [
         "demand_slowdown",
-        "geoeconomic_fragmentation"
+        "geoeconomic_fragmentation",
+        "commodity_dependence_fiscal_collapse",
+        "competitiveness_overvaluation",
+        "dutch_disease",
+        "financial_warfare_sanctions",
+        "single_buyer_dependence",
+        "technological_substitution_shock",
+        "terms_of_trade_shock"
       ],
       "in_signature": true,
       "phase_roles": [
@@ -347,7 +454,10 @@
       "introduced_in": "1.0.0",
       "replaces": [
         "export_pressure"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "partial"
     },
     {
       "id": "liquidity_stress",
@@ -361,14 +471,27 @@
       "related": [
         "credit_market_freeze",
         "basis_dislocation",
-        "self_fulfilling_run"
+        "self_fulfilling_run",
+        "basis_risk",
+        "clearing_access_exclusion",
+        "contagion",
+        "lender_of_last_resort_relief",
+        "leverage_spiral",
+        "off_balance_sheet_maturity_transformation",
+        "over_trading",
+        "settlement_failure",
+        "short_squeeze",
+        "twin_mismatch"
       ],
       "in_signature": true,
       "phase_roles": [
         "transmission",
         "amplification"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "untested"
     },
     {
       "id": "credit_market_freeze",
@@ -380,14 +503,19 @@
       "boundary": "Market intermediation must seize or fracture; ordinary spread widening or lower issuance alone is insufficient.",
       "test": "Intermediation itself has seized, not only become more expensive.",
       "related": [
-        "liquidity_stress"
+        "liquidity_stress",
+        "financial_product_complexity_opacity",
+        "off_balance_sheet_maturity_transformation"
       ],
       "in_signature": true,
       "phase_roles": [
         "transmission",
         "amplification"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "basis_dislocation",
@@ -399,14 +527,21 @@
       "boundary": "Expected convergence and its breakdown are essential; generic relative-value movement does not qualify.",
       "test": "Two instruments expected to converge have moved apart in a disorderly way.",
       "related": [
-        "liquidity_stress"
+        "liquidity_stress",
+        "basis_risk",
+        "delivery_default",
+        "leverage_spiral",
+        "short_squeeze"
       ],
       "in_signature": true,
       "phase_roles": [
         "transmission",
         "amplification"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "untested"
     },
     {
       "id": "credit_cycle",
@@ -415,17 +550,29 @@
       "status": "stable",
       "definition": "A reinforcing expansion or contraction between credit availability, leverage, asset values, and economic activity.",
       "scope": "Credit booms and busts, leverage build-up and deleveraging, and lending standards that move with asset values.",
-      "boundary": "The feedback cycle is central; a high level of debt without cyclical reinforcement is insufficient.",
-      "test": "Credit, leverage, asset values and activity are feeding each other.",
+      "boundary": "The feedback runs through real activity as well as credit and asset values: activity changes borrowers' net worth or lenders' standards and so moves credit supply. A spiral of collateral values and forced sales that stays inside financial markets is leverage_spiral; a high but stable debt level without reinforcement is not a credit cycle (debt too large to permit new investment is debt_overhang); borrowers choosing to repay while credit is available is balance_sheet_recession.",
+      "test": "Changes in real activity are shown to feed back into credit supply, through borrowers' net worth or lenders' standards, rather than a high debt level alone or a price spiral confined to collateral.",
       "related": [
-        "asset_quality_stress"
+        "asset_quality_stress",
+        "balance_sheet_recession",
+        "capital_recycling",
+        "debt_deflation",
+        "debt_overhang",
+        "directed_lending",
+        "leverage_spiral",
+        "microfinance_overlending",
+        "twin_balance_sheet",
+        "windfall_overextension"
       ],
       "in_signature": true,
       "phase_roles": [
         "amplification",
         "trigger"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "tested"
     },
     {
       "id": "funding_margin_pressure",
@@ -438,14 +585,18 @@
       "test": "A non-bank borrower's margin is squeezed by what its funding costs.",
       "related": [
         "banking_margin_pressure",
-        "sovereign_funding_stress"
+        "sovereign_funding_stress",
+        "over_trading"
       ],
       "in_signature": true,
       "phase_roles": [
         "amplification",
         "transmission"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "partial"
     },
     {
       "id": "asset_quality_stress",
@@ -458,14 +609,25 @@
       "test": "The quality of the assets institutions carry has deteriorated.",
       "related": [
         "banking_margin_pressure",
-        "credit_cycle"
+        "credit_cycle",
+        "asset_management_company_resolution",
+        "directed_lending",
+        "microfinance_overlending",
+        "originate_to_distribute_moral_hazard",
+        "regulatory_forbearance",
+        "sovereign_exposure_concentration",
+        "twin_balance_sheet",
+        "zombie_firm_forbearance"
       ],
       "in_signature": true,
       "phase_roles": [
         "amplification",
         "transmission"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "banking_margin_pressure",
@@ -484,7 +646,10 @@
       "phase_roles": [
         "amplification"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "untested"
     },
     {
       "id": "protection_gap",
@@ -498,14 +663,21 @@
       "related": [
         "cost_shifting",
         "adaptation_finance_gap",
-        "natural_disaster"
+        "natural_disaster",
+        "disaster_reconstruction_finance",
+        "entitlement_failure_famine",
+        "preparedness_paradox",
+        "public_service_delivery_failure"
       ],
       "in_signature": true,
       "phase_roles": [
         "amplification",
         "resolution"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "tested"
     },
     {
       "id": "risk_appetite_reversal",
@@ -518,14 +690,20 @@
       "test": "A change in the direction of risk-taking is observed, not only a low level.",
       "related": [
         "herd_behavior",
-        "contagion"
+        "contagion",
+        "capital_flight",
+        "flight_to_hard_money_dollarization",
+        "sudden_stop"
       ],
       "in_signature": true,
       "phase_roles": [
         "transmission",
         "trigger"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "ai_equity_momentum",
@@ -539,14 +717,18 @@
       "related": [
         "equity_narrow_leadership",
         "circular_financing",
-        "capacity_investment"
+        "capacity_investment",
+        "technological_unemployment"
       ],
       "in_signature": true,
       "phase_roles": [
         "amplification",
         "trigger"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "equity_narrow_leadership",
@@ -564,7 +746,10 @@
       "phase_roles": [
         "amplification"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "growth_slowdown",
@@ -583,7 +768,10 @@
         "resolution",
         "trigger"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "untested"
     },
     {
       "id": "demand_slowdown",
@@ -596,14 +784,21 @@
       "test": "Spending or orders have weakened.",
       "related": [
         "growth_slowdown",
-        "export_earnings_shock"
+        "export_earnings_shock",
+        "balance_sheet_recession",
+        "energy_supply_relief",
+        "import_compression",
+        "technological_substitution_shock"
       ],
       "in_signature": true,
       "phase_roles": [
         "resolution",
         "trigger"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "untested"
     },
     {
       "id": "capacity_investment",
@@ -623,7 +818,10 @@
       "phase_roles": [
         "amplification"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "inventory_pressure",
@@ -635,13 +833,18 @@
       "boundary": "Inventory dynamics must carry the mechanism; a physical supply shock without inventory transmission is separate.",
       "test": "Inventory changes are what carry the effect.",
       "related": [
-        "commodity_supply_squeeze"
+        "commodity_supply_squeeze",
+        "anti_hoarding_regulation",
+        "state_buffer_stock_intervention"
       ],
       "in_signature": true,
       "phase_roles": [
         "amplification"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "partial"
     },
     {
       "id": "geopolitical_escalation",
@@ -655,13 +858,18 @@
       "related": [
         "geopolitical_deescalation",
         "war_geopolitical",
-        "geoeconomic_fragmentation"
+        "geoeconomic_fragmentation",
+        "financial_warfare_sanctions",
+        "reciprocal_mobilization_trap"
       ],
       "in_signature": true,
       "phase_roles": [
         "trigger"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "geopolitical_deescalation",
@@ -673,13 +881,17 @@
       "boundary": "De-escalation is an active easing of prior stress, not the simple absence of new escalation.",
       "test": "A prior geopolitical constraint has actively eased.",
       "related": [
-        "geopolitical_escalation"
+        "geopolitical_escalation",
+        "negotiated_demobilization_settlement"
       ],
       "in_signature": true,
       "phase_roles": [
         "resolution"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "untested"
     },
     {
       "id": "contagion",
@@ -692,13 +904,19 @@
       "test": "Stress moved from one institution, market, sector or country to another through a named channel.",
       "related": [
         "liquidity_stress",
-        "risk_appetite_reversal"
+        "risk_appetite_reversal",
+        "export_ban_provisioning_cascade",
+        "settlement_failure",
+        "sovereign_exposure_concentration"
       ],
       "in_signature": true,
       "phase_roles": [
         "transmission"
       ],
-      "introduced_in": "0.1.0"
+      "introduced_in": "0.1.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "untested"
     },
     {
       "id": "accounting_disclosure_reform",
@@ -719,7 +937,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "resolution"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "anti_hoarding_regulation",
@@ -741,7 +962,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "policy"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "asset_management_company_resolution",
@@ -761,7 +985,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "resolution"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "asymmetric_payoff_mis_selling",
@@ -782,7 +1009,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "bail_in",
@@ -803,7 +1033,10 @@
       "phase_roles": [
         "policy",
         "resolution"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "balance_sheet_recession",
@@ -824,7 +1057,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "bank_recapitalization",
@@ -839,14 +1075,18 @@
         "lender_of_last_resort_relief",
         "state_equity_participation",
         "asset_management_company_resolution",
-        "cost_shifting"
+        "cost_shifting",
+        "bail_in"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "policy",
         "resolution"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "basis_risk",
@@ -866,7 +1106,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "benchmark_reform",
@@ -886,7 +1129,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "resolution"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "capital_flight",
@@ -908,7 +1154,10 @@
       "phase_roles": [
         "transmission",
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "tested"
     },
     {
       "id": "capital_recycling",
@@ -922,13 +1171,17 @@
       "related": [
         "credit_cycle",
         "windfall_overextension",
-        "sudden_stop"
+        "sudden_stop",
+        "reparations_transfer_problem"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "central_bank_independence_restoration",
@@ -949,7 +1202,10 @@
       "phase_roles": [
         "policy",
         "resolution"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "clean_slate_debt_cancellation",
@@ -969,7 +1225,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "resolution"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "clearing_access_exclusion",
@@ -990,7 +1249,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "coercive_interest_reduction",
@@ -1005,14 +1267,18 @@
         "odious_debt_repudiation",
         "sovereign_funding_stress",
         "debt_restructuring_framework",
-        "forced_loan_capital_levy"
+        "forced_loan_capital_levy",
+        "compulsory_domestic_conversion"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "policy",
         "resolution"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "coin_clipping_quality_degradation",
@@ -1028,7 +1294,10 @@
         "recoinage_shock"
       ],
       "in_signature": false,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "commodity_backed_debt_overhang",
@@ -1049,7 +1318,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "commodity_dependence_fiscal_collapse",
@@ -1064,13 +1336,19 @@
         "sovereign_funding_stress",
         "export_earnings_shock",
         "terms_of_trade_shock",
-        "windfall_overextension"
+        "windfall_overextension",
+        "commodity_backed_debt_overhang",
+        "dutch_disease",
+        "single_buyer_dependence"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "transmission"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "competitiveness_overvaluation",
@@ -1086,13 +1364,17 @@
         "dutch_disease",
         "overvalued_peg_entry",
         "fx_pressure",
-        "peg_defense_failure"
+        "peg_defense_failure",
+        "doctrinal_disinflation"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "trigger"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "compulsory_domestic_conversion",
@@ -1112,7 +1394,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "policy"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "convertibility_suspension",
@@ -1128,13 +1413,17 @@
         "intervention_risk",
         "devaluation_exit",
         "token_redemption_collapse",
-        "lender_of_last_resort_relief"
+        "lender_of_last_resort_relief",
+        "reserve_currency_dilemma"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "policy"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "corner_dynamics",
@@ -1149,13 +1438,18 @@
         "commodity_supply_squeeze",
         "short_squeeze",
         "delivery_default",
-        "position_limit_intervention"
+        "position_limit_intervention",
+        "market_design_gaming",
+        "spoofing"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "trigger"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "creditor_governance",
@@ -1175,7 +1469,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "resolution"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "currency_reform_redenomination",
@@ -1197,7 +1494,10 @@
       "phase_roles": [
         "policy",
         "resolution"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "current_account_swing",
@@ -1218,7 +1518,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "trigger"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "debasement_seigniorage",
@@ -1233,13 +1536,19 @@
         "coin_clipping_quality_degradation",
         "inflation_pressure",
         "fiscal_dominance",
-        "recoinage_shock"
+        "recoinage_shock",
+        "specie_drain",
+        "specie_scarcity_deflation",
+        "token_redemption_collapse"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "trigger"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "debt_deflation",
@@ -1254,13 +1563,18 @@
         "balance_sheet_recession",
         "war_debt_real_burden_deflation",
         "specie_scarcity_deflation",
-        "credit_cycle"
+        "credit_cycle",
+        "devaluation_exit",
+        "doctrinal_disinflation"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "debt_moratorium_relief",
@@ -1282,7 +1596,10 @@
       "phase_roles": [
         "policy",
         "resolution"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "debt_overhang",
@@ -1297,13 +1614,17 @@
         "balance_sheet_recession",
         "zombie_firm_forbearance",
         "twin_balance_sheet",
-        "commodity_backed_debt_overhang"
+        "commodity_backed_debt_overhang",
+        "credit_cycle"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "debt_restructuring_framework",
@@ -1324,7 +1645,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "resolution"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "delivery_default",
@@ -1344,7 +1668,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "trigger"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "deposit_guarantee_blanket",
@@ -1365,7 +1692,10 @@
       "phase_roles": [
         "policy",
         "resolution"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "devaluation_exit",
@@ -1385,7 +1715,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "resolution"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "directed_lending",
@@ -1405,7 +1738,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "disaster_reconstruction_finance",
@@ -1425,7 +1761,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "resolution"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "doctrinal_disinflation",
@@ -1440,14 +1779,18 @@
         "policy_repricing",
         "overvalued_peg_entry",
         "debt_deflation",
-        "competitiveness_overvaluation"
+        "competitiveness_overvaluation",
+        "war_debt_real_burden_deflation"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "policy",
         "trigger"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "dual_measure_divergence",
@@ -1465,7 +1808,10 @@
         "sovereign_funding_stress"
       ],
       "in_signature": false,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "dutch_disease",
@@ -1480,13 +1826,17 @@
         "competitiveness_overvaluation",
         "export_earnings_shock",
         "windfall_overextension",
-        "commodity_dependence_fiscal_collapse"
+        "commodity_dependence_fiscal_collapse",
+        "resource_nationalism_backfire"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "embedded_leverage",
@@ -1495,7 +1845,7 @@
       "status": "provisional",
       "definition": "An instrument's payoff multiplies movements in its reference rate or price, so a small position carries an exposure far larger than the capital committed.",
       "scope": "Leveraged swaps, structured notes and other derivatives whose notional exposure dwarfs the capital at stake.",
-      "boundary": "The leverage lies in the design of the instrument; leverage obtained by borrowing against collateral is leverage_spiral, and an asymmetric payoff sold to unsophisticated clients is asymmetric_payoff_mis_selling.",
+      "boundary": "The leverage lies in the design of the instrument; leverage obtained by borrowing or by posting margin is leverage, the feedback between collateral values and borrowing capacity is leverage_spiral, and an asymmetric payoff sold to unsophisticated clients is asymmetric_payoff_mis_selling.",
       "test": "An instrument's loss on a given market move is a multiple of that move.",
       "related": [
         "leverage_spiral",
@@ -1506,7 +1856,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "exchange_rate_based_stabilization",
@@ -1522,14 +1875,18 @@
         "imf_conditional_adjustment",
         "currency_reform_redenomination",
         "peg_defense_failure",
-        "policy_repricing"
+        "policy_repricing",
+        "new_institution_founding"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "policy",
         "resolution"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "export_ban_provisioning_cascade",
@@ -1550,7 +1907,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "external_relief_mobilization",
@@ -1571,7 +1931,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "resolution"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "fictitious_asset_issuance",
@@ -1586,13 +1949,17 @@
         "issuance_promotion_fraud",
         "predatory_lending_issuance_fraud",
         "affinity_fraud",
-        "related_party_abuse"
+        "related_party_abuse",
+        "tangible_asset_verification_illusion"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "trigger"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "financial_product_complexity_opacity",
@@ -1612,7 +1979,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "financial_warfare_sanctions",
@@ -1633,7 +2003,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "trigger"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "flight_to_hard_money_dollarization",
@@ -1654,7 +2027,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "forced_loan_capital_levy",
@@ -1675,7 +2051,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "policy"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "foreign_financial_control",
@@ -1697,7 +2076,10 @@
       "phase_roles": [
         "policy",
         "resolution"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "heterodox_shock_stabilization_plan",
@@ -1719,7 +2101,10 @@
       "phase_roles": [
         "policy",
         "resolution"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "imf_conditional_adjustment",
@@ -1741,7 +2126,10 @@
       "phase_roles": [
         "policy",
         "resolution"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "import_compression",
@@ -1762,7 +2150,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "transmission"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "infrastructure_regime_termination",
@@ -1782,7 +2173,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "trigger"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "institutional_displacement",
@@ -1802,7 +2196,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "transmission"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "instrument_ban_disclosure_reform",
@@ -1812,7 +2209,7 @@
       "definition": "A dangerous type of instrument is banned or made subject to mandatory disclosure and suitability rules.",
       "scope": "Bans on options and time bargains, rules on derivative sales to retail clients and firms, and derivative reforms after a crisis.",
       "boundary": "It targets an instrument type; restriction of a trading practice is short_selling_restriction, reform of reporting standards is accounting_disclosure_reform, and post-crisis regimes in general are re_regulation.",
-      "test": "An instrument type was banned or made subject to new disclosure or suitability rules.",
+      "test": "A rule bans an instrument type, or attaches disclosure or suitability conditions to that instrument, rather than restricting a trading practice or changing general reporting standards.",
       "related": [
         "short_selling_restriction",
         "accounting_disclosure_reform",
@@ -1823,7 +2220,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "resolution"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "issuance_promotion_fraud",
@@ -1843,7 +2243,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "labor_force_collapse_shock",
@@ -1863,7 +2266,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "transmission"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "lender_of_last_resort_relief",
@@ -1873,20 +2279,25 @@
       "definition": "A central bank or other public lender provides emergency funding to institutions or markets that cannot obtain it elsewhere.",
       "scope": "Emergency loans against collateral, discount-window lending, coordinated lifeboats and moratoria that stop a panic.",
       "boundary": "It supplies liquidity, not capital: injecting capital is bank_recapitalization, and moving losses onto the public is cost_shifting. The expectation of such lending, before it happens, is intervention_risk.",
-      "test": "Emergency lending to stressed institutions or markets is on record.",
+      "test": "Emergency lending, not a capital injection, was extended to institutions or markets that could not obtain funding elsewhere.",
       "related": [
         "bank_recapitalization",
         "cost_shifting",
         "intervention_risk",
         "liquidity_stress",
-        "convertibility_suspension"
+        "convertibility_suspension",
+        "clearing_access_exclusion",
+        "deposit_guarantee_blanket"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "policy",
         "resolution"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "leverage_spiral",
@@ -1907,7 +2318,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "market_design_gaming",
@@ -1921,13 +2335,17 @@
       "related": [
         "spoofing",
         "corner_dynamics",
-        "regulatory_arbitrage_vehicle"
+        "regulatory_arbitrage_vehicle",
+        "benchmark_reform"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "trigger"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "microfinance_overlending",
@@ -1948,7 +2366,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "model_risk",
@@ -1969,7 +2390,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "moral_hazard",
@@ -1991,7 +2415,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "negative_convexity_short_option",
@@ -2011,7 +2438,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "new_institution_founding",
@@ -2031,7 +2461,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "resolution"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "odious_debt_repudiation",
@@ -2045,13 +2478,18 @@
       "related": [
         "sovereign_funding_stress",
         "clean_slate_debt_cancellation",
-        "legitimacy_crisis"
+        "legitimacy_crisis",
+        "coercive_interest_reduction",
+        "predatory_lending_issuance_fraud"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "trigger"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "off_balance_sheet_maturity_transformation",
@@ -2066,13 +2504,17 @@
         "regulatory_arbitrage_vehicle",
         "self_fulfilling_run",
         "credit_market_freeze",
-        "liquidity_stress"
+        "liquidity_stress",
+        "tranching_illusion"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "original_sin_currency_mismatch",
@@ -2093,7 +2535,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "originate_to_distribute_moral_hazard",
@@ -2113,7 +2558,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "over_trading",
@@ -2133,7 +2581,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "overvalued_peg_entry",
@@ -2154,14 +2605,17 @@
       "phase_roles": [
         "trigger",
         "policy"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "peg_defense_failure",
       "name": "Peg defence failure",
       "layer": "core",
       "status": "provisional",
-      "definition": "Authorities spend reserves defending a fixed exchange rate until they are exhausted, then devalue in a large, abrupt step.",
+      "definition": "Authorities defend a fixed exchange rate by spending reserves heavily, then give it up in a large, abrupt devaluation.",
       "scope": "Reserve drawdowns, interest-rate defences and delayed abandonment of pegs, especially after falls in commodity prices.",
       "boundary": "It is the sequence of defence followed by capitulation; continuing pressure is fx_pressure, an expected intervention is intervention_risk, and a deliberate exit that ends deflation is devaluation_exit.",
       "test": "A peg was defended with reserves and then abandoned in a single large devaluation.",
@@ -2169,13 +2623,18 @@
         "fx_pressure",
         "intervention_risk",
         "devaluation_exit",
-        "competitiveness_overvaluation"
+        "competitiveness_overvaluation",
+        "exchange_rate_based_stabilization",
+        "overvalued_peg_entry"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "position_limit_intervention",
@@ -2190,14 +2649,18 @@
         "intervention_risk",
         "anti_hoarding_regulation",
         "corner_dynamics",
-        "short_squeeze"
+        "short_squeeze",
+        "short_selling_restriction"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "policy",
         "resolution"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "predatory_lending_issuance_fraud",
@@ -2218,7 +2681,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "trigger"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "re_regulation",
@@ -2233,14 +2699,19 @@
         "accounting_disclosure_reform",
         "instrument_ban_disclosure_reform",
         "ratchet_effect",
-        "platform_regulation"
+        "platform_regulation",
+        "benchmark_reform",
+        "regulatory_arbitrage_vehicle"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "policy",
         "resolution"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "recoinage_shock",
@@ -2255,14 +2726,18 @@
         "currency_reform_redenomination",
         "policy_repricing",
         "debasement_seigniorage",
-        "specie_scarcity_deflation"
+        "specie_scarcity_deflation",
+        "coin_clipping_quality_degradation"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "policy",
         "resolution"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "regulatory_arbitrage_vehicle",
@@ -2282,7 +2757,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "regulatory_forbearance",
@@ -2296,13 +2774,17 @@
       "related": [
         "zombie_firm_forbearance",
         "moral_hazard",
-        "asset_quality_stress"
+        "asset_quality_stress",
+        "directed_lending"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "related_party_abuse",
@@ -2322,7 +2804,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "reparations_transfer_problem",
@@ -2343,7 +2828,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "transmission"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "reserve_currency_dilemma",
@@ -2363,7 +2851,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "resource_nationalism_backfire",
@@ -2373,7 +2864,7 @@
       "definition": "During a windfall, nationalisation, special levies or limits on foreign investment drive away the investment the resource sector depends on, deepening the later bust.",
       "scope": "Nationalisations, production levies, investment laws and contract renegotiations in extractive sectors.",
       "boundary": "The measures are announced capture of resource rents; an unpredictable seizure of property is arbitrary_expropriation_shock, a change of ownership as such is ownership_transfer, and a state stake as such is state_equity_participation.",
-      "test": "Measures that capture resource rents are followed by a measured fall in investment or output in the sector.",
+      "test": "Measures that capture resource rents are followed by a measured fall in investment or output in the sector, and the text links the fall to those measures.",
       "related": [
         "arbitrary_expropriation_shock",
         "ownership_transfer",
@@ -2384,7 +2875,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "settlement_failure",
@@ -2399,14 +2893,18 @@
         "liquidity_stress",
         "contagion",
         "delivery_default",
-        "clearing_access_exclusion"
+        "clearing_access_exclusion",
+        "infrastructure_regime_termination"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "trigger",
         "transmission"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "short_selling_restriction",
@@ -2426,7 +2924,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "policy"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "short_squeeze",
@@ -2436,17 +2937,22 @@
       "definition": "Holders of short positions are forced to repurchase at the same time, driving the price up and forcing further repurchases.",
       "scope": "Shares and commodities with large short interest, sudden concentrated purchases and limited lendable supply.",
       "boundary": "No single party needs to control supply (contrast corner_dynamics); the price feedback runs among short holders. A disorderly gap between linked instruments is basis_dislocation.",
-      "test": "Forced covering of short positions is shown to drive the price move.",
+      "test": "Forced covering by short holders is shown to drive the price move without any single party controlling the deliverable supply.",
       "related": [
         "corner_dynamics",
         "basis_dislocation",
-        "liquidity_stress"
+        "liquidity_stress",
+        "position_limit_intervention",
+        "short_selling_restriction"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "single_buyer_dependence",
@@ -2467,7 +2973,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "transmission"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "sovereign_exposure_concentration",
@@ -2482,13 +2991,17 @@
         "asset_quality_stress",
         "contagion",
         "single_buyer_dependence",
-        "sovereign_funding_stress"
+        "sovereign_funding_stress",
+        "over_trading"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "sovereign_statistics_falsification",
@@ -2502,13 +3015,17 @@
       "related": [
         "dual_measure_divergence",
         "information_suppression_disaster_amplification",
-        "institutional_trust_decline"
+        "institutional_trust_decline",
+        "regime_self_mythologizing"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "trigger"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "specie_drain",
@@ -2529,7 +3046,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "transmission"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "specie_scarcity_deflation",
@@ -2539,18 +3059,22 @@
       "definition": "A shortage of monetary metal contracts the money supply and pushes the general price level down.",
       "scope": "Bullion shortages from exhausted mines, outflows or private hoards, and the resulting scarcity of coin and deflation in metal-based systems.",
       "boundary": "It is the reverse of a shortage that raises prices (commodity_supply_squeeze); the outflow channel itself is specie_drain, and the debt-burden spiral that can follow is debt_deflation.",
-      "test": "A scarcity of monetary metal coincides with falling prices.",
+      "test": "Falling prices are traced to a shortage of monetary metal shrinking the money supply, not to forced selling by debtors or a fall in demand.",
       "related": [
         "commodity_supply_squeeze",
         "specie_drain",
         "debt_deflation",
-        "debasement_seigniorage"
+        "debasement_seigniorage",
+        "recoinage_shock"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "trigger"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "spoofing",
@@ -2569,7 +3093,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "trigger"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "state_buffer_stock_intervention",
@@ -2591,7 +3118,10 @@
       "phase_roles": [
         "policy",
         "resolution"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "sudden_stop",
@@ -2607,14 +3137,20 @@
         "risk_appetite_reversal",
         "fx_pressure",
         "current_account_swing",
-        "original_sin_currency_mismatch"
+        "original_sin_currency_mismatch",
+        "capital_recycling",
+        "imf_conditional_adjustment",
+        "import_compression"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "trigger",
         "transmission"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "technological_substitution_shock",
@@ -2629,13 +3165,17 @@
         "demand_slowdown",
         "commodity_supply_squeeze",
         "export_earnings_shock",
-        "technological_unemployment"
+        "technological_unemployment",
+        "institutional_displacement"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "trigger"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "terms_of_trade_shock",
@@ -2650,14 +3190,18 @@
         "export_earnings_shock",
         "commodity_dependence_fiscal_collapse",
         "import_compression",
-        "current_account_swing"
+        "current_account_swing",
+        "single_buyer_dependence"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "trigger",
         "transmission"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "token_redemption_collapse",
@@ -2673,7 +3217,10 @@
         "debasement_seigniorage"
       ],
       "in_signature": false,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "tranching_illusion",
@@ -2693,7 +3240,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "twin_balance_sheet",
@@ -2708,13 +3258,17 @@
         "asset_quality_stress",
         "debt_overhang",
         "zombie_firm_forbearance",
-        "credit_cycle"
+        "credit_cycle",
+        "debt_restructuring_framework"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "twin_mismatch",
@@ -2735,7 +3289,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "war_debt_real_burden_deflation",
@@ -2756,7 +3313,10 @@
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "windfall_overextension",
@@ -2771,13 +3331,18 @@
         "credit_cycle",
         "commodity_backed_debt_overhang",
         "capital_recycling",
-        "sovereign_funding_stress"
+        "sovereign_funding_stress",
+        "commodity_dependence_fiscal_collapse",
+        "dutch_disease"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "zombie_firm_forbearance",
@@ -2792,13 +3357,17 @@
         "regulatory_forbearance",
         "asset_quality_stress",
         "twin_balance_sheet",
-        "debt_overhang"
+        "debt_overhang",
+        "debt_restructuring_framework"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "phase_roles": [
         "amplification"
-      ]
+      ],
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "race_to_the_bottom",
@@ -2814,7 +3383,10 @@
         "escalation_of_commitment"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "partial"
     },
     {
       "id": "political_short_termism",
@@ -2826,10 +3398,14 @@
       "boundary": "The driver is a decision horizon locked to the current term; a decision that is merely regretted later does not qualify.",
       "test": "The near-term threat to the decision-maker is shown to outrank the long-term one.",
       "related": [
-        "escalation_of_commitment"
+        "escalation_of_commitment",
+        "preparedness_paradox"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "tested"
     },
     {
       "id": "escalation_of_commitment",
@@ -2842,10 +3418,15 @@
       "test": "New resources were committed to the same line after negative feedback.",
       "related": [
         "political_short_termism",
-        "race_to_the_bottom"
+        "race_to_the_bottom",
+        "credible_commitment_regime",
+        "reciprocal_mobilization_trap"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "tested"
     },
     {
       "id": "fog_of_war",
@@ -2858,10 +3439,15 @@
       "test": "A decision had to be made before the needed information was available.",
       "related": [
         "information_suppression_disaster_amplification",
-        "legal_authority_gap"
+        "legal_authority_gap",
+        "administrative_capacity_collapse",
+        "dual_measure_divergence"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "partial"
     },
     {
       "id": "legal_authority_gap",
@@ -2874,10 +3460,15 @@
       "test": "The remedy is known but no one has clear legal power to apply it.",
       "related": [
         "fiscal_military_exhaustion",
-        "fog_of_war"
+        "fog_of_war",
+        "administrative_capacity_collapse",
+        "ratchet_effect"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "tested"
     },
     {
       "id": "self_fulfilling_run",
@@ -2891,10 +3482,17 @@
       "related": [
         "herd_behavior",
         "liquidity_stress",
-        "subsistence_unrest_spiral"
+        "subsistence_unrest_spiral",
+        "anti_hoarding_regulation",
+        "deposit_guarantee_blanket",
+        "off_balance_sheet_maturity_transformation",
+        "preference_falsification_cascade"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "tested"
     },
     {
       "id": "legitimacy_crisis",
@@ -2908,10 +3506,19 @@
       "related": [
         "performance_legitimacy",
         "repression_radicalization_spiral",
-        "institutional_trust_decline"
+        "institutional_trust_decline",
+        "collective_moral_disengagement",
+        "odious_debt_repudiation",
+        "pandemic_epidemic",
+        "preference_falsification_cascade",
+        "regime_self_mythologizing",
+        "succession_crisis"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "tested"
     },
     {
       "id": "herd_behavior",
@@ -2925,10 +3532,16 @@
       "related": [
         "self_fulfilling_run",
         "race_to_the_bottom",
-        "risk_appetite_reversal"
+        "risk_appetite_reversal",
+        "affinity_fraud",
+        "issuance_promotion_fraud",
+        "preference_falsification_cascade"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "tested"
     },
     {
       "id": "succession_crisis",
@@ -2944,7 +3557,10 @@
         "legitimacy_crisis"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "tested"
     },
     {
       "id": "scapegoating",
@@ -2957,10 +3573,14 @@
       "test": "Blame for a crisis is fixed on a pre-marked group as an explanatory shortcut.",
       "related": [
         "collective_moral_disengagement",
-        "repression_radicalization_spiral"
+        "repression_radicalization_spiral",
+        "regime_self_mythologizing"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "tested"
     },
     {
       "id": "performance_legitimacy",
@@ -2973,10 +3593,16 @@
       "test": "Public judgement of the authority turns on how it handled the event.",
       "related": [
         "legitimacy_crisis",
-        "state_capacity_building"
+        "state_capacity_building",
+        "external_relief_mobilization",
+        "public_service_delivery_failure",
+        "regime_self_mythologizing"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "partial"
     },
     {
       "id": "fiscal_military_exhaustion",
@@ -2993,7 +3619,10 @@
         "loss_of_monopoly_on_violence"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "loss_of_monopoly_on_violence",
@@ -3007,10 +3636,14 @@
       "related": [
         "succession_crisis",
         "fiscal_military_exhaustion",
-        "war_geopolitical"
+        "war_geopolitical",
+        "negotiated_demobilization_settlement"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "tested"
     },
     {
       "id": "entitlement_failure_famine",
@@ -3027,7 +3660,10 @@
         "protection_gap"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "subsistence_unrest_spiral",
@@ -3040,10 +3676,15 @@
       "test": "Crowd action is framed as enforcing a just price.",
       "related": [
         "self_fulfilling_run",
-        "entitlement_failure_famine"
+        "entitlement_failure_famine",
+        "anti_hoarding_regulation",
+        "famine_food_security"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "arbitrary_expropriation_shock",
@@ -3058,10 +3699,19 @@
         "ownership_transfer",
         "fiscal_dominance",
         "inflation_pressure",
-        "state_equity_participation"
+        "state_equity_participation",
+        "bail_in",
+        "compulsory_domestic_conversion",
+        "credible_commitment_regime",
+        "currency_reform_redenomination",
+        "forced_loan_capital_levy",
+        "resource_nationalism_backfire"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "state_capacity_building",
@@ -3074,10 +3724,17 @@
       "test": "A capacity built after one crisis is shown to have reduced the impact of a later one.",
       "related": [
         "performance_legitimacy",
-        "state_equity_participation"
+        "state_equity_participation",
+        "administrative_capacity_collapse",
+        "new_institution_founding",
+        "preparedness_paradox",
+        "ratchet_effect"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "collective_moral_disengagement",
@@ -3090,10 +3747,14 @@
       "test": "Knowledge of the harm exists and a collective frame removes its moral weight.",
       "related": [
         "scapegoating",
-        "legitimacy_crisis"
+        "legitimacy_crisis",
+        "moral_hazard"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "information_suppression_disaster_amplification",
@@ -3106,10 +3767,15 @@
       "test": "The information existed inside the state and its suppression measurably worsened the outcome.",
       "related": [
         "fog_of_war",
-        "state_censorship"
+        "state_censorship",
+        "pandemic_epidemic",
+        "sovereign_statistics_falsification"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "repression_radicalization_spiral",
@@ -3123,10 +3789,14 @@
       "related": [
         "scapegoating",
         "legitimacy_crisis",
-        "autocratization"
+        "autocratization",
+        "preference_falsification_cascade"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "administrative_capacity_collapse",
@@ -3144,7 +3814,10 @@
         "public_service_delivery_failure"
       ],
       "in_signature": false,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "affinity_fraud",
@@ -3161,7 +3834,10 @@
         "tangible_asset_verification_illusion"
       ],
       "in_signature": false,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "credible_commitment_regime",
@@ -3179,7 +3855,10 @@
         "foreign_financial_control"
       ],
       "in_signature": false,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "debt_bondage_spiral",
@@ -3197,7 +3876,10 @@
         "debt_moratorium_relief"
       ],
       "in_signature": false,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "negotiated_demobilization_settlement",
@@ -3214,7 +3896,10 @@
         "war_geopolitical"
       ],
       "in_signature": false,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "preference_falsification_cascade",
@@ -3232,7 +3917,10 @@
         "legitimacy_crisis"
       ],
       "in_signature": false,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "preparedness_paradox",
@@ -3249,7 +3937,10 @@
         "state_capacity_building"
       ],
       "in_signature": false,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "public_service_delivery_failure",
@@ -3267,7 +3958,10 @@
         "administrative_capacity_collapse"
       ],
       "in_signature": false,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "ratchet_effect",
@@ -3285,7 +3979,10 @@
         "autocratization"
       ],
       "in_signature": false,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "reciprocal_mobilization_trap",
@@ -3302,7 +3999,10 @@
         "escalation_of_commitment"
       ],
       "in_signature": false,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "regime_self_mythologizing",
@@ -3321,7 +4021,10 @@
         "performance_legitimacy"
       ],
       "in_signature": false,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "tangible_asset_verification_illusion",
@@ -3337,7 +4040,10 @@
         "affinity_fraud"
       ],
       "in_signature": false,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "untested"
     },
     {
       "id": "cost_shifting",
@@ -3349,10 +4055,17 @@
       "boundary": "The uninsured share of a loss itself is protection_gap.",
       "test": "Who carries the loss has changed.",
       "related": [
-        "protection_gap"
+        "protection_gap",
+        "asset_management_company_resolution",
+        "bail_in",
+        "bank_recapitalization",
+        "lender_of_last_resort_relief"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "tested"
     },
     {
       "id": "state_equity_participation",
@@ -3366,10 +4079,15 @@
       "related": [
         "ownership_transfer",
         "state_capacity_building",
-        "arbitrary_expropriation_shock"
+        "arbitrary_expropriation_shock",
+        "bank_recapitalization",
+        "resource_nationalism_backfire"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "tested"
     },
     {
       "id": "ownership_transfer",
@@ -3383,10 +4101,15 @@
       "related": [
         "arbitrary_expropriation_shock",
         "state_equity_participation",
-        "wealth_concentration"
+        "wealth_concentration",
+        "institutional_displacement",
+        "resource_nationalism_backfire"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "partial"
     },
     {
       "id": "water_scarcity",
@@ -3402,7 +4125,10 @@
         "adaptation_finance_gap"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "state",
+      "review": "in_review",
+      "name_test": "tested"
     },
     {
       "id": "adaptation_finance_gap",
@@ -3415,10 +4141,14 @@
       "test": "A measured need is compared with pledged or paid finance.",
       "related": [
         "protection_gap",
-        "aid_cuts"
+        "aid_cuts",
+        "water_scarcity"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "tested"
     },
     {
       "id": "aid_cuts",
@@ -3432,10 +4162,14 @@
       "related": [
         "adaptation_finance_gap",
         "humanitarian_displacement",
-        "famine_food_security"
+        "famine_food_security",
+        "external_relief_mobilization"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "tested"
     },
     {
       "id": "debt_service_crowding_out",
@@ -3447,10 +4181,14 @@
       "boundary": "The inability to fund debt in markets is sovereign_funding_stress.",
       "test": "Debt service is shown to displace service spending.",
       "related": [
-        "sovereign_funding_stress"
+        "sovereign_funding_stress",
+        "public_service_delivery_failure"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "tested"
     },
     {
       "id": "autocratization",
@@ -3460,14 +4198,18 @@
       "definition": "Electoral, judicial and executive constraints narrow and a regime moves toward autocracy.",
       "scope": "Weakened elections, courts, legislatures and other checks on the executive.",
       "boundary": "The repression and resistance loop is repression_radicalization_spiral; loss of autonomy at named institutions is erosion_of_institutional_independence.",
-      "test": "Constraints on executive power have narrowed.",
+      "test": "Electoral, judicial or legislative constraints on the executive have narrowed across the regime, not only the autonomy of one named institution.",
       "related": [
         "erosion_of_institutional_independence",
         "repression_radicalization_spiral",
-        "state_censorship"
+        "state_censorship",
+        "ratchet_effect"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "tested"
     },
     {
       "id": "erosion_of_institutional_independence",
@@ -3480,10 +4222,14 @@
       "test": "A named institution lost autonomy.",
       "related": [
         "autocratization",
-        "fiscal_dominance"
+        "fiscal_dominance",
+        "central_bank_independence_restoration"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "tested"
     },
     {
       "id": "state_censorship",
@@ -3497,10 +4243,14 @@
       "related": [
         "information_suppression_disaster_amplification",
         "platform_regulation",
-        "autocratization"
+        "autocratization",
+        "regime_self_mythologizing"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "tested"
     },
     {
       "id": "institutional_trust_decline",
@@ -3510,13 +4260,17 @@
       "definition": "Measured trust in news, media, institutions and information sources declines.",
       "scope": "Survey-measured trust in media, government, courts, science and platforms.",
       "boundary": "A crisis that destroys an authority's consent is legitimacy_crisis.",
-      "test": "A measured fall in trust is on record.",
+      "test": "A survey or index records falling trust in news, media, institutions or information sources; the loss of a ruling authority's consent is not required.",
       "related": [
         "legitimacy_crisis",
-        "synthetic_media"
+        "synthetic_media",
+        "sovereign_statistics_falsification"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "tested"
     },
     {
       "id": "platform_regulation",
@@ -3526,13 +4280,18 @@
       "definition": "Regulation, antitrust action and enforcement directed at digital platforms.",
       "scope": "Digital services rules, age limits, competition cases and enforcement actions.",
       "boundary": "State control of content for political ends is state_censorship.",
-      "test": "A rule or enforcement action targets digital platforms.",
+      "test": "A rule or enforcement action targets digital platforms as businesses (competition, conduct, data or liability), not the political content they carry.",
       "related": [
         "state_censorship",
-        "zero_click_search"
+        "zero_click_search",
+        "re_regulation",
+        "synthetic_media"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "tested"
     },
     {
       "id": "synthetic_media",
@@ -3542,13 +4301,17 @@
       "definition": "AI-generated content and deepfakes: their prevalence, labelling and effects.",
       "scope": "Prevalence, labelling, detection and documented effects of synthetic content.",
       "boundary": "A measured fall in trust is institutional_trust_decline, whether or not synthetic content caused it.",
-      "test": "AI-generated content is shown to be present or to have an effect.",
+      "test": "The content in question is shown to be AI-generated, not only false or misleading, and its spread, labelling or effect is documented.",
       "related": [
         "institutional_trust_decline",
-        "platform_regulation"
+        "platform_regulation",
+        "zero_click_search"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "tested"
     },
     {
       "id": "zero_click_search",
@@ -3558,13 +4321,16 @@
       "definition": "AI-assisted search shifts traffic and revenue from publishers to the platform.",
       "scope": "Answer engines and AI summaries that reduce click-through to source sites.",
       "boundary": "Rules aimed at platforms are platform_regulation.",
-      "test": "A shift of traffic or revenue away from publishers is measured.",
+      "test": "A loss of traffic or revenue by publishers is measured and tied to search answers kept on the platform, not to a general fall in advertising or to regulation.",
       "related": [
         "platform_regulation",
         "synthetic_media"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "tested"
     },
     {
       "id": "circular_financing",
@@ -3578,10 +4344,14 @@
       "related": [
         "capacity_investment",
         "ai_equity_momentum",
-        "useful_life_assumption"
+        "useful_life_assumption",
+        "related_party_abuse"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "partial"
     },
     {
       "id": "useful_life_assumption",
@@ -3594,10 +4364,14 @@
       "test": "A useful-life assumption is shown to move reported profit or returns.",
       "related": [
         "capacity_investment",
-        "circular_financing"
+        "circular_financing",
+        "dual_measure_divergence"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "tested"
     },
     {
       "id": "technological_unemployment",
@@ -3610,10 +4384,15 @@
       "test": "Displacement of workers or tasks attributed to automation is measured; job creation alone does not qualify.",
       "related": [
         "ai_equity_momentum",
-        "demographic_transition"
+        "demographic_transition",
+        "labor_force_collapse_shock",
+        "technological_substitution_shock"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "partial"
     },
     {
       "id": "wealth_concentration",
@@ -3623,12 +4402,15 @@
       "definition": "Wealth and asset ownership concentrate in the top segments of the distribution.",
       "scope": "Top wealth shares and the ownership of financial and real assets.",
       "boundary": "A single change of ownership is ownership_transfer.",
-      "test": "A measured rise in top wealth shares or in ownership concentration.",
+      "test": "Top wealth shares or ownership concentration are measured to rise across the distribution, not only through one change of owner.",
       "related": [
         "ownership_transfer"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "state",
+      "review": "in_review",
+      "name_test": "tested"
     },
     {
       "id": "demographic_transition",
@@ -3641,10 +4423,14 @@
       "test": "A sustained shift in fertility or mortality from high to lower levels is shown, or a change in age structure that follows from such a shift.",
       "related": [
         "technological_unemployment",
-        "humanitarian_displacement"
+        "humanitarian_displacement",
+        "labor_force_collapse_shock"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
     },
     {
       "id": "reserve_diversification",
@@ -3657,10 +4443,15 @@
       "test": "The composition of official reserves has shifted.",
       "related": [
         "fx_pressure",
-        "geoeconomic_fragmentation"
+        "geoeconomic_fragmentation",
+        "financial_warfare_sanctions",
+        "reserve_currency_dilemma"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "tested"
     },
     {
       "id": "geoeconomic_fragmentation",
@@ -3674,10 +4465,15 @@
       "related": [
         "geopolitical_escalation",
         "reserve_diversification",
-        "export_earnings_shock"
+        "export_earnings_shock",
+        "export_ban_provisioning_cascade",
+        "financial_warfare_sanctions"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "mechanism",
+      "review": "accepted",
+      "name_test": "tested"
     },
     {
       "id": "war_geopolitical",
@@ -3691,10 +4487,15 @@
       "related": [
         "geopolitical_escalation",
         "loss_of_monopoly_on_violence",
-        "humanitarian_displacement"
+        "humanitarian_displacement",
+        "negotiated_demobilization_settlement",
+        "reciprocal_mobilization_trap"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "crisis_type",
+      "review": "in_review",
+      "name_test": "partial"
     },
     {
       "id": "famine_food_security",
@@ -3708,10 +4509,14 @@
       "related": [
         "entitlement_failure_famine",
         "subsistence_unrest_spiral",
-        "aid_cuts"
+        "aid_cuts",
+        "export_ban_provisioning_cascade"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "crisis_type",
+      "review": "in_review",
+      "name_test": "partial"
     },
     {
       "id": "humanitarian_displacement",
@@ -3725,10 +4530,14 @@
       "related": [
         "war_geopolitical",
         "natural_disaster",
-        "aid_cuts"
+        "aid_cuts",
+        "demographic_transition"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "crisis_type",
+      "review": "in_review",
+      "name_test": "partial"
     },
     {
       "id": "natural_disaster",
@@ -3742,10 +4551,14 @@
       "related": [
         "protection_gap",
         "water_scarcity",
-        "humanitarian_displacement"
+        "humanitarian_displacement",
+        "disaster_reconstruction_finance"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "crisis_type",
+      "review": "in_review",
+      "name_test": "partial"
     },
     {
       "id": "pandemic_epidemic",
@@ -3758,10 +4571,14 @@
       "test": "An outbreak is spreading.",
       "related": [
         "information_suppression_disaster_amplification",
-        "legitimacy_crisis"
+        "legitimacy_crisis",
+        "labor_force_collapse_shock"
       ],
       "in_signature": true,
-      "introduced_in": "1.0.0"
+      "introduced_in": "1.0.0",
+      "kind": "crisis_type",
+      "review": "in_review",
+      "name_test": "partial"
     }
   ],
   "deprecated": [
@@ -3772,5 +4589,14 @@
       "replaced_by": "export_earnings_shock",
       "note": "Renamed for clarity. The scope narrowed to the contraction of export earnings; chronic loss of export competitiveness is not part of export_earnings_shock."
     }
-  ]
+  ],
+  "review_values": {
+    "accepted": "Accepted into the publisher's research vocabulary.",
+    "in_review": "Published and usable, still being reviewed; it may be clarified, merged or renamed with a migration note."
+  },
+  "name_test_values": {
+    "tested": "The name passed a blind naming test with two model families.",
+    "partial": "The naming test was run in part.",
+    "untested": "The name has not been through a blind naming test yet; it is the established term or the one already published."
+  }
 }

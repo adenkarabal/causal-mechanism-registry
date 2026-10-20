@@ -40,14 +40,14 @@ Every entry carries `in_signature`.
 - `true`: the current signature edition includes the name, either with a score or marked unknown.
 - `false`: the mechanism is named and defined here but is not part of the current signature edition. It has no score, and its absence from the signature says nothing about the world.
 
-In version 1.2.0, 78 entries are in the signature and 113 are not.
+In version 1.3.0, 78 entries are in the signature and 113 are not.
 
 ## Status
 
 | Status | Meaning |
 |---|---|
 | `stable` | The identifier and its core meaning are fixed. Later versions may clarify the wording, never reverse it. |
-| `provisional` | The identifier may still be renamed, merged or retired in a later version, always with a migration note. In version 1.2.0, all signature extensions and all 113 entries outside the signature are provisional. |
+| `provisional` | The identifier may still be renamed, merged or retired in a later version, always with a migration note. In version 1.3.0, all signature extensions and all 113 entries outside the signature are provisional. |
 
 ## Parts of an entry
 
@@ -86,7 +86,7 @@ A **signature** is a dated frame of reference, built from the fixed names of thi
 - **Names and scores only.** Within its scope, a signature carries no geography, no direction and no causal links between names. Where a reading draws a link between two names, the link is an inference, not a measurement.
 - **Model assumptions.** The dashboard can also show links between names proposed by a model, and runs of that network forward in time. These are model assumptions: not measurements, not evidence, not forecasts, and not part of the signature.
 - **Missing is not absent.** A mechanism that is not in the vocabulary, or is unknown in a signature, is not thereby absent from the world.
-- **Same vocabulary, same comparison.** Signatures can be compared only when they use the same vocabulary version, or with an explicit bridge between versions. The signature of edition 2026-09-25 was built on vocabulary version 1.0.0; the versions since then change no identifier, layer, status or meaning of its names. In version 1.2.0, the entries marked `in_signature` are exactly the names of the signature in edition 2026-09-25 at adenkarabal.com.
+- **Same vocabulary, same comparison.** Signatures can be compared only when they use the same vocabulary version, or with an explicit bridge between versions. The signature of edition 2026-09-25 was built on vocabulary version 1.0.0; the versions since then change no identifier, layer, status or meaning of its names. In version 1.3.0, the entries marked `in_signature` are exactly the names of the signature in edition 2026-09-25 at adenkarabal.com.
 
 A signature can be wrong. Two different states of the world that produce the same scores are, to anyone reading only the signature, the same state: whatever the vocabulary does not name is invisible to it.
 

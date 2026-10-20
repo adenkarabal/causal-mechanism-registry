@@ -1,0 +1,71 @@
+name: Mirror release to Hugging Face
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag to mirror (for example v1.3.1)"
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    env:
+      TAG: ${{ github.event.release.tag_name || inputs.tag }}
+      HF_REPO: adenkarabal/causal-mechanism-registry
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TAG }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build the dataset folder
+        run: |
+          python - <<'EOF'
+          import json, os, shutil
+          d = json.load(open("mechanisms.json", encoding="utf-8"))
+          tag = os.environ["TAG"]
+          assert tag == "v" + d["version"], f"tag {tag} != version {d['version']}"
+          os.makedirs("hf", exist_ok=True)
+          with open("hf/mechanisms.jsonl", "w", encoding="utf-8") as f:
+              for e in d["mechanisms"]:
+                  f.write(json.dumps(e, ensure_ascii=False) + "\n")
+          for name in ["mechanisms.json", "MECHANISMS.md", "CONCEPTS.md", "PRINCIPLES.md",
+                       "CHANGELOG.md", "CITATION.cff", "LICENSE"]:
+              shutil.copy(name, "hf/" + name)
+          card = open(".github/hf/README.md", encoding="utf-8").read()
+          card = (card.replace("{{VERSION}}", d["version"]).replace("{{RELEASED}}", d["released"])
+                      .replace("{{COUNT}}", str(len(d["mechanisms"]))))
+          assert "{{" not in card
+          open("hf/README.md", "w", encoding="utf-8").write(card)
+          n = sum(1 for _ in open("hf/mechanisms.jsonl", encoding="utf-8"))
+          assert n == len(d["mechanisms"]), (n, len(d["mechanisms"]))
+          print(f"{tag}: {n} entries, {len(os.listdir('hf'))} files")
+          EOF
+
+      - name: Upload to Hugging Face
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          pip install --quiet "huggingface_hub==0.26.2"
+          python - <<'EOF'
+          import os
+          from huggingface_hub import HfApi
+          api = HfApi(token=os.environ["HF_TOKEN"])
+          repo, tag = os.environ["HF_REPO"], os.environ["TAG"]
+          api.create_repo(repo, repo_type="dataset", exist_ok=True)
+          api.upload_folder(folder_path="hf", repo_id=repo, repo_type="dataset",
+                            commit_message=f"Causal Mechanism Registry {tag[1:]}",
+                            delete_patterns=["*"])
+          if tag not in [t.name for t in api.list_repo_refs(repo, repo_type="dataset").tags]:
+              api.create_tag(repo, tag=tag, repo_type="dataset")
+          print("mirrored", tag)
+          EOF

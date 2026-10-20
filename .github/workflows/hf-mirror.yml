@@ -23,6 +23,12 @@ jobs:
         with:
           ref: ${{ env.TAG }}
 
+      # The dataset card lives on the default branch, so older tags can be mirrored too.
+      - uses: actions/checkout@v4
+        with:
+          path: _main
+          sparse-checkout: .github/hf
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -41,7 +47,7 @@ jobs:
           for name in ["mechanisms.json", "MECHANISMS.md", "CONCEPTS.md", "PRINCIPLES.md",
                        "CHANGELOG.md", "CITATION.cff", "LICENSE"]:
               shutil.copy(name, "hf/" + name)
-          card = open(".github/hf/README.md", encoding="utf-8").read()
+          card = open("_main/.github/hf/README.md", encoding="utf-8").read()
           card = (card.replace("{{VERSION}}", d["version"]).replace("{{RELEASED}}", d["released"])
                       .replace("{{COUNT}}", str(len(d["mechanisms"]))))
           assert "{{" not in card

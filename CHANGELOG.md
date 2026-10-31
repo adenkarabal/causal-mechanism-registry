@@ -2,6 +2,23 @@
 
 Versions describe the vocabulary (identifiers, definitions, scope, boundaries and tests) and the documents published with it. The rules are in [PRINCIPLES.md](PRINCIPLES.md).
 
+## 1.4.0 — 2026-10-31
+
+42 entries added in a new layer. No identifier was removed, and the identifier, layer, status and meaning of every entry of 1.3.1 are unchanged.
+
+**Vocabulary**
+
+- New layer `corpus` (Corpus mechanisms): mechanisms tested against the research corpus but not yet used in the signature. It holds the 42 new entries; all are `provisional` and `in_review`, and every name has passed the blind naming test (`tested`). The `extension` layer keeps its meaning: newer names in use in the signature.
+- 233 entries in five layers: 133 core causal mechanisms, 32 social mechanisms, 21 signature extensions, 42 corpus mechanisms and 5 crisis types. The signature still uses 78 of them.
+- `related` stays reciprocal: 61 existing entries gained links to new entries. No link was removed.
+- Naming tests run since 1.3.1: 77 existing entries changed `name_test` (50 from `untested` to `tested`, 25 from `untested` to `partial`, 2 from `partial` to `tested`).
+- Clarified, with identifier and core meaning unchanged:
+  - `export_earnings_shock` (stable): definition, scope and test name services as well as goods, such as tourism receipts. Chronic loss of export competitiveness is still outside it (see 1.0.0).
+  - `performance_legitimacy` (stable): scope only, with an example of an economic crisis read as a failure to provide; definition, boundary and test are unchanged.
+  - `debt_service_crowding_out` (provisional): definition, scope and test include public investment and infrastructure.
+  - `imf_conditional_adjustment` (provisional): definition, scope and test include the suspension of disbursements when conditions are missed.
+  - `water_scarcity` (provisional): scope now states what it covers.
+
 ## 1.3.1 — 2026-10-20
 
 Descriptions aligned with the data; no entry's text, identifier, layer, status or relation changed.

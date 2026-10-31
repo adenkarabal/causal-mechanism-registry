@@ -1,7 +1,7 @@
 {
   "title": "Causal Mechanism Registry",
-  "version": "1.3.1",
-  "released": "2026-10-20",
+  "version": "1.4.0",
+  "released": "2026-10-31",
   "first_public_version": {
     "version": "0.1.0",
     "released": "2026-09-17"
@@ -12,7 +12,7 @@
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "ai_training": "not restricted by CC BY 4.0; attribution applies when the material is shared (see README)",
   "signature_edition": "2026-09-25",
-  "count": 191,
+  "count": 233,
   "in_signature_count": 78,
   "layers": {
     "core": {
@@ -29,6 +29,11 @@
       "label": "Signature extensions",
       "count": 21,
       "in_signature": 21
+    },
+    "corpus": {
+      "label": "Corpus mechanisms",
+      "count": 42,
+      "in_signature": 0
     },
     "crisis_type": {
       "label": "Crisis types",
@@ -50,7 +55,7 @@
   "fields": {
     "id": "Stable identifier. Never reused for another meaning.",
     "name": "Display name. For entries in the signature, as shown on adenkarabal.com.",
-    "layer": "core | social | extension | crisis_type",
+    "layer": "core | social | extension | corpus | crisis_type",
     "status": "stable | provisional",
     "definition": "What the entry is.",
     "scope": "What it covers.",
@@ -87,7 +92,7 @@
       "introduced_in": "0.1.0",
       "kind": "mechanism",
       "review": "accepted",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "energy_supply_relief",
@@ -110,7 +115,7 @@
       "introduced_in": "0.1.0",
       "kind": "mechanism",
       "review": "accepted",
-      "name_test": "untested"
+      "name_test": "partial"
     },
     {
       "id": "energy_cost_pressure",
@@ -123,7 +128,8 @@
       "test": "The burden arrives through what energy costs, whether or not supply was physically short.",
       "related": [
         "energy_supply_shock",
-        "cost_inflation"
+        "cost_inflation",
+        "subsidy_fiscal_burden"
       ],
       "in_signature": true,
       "phase_roles": [
@@ -133,7 +139,7 @@
       "introduced_in": "0.1.0",
       "kind": "mechanism",
       "review": "accepted",
-      "name_test": "untested"
+      "name_test": "partial"
     },
     {
       "id": "commodity_supply_squeeze",
@@ -162,7 +168,7 @@
       "introduced_in": "0.1.0",
       "kind": "mechanism",
       "review": "accepted",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "cost_inflation",
@@ -186,7 +192,7 @@
       "introduced_in": "0.1.0",
       "kind": "mechanism",
       "review": "accepted",
-      "name_test": "untested"
+      "name_test": "partial"
     },
     {
       "id": "inflation_pressure",
@@ -203,7 +209,11 @@
         "arbitrary_expropriation_shock",
         "debasement_seigniorage",
         "flight_to_hard_money_dollarization",
-        "heterodox_shock_stabilization_plan"
+        "heterodox_shock_stabilization_plan",
+        "demand_boom",
+        "repressed_inflation_release",
+        "fiscal_populism",
+        "flight_from_money"
       ],
       "in_signature": true,
       "phase_roles": [
@@ -213,7 +223,7 @@
       "introduced_in": "0.1.0",
       "kind": "mechanism",
       "review": "accepted",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "duration_selloff",
@@ -236,7 +246,7 @@
       "introduced_in": "0.1.0",
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "sovereign_funding_stress",
@@ -266,7 +276,8 @@
         "reparations_transfer_problem",
         "sovereign_exposure_concentration",
         "war_debt_real_burden_deflation",
-        "windfall_overextension"
+        "windfall_overextension",
+        "reserve_depletion"
       ],
       "in_signature": true,
       "phase_roles": [
@@ -276,7 +287,7 @@
       "introduced_in": "0.1.0",
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "policy_repricing",
@@ -294,7 +305,10 @@
         "duration_selloff",
         "exchange_rate_based_stabilization",
         "imf_conditional_adjustment",
-        "recoinage_shock"
+        "recoinage_shock",
+        "political_uncertainty",
+        "zero_lower_bound",
+        "monetary_tightening"
       ],
       "in_signature": true,
       "phase_roles": [
@@ -304,7 +318,7 @@
       "introduced_in": "0.1.0",
       "kind": "mechanism",
       "review": "accepted",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "fiscal_dominance",
@@ -324,7 +338,11 @@
         "debasement_seigniorage",
         "fiscal_military_exhaustion",
         "foreign_financial_control",
-        "inflation_pressure"
+        "inflation_pressure",
+        "fiscal_populism",
+        "olivera_tanzi_effect",
+        "quasi_money_issuance",
+        "subsidy_fiscal_burden"
       ],
       "in_signature": true,
       "phase_roles": [
@@ -334,7 +352,7 @@
       "introduced_in": "0.1.0",
       "kind": "mechanism",
       "review": "accepted",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "fx_pressure",
@@ -362,7 +380,10 @@
         "sovereign_funding_stress",
         "specie_drain",
         "sudden_stop",
-        "twin_mismatch"
+        "twin_mismatch",
+        "reserve_depletion",
+        "exchange_controls",
+        "multiple_exchange_rate_regime"
       ],
       "in_signature": true,
       "phase_roles": [
@@ -372,7 +393,7 @@
       "introduced_in": "0.1.0",
       "kind": "mechanism",
       "review": "accepted",
-      "name_test": "untested"
+      "name_test": "partial"
     },
     {
       "id": "currency_sensitivity",
@@ -413,7 +434,9 @@
         "lender_of_last_resort_relief",
         "moral_hazard",
         "peg_defense_failure",
-        "position_limit_intervention"
+        "position_limit_intervention",
+        "exchange_controls",
+        "political_uncertainty"
       ],
       "in_signature": true,
       "phase_roles": [
@@ -424,17 +447,17 @@
       "introduced_in": "0.1.0",
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "partial"
     },
     {
       "id": "export_earnings_shock",
       "name": "Export earnings shock",
       "layer": "core",
       "status": "stable",
-      "definition": "A contraction in export earnings: a fall in export volumes or export prices, or a loss of market access.",
-      "scope": "Weaker external demand, lower world prices for exported goods, tariffs, quotas, boycotts, sanctions, or a collapse in the supply of the exported product.",
+      "definition": "A contraction in export earnings from goods or services: a fall in export volumes or prices, a loss of market access, or a drop in receipts such as tourism.",
+      "scope": "Weaker external demand, lower world prices for exported goods, tariffs, quotas, boycotts, sanctions, a collapse in the supply of the exported product, or a fall in service receipts such as tourism.",
       "boundary": "Chronic loss of export competitiveness, deindustrialisation or Dutch disease on their own are not this mechanism; weakness in domestic demand is demand_slowdown.",
-      "test": "What a country or sector earns from exports has contracted.",
+      "test": "What a country or sector earns from exports of goods or services has contracted.",
       "related": [
         "demand_slowdown",
         "geoeconomic_fragmentation",
@@ -444,7 +467,9 @@
         "financial_warfare_sanctions",
         "single_buyer_dependence",
         "technological_substitution_shock",
-        "terms_of_trade_shock"
+        "terms_of_trade_shock",
+        "economic_sanctions",
+        "trade_disruption"
       ],
       "in_signature": true,
       "phase_roles": [
@@ -457,7 +482,7 @@
       ],
       "kind": "mechanism",
       "review": "accepted",
-      "name_test": "partial"
+      "name_test": "tested"
     },
     {
       "id": "liquidity_stress",
@@ -481,7 +506,11 @@
         "over_trading",
         "settlement_failure",
         "short_squeeze",
-        "twin_mismatch"
+        "twin_mismatch",
+        "dealer_balance_sheet_constraints",
+        "fire_sale",
+        "maturity_mismatch",
+        "lender_of_last_resort_failure"
       ],
       "in_signature": true,
       "phase_roles": [
@@ -491,7 +520,7 @@
       "introduced_in": "0.1.0",
       "kind": "mechanism",
       "review": "accepted",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "credit_market_freeze",
@@ -505,7 +534,10 @@
       "related": [
         "liquidity_stress",
         "financial_product_complexity_opacity",
-        "off_balance_sheet_maturity_transformation"
+        "off_balance_sheet_maturity_transformation",
+        "credit_crunch",
+        "dealer_balance_sheet_constraints",
+        "fire_sale"
       ],
       "in_signature": true,
       "phase_roles": [
@@ -515,7 +547,7 @@
       "introduced_in": "0.1.0",
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "basis_dislocation",
@@ -541,7 +573,7 @@
       "introduced_in": "0.1.0",
       "kind": "mechanism",
       "review": "accepted",
-      "name_test": "untested"
+      "name_test": "partial"
     },
     {
       "id": "credit_cycle",
@@ -562,7 +594,8 @@
         "leverage_spiral",
         "microfinance_overlending",
         "twin_balance_sheet",
-        "windfall_overextension"
+        "windfall_overextension",
+        "lending_boom"
       ],
       "in_signature": true,
       "phase_roles": [
@@ -586,7 +619,8 @@
       "related": [
         "banking_margin_pressure",
         "sovereign_funding_stress",
-        "over_trading"
+        "over_trading",
+        "credit_crunch"
       ],
       "in_signature": true,
       "phase_roles": [
@@ -617,7 +651,8 @@
         "regulatory_forbearance",
         "sovereign_exposure_concentration",
         "twin_balance_sheet",
-        "zombie_firm_forbearance"
+        "zombie_firm_forbearance",
+        "lending_boom"
       ],
       "in_signature": true,
       "phase_roles": [
@@ -627,7 +662,7 @@
       "introduced_in": "0.1.0",
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "banking_margin_pressure",
@@ -649,7 +684,7 @@
       "introduced_in": "0.1.0",
       "kind": "mechanism",
       "review": "accepted",
-      "name_test": "untested"
+      "name_test": "partial"
     },
     {
       "id": "protection_gap",
@@ -693,7 +728,10 @@
         "contagion",
         "capital_flight",
         "flight_to_hard_money_dollarization",
-        "sudden_stop"
+        "sudden_stop",
+        "confidence_collapse",
+        "flight_to_quality",
+        "search_for_yield"
       ],
       "in_signature": true,
       "phase_roles": [
@@ -703,7 +741,7 @@
       "introduced_in": "0.1.0",
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "partial"
     },
     {
       "id": "ai_equity_momentum",
@@ -728,7 +766,7 @@
       "introduced_in": "0.1.0",
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "partial"
     },
     {
       "id": "equity_narrow_leadership",
@@ -749,7 +787,7 @@
       "introduced_in": "0.1.0",
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "growth_slowdown",
@@ -761,7 +799,8 @@
       "boundary": "This concerns aggregate activity; demand_slowdown isolates the spending or orders channel.",
       "test": "Aggregate activity is decelerating.",
       "related": [
-        "demand_slowdown"
+        "demand_slowdown",
+        "zero_lower_bound"
       ],
       "in_signature": true,
       "phase_roles": [
@@ -771,7 +810,7 @@
       "introduced_in": "0.1.0",
       "kind": "mechanism",
       "review": "accepted",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "demand_slowdown",
@@ -788,7 +827,8 @@
         "balance_sheet_recession",
         "energy_supply_relief",
         "import_compression",
-        "technological_substitution_shock"
+        "technological_substitution_shock",
+        "demand_boom"
       ],
       "in_signature": true,
       "phase_roles": [
@@ -798,7 +838,7 @@
       "introduced_in": "0.1.0",
       "kind": "mechanism",
       "review": "accepted",
-      "name_test": "untested"
+      "name_test": "partial"
     },
     {
       "id": "capacity_investment",
@@ -821,7 +861,7 @@
       "introduced_in": "0.1.0",
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "inventory_pressure",
@@ -835,7 +875,8 @@
       "related": [
         "commodity_supply_squeeze",
         "anti_hoarding_regulation",
-        "state_buffer_stock_intervention"
+        "state_buffer_stock_intervention",
+        "fire_sale"
       ],
       "in_signature": true,
       "phase_roles": [
@@ -869,7 +910,7 @@
       "introduced_in": "0.1.0",
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "partial"
     },
     {
       "id": "geopolitical_deescalation",
@@ -891,7 +932,7 @@
       "introduced_in": "0.1.0",
       "kind": "mechanism",
       "review": "accepted",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "contagion",
@@ -916,7 +957,7 @@
       "introduced_in": "0.1.0",
       "kind": "mechanism",
       "review": "accepted",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "accounting_disclosure_reform",
@@ -931,7 +972,8 @@
         "benchmark_reform",
         "instrument_ban_disclosure_reform",
         "re_regulation",
-        "related_party_abuse"
+        "related_party_abuse",
+        "accounting_fraud"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -940,7 +982,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "anti_hoarding_regulation",
@@ -956,7 +998,8 @@
         "position_limit_intervention",
         "inventory_pressure",
         "subsistence_unrest_spiral",
-        "self_fulfilling_run"
+        "self_fulfilling_run",
+        "repressed_inflation_release"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -1012,7 +1055,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "bail_in",
@@ -1060,7 +1103,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "bank_recapitalization",
@@ -1123,7 +1166,8 @@
       "related": [
         "accounting_disclosure_reform",
         "re_regulation",
-        "market_design_gaming"
+        "market_design_gaming",
+        "market_opacity"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -1132,7 +1176,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "capital_flight",
@@ -1147,7 +1191,10 @@
         "sudden_stop",
         "risk_appetite_reversal",
         "flight_to_hard_money_dollarization",
-        "fx_pressure"
+        "fx_pressure",
+        "exchange_controls",
+        "flight_to_quality",
+        "reserve_depletion"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -1228,7 +1275,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "clearing_access_exclusion",
@@ -1278,7 +1325,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "partial"
     },
     {
       "id": "coin_clipping_quality_degradation",
@@ -1365,7 +1412,8 @@
         "overvalued_peg_entry",
         "fx_pressure",
         "peg_defense_failure",
-        "doctrinal_disinflation"
+        "doctrinal_disinflation",
+        "multiple_exchange_rate_regime"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -1397,7 +1445,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "partial"
     },
     {
       "id": "convertibility_suspension",
@@ -1414,7 +1462,8 @@
         "devaluation_exit",
         "token_redemption_collapse",
         "lender_of_last_resort_relief",
-        "reserve_currency_dilemma"
+        "reserve_currency_dilemma",
+        "currency_overissue"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -1497,7 +1546,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "current_account_swing",
@@ -1548,7 +1597,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "debt_deflation",
@@ -1565,7 +1614,8 @@
         "specie_scarcity_deflation",
         "credit_cycle",
         "devaluation_exit",
-        "doctrinal_disinflation"
+        "doctrinal_disinflation",
+        "corporate_bankruptcy_wave"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -1574,7 +1624,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "debt_moratorium_relief",
@@ -1599,7 +1649,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "debt_overhang",
@@ -1624,7 +1674,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "debt_restructuring_framework",
@@ -1648,7 +1698,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "partial"
     },
     {
       "id": "delivery_default",
@@ -1695,7 +1745,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "devaluation_exit",
@@ -1780,7 +1830,8 @@
         "overvalued_peg_entry",
         "debt_deflation",
         "competitiveness_overvaluation",
-        "war_debt_real_burden_deflation"
+        "war_debt_real_burden_deflation",
+        "monetary_tightening"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -1811,7 +1862,7 @@
       "introduced_in": "1.0.0",
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "partial"
     },
     {
       "id": "dutch_disease",
@@ -1886,7 +1937,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "export_ban_provisioning_cascade",
@@ -1910,7 +1961,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "partial"
     },
     {
       "id": "external_relief_mobilization",
@@ -1925,7 +1976,8 @@
         "disaster_reconstruction_finance",
         "aid_cuts",
         "performance_legitimacy",
-        "state_buffer_stock_intervention"
+        "state_buffer_stock_intervention",
+        "famine_relief_failure"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -1950,7 +2002,11 @@
         "predatory_lending_issuance_fraud",
         "affinity_fraud",
         "related_party_abuse",
-        "tangible_asset_verification_illusion"
+        "tangible_asset_verification_illusion",
+        "accounting_fraud",
+        "accounting_opacity",
+        "ponzi_scheme",
+        "currency_overissue"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -1959,7 +2015,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "financial_product_complexity_opacity",
@@ -1973,7 +2029,8 @@
       "related": [
         "model_risk",
         "asymmetric_payoff_mis_selling",
-        "credit_market_freeze"
+        "credit_market_freeze",
+        "market_opacity"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -1997,7 +2054,9 @@
         "geopolitical_escalation",
         "geoeconomic_fragmentation",
         "reserve_diversification",
-        "export_earnings_shock"
+        "export_earnings_shock",
+        "economic_sanctions",
+        "trade_disruption"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -2021,7 +2080,9 @@
         "capital_flight",
         "risk_appetite_reversal",
         "fx_pressure",
-        "inflation_pressure"
+        "inflation_pressure",
+        "flight_from_money",
+        "flight_to_quality"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -2054,7 +2115,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "foreign_financial_control",
@@ -2094,7 +2155,9 @@
         "exchange_rate_based_stabilization",
         "imf_conditional_adjustment",
         "currency_reform_redenomination",
-        "inflation_pressure"
+        "inflation_pressure",
+        "fiscal_consolidation",
+        "repressed_inflation_release"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -2104,22 +2167,24 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "imf_conditional_adjustment",
       "name": "IMF-conditional adjustment",
       "layer": "core",
       "status": "provisional",
-      "definition": "An external official lender provides financing in exchange for policy conditions such as devaluation and fiscal tightening, as the route out of a balance-of-payments crisis.",
-      "scope": "Stand-by and similar arrangements with the International Monetary Fund or comparable lenders, their conditionality, and the large devaluations agreed with them.",
+      "definition": "An external official lender provides financing in exchange for policy conditions such as devaluation and fiscal tightening, as the route out of a balance-of-payments crisis, and suspends disbursement when the conditions are missed.",
+      "scope": "Stand-by and similar arrangements with the International Monetary Fund or comparable lenders, their conditionality, the large devaluations agreed with them, and the suspension of disbursements when conditions are missed or access to the program closes.",
       "boundary": "The programme is external and conditioned; a domestic exchange-rate anchor is exchange_rate_based_stabilization, and a general shift in policy expectations is policy_repricing.",
-      "test": "Financing from an external official lender was tied to stated policy conditions.",
+      "test": "Financing from an external official lender was tied to stated policy conditions, or stopped because the conditions were not met.",
       "related": [
         "exchange_rate_based_stabilization",
         "policy_repricing",
         "heterodox_shock_stabilization_plan",
-        "sudden_stop"
+        "sudden_stop",
+        "austerity_fatigue",
+        "fiscal_consolidation"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -2129,7 +2194,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "import_compression",
@@ -2223,7 +2288,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "issuance_promotion_fraud",
@@ -2237,7 +2302,8 @@
       "related": [
         "fictitious_asset_issuance",
         "predatory_lending_issuance_fraud",
-        "herd_behavior"
+        "herd_behavior",
+        "ponzi_scheme"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -2246,7 +2312,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "partial"
     },
     {
       "id": "labor_force_collapse_shock",
@@ -2260,7 +2326,8 @@
       "related": [
         "demographic_transition",
         "pandemic_epidemic",
-        "technological_unemployment"
+        "technological_unemployment",
+        "famine_epidemic_nexus"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -2287,7 +2354,8 @@
         "liquidity_stress",
         "convertibility_suspension",
         "clearing_access_exclusion",
-        "deposit_guarantee_blanket"
+        "deposit_guarantee_blanket",
+        "lender_of_last_resort_failure"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -2297,7 +2365,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "leverage_spiral",
@@ -2360,7 +2428,8 @@
         "credit_cycle",
         "debt_bondage_spiral",
         "asset_quality_stress",
-        "debt_moratorium_relief"
+        "debt_moratorium_relief",
+        "lending_boom"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -2369,7 +2438,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "model_risk",
@@ -2418,7 +2487,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "negative_convexity_short_option",
@@ -2432,7 +2501,8 @@
       "related": [
         "asymmetric_payoff_mis_selling",
         "embedded_leverage",
-        "model_risk"
+        "model_risk",
+        "search_for_yield"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -2489,7 +2559,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "off_balance_sheet_maturity_transformation",
@@ -2505,7 +2575,8 @@
         "self_fulfilling_run",
         "credit_market_freeze",
         "liquidity_stress",
-        "tranching_illusion"
+        "tranching_illusion",
+        "maturity_mismatch"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -2625,7 +2696,9 @@
         "devaluation_exit",
         "competitiveness_overvaluation",
         "exchange_rate_based_stabilization",
-        "overvalued_peg_entry"
+        "overvalued_peg_entry",
+        "multiple_exchange_rate_regime",
+        "reserve_depletion"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -2684,7 +2757,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "partial"
     },
     {
       "id": "re_regulation",
@@ -2711,7 +2784,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "partial"
     },
     {
       "id": "recoinage_shock",
@@ -2784,7 +2857,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "related_party_abuse",
@@ -2798,7 +2871,8 @@
       "related": [
         "fictitious_asset_issuance",
         "circular_financing",
-        "accounting_disclosure_reform"
+        "accounting_disclosure_reform",
+        "accounting_fraud"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -2807,7 +2881,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "reparations_transfer_problem",
@@ -3016,7 +3090,9 @@
         "dual_measure_divergence",
         "information_suppression_disaster_amplification",
         "institutional_trust_decline",
-        "regime_self_mythologizing"
+        "regime_self_mythologizing",
+        "accounting_opacity",
+        "accounting_fraud"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -3025,7 +3101,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "specie_drain",
@@ -3074,7 +3150,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "spoofing",
@@ -3111,7 +3187,8 @@
         "anti_hoarding_regulation",
         "external_relief_mobilization",
         "inventory_pressure",
-        "commodity_supply_squeeze"
+        "commodity_supply_squeeze",
+        "famine_relief_failure"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -3140,7 +3217,8 @@
         "original_sin_currency_mismatch",
         "capital_recycling",
         "imf_conditional_adjustment",
-        "import_compression"
+        "import_compression",
+        "credit_crunch"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -3150,7 +3228,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "technological_substitution_shock",
@@ -3214,7 +3292,8 @@
       "test": "Tokens were issued with an explicit redemption promise that was not honoured.",
       "related": [
         "convertibility_suspension",
-        "debasement_seigniorage"
+        "debasement_seigniorage",
+        "quasi_money_issuance"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -3268,7 +3347,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "twin_mismatch",
@@ -3367,7 +3446,7 @@
       ],
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "partial"
     },
     {
       "id": "race_to_the_bottom",
@@ -3399,7 +3478,8 @@
       "test": "The near-term threat to the decision-maker is shown to outrank the long-term one.",
       "related": [
         "escalation_of_commitment",
-        "preparedness_paradox"
+        "preparedness_paradox",
+        "austerity_fatigue"
       ],
       "in_signature": true,
       "introduced_in": "1.0.0",
@@ -3486,7 +3566,11 @@
         "anti_hoarding_regulation",
         "deposit_guarantee_blanket",
         "off_balance_sheet_maturity_transformation",
-        "preference_falsification_cascade"
+        "preference_falsification_cascade",
+        "confidence_collapse",
+        "ponzi_scheme",
+        "fire_sale",
+        "peasant_flight"
       ],
       "in_signature": true,
       "introduced_in": "1.0.0",
@@ -3512,7 +3596,9 @@
         "pandemic_epidemic",
         "preference_falsification_cascade",
         "regime_self_mythologizing",
-        "succession_crisis"
+        "succession_crisis",
+        "confidence_collapse",
+        "counter_reformation_institutional_repair"
       ],
       "in_signature": true,
       "introduced_in": "1.0.0",
@@ -3588,7 +3674,7 @@
       "layer": "social",
       "status": "stable",
       "definition": "Handling a disaster or crisis works as a test of a regime's legitimacy: an effective response strengthens it, a failed one crystallises opposition.",
-      "scope": "Disaster relief, evacuation, epidemic response and crisis management, judged by the public as evidence of the state's protective capacity.",
+      "scope": "Disaster relief, evacuation, epidemic response and crisis management, judged by the public as evidence of the state's protective capacity. The crisis can be economic: in Eastern Europe before 1989, foreign debt and austerity, such as Romania's energy rationing and food shortages while it paid off its debt, were read as the regimes' failure to provide.",
       "boundary": "The same mechanism can produce opposite outcomes; the deciding variable is the effectiveness of the response. Erosion of consent without the response being the test is legitimacy_crisis.",
       "test": "Public judgement of the authority turns on how it handled the event.",
       "related": [
@@ -3616,13 +3702,15 @@
       "related": [
         "legal_authority_gap",
         "fiscal_dominance",
-        "loss_of_monopoly_on_violence"
+        "loss_of_monopoly_on_violence",
+        "peasant_flight",
+        "war_finance"
       ],
       "in_signature": true,
       "introduced_in": "1.0.0",
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "partial"
     },
     {
       "id": "loss_of_monopoly_on_violence",
@@ -3657,13 +3745,14 @@
       "related": [
         "famine_food_security",
         "subsistence_unrest_spiral",
-        "protection_gap"
+        "protection_gap",
+        "plant_disease_epidemic"
       ],
       "in_signature": true,
       "introduced_in": "1.0.0",
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "subsistence_unrest_spiral",
@@ -3678,13 +3767,15 @@
         "self_fulfilling_run",
         "entitlement_failure_famine",
         "anti_hoarding_regulation",
-        "famine_food_security"
+        "famine_food_security",
+        "popular_unrest",
+        "peasant_flight"
       ],
       "in_signature": true,
       "introduced_in": "1.0.0",
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "partial"
     },
     {
       "id": "arbitrary_expropriation_shock",
@@ -3711,7 +3802,7 @@
       "introduced_in": "1.0.0",
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "state_capacity_building",
@@ -3734,7 +3825,7 @@
       "introduced_in": "1.0.0",
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "collective_moral_disengagement",
@@ -3754,7 +3845,7 @@
       "introduced_in": "1.0.0",
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "information_suppression_disaster_amplification",
@@ -3775,7 +3866,7 @@
       "introduced_in": "1.0.0",
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "partial"
     },
     {
       "id": "repression_radicalization_spiral",
@@ -3790,13 +3881,15 @@
         "scapegoating",
         "legitimacy_crisis",
         "autocratization",
-        "preference_falsification_cascade"
+        "preference_falsification_cascade",
+        "popular_unrest",
+        "state_repression"
       ],
       "in_signature": true,
       "introduced_in": "1.0.0",
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "administrative_capacity_collapse",
@@ -3811,7 +3904,9 @@
         "fog_of_war",
         "state_capacity_building",
         "legal_authority_gap",
-        "public_service_delivery_failure"
+        "public_service_delivery_failure",
+        "peasant_flight",
+        "famine_relief_failure"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -3831,13 +3926,14 @@
       "related": [
         "fictitious_asset_issuance",
         "herd_behavior",
-        "tangible_asset_verification_illusion"
+        "tangible_asset_verification_illusion",
+        "ponzi_scheme"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "credible_commitment_regime",
@@ -3879,7 +3975,7 @@
       "introduced_in": "1.0.0",
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "negotiated_demobilization_settlement",
@@ -3914,7 +4010,8 @@
         "self_fulfilling_run",
         "herd_behavior",
         "repression_radicalization_spiral",
-        "legitimacy_crisis"
+        "legitimacy_crisis",
+        "state_repression"
       ],
       "in_signature": false,
       "introduced_in": "1.0.0",
@@ -3982,7 +4079,7 @@
       "introduced_in": "1.0.0",
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "tested"
     },
     {
       "id": "reciprocal_mobilization_trap",
@@ -4024,7 +4121,7 @@
       "introduced_in": "1.0.0",
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "partial"
     },
     {
       "id": "tangible_asset_verification_illusion",
@@ -4043,7 +4140,7 @@
       "introduced_in": "1.0.0",
       "kind": "mechanism",
       "review": "in_review",
-      "name_test": "untested"
+      "name_test": "partial"
     },
     {
       "id": "cost_shifting",
@@ -4117,7 +4214,7 @@
       "layer": "extension",
       "status": "provisional",
       "definition": "Water shortage, drought, groundwater depletion, and conflict over water allocation.",
-      "scope": "Applies whether or not the damage or cost has been measured.",
+      "scope": "Shortage of surface or ground water, drought, depletion of aquifers, and disputes over how water is shared between users, sectors, regions or countries; it applies whether or not the damage or cost has been measured.",
       "boundary": "It names the scarcity and the allocation conflict; a flood, storm or other hazard event is natural_disaster.",
       "test": "Available water falls short of needs, or its allocation is contested.",
       "related": [
@@ -4176,13 +4273,14 @@
       "name": "Debt service crowding out",
       "layer": "extension",
       "status": "provisional",
-      "definition": "Debt service crowds out spending on basic public services such as health and social protection.",
-      "scope": "Interest and principal payments absorbing revenue that would otherwise fund public services.",
+      "definition": "Debt service crowds out spending on basic public services and public investment, such as health, social protection and infrastructure.",
+      "scope": "Interest and principal payments absorbing revenue that would otherwise fund public services or public investment, including the upkeep and renewal of infrastructure.",
       "boundary": "The inability to fund debt in markets is sovereign_funding_stress.",
-      "test": "Debt service is shown to displace service spending.",
+      "test": "Debt service is shown to displace service or investment spending.",
       "related": [
         "sovereign_funding_stress",
-        "public_service_delivery_failure"
+        "public_service_delivery_failure",
+        "fiscal_consolidation"
       ],
       "in_signature": true,
       "introduced_in": "1.0.0",
@@ -4203,7 +4301,8 @@
         "erosion_of_institutional_independence",
         "repression_radicalization_spiral",
         "state_censorship",
-        "ratchet_effect"
+        "ratchet_effect",
+        "state_repression"
       ],
       "in_signature": true,
       "introduced_in": "1.0.0",
@@ -4244,7 +4343,8 @@
         "information_suppression_disaster_amplification",
         "platform_regulation",
         "autocratization",
-        "regime_self_mythologizing"
+        "regime_self_mythologizing",
+        "state_repression"
       ],
       "in_signature": true,
       "introduced_in": "1.0.0",
@@ -4264,7 +4364,8 @@
       "related": [
         "legitimacy_crisis",
         "synthetic_media",
-        "sovereign_statistics_falsification"
+        "sovereign_statistics_falsification",
+        "confidence_collapse"
       ],
       "in_signature": true,
       "introduced_in": "1.0.0",
@@ -4476,6 +4577,852 @@
       "name_test": "tested"
     },
     {
+      "id": "accounting_fraud",
+      "name": "Accounting fraud",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "An institution or one of its units falsifies its books and balance sheet to hide losses or its true condition, and confidence and value collapse when the falsification is exposed.",
+      "scope": "Companies, banks and the branches or subsidiaries of a group: losses kept off the books, inflated or invented assets and revenue, understated debt and parallel balance sheets sent to the centre, up to the exposure that ends the falsification and the fall in market value and in creditors' recoveries that follows.",
+      "boundary": "The falsifier is the institution and the object is its own accounts; false official statistics published by a state are sovereign_statistics_falsification. Named techniques inside such a fraud are separate: hiding it from auditors by controlling the records and samples they check, moving unrealised losses into off-balance-sheet funds, selling claims on assets that do not exist (fictitious_asset_issuance) and dealings with connected parties used to misstate results (related_party_abuse). The fraud as a crisis event is a separate crisis type, and the tightening of audit and disclosure rules after exposure is accounting_disclosure_reform.",
+      "test": "A firm or one of its units is shown to have falsified its accounts to hide losses or its real condition, and its value or the confidence of its investors and creditors collapses once the falsification comes out.",
+      "related": [
+        "fictitious_asset_issuance",
+        "accounting_disclosure_reform",
+        "sovereign_statistics_falsification",
+        "related_party_abuse",
+        "internal_control_failure"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "accounting_opacity",
+      "name": "Accounting opacity",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "Reported accounts hide an entity's real losses, liabilities or risks from investors, lenders and supervisors, whether through aggressive valuation and undisclosed reserves or through fabricated records.",
+      "scope": "Corporate, bank and holding-group accounts; soft concealment (valuation, hidden reserves, deconsolidation, timing of revenue and cost) and hard concealment (forged documents, invented balances); used across the fraud and hidden-loss files of the corpus.",
+      "boundary": "A single concealment technique against auditors (records held in systems the fraudsters control, audit samples learned in advance) is narrower; accounting_opacity is the broader state of misleading accounts. fictitious_asset_issuance issues claims on assets that do not exist; accounting opacity can hide real losses without any false claim. sovereign_statistics_falsification is the same concealment in a state's official statistics.",
+      "test": "The file shows reported accounts that hid real losses, liabilities or risks from outsiders, and the later exposure of the gap between the reported and the real position.",
+      "related": [
+        "fictitious_asset_issuance",
+        "sovereign_statistics_falsification",
+        "confidence_collapse",
+        "internal_control_failure",
+        "market_opacity"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "austerity_fatigue",
+      "name": "Austerity fatigue",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "Austerity, wage cuts and adjustment programmes create social tension and exhaust political tolerance, and the programme is abandoned.",
+      "scope": "The path from the burden of an austerity or adjustment programme to the social reaction (protest, strike, mutiny, riot) and the loss of political tolerance that ends it, whether the programme is dropped, reversed or its government falls. It is about austerity and adjustment programmes, not about every reform that people tire of.",
+      "boundary": "The mechanism is the political collapse of a programme under its own burden. The programme itself, with outside financing and conditions, is imf_conditional_adjustment, and the cut that causes the burden is fiscal_consolidation. Real wages that resist falling, so that adjustment fails, are a separate rigidity. Leaders who postpone remedies because of short horizons are political_short_termism, and a legislature that runs its own deadline toward sudden austerity is a different chain. The fall of a regime as an event is a separate crisis type. A general weariness with adjustment of any kind is wider than this entry.",
+      "test": "An austerity or adjustment programme is put in place, protest, strike or unrest follows and is documented, and the programme is dropped, reversed or its government falls.",
+      "related": [
+        "imf_conditional_adjustment",
+        "fiscal_consolidation",
+        "political_short_termism"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "confidence_collapse",
+      "name": "Confidence collapse",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "Belief in an issuer's statements, or in the integrity of a market or its supervision, collapses after a revelation, and holders, lenders and counterparties withdraw at once.",
+      "scope": "Firms, banks, funds and public issuers after a fraud, a hidden loss or a misleading statement comes to light; the loss of belief attaches to one issuer, a group of similar issuers, or the integrity of a whole market or its supervision, such as a government bond auction or a national equity market after a fraud.",
+      "boundary": "risk_appetite_reversal is a general shift away from risk across markets; confidence collapse attaches to a named issuer, a group of issuers or a market and its supervision after a revelation. self_fulfilling_run is the exit dynamic in which each withdrawal encourages the next; confidence collapse is the revelation-driven loss of belief that can start such a run and also covers share prices. institutional_trust_decline is a slow fall in measured trust in institutions; confidence collapse is sudden. legitimacy_crisis concerns the consent to an authority's right to rule.",
+      "test": "The file shows a revelation followed at once by withdrawal from the issuer, the group or the market it concerns, with the cause traced to disbelief in what was revealed rather than to a general move away from risk.",
+      "related": [
+        "risk_appetite_reversal",
+        "self_fulfilling_run",
+        "institutional_trust_decline",
+        "legitimacy_crisis",
+        "accounting_opacity"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "corporate_bankruptcy_wave",
+      "name": "Corporate bankruptcy wave",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "Many firms fail together, and the wave of bankruptcies cuts the supply of credit and the level of employment.",
+      "scope": "Clusters of business failures in an economy or a sector: forced sales and bankruptcies of farms, manufacturers and companies that cannot meet their debts. What defines the entry is the wave, a number of failures close in time, together with its two effects: banks facing bad loans lend less, and lost firms mean lost jobs and wages. The legal procedure of any single bankruptcy is not the subject.",
+      "boundary": "It is the wave of firm failures and its effect on credit and jobs. Bankruptcy is the legal procedure of one insolvent firm or person, not a wave. Falling prices that raise the real burden of fixed debts and force sales are debt_deflation, which can cause the wave; the cut in the supply of credit by lenders is credit_crunch, which here is one result of the wave and can also arise without it.",
+      "test": "A number of firms are recorded failing close in time, and the record ties the failures to a contraction of credit, of employment, or of both.",
+      "related": [
+        "debt_deflation",
+        "credit_crunch"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "counter_reformation_institutional_repair",
+      "name": "Counter-Reformation institutional repair",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "An institution under attack partly restores its legitimacy through self-reform and geographically limits the break.",
+      "scope": "Self-reform by a challenged religious, political or professional institution that stops the spread of a rival movement without winning back what it lost.",
+      "boundary": "The containment comes from the institution's own reform. The breaking of consent that it answers is a separate mechanism, and so is the later freezing of the divided map by agreement.",
+      "test": "An institution under attack reforms itself, partly regains legitimacy and the rival movement stops spreading beyond the ground it holds.",
+      "related": [
+        "legitimacy_crisis"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "credit_crunch",
+      "name": "Credit crunch",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "Banks withdraw credit products, hoard reserves or cut lending, so the supply of credit to the real economy is cut.",
+      "scope": "Retreat by lenders: reserves held instead of lent, mortgage and other products pulled from the market, working-capital finance cut, credit tools that cannot be collected, and tighter lending by an administration after a crisis. The cause may be losses, funding stress or policy; what defines the entry is the fall in the supply of credit.",
+      "boundary": "The lenders cut supply. credit_market_freeze is a breakdown of intermediation in one market, such as thin trading, discounts and halted issuance; the chain that links such freezes across eras and countries is a separate backbone; the event of failing banks, runs and panics is a banking crisis, a crisis type; funding_margin_pressure is the squeeze on a borrower's margins from dearer funding; and sudden_stop is foreign lenders ending finance to a whole economy.",
+      "test": "Banks or other lenders pull products, hold reserves or cut lending, and the record shows the real economy unable to borrow (refused loans, missing mortgage or working-capital finance) while the lenders themselves are still operating.",
+      "related": [
+        "credit_market_freeze",
+        "corporate_bankruptcy_wave",
+        "funding_margin_pressure",
+        "sudden_stop",
+        "dealer_balance_sheet_constraints"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "currency_overissue",
+      "name": "Currency overissue",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "A state or banks with no borrowing channel issue paper money or coin beyond what backs it.",
+      "scope": "Paper currency or coin issued above its reserve, silver cover or pledged property: a government that prints to close a deficit when credit is shut, banks that issue notes without redemption cover, and a stock of coin too large for the rate fixed for it, before and after a mint closure.",
+      "boundary": "The amount issued exceeds its backing. quasi_money_issuance is small-denomination government paper that pays bills while ordinary money creation is restricted; a whole system of many private note issuers, in which overissue is one of the failings, is a wider regime; convertibility_suspension is the official act of ending redemption; fictitious_asset_issuance issues claims on assets that do not exist; and the chain in which a state over-issues copper coin to spare its silver is a separate backbone.",
+      "test": "A state or bank issues paper money or coin in an amount the record shows to be above its cover, silver, pledged property or redemption ability, and the money loses value or the issuer fails to honour it.",
+      "related": [
+        "quasi_money_issuance",
+        "convertibility_suspension",
+        "fictitious_asset_issuance"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "dealer_balance_sheet_constraints",
+      "name": "Dealer balance sheet constraints",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "Limits on the balance sheets and leverage of dealer banks keep them from making markets and arbitraging in times of stress.",
+      "scope": "Leverage and capital rules such as the Basel III supplementary leverage ratio, balance-sheet capacity of primary dealers and market makers, and the way they limit trading and arbitrage in Treasury, corporate bond, equity, money market and foreign-exchange swap markets. The limit can be a rule or the dealer's own choice to protect its balance sheet; in both cases it bites in stress, not in calm.",
+      "boundary": "This is the constraint on the intermediary. The breakdown of credit-market intermediation as a whole, with halted issuance and fund discounts, is credit_market_freeze, in which these limits are one part. The cut in bank lending to the economy is credit_crunch, and difficulty obtaining funding or trading is liquidity_stress, the condition these limits help produce.",
+      "test": "In a period of stress, dealers or primary dealers are reported to hold back from taking positions because of balance-sheet capacity or leverage rules; and bid-ask spreads, market depth or an arbitrage gap are shown to have widened as a result.",
+      "related": [
+        "credit_market_freeze",
+        "liquidity_stress",
+        "credit_crunch"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "demand_boom",
+      "name": "Demand boom",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "A sudden surge in domestic demand caused by pent-up demand, wage rises, war profits or stimulus.",
+      "scope": "A rapid rise in spending by households, firms or the state inside the economy, from its source (released savings, higher pay, windfall profit from a war or a stimulus payment, a shift of spending from services to goods) to the strain it puts on supply. It names the jump in demand, not the later rise in prices or the credit that may feed it.",
+      "boundary": "The mechanism is the surge in demand. A broad upward push on the price level is inflation_pressure, and a fast growth of bank credit is lending_boom; either may accompany a demand boom but neither is it. The opposite, a weakening of demand, is demand_slowdown. Price indexation that reproduces inflation without any demand is a different mechanism. The slump that follows when war demand ends belongs to a separate postwar chain. Pent-up demand is one cause of the surge, and this entry covers it with the other causes.",
+      "test": "Domestic spending jumps within a short period after a release of savings, a pay rise, a windfall or a stimulus, and supply, imports or prices are strained by it.",
+      "related": [
+        "inflation_pressure",
+        "lending_boom",
+        "demand_slowdown"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "economic_sanctions",
+      "name": "Economic sanctions",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "Sanctions on a country, through trade, finance or both, and their easing or lifting, change its export earnings, production capacity, access to finance and the living conditions of its people.",
+      "scope": "Embargoes and trade sanctions, financial sanctions, sectoral and secondary sanctions, and their lifting; the effects on export earnings and prices, production capacity, access to credit and debt restructuring, and humanitarian conditions such as food intake and mortality. The channel can be trade, finance or both. How much of a crisis the sanctions cause is often disputed; the entry covers the channel, not a claim about its weight.",
+      "boundary": "This is the whole effect of sanctions on a country, whatever channel they use. When the coercion runs through payment networks and frozen reserves only, it is financial_warfare_sanctions, a narrower case. The cut in trade by embargo, boycott or plague is trade_disruption, and the fall in export earnings that follows is export_earnings_shock. Here the penalty and its lifting are the cause, and the three effects named above are what the entry follows.",
+      "test": "Sanctions were imposed on a country, or eased or lifted; and the sources record an effect on export earnings, oil or production capacity, access to finance or debt restructuring, or on food intake, health or mortality, as a result of them.",
+      "related": [
+        "financial_warfare_sanctions",
+        "trade_disruption",
+        "export_earnings_shock"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "exchange_controls",
+      "name": "Exchange controls",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "The state controls the exchange rate and capital flows through foreign-exchange controls, pressure on exchange bureaus, policies that suppress dollarisation and bans on exporting bullion.",
+      "scope": "Licensing, quotas and multiple exchange rates, capital controls, pressure on exchange bureaus, policies that suppress dollar use, and bans on foreign coin and on bullion export. Bans that cannot be enforced still count when they raise transaction costs and slow the flow of money.",
+      "boundary": "These are rules and pressure by the state. capital_flight is what residents do, often before or after such rules; the blocked flow of coin and bullion as a cause of scarcity, of which an export ban is one instrument, is a separate mechanism; fx_pressure is the strain on the currency that prompts controls; changing the currency of existing contracts by order is a separate measure; intervention_risk is the expectation that the authorities will step in, not the measure itself.",
+      "test": "The state sets licences, quotas, multiple rates, restrictions on exchange bureaus or dollar use, or bans on exporting foreign coin or bullion, and the record shows the rate or flow it aimed to control (official against parallel rate, reserves, remittances, outflows).",
+      "related": [
+        "capital_flight",
+        "fx_pressure",
+        "intervention_risk",
+        "subsidy_fiscal_burden"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "famine_epidemic_nexus",
+      "name": "Famine-epidemic nexus",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "Famine, migration, undernutrition in camps and the collapse of infrastructure spread epidemic disease.",
+      "scope": "Outbreaks of cholera, typhus, dysentery, smallpox and malaria among people made weak or mobile by famine, in relief camps, refugee flows and towns; and outbreaks that follow an economic collapse that breaks water and health systems. It covers the path from hunger, flight and broken services to disease, not the outbreak or the famine as an event.",
+      "boundary": "The link runs from famine, flight and broken infrastructure to the spread of disease. The outbreak as an event is pandemic_epidemic and the famine as an event is famine_food_security; the count of deaths above the normal rate is an indicator, not this link; disease carried along trade routes with no famine behind it is a separate chain; and the fall of the workforce after mass death is labor_force_collapse_shock.",
+      "test": "An epidemic breaks out or peaks among people displaced, camped or malnourished by a famine or collapse, and the record ties its spread to the crowding, hunger or failed water and health services, with deaths from disease counted beside deaths from hunger.",
+      "related": [
+        "pandemic_epidemic",
+        "famine_food_security",
+        "labor_force_collapse_shock"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "famine_relief_failure",
+      "name": "Famine relief failure",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "The state fails to establish control over supply, distribution and grain purchase, or its provisioning intervention stays below the scale of the crisis.",
+      "scope": "Public relief and supply control in a famine that fall short: a grain purchase programme that collects a fraction of its target, planned allocations that arrive in a small share, relief works with low wages, relief laws not designed for a famine, and funds withdrawn from relief by fiscal pressure or war.",
+      "boundary": "The fault is the state's own supply control and relief being too weak. Help brought in from outside is external_relief_mobilization; a public body storing grain when it is cheap is state_buffer_stock_intervention; a colonial state conditioning relief on tests and penal wages is a narrower policy; a rival cutting the capital's supply line is a different cause; and a lasting collapse of the state's ability to record and collect is administrative_capacity_collapse.",
+      "test": "In a famine the state's purchase, allocation or relief is recorded as far below its target or the need (a fraction collected, a small share delivered, wages below subsistence, funds withdrawn), and prices rise or deaths grow while the shortfall lasts.",
+      "related": [
+        "external_relief_mobilization",
+        "state_buffer_stock_intervention",
+        "administrative_capacity_collapse"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "fire_sale",
+      "name": "Fire sale",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "A sale of assets forced by a funding or capital need, at a price below fundamental value because the natural buyers are constrained at the same moment.",
+      "scope": "Securities, loans and real assets sold by banks, funds, dealers or other leveraged holders under funding, margin or capital pressure; the sale and its price discount, not the funding loss that causes it.",
+      "boundary": "The seller is forced and the price is below fundamental value. A loss of funding that does not yet force sales is liquidity_stress; a market where dealers and liquidity promises break down together is credit_market_freeze; holders withdrawing because others withdraw is self_fulfilling_run. A sale of goods inventories at falling prices is inventory_pressure.",
+      "test": "A holder sells because a funding, margin or capital need forces it, and the price obtained is below what an unconstrained buyer would pay.",
+      "related": [
+        "credit_market_freeze",
+        "liquidity_stress",
+        "flight_to_quality",
+        "self_fulfilling_run",
+        "inventory_pressure"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "fiscal_consolidation",
+      "name": "Fiscal consolidation",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "Cuts in public spending, austerity and internal devaluation that tighten the fiscal stance and reduce demand and growth.",
+      "scope": "Spending cuts, austerity programmes and internal devaluation (a fall in wages and prices to regain competitiveness), whether the government picks them, an anchor system demands them or a debt-repayment goal imposes them, from the decision to the fall in demand and growth; the cut can be a plan for the budget as a whole or a cut in one item such as public works. Only the tightening itself counts, not the financial strain that causes it.",
+      "boundary": "The mechanism is the tightening of the fiscal stance and its effect on demand. Financing from an outside lender in return for policy conditions is imf_conditional_adjustment, a package that adds price and wage controls is heterodox_shock_stabilization_plan, and a legislature letting its own deadline run toward sudden austerity is a separate chain. Debt service that displaces health or social spending is debt_service_crowding_out, which describes the squeeze rather than the cut; strain on public finances as an event is a crisis type.",
+      "test": "Public spending is cut, or wages and prices are pushed down on purpose, and the same period shows a fall in income, demand or growth that the cut helped cause.",
+      "related": [
+        "imf_conditional_adjustment",
+        "debt_service_crowding_out",
+        "austerity_fatigue",
+        "heterodox_shock_stabilization_plan"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "fiscal_populism",
+      "name": "Fiscal populism",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "Pre-election, populist or unfunded fiscal expansion and surges in public spending that enlarge deficits and destabilise the economy.",
+      "scope": "Increases in spending or cuts in revenue that are not matched by a source of funding and are timed or aimed at winning or keeping support, whether before an election, after unrest or in response to a fiscal promise. A narrower form tied only to the election calendar, the political budget cycle, is part of it.",
+      "boundary": "It is the unfunded expansion itself. A regime in which financing needs bend monetary policy is fiscal_dominance, and public enterprises that expect the budget to cover their losses face a soft budget constraint, a separate mechanism. The gap that results, in one period, is the budget deficit. Broad price pressures that the spending adds to are inflation_pressure, and strain on public finances recorded as an event is a crisis type.",
+      "test": "Spending rises or taxes are cut without a matching source of funds, the timing or target is political (an election, unrest, a promise), and the deficit widens as a result.",
+      "related": [
+        "fiscal_dominance",
+        "inflation_pressure"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "flight_from_money",
+      "name": "Flight from money",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "A rise in the velocity of money driven by expected inflation, in which people spend money at once and prices accelerate beyond what the money supply alone would explain.",
+      "scope": "The behaviour of holders of money who respond to expected price rises by spending sooner, and the faster circulation and price acceleration this produces. A fall in velocity through hoarding is the opposite movement and is not covered.",
+      "boundary": "It is the change in how fast money moves in response to expected prices. People who give up the domestic currency for foreign money or metal as a store of value are in flight_to_hard_money_dollarization. Inflation that repeats itself through indexation is a different mechanism. A jump in the demand for money after disinflation is the reverse movement, and the event of high inflation is a crisis type. Broad upward pressure on prices is inflation_pressure.",
+      "test": "Expected price rises make people spend money as soon as they get it, and prices rise faster than the growth of the money supply alone would explain.",
+      "related": [
+        "flight_to_hard_money_dollarization",
+        "inflation_pressure"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "flight_to_quality",
+      "name": "Flight to quality",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "A sudden shift of investors and lenders out of risky assets into the safest available assets, which widens the spread between the two.",
+      "scope": "Market-wide portfolio shifts toward government debt, top-rated paper or reserve currencies during stress, and their effect on spreads and on credit to riskier borrowers.",
+      "boundary": "The movement is from risky to safe assets and is measured in the spread. A general turn from risk seeking to risk reduction, with or without a move into safe assets, is risk_appetite_reversal. Residents moving savings out of their own country is capital_flight; abandoning the domestic currency for foreign money or metal is flight_to_hard_money_dollarization; stress spreading from one market to another is contagion.",
+      "test": "Safe-asset yields fall and risky spreads widen at the same time because investors move their holdings from the one to the other.",
+      "related": [
+        "risk_appetite_reversal",
+        "capital_flight",
+        "fire_sale",
+        "flight_to_hard_money_dollarization"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "internal_control_failure",
+      "name": "Internal control failure",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "Weaknesses in internal control, separation of duties, market discipline and senior management oversight allow fraud to go unnoticed.",
+      "scope": "The weak points inside an institution that let wrongdoing run: duties held by one person, a split audit structure, missing written confirmation of customer bids or loans, a firm with no traded securities to give a market signal, a one-man style of management where no one can object, and senior managers who neglect oversight or cover up. The scope is the weakness, from its set-up to the delay in finding the fraud, and not the fraud's own technique.",
+      "boundary": "The mechanism is the weakness of control that lets wrongdoing stay hidden. The misleading state of the accounts is accounting_opacity, and a forged bank confirmation of cash is one fraud technique. Falsifying the books, including reporting capital or revenue that does not exist, is accounting_fraud. A failure of supervisors outside the firm, or of rules, is a regulatory failure, and creditor roles in managing a sovereign's debt are a different matter. Here the gap is inside the firm; the fraud technique is separate.",
+      "test": "A fraud or hidden loss ran for a long time inside an institution, and the record shows that duties were not separated, checks were missing or senior management ignored warnings or covered up.",
+      "related": [
+        "accounting_opacity",
+        "accounting_fraud"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "lender_of_last_resort_failure",
+      "name": "Lender of last resort failure",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "In a crisis, the last-resort lender, public backstop or resolution tool is absent, insufficient, delayed or refused, so that a liquidity squeeze turns into a systemic crisis.",
+      "scope": "Four forms of the failure: no lender exists (no central bank, or a monetary union whose members cannot print the currency they borrow in); the lender is too small (reserves far below foreign-currency liabilities, a rescue fund or ELA limit that is too low); support comes late or is capped; support is refused on principle, as when taxpayer money is ruled out. It covers banks, states and market funding alike, and the whole span from the squeeze to the point where the crisis becomes systemic; the cases where a lender did act are outside it.",
+      "boundary": "This is the lender missing, short, late or refusing. When the lending actually happens, it is lender_of_last_resort_relief. The recurring chain of crises, linked by the backstop each one got or lacked, is a separate backbone. The reading of asking for help as weakness is a funding stigma, a separate mechanism, and the squeeze itself, before it turns systemic, is liquidity_stress.",
+      "test": "A funding squeeze hit an institution, a market or a state; at that moment no public lender or backstop existed, or it was too small, came late, or was refused; and the squeeze then turned into a systemic crisis, with the missing or insufficient support named in the sources as part of the cause.",
+      "related": [
+        "lender_of_last_resort_relief",
+        "liquidity_stress"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "lending_boom",
+      "name": "Lending boom",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "An episode of unusually fast growth of bank credit to the private sector, well above its trend and above output growth.",
+      "scope": "Measured episodes of private-credit expansion relative to output or trend (for example a rise of the credit-to-GDP ratio of several points within a few years), in any economy; the expansion phase, not the bust.",
+      "boundary": "It names the expansion episode, measured against a trend. The whole self-reinforcing loop of expansion and contraction is credit_cycle; the deterioration of the loans when the boom turns is asset_quality_stress. Excess lending concentrated in microcredit to poor borrowers is microfinance_overlending.",
+      "test": "Private credit grows clearly faster than its trend and than output for several years, and the episode can be dated with a start and an end.",
+      "related": [
+        "credit_cycle",
+        "asset_quality_stress",
+        "demand_boom",
+        "microfinance_overlending"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "loss_of_policy_credibility",
+      "name": "Loss of policy credibility",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "A government or central bank fails to keep its commitments and the policy credibility it relied on collapses.",
+      "scope": "Governments and central banks, at any date, whose stated policy or promise is no longer believed by the public, lenders or markets. The loss may come from broken promises, repeated policy reversals or visible inability to deliver, and it shows in capital flight, higher risk premia, flight from the currency or loss of public order. It covers the collapse of belief, not the later rebuilding of it.",
+      "boundary": "It is the loss of belief in an authority's word. The long cycle in which a central bank's anchor is born, eroded and restored is a wider backbone, and the late-response lapse inside it is a separate branch. Expectations that have already come loose from any anchor and drive prices and spending are a later stage. Doubt created by an election or a fall of government is political_uncertainty, which can feed this loss but is about who will decide, not whether promises are kept.",
+      "test": "The authority made or implied a commitment, there is a record that belief in it fell (capital leaving, risk premia or interest demanded rising, loss of public confidence in the government), and the fall is tied to broken or undeliverable commitments rather than to an outside shock alone.",
+      "related": [
+        "political_uncertainty"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "market_opacity",
+      "name": "Market opacity",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "Opaque and delayed data on stocks, reserves or metal content delay pricing and feed speculation.",
+      "scope": "Missing, inconsistent or late figures on commodity stocks, reserves and exchange rates, the metal content of coins, and the quality of loans passed from the lender to a buyer, where the gap in what is known delays the price response. The data gap is the mechanism; a hidden loss in one entity's own accounts is outside it.",
+      "boundary": "The missing item is market data and the harm is late pricing. accounting_opacity is one entity's reports hiding its own losses; financial_product_complexity_opacity is a product too complex to value; the effect of stocks on production and price is a different matter from the lack of data on them; benchmark_reform answers manipulated reference prices; falsifying an entity's books to show value that is not there is fraud, not opacity. A difference in knowledge between the two sides of a deal (information asymmetry) is narrower than a market-wide lack of timely data.",
+      "test": "A key figure for a market (stock, reserve, metal content, loan quality) is missing, inconsistent or arrives late, prices lag or jump when it is revealed, and the record links the gap to speculation or delayed adjustment.",
+      "related": [
+        "accounting_opacity",
+        "financial_product_complexity_opacity",
+        "benchmark_reform"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "maturity_mismatch",
+      "name": "Maturity mismatch",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "A gap between the maturity and liquidity of what is owed and what is held, so that short-term or on-demand funding of long-term or illiquid assets strains debt service under stress.",
+      "scope": "Banks, funds, companies, states and other borrowers whose funding falls due or can be withdrawn sooner than their assets can be repaid or sold. The mismatch has two sides: time (the debt matures before the asset pays back) and liquidity (the holder can demand cash today while the asset cannot be sold quickly at a fair price); the entry covers both together. It describes the structure that stress then exploits, not the stress itself.",
+      "boundary": "It is the structural gap between funding and assets. The stress that follows, a difficulty in raising funds or trading without delay or discount, is liquidity_stress. A vehicle outside a sponsor's balance sheet that funds long-term assets short and has no committed backstop is off_balance_sheet_maturity_transformation, one special case of this gap. The funding itself, raised in markets rather than from retail deposits, is wholesale funding, an asset class, not a mismatch.",
+      "test": "Funding that is short in term or can be withdrawn on demand stands against assets that are long in term or hard to sell quickly, and the record shows that stress made the borrower unable to renew, sell or repay.",
+      "related": [
+        "liquidity_stress",
+        "off_balance_sheet_maturity_transformation"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "monetary_tightening",
+      "name": "Monetary tightening",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "Monetary and macroprudential tightening through higher interest rates, reserve requirements, credit ceilings or restrictions on banknote issue, which narrows credit and demand.",
+      "scope": "Actions of a central bank or other authority that make money or credit dearer or scarcer: policy rate increases, higher reserve requirements, quotas or ceilings on lending, a cut in banknote issue or advances. Macroprudential limits, such as a cap on property lending, count as tightening when they work through credit.",
+      "boundary": "It names the act of tightening, whatever its motive or timing. A tightening that a doctrine or concern for reputation demands, despite domestic slack, is doctrinal_disinflation. A late and then faster catch-up is a separate backbone. The market's revaluation of the expected policy path is policy_repricing, and the sharp tightening of financial conditions that cumulative tightening produces is a separate chain. The shrinking of balance sheets that follows an asset bust is a different contraction.",
+      "test": "A central bank or authority raises rates, reserve requirements or ceilings on lending, or cuts banknote issue or advances, and credit, asset prices or demand contract afterwards.",
+      "related": [
+        "doctrinal_disinflation",
+        "policy_repricing"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "multiple_exchange_rate_regime",
+      "name": "Multiple exchange rate regime",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "A system of several exchange rates in which the gap between the official and the parallel rate creates arbitrage, rents and a loss of reserves until the gap closes.",
+      "scope": "The period from the setting of separate rates, official, parallel or several channels, through the rents, import distortions and reserve losses they cause, to the closing of the gap by unifying or floating the rate. It covers the economic effects of the system, such as delayed foreign investment and the state buying dollars in the parallel market, and the unification that ends them; it is not the measure of the premium alone.",
+      "boundary": "This is the regime and its effects. The parallel rate itself is an indicator, and so is a rate computed from asset prices. Pressure on a currency in general is fx_pressure, and a fixed rate defended with reserves and then abandoned is peg_defense_failure. Chronic overvaluation that erodes tradable sectors is competitiveness_overvaluation. The size of the black market premium is a gauge and not a mechanism, so it is not part of this entry.",
+      "test": "A country runs an official rate and at least one other rate at the same time, the gap is large enough to pay for arbitrage or rationing, and reserves, imports or investment respond to it.",
+      "related": [
+        "peg_defense_failure",
+        "subsidy_fiscal_burden",
+        "fx_pressure",
+        "competitiveness_overvaluation"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "olivera_tanzi_effect",
+      "name": "Olivera-Tanzi effect",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "Under high inflation the real value of tax revenue falls because of the lag between the tax liability and its collection, and financing the resulting deficit with money creation raises inflation further.",
+      "scope": "The collection lag as the channel through which inflation erodes real revenue, and the loop that follows when the gap is financed by printing money. It applies when inflation is high enough that a delay of weeks or months matters; moderate inflation with prompt collection is outside it.",
+      "boundary": "It is a loop between inflation and the real value of taxes. When financing needs bend monetary policy as a regime, the term is fiscal_dominance, and the Olivera-Tanzi effect is one of the ways that regime feeds itself. Inflation that repeats itself through indexation is a different mechanism. The whole chain from a money-financed gap to the collapse of the monetary regime is a wider backbone, and a shock to revenue from a disaster is a different cause. The gap in one period, with no view of how it grows, is the budget deficit.",
+      "test": "Inflation is high, tax revenue falls in real terms because of the delay between liability and payment, and the deficit that results is financed with newly printed money.",
+      "related": [
+        "fiscal_dominance"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "peasant_flight",
+      "name": "Peasant flight",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "Peasants abandon their land en masse, driven by violence, insecurity or drought, and the flight erodes the tax base that rested on them.",
+      "scope": "Mass rural flight to fortified towns, cities or abroad, and flight into nomadism or out of the tax registers, driven by violence, insecurity or drought in the countryside, in agrarian states whose revenue rests on taxing cultivators.",
+      "boundary": "The flight is from the land and its mark is the lost tax base; a run in which each exit hastens the others' until a shared resource is exhausted is self_fulfilling_run, forced displacement as a humanitarian event is humanitarian_displacement, crowds that stay and riot over staple prices are subsistence_unrest_spiral, the lasting breakdown of the state's means to record and collect is administrative_capacity_collapse, and the forced allocation of labour from which workers may flee is a separate mechanism.",
+      "test": "The text records peasants leaving their land in large numbers and links their departure to a loss of tax-paying population or revenue.",
+      "related": [
+        "administrative_capacity_collapse",
+        "fiscal_military_exhaustion",
+        "humanitarian_displacement",
+        "self_fulfilling_run",
+        "subsistence_unrest_spiral",
+        "popular_unrest"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "plant_disease_epidemic",
+      "name": "Plant disease epidemic",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "Plant diseases such as potato blight, brown spot of rice and black pod of cacao spread through a crop and destroy a large part of the harvest.",
+      "scope": "Fungal, bacterial and viral diseases of food and cash crops whose spread cuts the harvest, whether a staple eaten by the people who grow it or a commodity grown for sale. It covers the outbreak and the loss of yield it causes; what the lost harvest then does to prices, incomes or hunger is carried on by other entries. The weather that helps the disease to spread is a condition, not part of the entry.",
+      "boundary": "It is the disease of the plant. A climatic or volcanic shock that fails the harvest, and the chain from it to grain prices or revenue, is a separate mechanism; the disease can be one of its links, but the cause here is a pathogen, not the weather itself. A shock in an agricultural commodity as an event on the market is a crisis type, which a disease can drive. Famine, the access failure through which hunger kills, is entitlement_failure_famine, and the broader collapse of food security is famine_food_security; a blighted crop can lead to either but need not.",
+      "test": "A named plant disease or pathogen is recorded as spreading through a crop, and the record ties it to a fall in yield or harvest, whether or not weather, prices or hunger followed.",
+      "related": [
+        "entitlement_failure_famine",
+        "famine_food_security"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "political_uncertainty",
+      "name": "Political uncertainty",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "Uncertainty about policy created by an election result, political transition, the fall of a government or a resignation, which presses on the exchange rate, expectations and capital flows.",
+      "scope": "The doubt over which policies will follow a political event and who will make them, from the event until the policy direction is clear. A regime that actually changes or collapses is a separate matter; this term covers the uncertainty, not the change.",
+      "boundary": "It is the uncertainty over policy that a political event creates. A change, collapse or overthrow of the regime itself is a crisis type of its own, with or without a recorded financial echo. The market's revaluation of the expected policy path is policy_repricing, which can follow from this uncertainty. A credible risk of official intervention in markets is intervention_risk, and recurring default under political risk is a separate backbone.",
+      "test": "A political event such as an election result, transition, fall of a government or resignation leaves the direction of policy unclear, and the exchange rate, expectations or capital flows move under that doubt.",
+      "related": [
+        "policy_repricing",
+        "loss_of_policy_credibility",
+        "intervention_risk"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "ponzi_scheme",
+      "name": "Ponzi scheme",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "Returns to existing investors are paid from new investors' money rather than from any real source of return, so the scheme collapses when new inflows slow.",
+      "scope": "Investment and deposit-taking schemes, chit funds and collective investment schemes, mutual-aid platforms that match members' payments, and online and crypto schemes, whether the operator holds the money or only matches payers with recipients.",
+      "boundary": "The mark is the source of the payments; claims sold on assets that do not exist are fictitious_asset_issuance, a real venture misrepresented to place shares is issuance_promotion_fraud, spread through a group's mutual trust is affinity_fraud, and a run of exits that can fell a sound institution is self_fulfilling_run. The fraud as an event, with its losses and its exposure, is a crisis type.",
+      "test": "The text shows promised returns or withdrawals being paid from later investors' money rather than from earnings, and payments failing when new inflows slow or stop.",
+      "related": [
+        "affinity_fraud",
+        "fictitious_asset_issuance",
+        "issuance_promotion_fraud",
+        "self_fulfilling_run"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "popular_unrest",
+      "name": "Popular unrest",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "Economic hardship, tax burden or loss of legitimacy that turns into street demonstrations, peasant and soldier revolts, or revolutionary mass mobilisation.",
+      "scope": "The step from grievance to collective action against the authority, in any of three forms: crowds in the street, rural or military revolts, and mass movements aimed at changing the regime. The step itself is the mechanism; the causes that feed it are named elsewhere.",
+      "boundary": "It is the turning of hardship into open collective action. A crowd that acts over staple prices because it sees profiteering as a moral wrong is subsistence_unrest_spiral, and repression that hardens and enlarges an opposition is repression_radicalization_spiral. A movement built on a promise of transformation, with its own organisation, is a separate mechanism. Peasants who leave the land instead of rising are peasant_flight. Relative deprivation, the felt gap between expectation and reality, is a cause of unrest and not the unrest itself.",
+      "test": "Hardship, a tax burden or a visible loss of legitimacy is followed by crowds in the street, a peasant or soldier revolt, or a mass mobilisation directed against the authority.",
+      "related": [
+        "subsistence_unrest_spiral",
+        "repression_radicalization_spiral",
+        "peasant_flight"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "quasi_money_issuance",
+      "name": "Quasi-money issuance",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "The issuance by a government short of cash of small-denomination debt instruments used to pay wages and suppliers, which then circulate as money alongside the official currency.",
+      "scope": "Bonds, certificates or scrip issued by central, provincial or municipal governments to settle their own payments, accepted in payments and taxes, under a monetary regime that restricts ordinary money creation.",
+      "boundary": "The issuer is a government paying its own bills, and the paper circulates as money. A regime in which public financing needs constrain monetary policy is fiscal_dominance, of which this can be one instrument; tokens issued against a promise of later redemption losing value when the promise fails is token_redemption_collapse, which can be the end of this paper. Notes issued by many private issuers form a different regime.",
+      "test": "A government pays its own wages or suppliers with debt paper that is then accepted in ordinary payments as if it were money.",
+      "related": [
+        "fiscal_dominance",
+        "token_redemption_collapse",
+        "currency_overissue"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "repressed_inflation_release",
+      "name": "Repressed inflation release",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "The abrupt discharge into prices of repressed inflation, an excess of money held back by price controls and legal compulsion, once those controls are lifted.",
+      "scope": "The release itself: from the lifting of controls (a one-time price liberalisation, a gradual one or the collapse of legal enforcement) to the jump in prices as the stock of excess money meets goods. It covers the discharge of the stock that controls had held back; the build-up of that stock under controls and its size as a level are not this entry.",
+      "boundary": "The mechanism is the discharge when controls are lifted. The legal cap itself, which causes shortages and evasion, is a separate mechanism, and a package that adds a freeze to fiscal and monetary measures is heterodox_shock_stabilization_plan. Broad upward pressure on prices from any source is inflation_pressure. A ban on withholding goods is anti_hoarding_regulation, and quota-set state purchases paid for with new money are a different cause. The accumulated stock of money, monetary overhang, is a level that this release empties into prices.",
+      "test": "Price controls or legal compulsion that had held prices below market level end, and prices jump over a short period because of the excess money held before.",
+      "related": [
+        "inflation_pressure",
+        "heterodox_shock_stabilization_plan",
+        "anti_hoarding_regulation"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "reserve_depletion",
+      "name": "Reserve depletion",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "A rapid fall in a central bank's foreign-exchange reserves caused by selling them to defend the exchange rate or to cover external payments.",
+      "scope": "Gross and net official reserves of central banks and monetary authorities under currency or external-payment pressure, measured against imports, short-term debt or money stock; the drain itself, not how it ends.",
+      "boundary": "It names the drain of reserves. The sequence of a costly defence followed by an abrupt devaluation is peg_defense_failure, which usually contains this drain; pressure on the rate that the authorities do not resist with reserves is fx_pressure. Residents moving savings abroad (capital_flight) and a sovereign's difficulty in rolling over its debt (sovereign_funding_stress) are causes that can feed the drain.",
+      "test": "Official reserves fall quickly because the authority sells them to hold the rate or to pay abroad, and the remaining cover becomes a market signal.",
+      "related": [
+        "fx_pressure",
+        "peg_defense_failure",
+        "capital_flight",
+        "sovereign_funding_stress"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "search_for_yield",
+      "name": "Search for yield",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "In a long period of low interest rates and low volatility, the hunt for return builds up risky positions and hidden risk.",
+      "scope": "The build-up phase: from the low-rate and low-volatility setting, through the behaviour of investors, funds or firms who reach for return by leverage, duration or hidden bets, to the hidden risk they carry. It also covers firms that look for profit in financial investment when their own business pays too little. The later unwind is outside.",
+      "boundary": "The mechanism is the reach for return before the shock. An exposure that gains small amounts in calm markets and loses large amounts when markets move is negative_convexity_short_option, the position this behaviour often ends up in. The reversal from risk-seeking to risk reduction is risk_appetite_reversal, and the forced closing of leveraged carry positions after a funding currency rises is a separate chain. Faulty assumptions in a model are a different risk. The constraint of a policy rate at zero is zero_lower_bound, which can be the setting but is not the behaviour.",
+      "test": "Rates and volatility are low for a long time, investors or firms add leverage, duration or option-like exposure to keep returns, and a later shock reveals a risk that calm prices had hidden.",
+      "related": [
+        "negative_convexity_short_option",
+        "risk_appetite_reversal",
+        "zero_lower_bound"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "state_repression",
+      "name": "State repression",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "A state uses its security apparatus for mass violence, terror, forced resettlement and rights abuses to suppress opposition and its own population.",
+      "scope": "Violence and coercion by the state against its own people: mass arrests and executions, terror, show trials, forced resettlement, targeted killing of educated groups and the militarising of society. It runs from the order or plan to the damage to the population and to the economy. Violence between armed groups, war between states and control of information alone are outside.",
+      "boundary": "The mechanism is the state's use of force on its people. The loop in which repression feeds a wider and harder opposition is repression_radicalization_spiral, and the narrowing of electoral, judicial and executive limits is autocratization. Controlling information by removal, shutdowns or blocking is state_censorship, and a hidden opposition that bursts open at once is preference_falsification_cascade. Directing labour by force and quota is a separate mechanism.",
+      "test": "The state's own security apparatus carries out mass violence or coercion against opposition or population (killings, arrests, forced resettlement, terror), and this is documented as a policy and not as a side effect of war.",
+      "related": [
+        "repression_radicalization_spiral",
+        "autocratization",
+        "state_censorship",
+        "preference_falsification_cascade"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "subsidy_fiscal_burden",
+      "name": "Subsidy fiscal burden",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "Food, energy and foreign-exchange subsidies create a fiscal cost that grows as the world price or the exchange rate moves.",
+      "scope": "Subsidies on bread, grain, cooking oil, fuel and electricity, and the implicit subsidy of an official exchange rate held artificially low; the cost to the budget measured in local currency; the pressure to cut the subsidy and the unrest that follows a cut. The cost can grow because the world price rises or because the local currency falls, as when a cheap imported staple costs more kwacha or pounds. Subsidies that stay small whatever the world price does are outside it.",
+      "boundary": "This is the budget cost of holding prices down. Handing out resource revenue through low domestic energy prices is a narrower form of subsidy; the system of several exchange rates that makes a dollar cheap for some buyers is multiple_exchange_rate_regime, of which the cheap dollar is one cost; the state's rules on currency and capital are exchange_controls. The pressure of energy costs on households and firms is energy_cost_pressure, and the submission of monetary policy to financing needs is fiscal_dominance. A legal price ceiling that creates shortage is a separate mechanism.",
+      "test": "A state holds a food, energy or foreign-exchange price below the world or market level; a rise in the world price or a fall in the currency enlarges what the budget pays; and the sources name that rising cost as part of the deficit, of the pressure to reform, or of the political trouble that follows.",
+      "related": [
+        "multiple_exchange_rate_regime",
+        "exchange_controls",
+        "energy_cost_pressure",
+        "fiscal_dominance"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "trade_disruption",
+      "name": "Trade disruption",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "Trade flows are cut by an embargo, boycott, quota cut-off, closing of a country to outside trade or an epidemic.",
+      "scope": "The cutting of trade between two sides, from the act or event that stops the flow to its effect on volume, prices and revenue on both sides. The cause can be political (embargo, boycott, quota used as a weapon, deliberate closing), or a plague that wrecks trade routes. Disruption that comes from a breakdown in production or transport chains, without a trade act, is outside.",
+      "boundary": "The mechanism is the cut in trade itself. A state restricting exports of a critical commodity, or of energy, as a chain of episodes is a separate backbone. Using payment and clearing networks or frozen reserves as a weapon is financial_warfare_sanctions. The fall in export earnings that follows is export_earnings_shock, and a disruption of production and transport chains as an event is a supply chain shock; that is a breakdown of chains, while this entry is a break of trade by act or event.",
+      "test": "A named act (embargo, boycott, quota cut-off, closing the borders to trade) or an epidemic stops trade between two sides, and the same period shows goods, revenue or prices moving because of it.",
+      "related": [
+        "economic_sanctions",
+        "financial_warfare_sanctions",
+        "export_earnings_shock"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "war_finance",
+      "name": "War finance",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "The urgent financing need created by war, suppression of revolt and the cost of a growing standing army, which pushes the state's finances toward borrowing, debasement or money creation.",
+      "scope": "Spending on campaigns, garrisons, internal wars and permanent armies, and the way a state raises money to meet it, whether by loans, a lower metal content in coins or the printing press. Peacetime deficits with no military cause are outside it.",
+      "boundary": "It names the need that war creates and the choices a state makes to meet it. A state that can no longer sustain its forces at all, so that they mutiny or defect, is fiscal_military_exhaustion. Finance concentrated in one financier or contractor is a narrower mechanism. An army that covers its costs by levies on the region where it stands is a separate mechanism. The gap in the budget itself, whatever its cause, is the budget deficit, and a general strain on public finances is a crisis type.",
+      "test": "Spending on war, repression of revolt or a standing army outruns the state's revenue, and the state answers with loans, a lower metal content in its coins or newly printed money.",
+      "related": [
+        "fiscal_military_exhaustion"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
+      "id": "zero_lower_bound",
+      "name": "Zero lower bound",
+      "layer": "corpus",
+      "status": "provisional",
+      "definition": "The constraint reached when a central bank's policy rate is at or near zero and cannot be lowered materially further, which stops conventional easing.",
+      "scope": "Policy-rate decisions of central banks at or near zero (including slightly negative rates), and the shift to unconventional tools that follows; the constraint, not the downturn that leads to it.",
+      "boundary": "It is a limit on the policy instrument. A change in what markets expect policy to do is policy_repricing, which may happen at the bound or far from it; the downturn that pushes rates to zero is growth_slowdown or another shock. Monetary policy bent to the needs of public finance is a different limit.",
+      "test": "The policy rate is at or near zero, further cuts are not available or not effective, and the central bank says so or moves to other tools.",
+      "related": [
+        "policy_repricing",
+        "growth_slowdown",
+        "search_for_yield"
+      ],
+      "in_signature": false,
+      "introduced_in": "1.4.0",
+      "kind": "mechanism",
+      "review": "in_review",
+      "name_test": "tested"
+    },
+    {
       "id": "war_geopolitical",
       "name": "War and armed conflict",
       "layer": "crisis_type",
@@ -4510,7 +5457,9 @@
         "entitlement_failure_famine",
         "subsistence_unrest_spiral",
         "aid_cuts",
-        "export_ban_provisioning_cascade"
+        "export_ban_provisioning_cascade",
+        "famine_epidemic_nexus",
+        "plant_disease_epidemic"
       ],
       "in_signature": true,
       "introduced_in": "1.0.0",
@@ -4531,7 +5480,8 @@
         "war_geopolitical",
         "natural_disaster",
         "aid_cuts",
-        "demographic_transition"
+        "demographic_transition",
+        "peasant_flight"
       ],
       "in_signature": true,
       "introduced_in": "1.0.0",
@@ -4558,7 +5508,7 @@
       "introduced_in": "1.0.0",
       "kind": "crisis_type",
       "review": "in_review",
-      "name_test": "partial"
+      "name_test": "tested"
     },
     {
       "id": "pandemic_epidemic",
@@ -4572,7 +5522,8 @@
       "related": [
         "information_suppression_disaster_amplification",
         "legitimacy_crisis",
-        "labor_force_collapse_shock"
+        "labor_force_collapse_shock",
+        "famine_epidemic_nexus"
       ],
       "in_signature": true,
       "introduced_in": "1.0.0",

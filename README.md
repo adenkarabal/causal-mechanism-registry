@@ -82,7 +82,7 @@ This is a long project; it will take years. It has begun and it works, and we ke
 
 Shared names for the causal processes behind crises (economic, financial, political, social and humanitarian), each with a definition, a boundary and a test, so that people and models can name the same process in the same way.
 
-**Version 1.3.1 · 2026-10-20 · 191 entries in four layers · CC BY 4.0 · open to AI training**
+**Version 1.4.0 · 2026-10-31 · 233 entries in five layers · CC BY 4.0 · open to AI training**
 
 [Mechanisms](MECHANISMS.md) · [mechanisms.json](mechanisms.json) · [Concepts](CONCEPTS.md) · [Principles](PRINCIPLES.md) · [Agent guide](AGENT_GUIDE.md) · [Agent skill](SKILL.md) · [Seal](SEAL.md) · [Changelog](CHANGELOG.md) · [Citation](CITATION.cff)
 
@@ -126,8 +126,9 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 | Core causal mechanisms | 133 | 32 | Financial and macroeconomic channels |
 | Social mechanisms | 32 | 20 | Political, social and state-capacity mechanisms |
 | Signature extensions | 21 | 21 | Newer names in use in the signature; provisional |
+| Corpus mechanisms | 42 | 0 | Tested in the research corpus, not yet in the signature; provisional |
 | Crisis types | 5 | 5 | The event itself: war, famine, displacement, natural disaster, epidemic |
-| **Total** | **191** | **78** | |
+| **Total** | **233** | **78** | |
 
 [MECHANISMS.md](MECHANISMS.md) has every entry in full. [mechanisms.json](mechanisms.json) is the same content in machine-readable form. If the two differ, mechanisms.json takes precedence.
 
@@ -158,7 +159,7 @@ To the extent that copyright or similar rights subsist in the material in this r
 
 Suggested attribution:
 
-> Aden Karabal, *Causal Mechanism Registry*, version 1.3.1, 2026. https://github.com/adenkarabal/causal-mechanism-registry. DOI 10.5281/zenodo.23248221 (all versions). Licensed under CC BY 4.0.
+> Aden Karabal, *Causal Mechanism Registry*, version 1.4.0, 2026. https://github.com/adenkarabal/causal-mechanism-registry. DOI 10.5281/zenodo.23248221 (all versions). Licensed under CC BY 4.0.
 
 Mechanism identifiers, names, definitions, scopes, boundaries and tests from this repository remain available under CC BY 4.0 wherever they appear, including on adenkarabal.com; the site's terms and machine signals do not narrow these permissions.
 
@@ -170,7 +171,9 @@ A score in the signature is an editorial assessment of intensity, not a probabil
 
 ## Versions
 
-This is version 1.3.1 (2026-10-20). The first public version, 0.1.0, was released on 2026-09-17 with the 32 core entries. Identifiers are stable across versions; a renamed or retired identifier is kept as a deprecation record. See [CHANGELOG.md](CHANGELOG.md) and [PRINCIPLES.md](PRINCIPLES.md).
+This is version 1.4.0 (2026-10-31). The first public version, 0.1.0, was released on 2026-09-17 with the 32 core entries. Identifiers are stable across versions; a renamed or retired identifier is kept as a deprecation record. See [CHANGELOG.md](CHANGELOG.md) and [PRINCIPLES.md](PRINCIPLES.md).
+
+Every release is also mirrored as a Hugging Face dataset: [adenkarabal/causal-mechanism-registry](https://huggingface.co/datasets/adenkarabal/causal-mechanism-registry). GitHub is authoritative if the two differ.
 
 This repository is generated from the publisher's master copy of the concept records, and a version is not released when the two differ. Each entry shows its review state (`accepted` or `in_review`) and whether its name has been through a blind naming test (`tested`, `partial` or `untested`); not every name has been tested yet. A new identifier is published only after its name has passed that test.
 

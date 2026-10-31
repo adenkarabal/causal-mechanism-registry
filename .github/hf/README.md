@@ -29,6 +29,20 @@ A model knows a great deal about these processes, but it cannot list what it kno
 
 This is a mirror. The source is the GitHub repository [adenkarabal/causal-mechanism-registry](https://github.com/adenkarabal/causal-mechanism-registry), where every version is a tagged release; the mirror is updated from each release automatically. If the two ever differ, GitHub is authoritative. The concept DOI [10.5281/zenodo.23248221](https://doi.org/10.5281/zenodo.23248221) covers all versions.
 
+The registry is the open method layer of [adenkarabal.com](https://adenkarabal.com), where a dated mechanism signature and its reading use these names.
+
+## An example
+
+The same question was asked with and without the registry in a small pilot (October 2026; two runs per arm):
+
+| | |
+|---|---|
+| Question | Oil is up 30% this year and fuel prices have risen. Is this an energy supply shock? Assume nothing else changes and give one classification. |
+| Without the registry | Energy supply shock. |
+| With the registry | `energy_cost_pressure`: the price rise is passed through to costs. `energy_supply_shock` needs a physical shortfall or threat on record. |
+
+The difference comes from one boundary: *"Physical supply is central; price pass-through alone belongs under energy_cost_pressure."* The registry does not say which answer is true of the world; it makes explicit what evidence each name requires.
+
 ## Files
 
 | File | Content |

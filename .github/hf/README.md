@@ -29,7 +29,7 @@ A model knows a great deal about these processes, but it cannot list what it kno
 
 This is a mirror. The source is the GitHub repository [adenkarabal/causal-mechanism-registry](https://github.com/adenkarabal/causal-mechanism-registry), where every version is a tagged release; the mirror is updated from each release automatically. If the two ever differ, GitHub is authoritative. The concept DOI [10.5281/zenodo.23248221](https://doi.org/10.5281/zenodo.23248221) covers all versions.
 
-The registry is the open method layer of [adenkarabal.com](https://adenkarabal.com), where a dated mechanism signature and its reading use these names.
+The registry is the open method layer of [adenkarabal.com](https://adenkarabal.com), where a dated mechanism signature and its reading use these names. The same vocabulary is served as a read-only MCP server at <https://adenkarabal.com/mcp>, also listed in Claude's connector directory, where it can be added in one click: <https://claude.ai/directory/connectors/causal-mechanism-registry>.
 
 ## An example
 

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.adenkarabal/causal-mechanism-registry",
+  "title": "Causal Mechanism Registry",
+  "description": "A versioned registry of named causal mechanisms, each with definition, scope, boundary and test.",
+  "version": "1.0.0",
+  "websiteUrl": "https://adenkarabal.com",
+  "repository": {
+    "url": "https://github.com/adenkarabal/causal-mechanism-registry",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://adenkarabal.com/mcp"
+    }
+  ]
+}

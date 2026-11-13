@@ -1,6 +1,6 @@
 # Mechanisms
 
-Version 1.4.0 · 2026-10-31 · 233 entries in five layers · CC BY 4.0, open to AI training (see README).
+Version 1.4.1 · 2026-11-13 · 233 entries in five layers · CC BY 4.0, open to AI training (see README).
 
 This file is generated from [`mechanisms.json`](mechanisms.json); if the two differ, the JSON file takes precedence. Each entry has a stable identifier, a definition, its scope, its boundary against neighbouring entries, and a test: what must be on record for the entry to apply. What the layers, statuses, the `in_signature` flag and the default phase roles mean is in [CONCEPTS.md](CONCEPTS.md).
 
@@ -541,11 +541,11 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 
 ### `convertibility_suspension`
 
-**Convertibility suspension.** Authorities formally suspend the right to exchange money for metal or for a fixed foreign standard, or suspend a statutory limit on note issue.
+**Convertibility suspension.** Authorities formally suspend the right to exchange money for metal or for a fixed foreign standard, or suspend a statutory limit on note issue; a declared collective suspension of cash payments by the banks of a system, sanctioned or openly tolerated by the authorities, counts as well.
 
-- **Scope:** Wartime and emergency suspensions, legal-tender paper issued without redemption, and temporary suspensions used to relieve a liquidity panic.
-- **Boundary:** It is a discrete official act; continuing pressure on the currency is fx_pressure, and an expected official move is intervention_risk. Recovery after leaving a parity is devaluation_exit, and tokens issued with a redemption promise that was never honoured are token_redemption_collapse.
-- **Test:** A formal suspension of convertibility, or of the rule tying issue to reserves, is on record.
+- **Scope:** Wartime and emergency suspensions, legal-tender paper issued without redemption, and temporary suspensions used to relieve a liquidity panic, including collective suspensions of cash payments by banks.
+- **Boundary:** It is a discrete, declared act by the authorities or, with their sanction or open tolerance, by the banks of a system acting together (as in the United States in 1837, 1857 and 1907); a single bank that stops paying is a run or a failure, not a suspension. Continuing pressure on the currency is fx_pressure, and an expected official move is intervention_risk. Recovery after leaving a parity is devaluation_exit, and tokens issued with a redemption promise that was never honoured are token_redemption_collapse.
+- **Test:** A declared suspension of convertibility, or of the rule tying issue to reserves, is on record, made by the authorities or collectively by the banks with the authorities' sanction or open tolerance.
 - **Related:** `fx_pressure`, `intervention_risk`, `devaluation_exit`, `token_redemption_collapse`, `lender_of_last_resort_relief`, `reserve_currency_dilemma`, `currency_overissue`
 - layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: policy · kind `mechanism` · review `in_review` · name test `untested`
 
@@ -794,7 +794,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 **Flight to hard money.** People abandon the domestic currency as a store of value or means of payment in favour of foreign currency or precious metal.
 
 - **Scope:** Currency substitution, pricing and saving in foreign currency, and private hoards of metal coin during inflation or monetary breakdown.
-- **Boundary:** The flight is from the money itself; moving savings abroad is capital_flight, and a general shift away from risky assets is risk_appetite_reversal.
+- **Boundary:** The flight is from the money itself; moving savings abroad is capital_flight, and a general shift away from risky assets is risk_appetite_reversal. When two monies must be accepted at the same legal value and the worse one keeps circulating while the better one is hoarded or exported, the sorting between them is Gresham's law, not this flight; here the domestic money itself loses its role to foreign currency or metal.
 - **Test:** Use of foreign currency or metal for saving, pricing or payment rises at the expense of the domestic currency.
 - **Related:** `capital_flight`, `risk_appetite_reversal`, `fx_pressure`, `inflation_pressure`, `flight_from_money`, `flight_to_quality`
 - layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
@@ -1125,7 +1125,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 
 - **Scope:** Indemnities, reparations and war debts between states, and the loans raised to pay them.
 - **Boundary:** The burden is a fixed transfer; general strain on sovereign funding is sovereign_funding_stress, and the strain on the currency is fx_pressure.
-- **Test:** A fixed external payment obligation is shown to require a transfer the economy struggles to generate.
+- **Test:** A fixed external payment obligation is shown to require converting domestic resources into foreign exchange or gold, through a trade surplus or new foreign borrowing, on a scale the economy struggles to generate.
 - **Related:** `sovereign_funding_stress`, `fx_pressure`, `capital_recycling`, `war_debt_real_burden_deflation`
 - layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: transmission · kind `mechanism` · review `in_review` · name test `untested`
 
@@ -1333,8 +1333,8 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 
 **Windfall overextension.** A government or firm borrows and spends against expected future commodity revenue, and the debt outlasts the windfall.
 
-- **Scope:** Borrowing secured on, or justified by, projected resource rents during booms.
-- **Boundary:** The optimism is tied to resource rents; a general credit boom is credit_cycle, debt explicitly secured on commodity deliveries is commodity_backed_debt_overhang, and recycled foreign surpluses are capital_recycling.
+- **Scope:** Borrowing secured on, or justified by, projected resource rents, taken on during a boom or in the expectation that boom revenue will continue or return.
+- **Boundary:** The optimism is tied to resource rents; a general credit boom is credit_cycle, and recycled foreign surpluses are capital_recycling. When the debt is repaid in a commodity or secured on commodity deliveries, the burden that grows as the commodity's price falls is commodity_backed_debt_overhang; the decision to borrow against expected rents remains this concept, and the two can apply together.
 - **Test:** Borrowing was justified by expected commodity revenue that later fell short.
 - **Related:** `credit_cycle`, `commodity_backed_debt_overhang`, `capital_recycling`, `sovereign_funding_stress`, `commodity_dependence_fiscal_collapse`, `dutch_disease`
 - layer `core` · status `provisional` · not in the current signature · introduced in 1.0.0 · default phase roles: amplification · kind `mechanism` · review `in_review` · name test `untested`
@@ -1659,7 +1659,7 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 
 - **Scope:** Official narratives of economic miracle, providential rule or national rescue, including their effect on markets.
 - **Boundary:** It builds legitimacy; blaming a group is scapegoating, the erosion of consent is legitimacy_crisis, false statistics are sovereign_statistics_falsification, and control of information channels is state_censorship.
-- **Test:** An official narrative of the regime's success is shown to shape public or market expectations.
+- **Test:** An official narrative of the regime's success or rescue is shown to be used to build or hold its legitimacy; its effect on public or market expectations is one form of evidence.
 - **Related:** `scapegoating`, `legitimacy_crisis`, `sovereign_statistics_falsification`, `state_censorship`, `performance_legitimacy`
 - layer `social` · status `provisional` · not in the current signature · introduced in 1.0.0 · kind `mechanism` · review `in_review` · name test `partial`
 
@@ -1668,8 +1668,8 @@ The signature at adenkarabal.com includes 78 of these mechanisms (69 scored and 
 **Tangible-asset verification illusion.** A scheme fronted by visible physical assets persuades investors that it is sound because the assets are real.
 
 - **Scope:** Livestock, stamps, precious metals and other tangible goods used as the face of an investment scheme.
-- **Boundary:** The assets exist but cannot support the promised returns; assets that do not exist are fictitious_asset_issuance, and recruitment through group trust is affinity_fraud.
-- **Test:** Investor confidence is shown to rest on the existence of physical assets rather than on what those assets could earn.
+- **Boundary:** Real, visible assets carry the confidence, even when part of what is claimed is fictitious or the assets cannot support the promised returns; when no asset exists at all it is fictitious_asset_issuance, and recruitment through group trust is affinity_fraud.
+- **Test:** Investor confidence is shown to rest on the visible existence of physical assets, which stands in for checking what they can earn or whether all the claimed assets exist.
 - **Related:** `fictitious_asset_issuance`, `affinity_fraud`
 - layer `social` · status `provisional` · not in the current signature · introduced in 1.0.0 · kind `mechanism` · review `in_review` · name test `partial`
 

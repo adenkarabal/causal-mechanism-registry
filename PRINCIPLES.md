@@ -8,7 +8,7 @@ The rules the vocabulary and the work built on it are kept under.
 - A published identifier does not silently change its name or meaning. Wording may be clarified; the causal core of an entry is not reversed under the same identifier.
 - An identifier that has to change is deprecated, not erased: the deprecation record says what replaced it and how the scope changed.
 - The number of entries is never a goal. A name is added only when a recurring causal process cannot be expressed with the existing names without losing a material distinction.
-- Versions follow semantic versioning adapted to a vocabulary: a major version for a breaking change to identifiers or meanings, a minor version for additions, a patch for clarifications and corrections of wording.
+- Versions follow semantic versioning adapted to a vocabulary that is updated often: a major version for a breaking change to identifiers or meanings; a minor version for a structural step, such as a new layer or a new kind of field; a patch for regular updates, which may correct or clarify entries and add new ones. A `provisional` entry may have its scope, boundary and test corrected in a patch; a `stable` entry may only be clarified.
 
 ## 2. Every claim has a date
 

@@ -2,6 +2,23 @@
 
 Versions describe the vocabulary (identifiers, definitions, scope, boundaries and tests) and the documents published with it. The rules are in [PRINCIPLES.md](PRINCIPLES.md).
 
+## 1.4.1 — 2026-11-13
+
+A correction release: six entries corrected so that each entry's test and boundary check what its definition says. No entry was added or removed, and every identifier, layer, status, review state and relation of 1.4.0 is unchanged. All six entries are `provisional`; none is used in the signature.
+
+**Vocabulary**
+
+- `convertibility_suspension`: definition, scope, boundary and test. A declared collective suspension of cash payments by the banks of a system, sanctioned or openly tolerated by the authorities (as in the United States in 1837, 1857 and 1907), is now inside the concept; a single bank that stops paying is a run or a failure, not a suspension. In 1.4.0 the definition required an official act while the scope included panic suspensions, and the boundary did not say where bank suspensions fall.
+- `windfall_overextension`: scope and boundary. The scope includes borrowing in the expectation that boom revenue will continue or return, not only borrowing during a boom. The boundary now separates it from `commodity_backed_debt_overhang`: the burden that grows as the commodity's price falls belongs there, the decision to borrow against expected rents stays here, and the two can apply together. In 1.4.0 the scope included borrowing secured on rents while the boundary sent secured debt to the neighbouring entry.
+- `tangible_asset_verification_illusion`: test and boundary. The test looks for visible assets standing in for checking what they can earn or whether all the claimed assets exist. Real, visible assets carrying confidence keep a case here even when part of what is claimed is fictitious; when no asset exists at all, the case is `fictitious_asset_issuance`.
+- `reparations_transfer_problem`: test. The test asks for the conversion of domestic resources into foreign exchange or gold, through a trade surplus or new foreign borrowing, which is the core of the definition.
+- `regime_self_mythologizing`: test. The test asks for the official narrative to be used to build or hold the regime's legitimacy; its effect on expectations is one form of evidence, not the test itself.
+- `flight_to_hard_money_dollarization`: boundary. Gresham's law is named as a separate process: when two monies must be accepted at the same legal value, the sorting between them is not this flight.
+
+**Versioning**
+
+- [PRINCIPLES.md](PRINCIPLES.md) states how version numbers move. The vocabulary is updated often and its numbers move slowly: a patch version carries regular updates, including corrections and new entries; a minor version is kept for a structural step, such as a new layer or a new kind of field; a major version for a change that breaks identifiers or meanings.
+
 ## 1.4.0 — 2026-10-31
 
 42 entries added in a new layer. No identifier was removed, and the identifier, layer, status and meaning of every entry of 1.3.1 are unchanged.

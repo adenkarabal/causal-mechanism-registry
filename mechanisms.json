@@ -1,7 +1,7 @@
 {
   "title": "Causal Mechanism Registry",
-  "version": "1.4.0",
-  "released": "2026-10-31",
+  "version": "1.4.1",
+  "released": "2026-11-13",
   "first_public_version": {
     "version": "0.1.0",
     "released": "2026-09-17"
@@ -1452,10 +1452,10 @@
       "name": "Convertibility suspension",
       "layer": "core",
       "status": "provisional",
-      "definition": "Authorities formally suspend the right to exchange money for metal or for a fixed foreign standard, or suspend a statutory limit on note issue.",
-      "scope": "Wartime and emergency suspensions, legal-tender paper issued without redemption, and temporary suspensions used to relieve a liquidity panic.",
-      "boundary": "It is a discrete official act; continuing pressure on the currency is fx_pressure, and an expected official move is intervention_risk. Recovery after leaving a parity is devaluation_exit, and tokens issued with a redemption promise that was never honoured are token_redemption_collapse.",
-      "test": "A formal suspension of convertibility, or of the rule tying issue to reserves, is on record.",
+      "definition": "Authorities formally suspend the right to exchange money for metal or for a fixed foreign standard, or suspend a statutory limit on note issue; a declared collective suspension of cash payments by the banks of a system, sanctioned or openly tolerated by the authorities, counts as well.",
+      "scope": "Wartime and emergency suspensions, legal-tender paper issued without redemption, and temporary suspensions used to relieve a liquidity panic, including collective suspensions of cash payments by banks.",
+      "boundary": "It is a discrete, declared act by the authorities or, with their sanction or open tolerance, by the banks of a system acting together (as in the United States in 1837, 1857 and 1907); a single bank that stops paying is a run or a failure, not a suspension. Continuing pressure on the currency is fx_pressure, and an expected official move is intervention_risk. Recovery after leaving a parity is devaluation_exit, and tokens issued with a redemption promise that was never honoured are token_redemption_collapse.",
+      "test": "A declared suspension of convertibility, or of the rule tying issue to reserves, is on record, made by the authorities or collectively by the banks with the authorities' sanction or open tolerance.",
       "related": [
         "fx_pressure",
         "intervention_risk",
@@ -2074,7 +2074,7 @@
       "status": "provisional",
       "definition": "People abandon the domestic currency as a store of value or means of payment in favour of foreign currency or precious metal.",
       "scope": "Currency substitution, pricing and saving in foreign currency, and private hoards of metal coin during inflation or monetary breakdown.",
-      "boundary": "The flight is from the money itself; moving savings abroad is capital_flight, and a general shift away from risky assets is risk_appetite_reversal.",
+      "boundary": "The flight is from the money itself; moving savings abroad is capital_flight, and a general shift away from risky assets is risk_appetite_reversal. When two monies must be accepted at the same legal value and the worse one keeps circulating while the better one is hoarded or exported, the sorting between them is Gresham's law, not this flight; here the domestic money itself loses its role to foreign currency or metal.",
       "test": "Use of foreign currency or metal for saving, pricing or payment rises at the expense of the domestic currency.",
       "related": [
         "capital_flight",
@@ -2891,7 +2891,7 @@
       "definition": "A large fixed external payment, such as a war indemnity, has to be turned into foreign exchange through trade surpluses, straining the payer's economy and currency.",
       "scope": "Indemnities, reparations and war debts between states, and the loans raised to pay them.",
       "boundary": "The burden is a fixed transfer; general strain on sovereign funding is sovereign_funding_stress, and the strain on the currency is fx_pressure.",
-      "test": "A fixed external payment obligation is shown to require a transfer the economy struggles to generate.",
+      "test": "A fixed external payment obligation is shown to require converting domestic resources into foreign exchange or gold, through a trade surplus or new foreign borrowing, on a scale the economy struggles to generate.",
       "related": [
         "sovereign_funding_stress",
         "fx_pressure",
@@ -3403,8 +3403,8 @@
       "layer": "core",
       "status": "provisional",
       "definition": "A government or firm borrows and spends against expected future commodity revenue, and the debt outlasts the windfall.",
-      "scope": "Borrowing secured on, or justified by, projected resource rents during booms.",
-      "boundary": "The optimism is tied to resource rents; a general credit boom is credit_cycle, debt explicitly secured on commodity deliveries is commodity_backed_debt_overhang, and recycled foreign surpluses are capital_recycling.",
+      "scope": "Borrowing secured on, or justified by, projected resource rents, taken on during a boom or in the expectation that boom revenue will continue or return.",
+      "boundary": "The optimism is tied to resource rents; a general credit boom is credit_cycle, and recycled foreign surpluses are capital_recycling. When the debt is repaid in a commodity or secured on commodity deliveries, the burden that grows as the commodity's price falls is commodity_backed_debt_overhang; the decision to borrow against expected rents remains this concept, and the two can apply together.",
       "test": "Borrowing was justified by expected commodity revenue that later fell short.",
       "related": [
         "credit_cycle",
@@ -4109,7 +4109,7 @@
       "definition": "A ruling authority builds a positive story of rescue or miracle about itself, and that story becomes the basis of its legitimacy and of public expectations.",
       "scope": "Official narratives of economic miracle, providential rule or national rescue, including their effect on markets.",
       "boundary": "It builds legitimacy; blaming a group is scapegoating, the erosion of consent is legitimacy_crisis, false statistics are sovereign_statistics_falsification, and control of information channels is state_censorship.",
-      "test": "An official narrative of the regime's success is shown to shape public or market expectations.",
+      "test": "An official narrative of the regime's success or rescue is shown to be used to build or hold its legitimacy; its effect on public or market expectations is one form of evidence.",
       "related": [
         "scapegoating",
         "legitimacy_crisis",
@@ -4130,8 +4130,8 @@
       "status": "provisional",
       "definition": "A scheme fronted by visible physical assets persuades investors that it is sound because the assets are real.",
       "scope": "Livestock, stamps, precious metals and other tangible goods used as the face of an investment scheme.",
-      "boundary": "The assets exist but cannot support the promised returns; assets that do not exist are fictitious_asset_issuance, and recruitment through group trust is affinity_fraud.",
-      "test": "Investor confidence is shown to rest on the existence of physical assets rather than on what those assets could earn.",
+      "boundary": "Real, visible assets carry the confidence, even when part of what is claimed is fictitious or the assets cannot support the promised returns; when no asset exists at all it is fictitious_asset_issuance, and recruitment through group trust is affinity_fraud.",
+      "test": "Investor confidence is shown to rest on the visible existence of physical assets, which stands in for checking what they can earn or whether all the claimed assets exist.",
       "related": [
         "fictitious_asset_issuance",
         "affinity_fraud"
